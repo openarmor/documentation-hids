@@ -4,20 +4,20 @@
    :author: Vic Hargrave
 
 ======================
-OSSEC Moving to Github
+OpenArmor Moving to Github
 ======================
 
 
-OSSEC is moving from bitbucket to github, and in the process moving to a
+OpenArmor is moving from bitbucket to github, and in the process moving to a
 new method for accepting contributions. This is an exciting change that
-we feel will help push OSSEC forward in 2014 and further into the
+we feel will help push OpenArmor forward in 2014 and further into the
 future.
 
 -  `oRFC:1 Collective Code Construction
-   Contract <https://github.com/ossec/ossec-docs/blob/master/docs/oRFC/orfc-1.rst>`__
+   Contract <https://github.com/OpenArmor/OpenArmor-docs/blob/master/docs/oRFC/orfc-1.rst>`__
    (Adapted from ZeroMQ's `C4 <http://rfc.zeromq.org/spec:22>`__).
 
-The overall goals of the change are to allow OSSEC to be more dynamic,
+The overall goals of the change are to allow OpenArmor to be more dynamic,
 agile, and quicker to respond to the needs of the community.
 
 This change will not be without issues or problems, but we aim to make
@@ -32,7 +32,7 @@ following task to be completed 7 days from now:
 ~~~~~~~~~~~~~~~
 
 This is currently done every 30 minutes (when hg-git does not break). We
-have set up and enabled `github.com/ossec/ossec-hids <>`__
+have set up and enabled `github.com/OpenArmor/OpenArmor-hids <>`__
 
 This will continue till to the cut over date of Feb 7th 2014.
 
@@ -53,8 +53,8 @@ we shall attempt it here.
 Contact pull request author to request they move to github and resubmit
 using github. If no response is recevied before the following:
 
--  Create github.com/ossec/bitbucket-pull-requests as a fork of
-   github.com/ossec/ossec-hids/
+-  Create github.com/OpenArmor/bitbucket-pull-requests as a fork of
+   github.com/OpenArmor/OpenArmor-hids/
 -  Export each Pull Request as a patch bb-gh-pull-request-##.patch
 -  Import each patch into a branch named bb-gh-pull-request-##
 

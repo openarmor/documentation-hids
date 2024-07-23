@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>File Monitoring &#8212; OSSEC</title>
+    <title>File Monitoring &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -153,13 +153,13 @@ gtag('config', 'UA-138780766-1');
 <span id="manual-filemon"></span><h1>File Monitoring<a class="headerlink" href="#file-monitoring" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>OSSEC has a process named <code class="docutils literal notranslate"><span class="pre">ossec-logcollector</span></code> that monitors the configured log files for new events.
-When new log messages arrive, it forwards them to other processes for analysis or transport to an OSSEC server.</p>
+<p>OpenArmor has a process named <code class="docutils literal notranslate"><span class="pre">OpenArmor-logcollector</span></code> that monitors the configured log files for new events.
+When new log messages arrive, it forwards them to other processes for analysis or transport to an OpenArmor server.</p>
 </div>
 <div class="section" id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<p>The configuration for ossec-logcollector exists in <code class="docutils literal notranslate"><span class="pre">/var/ossec/etc/ossec.conf</span></code> in the <code class="docutils literal notranslate"><span class="pre">&lt;ossec_config&gt;</span></code> section.
-The syntax can be found in the <a class="reference external" href="../../syntax/head_ossec_config.localfile.html">localfile syntax page</a></p>
+<p>The configuration for OpenArmor-logcollector exists in <code class="docutils literal notranslate"><span class="pre">/var/OpenArmor/etc/OpenArmor.conf</span></code> in the <code class="docutils literal notranslate"><span class="pre">&lt;OpenArmor_config&gt;</span></code> section.
+The syntax can be found in the <a class="reference external" href="../../syntax/head_OpenArmor_config.localfile.html">localfile syntax page</a></p>
 </div>
 <div class="section" id="configuration-examples">
 <h2>Configuration examples<a class="headerlink" href="#configuration-examples" title="Permalink to this headline">¶</a></h2>
@@ -199,7 +199,7 @@ If the file name contains a “%4”, replace it with “/”. Example:</p>
 </div>
 <div class="section" id="multiple-files-example">
 <h3>Multiple Files Example<a class="headerlink" href="#multiple-files-example" title="Permalink to this headline">¶</a></h3>
-<p>To check multiple files, OSSEC supports posix regular expressions.
+<p>To check multiple files, OpenArmor supports posix regular expressions.
 For example, to analyze every file that ends with a .log inside the /var/log directory,
 use the following configuration:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;localfile&gt;</span>
@@ -230,7 +230,7 @@ day (and it is rolled over every day), do:</p>
 <h3>IIS Logs Example<a class="headerlink" href="#iis-logs-example" title="Permalink to this headline">¶</a></h3>
 <p>Support for IIS (5 and 6) is available for the NCSA format (web only) and the W3C
 extended format (for Web, FTP and SMTP). By default, the installation scripts will
-attempt to configure OSSEC to monitor the first virtual hosts for web (W3SVC1 to
+attempt to configure OpenArmor to monitor the first virtual hosts for web (W3SVC1 to
 W3SVC254), ftp (MSFTPSVC1 to MSFTPSVC254) and smtp (SMTPSVC1 to SMTPSVC254).
 To monitor any other file you need to add a new entry manually.</p>
 <p>In addition to that, make sure to set the log time period to daily.</p>
@@ -264,8 +264,8 @@ of IIS web</p>
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

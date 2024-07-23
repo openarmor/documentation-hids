@@ -5,14 +5,14 @@
 
 
 ==================
-OSSEC 2.9.0 Beta05
+OpenArmor 2.9.0 Beta05
 ==================
 
 This release marks our official code freeze for 2.9, from here on out
 we will only be accepting bug fixes to the 2.9 branch. Now is when we need
 your help! As a community driven project, we need all the testing a release
-this size can get. Let us know in the OSSEC mailing list, Github bug tracker,
-or the official OSSEC irc channel.
+this size can get. Let us know in the OpenArmor mailing list, Github bug tracker,
+or the official OpenArmor irc channel.
 
 
 **Highlights in 2.9 beta05**
@@ -22,17 +22,17 @@ or the official OSSEC irc channel.
     - Report file deletion, even without realtime enabled
     - Report modifications made on directories
     - Corrects bug so that files created between the first and second scan are reported as new files
-    - Corrects bug that made changes reverting a file to the state it was in when ossec started unreported
+    - Corrects bug that made changes reverting a file to the state it was in when OpenArmor started unreported
     - Avoids computing hashes multiple times to improve performance
     - Make the time between two syscheck wakeups configurable in internal_options
-    - Add support for the "nodiff" option when using report_changes, sensitive files tagged with <nodiff> in ossec.conf will have their contents included in an alert.
+    - Add support for the "nodiff" option when using report_changes, sensitive files tagged with <nodiff> in OpenArmor.conf will have their contents included in an alert.
 * IPv6 support
-* Support to call an external mailer. This solves the problem of supporting encryption when sending mail alerts in OSSEC. The <smtp_server> field can now be prepended with "/" to designate a local binary. Example: "<smtp_server>/usr/sbin/sendmail -t</smtp_server>".
+* Support to call an external mailer. This solves the problem of supporting encryption when sending mail alerts in OpenArmor. The <smtp_server> field can now be prepended with "/" to designate a local binary. Example: "<smtp_server>/usr/sbin/sendmail -t</smtp_server>".
 * Slack notification support
 
 **Download**
 
-`https://github.com/ossec/ossec-hids/releases <https://github.com/ossec/ossec-hids/releases>`_
+`https://github.com/OpenArmor/OpenArmor-hids/releases <https://github.com/OpenArmor/OpenArmor-hids/releases>`_
 
 **Changelog**
 
@@ -67,11 +67,11 @@ or the official OSSEC irc channel.
 * PR#4, Authd, Bugfix for Openssl operations on non-blocking socket
 * PR#563: IPv6 support
 * PR#599, Allow for the log format in proftpd 1.3.5+
-* PR#610: Execd, Reduce system load caused by simultaneous active response processes during ossec stop. #610
+* PR#610: Execd, Reduce system load caused by simultaneous active response processes during OpenArmor stop. #610
 * PR#615: Adds support for Binding src IP to 'local_ip' config value in agentd. In mulihomed host environment we have a big problem with binding agent to correct ip. By default agentd used ip-addr of interface, from which sented ip-packets. 
 * PR#617: Agentd, Add CLIENT to DEFINES for winagent target #617  Bugfix #595
 * PR#622: Fix for CVE-2015-3222
-* PR#631, Log failure when ossec fails to remove a PID file
+* PR#631, Log failure when OpenArmor fails to remove a PID file
 * PR#652, Syscheck, add support for the "-t" flag to display XML parsing errors in agent.conf on agents
 * PR#657: Syscheck, Allows scanning of directories with , in the name. Let directory check_something="no" options to work.  This means you can do <directory check_all="yes" check_sum="no"> instead of listing out all the ones you want to use.
 * PR#670: Syscheck, Bugfix for report_changes
@@ -82,10 +82,10 @@ or the official OSSEC irc channel.
 * PR#699: Encompassing only complete statements with conditional directives. 
 * PR#717: Active Response, add Slack (www.slack.com) notification support
 * PR#720: Fixes for the statfs error spam
-* PR#724: Authd, bugfix for issue #642, This brings ossec-authd into parity with whatever the MAX_AGENTS is set at build time
+* PR#724: Authd, bugfix for issue #642, This brings OpenArmor-authd into parity with whatever the MAX_AGENTS is set at build time
 * PR#726: Make syslog/cef consistent with json/splunk and add classification field to alerts.  
-* PR#727: Maild, Add support for "email_reply_to". This allows configuing the Reply-To: field in email alerts sent from ossec-maild
-* PR#740: Remoted, bugfix for issue #739, Ossec will now report the agent ID of the agent that tries to conect
+* PR#727: Maild, Add support for "email_reply_to". This allows configuing the Reply-To: field in email alerts sent from OpenArmor-maild
+* PR#740: Remoted, bugfix for issue #739, OpenArmor will now report the agent ID of the agent that tries to conect
 * PR#744: Syscheck, Bugfix for issue #42, corrects issue on windows that would produce an incorrect hash
 * PR#749: Windows, Changed Makefile to use Windows subsystem only wth UI manager
 * PR#750: Analysisd, Fixes glob() impelemtation bug, adds Hourly/Daily options to logcollector, improved dfalts to analysisd diff alerts.

@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Managing Agents &#8212; OSSEC</title>
+    <title>Managing Agents &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -23,7 +23,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Agent systems behind NAT or with dynamic IPs (DHCP)" href="agent-dhcp-nat.html" />
-    <link rel="prev" title="Communication between agents and the OSSEC server" href="communication.html" />
+    <link rel="prev" title="Communication between agents and the OpenArmor server" href="communication.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -117,7 +117,7 @@ gtag('config', 'UA-138780766-1');
               
                 
   <li>
-    <a href="communication.html" title="Previous Chapter: Communication between agents and the OSSEC server"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Communication...</span>
+    <a href="communication.html" title="Previous Chapter: Communication between agents and the OpenArmor server"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Communication...</span>
     </a>
   </li>
   <li>
@@ -151,37 +151,37 @@ gtag('config', 'UA-138780766-1');
       
   <div class="section" id="managing-agents">
 <span id="manual-agent-manage"></span><h1>Managing Agents<a class="headerlink" href="#managing-agents" title="Permalink to this headline">¶</a></h1>
-<p>To add an agent to an OSSEC manager with <a class="reference internal" href="../../programs/manage_agents.html#manage-agents"><span class="std std-ref">manage_agents</span></a> you need to follow the steps below.</p>
+<p>To add an agent to an OpenArmor manager with <a class="reference internal" href="../../programs/manage_agents.html#manage-agents"><span class="std std-ref">manage_agents</span></a> you need to follow the steps below.</p>
 <ol class="arabic simple">
-<li><p>Run manage_agents on the OSSEC server.</p></li>
+<li><p>Run manage_agents on the OpenArmor server.</p></li>
 <li><p>Add an agent.</p></li>
 <li><p>Extract the key for the agent.</p></li>
 <li><p>Copy that key to the agent.</p></li>
 <li><p>Run manage_agents on the agent.</p></li>
 <li><p>Import the key copied from the manager.</p></li>
-<li><p>Restart the manager’s OSSEC processes.</p></li>
+<li><p>Restart the manager’s OpenArmor processes.</p></li>
 <li><p>Start the agent.</p></li>
 </ol>
-<div class="section" id="manage-agents-on-the-ossec-server">
-<h2>manage_agents on the OSSEC server<a class="headerlink" href="#manage-agents-on-the-ossec-server" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="manage-agents-on-the-OpenArmor-server">
+<h2>manage_agents on the OpenArmor server<a class="headerlink" href="#manage-agents-on-the-OpenArmor-server" title="Permalink to this headline">¶</a></h2>
 <p>The server version of manage_agents provides an interface to:</p>
 <ul class="simple">
-<li><p>add an OSSEC agent to the OSSEC server</p></li>
-<li><p>extract the key for an agent already added to the OSSEC server</p></li>
-<li><p>remove an agent from the OSSEC server</p></li>
-<li><p>list all agents already added to the OSSEC server.</p></li>
+<li><p>add an OpenArmor agent to the OpenArmor server</p></li>
+<li><p>extract the key for an agent already added to the OpenArmor server</p></li>
+<li><p>remove an agent from the OpenArmor server</p></li>
+<li><p>list all agents already added to the OpenArmor server.</p></li>
 </ul>
 <div class="section" id="running-manage-agents-and-start-screen">
 <h3>Running manage_agents and start screen<a class="headerlink" href="#running-manage-agents-and-start-screen" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">manage_agents</span></code> should be run as a user with
 the appropriate privileges (e.g. root).</p>
 <p>Run <code class="docutils literal notranslate"><span class="pre">manage_agents</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/ossec/bin/manage_agents
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/OpenArmor/bin/manage_agents
 </pre></div>
 </div>
 <p>The manage_agents menu:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">****************************************</span>
-<span class="go">* OSSEC HIDS v2.5-SNP-100809 Agent manager.     *</span>
+<span class="go">* OpenArmor HIDS v2.5-SNP-100809 Agent manager.     *</span>
 <span class="go">* The following options are available: *</span>
 <span class="go">****************************************</span>
 <span class="go">   (A)dd an agent (A).</span>
@@ -223,7 +223,7 @@ Multiple systems can use the same IP range or <code class="docutils literal notr
 <p>The last information you will be asked for is the ID you want to assign to the agent.
 <a class="reference internal" href="../../programs/manage_agents.html#manage-agents"><span class="std std-ref">manage_agents</span></a> will suggest a value for the ID. This value should be the lowest positive
 number that is not already assigned to another agent. The ID 000 is assigned to the
-OSSEC server. To accept the suggestion, simply press ENTER. To choose another value,
+OpenArmor server. To accept the suggestion, simply press ENTER. To choose another value,
 type it in and press ENTER.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">* An ID for the new agent[001]:</span>
 </pre></div>
@@ -238,11 +238,11 @@ type it in and press ENTER.</p>
 <span class="go">Agent added.</span>
 </pre></div>
 </div>
-<p>After that <a class="reference internal" href="../../programs/manage_agents.html#manage-agents"><span class="std std-ref">manage_agents</span></a> appends the agent information to /var/ossec/etc/client.keys
+<p>After that <a class="reference internal" href="../../programs/manage_agents.html#manage-agents"><span class="std std-ref">manage_agents</span></a> appends the agent information to /var/OpenArmor/etc/client.keys
 and goes back to the start screen.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If this is the first agent added to this server, the server’s OSSEC processes should be restarted using <code class="docutils literal notranslate"><span class="pre">/var/ossec/bin/ossec-control</span> <span class="pre">restart</span></code>.</p>
+<p>If this is the first agent added to this server, the server’s OpenArmor processes should be restarted using <code class="docutils literal notranslate"><span class="pre">/var/OpenArmor/bin/OpenArmor-control</span> <span class="pre">restart</span></code>.</p>
 </div>
 </div>
 </div>
@@ -272,7 +272,7 @@ and includes information about the agent. This string can be added to the agent 
 </div>
 <div class="section" id="removing-an-agent">
 <h2>Removing an agent<a class="headerlink" href="#removing-an-agent" title="Permalink to this headline">¶</a></h2>
-<p>If you want to remove an OSSEC agent from the server, use the <code class="docutils literal notranslate"><span class="pre">r</span></code> option in the <a class="reference internal" href="../../programs/manage_agents.html#manage-agents"><span class="std std-ref">manage_agents</span></a>
+<p>If you want to remove an OpenArmor agent from the server, use the <code class="docutils literal notranslate"><span class="pre">r</span></code> option in the <a class="reference internal" href="../../programs/manage_agents.html#manage-agents"><span class="std std-ref">manage_agents</span></a>
 start screen. You will be given a list of all agents already added to the server. To remove
 an agent, simply type in the ID of the agent, press enter, and finally confirm the deletion.
 It is important to note that you have to enter all digits of the ID.</p>
@@ -286,15 +286,15 @@ It is important to note that you have to enter all digits of the ID.</p>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">manage_agents</span></code> then invalidates the agent information in
-<code class="docutils literal notranslate"><span class="pre">/var/ossec/etc/client.keys</span></code>. Only the values for ID and the key are kept to
+<code class="docutils literal notranslate"><span class="pre">/var/OpenArmor/etc/client.keys</span></code>. Only the values for ID and the key are kept to
 avoid conflicts when adding agents. The deleted agent can no longer
-communicate with the OSSEC server.</p>
+communicate with the OpenArmor server.</p>
 </div>
-<div class="section" id="manage-agents-on-ossec-agents">
-<h2>manage_agents on OSSEC agents<a class="headerlink" href="#manage-agents-on-ossec-agents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="manage-agents-on-OpenArmor-agents">
+<h2>manage_agents on OpenArmor agents<a class="headerlink" href="#manage-agents-on-OpenArmor-agents" title="Permalink to this headline">¶</a></h2>
 <p>The agent version provides an interface for importing authentication keys.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">****************************************</span>
-<span class="go">* OSSEC HIDS v2.5-SNP-100809 Agent manager.     *</span>
+<span class="go">* OpenArmor HIDS v2.5-SNP-100809 Agent manager.     *</span>
 <span class="go">* The following options are available: *</span>
 <span class="go">****************************************</span>
 <span class="go">   (I)mport key from the server (I).</span>
@@ -334,8 +334,8 @@ restart the server and start the agent.</p>
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

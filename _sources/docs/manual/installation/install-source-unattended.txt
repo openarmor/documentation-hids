@@ -5,7 +5,7 @@ Unattended Source Installation
 ==============================
 
 
-OSSEC has the capability to be compiled and installed without the interactivity of ``install.sh``.
+OpenArmor has the capability to be compiled and installed without the interactivity of ``install.sh``.
 The install script can collect the answers to its questions from the ``etc/preloaded-vars.conf`` configuration file.
 
 
@@ -23,7 +23,7 @@ Example preloaded-vars.conf:
 .. code-block:: console
 
 
-   # preloaded-vars.conf, Daniel B. Cid (dcid @ ossec.net).
+   # preloaded-vars.conf, Daniel B. Cid (dcid @ OpenArmor.net).
    #
    # Use this file to customize your installations.
    # It will make the install.sh script pre-load some
@@ -58,12 +58,12 @@ Example preloaded-vars.conf:
    #USER_INSTALL_TYPE="server"
 
 
-   # USER_DIR defines the location to install ossec
-   #USER_DIR="/var/ossec"
+   # USER_DIR defines the location to install OpenArmor
+   #USER_DIR="/var/OpenArmor"
 
 
    # If USER_DELETE_DIR is set to "y", the directory
-   # to install OSSEC will be removed if present.
+   # to install OpenArmor will be removed if present.
    #USER_DELETE_DIR="y"
 
 
@@ -101,7 +101,7 @@ Example preloaded-vars.conf:
    ### Agent Installation variables. ###
 
    # Specifies the IP address or hostname of the
-   # ossec server. Only used on agent installations.
+   # OpenArmor server. Only used on agent installations.
    # Choose only one, not both.
    # USER_AGENT_SERVER_IP="1.2.3.4"
    # USER_AGENT_SERVER_NAME
@@ -121,10 +121,10 @@ Example preloaded-vars.conf:
    #USER_ENABLE_EMAIL="y"
 
    # USER_EMAIL_ADDRESS defines the destination e-mail of the alerts.
-   #USER_EMAIL_ADDRESS="dcid@test.ossec.net"
+   #USER_EMAIL_ADDRESS="dcid@test.OpenArmor.net"
 
    # USER_EMAIL_SMTP defines the SMTP server to send the e-mails.
-   #USER_EMAIL_SMTP="test.ossec.net"
+   #USER_EMAIL_SMTP="test.OpenArmor.net"
 
 
    # USER_ENABLE_SYSLOG enables or disables remote syslog.
@@ -141,7 +141,7 @@ Example preloaded-vars.conf:
 
 
    # PF table to use (OpenBSD and FreeBSD only).
-   #USER_PF_TABLE="ossec_fwtable"
+   #USER_PF_TABLE="OpenArmor_fwtable"
 
 
    # USER_WHITE_LIST is a list of IPs or networks

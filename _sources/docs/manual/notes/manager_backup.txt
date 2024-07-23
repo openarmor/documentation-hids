@@ -7,30 +7,30 @@ These are the two locations where the keys are saved for all the agents.
 
 .. code-block:: console
 
-  /var/ossec/etc/client.keys
-  /var/ossec/queue/rids/ 
+  /var/OpenArmor/etc/client.keys
+  /var/OpenArmor/queue/rids/ 
 
 These are the configuration files you may want to keep 
 
 .. code-block:: console
 
-  /var/ossec/etc/*.conf
-  /var/ossec/rules
-  /var/ossec/etc/*.xml
-  /var/ossec/etc/shared/agent.conf
+  /var/OpenArmor/etc/*.conf
+  /var/OpenArmor/rules
+  /var/OpenArmor/etc/*.xml
+  /var/OpenArmor/etc/shared/agent.conf
 
 
 These are the databases where we store data for the agents.
 
 .. code-block:: console
 
-  /var/ossec/queue/syscheck
-  /var/ossec/queue/rootcheck
-  /var/ossec/queue/fts
-  /var/ossec/queue/agentless
+  /var/OpenArmor/queue/syscheck
+  /var/OpenArmor/queue/rootcheck
+  /var/OpenArmor/queue/fts
+  /var/OpenArmor/queue/agentless
 
 Logs stored if they are needed.
 
 .. code-block:: console
 
-  /var/ossec/logs
+  /var/OpenArmor/logs

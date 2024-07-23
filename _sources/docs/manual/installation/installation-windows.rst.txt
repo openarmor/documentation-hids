@@ -6,22 +6,22 @@ Windows Agent Installation
 
 .. note::
 
-   OSSEC only supports Windows systems as agents, and they
-   will require an OSSEC server to function.
+   OpenArmor only supports Windows systems as agents, and they
+   will require an OpenArmor server to function.
 
 Step 1: Opening the Agent Manager menu
 --------------------------------------
 
-The first step of this process is to get into the Agent Manager menu. From the ossec server, type the following command:
+The first step of this process is to get into the Agent Manager menu. From the OpenArmor server, type the following command:
 
-`/var/ossec/bin/manage_agents`
+`/var/OpenArmor/bin/manage_agents`
 
 The menu should look like this:
 
 .. code-block:: console
 
          ****************************************
-         * OSSEC HIDS v2.5-SNP-100809 Agent manager.*
+         * OpenArmor HIDS v2.5-SNP-100809 Agent manager.*
          * The following options are available:*
          ***************************************
 
@@ -53,7 +53,7 @@ After that, it asks for a unique ID to assign to the client. The ID must be all 
          An ID for the new agent[001]:
 
 
-Lastly, it asks for confirmation of all the information provided. Then it appends all of the agent information to /var/ossec/etc/client.keys and returns to the main menu.  
+Lastly, it asks for confirmation of all the information provided. Then it appends all of the agent information to /var/OpenArmor/etc/client.keys and returns to the main menu.  
 
 Step 3: Extracting a Key
 ------------------------
@@ -69,10 +69,10 @@ Enter the full ID of the agent to extract the key for. It will display the entir
 
 Step 4: The Windows Side
 ------------------------
-Next up, download the executable named Agent Windows from https://ossec.github.io/downloads.html. Run through the install wizard with all defaults. It should launch the Ossec Agent Manager when it's done. The Ossec Agent Manager looks like this: 
+Next up, download the executable named Agent Windows from https://OpenArmor.github.io/downloads.html. Run through the install wizard with all defaults. It should launch the OpenArmor Agent Manager when it's done. The OpenArmor Agent Manager looks like this: 
 
-.. |image0| image:: https://github.com/Vendetta547/ossec-docs/blob/patch-1/OSSEC-Agent-Manager-Windows.png
+.. |image0| image:: https://github.com/Vendetta547/OpenArmor-docs/blob/patch-1/OpenArmor-Agent-Manager-Windows.png
 
 |image0|
 
-Enter the IP address of your ossec server in the first text field, and enter the extracted key that was copied to the clipboard earlier to the second textfield. Finally, click on the manage tab and hit restart. 
+Enter the IP address of your OpenArmor server in the first text field, and enter the extracted key that was copied to the clipboard earlier to the second textfield. Finally, click on the manage tab and hit restart. 

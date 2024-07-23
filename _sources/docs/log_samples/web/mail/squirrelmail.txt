@@ -79,6 +79,6 @@ Separate group "squirrelmail" allowing to get report about webmail logins:
 
 .. code-block:: console
 
-  cat /var/ossec/logs/alerts/alerts.log|/var/ossec/bin/ossec-reportd -f group squirrelmail
+  cat /var/OpenArmor/logs/alerts/alerts.log|/var/OpenArmor/bin/OpenArmor-reportd -f group squirrelmail
 
 

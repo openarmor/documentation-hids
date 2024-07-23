@@ -1,23 +1,23 @@
 
-.. _ossec-logtest: 
+.. _OpenArmor-logtest: 
 
-ossec-logtest 
+OpenArmor-logtest 
 =============
 
-ossec-logtest is the single most useful tool when working with ossec.  This tool allows oneself 
-to test and verify log files in the exact same way that `ossec-anaylistd` does.  
+OpenArmor-logtest is the single most useful tool when working with OpenArmor.  This tool allows oneself 
+to test and verify log files in the exact same way that `OpenArmor-anaylistd` does.  
 
-Something ossec-logtest can help with: 
+Something OpenArmor-logtest can help with: 
 
 - Writing rules (Debugging your custom rules) 
 - Troubleshooting false positives or false negatives 
 
-ossec-logtest accepts standard input for all log to test.  
+OpenArmor-logtest accepts standard input for all log to test.  
 
 osssec-logtest argument options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. program:: ossec-logtest 
+.. program:: OpenArmor-logtest 
 
 .. option:: -a 
 
@@ -25,11 +25,11 @@ osssec-logtest argument options
 
 .. option:: -c <config> 
 
-    <config> is the path and filename to load in place of the default /var/ossec/etc/ossec.conf. 
+    <config> is the path and filename to load in place of the default /var/OpenArmor/etc/OpenArmor.conf. 
 
 .. option:: -D <dir> 
 
-    This is the path that ossec-logtest will chroot to before it completes loading all rules, 
+    This is the path that OpenArmor-logtest will chroot to before it completes loading all rules, 
     decoders, and lists and processing standard input.  
 
 .. option:: -d 
@@ -42,36 +42,36 @@ osssec-logtest argument options
 
 .. option:: -t 
 
-    Test configuration.  This will print file details on the ossec-anaylistd rules, 
+    Test configuration.  This will print file details on the OpenArmor-anaylistd rules, 
     decoders, and lists as they are loaded and the order they were processed.  
 
 .. option:: -U <rule-id:alert-level:decoder-name> 
 
-    This option will cause ossec-logtest to return with an exit status other then zero unless 
+    This option will cause OpenArmor-logtest to return with an exit status other then zero unless 
     the last line tested matches the arguments passed.  
 
     .. note::
 
-      This only works for the last, line so passing many lines into ossec-logtest with 
+      This only works for the last, line so passing many lines into OpenArmor-logtest with 
       this argument may not provide the desired results.
 
     .. note::
 
-      This ossec-logtest code requires access to all ossec configuation files.  
-      This is a bug and will be corrected. It is documented in issue #`61 <https://bitbucket.org/jbcheng/ossec-hids/issue/61/ossec-logtest-must-be-used-with-a-full>`_
+      This OpenArmor-logtest code requires access to all OpenArmor configuation files.  
+      This is a bug and will be corrected. It is documented in issue #`61 <https://bitbucket.org/jbcheng/OpenArmor-hids/issue/61/OpenArmor-logtest-must-be-used-with-a-full>`_
 
     .. code-block:: console
 
-      % echo "Aug 29 15:33:13 ns3 named[464]: client 217.148.39.3#1036: query (cache) denied" | sudo /var/ossec/bin/ossec-logtest -U 12108:0:named 2>&1 > /dev/null
+      % echo "Aug 29 15:33:13 ns3 named[464]: client 217.148.39.3#1036: query (cache) denied" | sudo /var/OpenArmor/bin/OpenArmor-logtest -U 12108:0:named 2>&1 > /dev/null
       % echo $?
       0
-      % echo "Aug 29 15:33:13 ns3 XXXXXX[464]: client 217.148.39.3#1036: query (cache) denied" | sudo /var/ossec/bin/ossec-logtest -U 12108:0:named 2>&1 > /dev/null
+      % echo "Aug 29 15:33:13 ns3 XXXXXX[464]: client 217.148.39.3#1036: query (cache) denied" | sudo /var/OpenArmor/bin/OpenArmor-logtest -U 12108:0:named 2>&1 > /dev/null
       % echo $? 
       3
 
 .. option:: -V
  
-   Print the Version and license message for OSSEC and ossec-logtest. 
+   Print the Version and license message for OpenArmor and OpenArmor-logtest. 
 
 .. option:: -v 
 
@@ -92,7 +92,7 @@ osssec-logtest argument options
 Caveats
 ~~~~~~~
 
-Some log formats will be processed differently than they appear in the log file. MySQL log files for instance will have ``MySQL log: `` prepended to the log message before analysis. If using ossec-logtest to test MySQL logs, please add this string to the beginning.
+Some log formats will be processed differently than they appear in the log file. MySQL log files for instance will have ``MySQL log: `` prepended to the log message before analysis. If using OpenArmor-logtest to test MySQL logs, please add this string to the beginning.
 
 Example:
 
@@ -103,14 +103,14 @@ Given the following MySQL log message:
    130218 12:07:52 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. The statement is unsafe because it uses a LIMIT clause. This is unsafe because the set of rows included cannot be predicted. Statement: DELETE FROM `emailQueue` WHERE `emailQueueID` = '12207' LIMIT 1
 
 
-The message that should be pasted into ossec-logtest is:
+The message that should be pasted into OpenArmor-logtest is:
 
 .. code-block:: console
 
    MySQL log: 130218 12:07:52 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. The statement is unsafe because it uses a LIMIT clause. This is unsafe because the set of rows included cannot be predicted. Statement: DELETE FROM `emailQueue` WHERE `emailQueueID` = '12207' LIMIT 1
 
 
-ossec-logtest example usage
+OpenArmor-logtest example usage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Example 1: Testing standard rules
@@ -120,14 +120,14 @@ Example 1: Testing standard rules
 
 .. code-block:: console 
 
-        # echo "Aug 29 15:33:13 ns3 named[464]: client 217.148.39.3#1036: query (cache) denied" | /var/ossec/bin/ossec-logtest -f
-        2010/08/10 06:57:06 ossec-testrule: INFO: Reading decoder file loadables/decoders/00_decoders.xml.
-        2010/08/10 06:57:06 ossec-testrule: INFO: Reading decoder file loadables/decoders/50_named.xml.
-        2010/08/10 06:57:06 ossec-testrule: INFO: Reading decoder file loadables/decoders/50_pam.xml.
-        2010/08/10 06:57:06 ossec-testrule: INFO: Reading decoder file loadables/decoders/50_sshd.xml.
-        2010/08/10 06:57:06 ossec-testrule: INFO: Reading loading the lists file: 'loadables/lists/rfc1918-privateaddresses'
-        2010/08/10 06:57:06 ossec-testrule: INFO: Started (pid: 78828).
-        ossec-testrule: Type one log per line.
+        # echo "Aug 29 15:33:13 ns3 named[464]: client 217.148.39.3#1036: query (cache) denied" | /var/OpenArmor/bin/OpenArmor-logtest -f
+        2010/08/10 06:57:06 OpenArmor-testrule: INFO: Reading decoder file loadables/decoders/00_decoders.xml.
+        2010/08/10 06:57:06 OpenArmor-testrule: INFO: Reading decoder file loadables/decoders/50_named.xml.
+        2010/08/10 06:57:06 OpenArmor-testrule: INFO: Reading decoder file loadables/decoders/50_pam.xml.
+        2010/08/10 06:57:06 OpenArmor-testrule: INFO: Reading decoder file loadables/decoders/50_sshd.xml.
+        2010/08/10 06:57:06 OpenArmor-testrule: INFO: Reading loading the lists file: 'loadables/lists/rfc1918-privateaddresses'
+        2010/08/10 06:57:06 OpenArmor-testrule: INFO: Started (pid: 78828).
+        OpenArmor-testrule: Type one log per line.
 
 
 
@@ -182,20 +182,20 @@ Example 1: Testing standard rules
                Info - Link: 'http://www.reedmedia.net/misc/dns/errors.html'
         **Alert to be generated.
 
-Example 2: Using OSSEC for the forensic analysis of log files
+Example 2: Using OpenArmor for the forensic analysis of log files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you have one old log file that you want to check or if you are doing a 
-forensics analysis of a box and wants to check the logs with OSSEC, we 
+forensics analysis of a box and wants to check the logs with OpenArmor, we 
 now have a solution too.
 
-Let’s say you have a file /var/log/secure that you want to analyze with OSSEC. 
-You need to use the ossec-logtest tool with the “``-a``” flag to reproduce 
+Let’s say you have a file /var/log/secure that you want to analyze with OpenArmor. 
+You need to use the OpenArmor-logtest tool with the “``-a``” flag to reproduce 
 the alerts:
 
 .. code-block:: console 
 
-    # cat /var/log/secure | /var/ossec/bin/ossec-logtest -a
+    # cat /var/log/secure | /var/OpenArmor/bin/OpenArmor-logtest -a
 
     ** Alert 1264788284.11: - syslog,sshd,authentication_success,
     2010 Jan 29 14:04:44 enigma->stdin
@@ -211,13 +211,13 @@ the alerts:
     User: dcid
     Jan 15 11:19:20 enigma sshd[18853]: Accepted publickey for dcid from 127.0.0.1 port 6725 ssh2
 
-You will get the alerts just like you would at /var/ossec/logs/alerts.log. The 
-benefit now is that you can pipe this output to :ref:`ossec-reported` to get a 
+You will get the alerts just like you would at /var/OpenArmor/logs/alerts.log. The 
+benefit now is that you can pipe this output to :ref:`OpenArmor-reported` to get a 
 better view of what is going on:
 
 .. code-block:: console 
 
-    # cat /var/log/secure | /var/ossec/bin/ossec-logtest -a |/var/ossec/bin/ossec-reported
+    # cat /var/log/secure | /var/OpenArmor/bin/OpenArmor-logtest -a |/var/OpenArmor/bin/OpenArmor-reported
     Report completed. ==
     ————————————————
     ->Processed alerts: 522
@@ -260,7 +260,7 @@ box:
 
 .. code-block:: console 
 
-    # cat /var/log/secure | /var/ossec/bin/ossec-logtest -a |/var/ossec/bin/ossec-reported -f group authentication_failures
+    # cat /var/log/secure | /var/OpenArmor/bin/OpenArmor-logtest -a |/var/OpenArmor/bin/OpenArmor-reported -f group authentication_failures
 
     Report completed. ==
     ————————————————

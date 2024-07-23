@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Understanding Active Response with FreeBSD &#8212; OSSEC</title>
+    <title>Understanding Active Response with FreeBSD &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../../index.html"><img src="../../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../../index.html"><img src="../../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -152,17 +152,17 @@ gtag('config', 'UA-138780766-1');
   <div class="section" id="understanding-active-response-with-freebsd">
 <span id="manual-ar-freebsd-firewall"></span><h1>Understanding Active Response with FreeBSD<a class="headerlink" href="#understanding-active-response-with-freebsd" title="Permalink to this headline">¶</a></h1>
 <p>There are currently 3 options for firewalls in <a class="reference external" href="http://www.freebsd.org/doc/en/books/handbook/firewalls.html">FreeBSD</a>: IPF, IPFW, and PF.
-Each is configured differently on FreeBSD. OSSEC will attempt to check for IPFW and then PF, falling back to IPF if neither of these was found at the time of installation.</p>
-<div class="section" id="how-does-ossec-know-which-firewall-is-being-used">
-<h2>How does OSSEC know which firewall is being used?<a class="headerlink" href="#how-does-ossec-know-which-firewall-is-being-used" title="Permalink to this headline">¶</a></h2>
-<p>The OSSEC install script will check <cite>rc.conf</cite> to determine which firewall is currently active.
-It first greps for <cite>firewall_enable=”YES”</cite>, and enables IPFW if this is found. IPFW support is enabled by copying the <code class="docutils literal notranslate"><span class="pre">ipfw.sh</span></code> to <code class="docutils literal notranslate"><span class="pre">/var/ossec/active-response/bin/firewall-drop.sh</span></code>.
+Each is configured differently on FreeBSD. OpenArmor will attempt to check for IPFW and then PF, falling back to IPF if neither of these was found at the time of installation.</p>
+<div class="section" id="how-does-OpenArmor-know-which-firewall-is-being-used">
+<h2>How does OpenArmor know which firewall is being used?<a class="headerlink" href="#how-does-OpenArmor-know-which-firewall-is-being-used" title="Permalink to this headline">¶</a></h2>
+<p>The OpenArmor install script will check <cite>rc.conf</cite> to determine which firewall is currently active.
+It first greps for <cite>firewall_enable=”YES”</cite>, and enables IPFW if this is found. IPFW support is enabled by copying the <code class="docutils literal notranslate"><span class="pre">ipfw.sh</span></code> to <code class="docutils literal notranslate"><span class="pre">/var/OpenArmor/active-response/bin/firewall-drop.sh</span></code>.
 The installation script will then look for <a href="#id1"><span class="problematic" id="id2">``</span></a>pf_enable=”YES”` in the rc.conf, and will enable PF instead if this is found. The script for pf is pf.sh.
 If neither of these is found, the default firewall-drop.sh script will be installed. This script will use attempt to use IPF to block IPs.</p>
 </div>
 <div class="section" id="how-do-i-change-which-script-is-used-by-an-agent">
 <h2>How do I change which script is used by an agent?<a class="headerlink" href="#how-do-i-change-which-script-is-used-by-an-agent" title="Permalink to this headline">¶</a></h2>
-<p>Copy the appropriate script from the OSSEC source to <code class="docutils literal notranslate"><span class="pre">/var/ossec/active-response/bin/firewall-drop.sh</span></code> on the agent.</p>
+<p>Copy the appropriate script from the OpenArmor source to <code class="docutils literal notranslate"><span class="pre">/var/OpenArmor/active-response/bin/firewall-drop.sh</span></code> on the agent.</p>
 </div>
 </div>
 
@@ -178,8 +178,8 @@ If neither of these is found, the default firewall-drop.sh script will be instal
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

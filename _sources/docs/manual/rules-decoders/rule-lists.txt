@@ -4,7 +4,7 @@
 CDB List lookups from within Rules
 ===================================
 
-Allow for CDB lookups from within rules in OSSEC (ossec-analysisd) of all possible 
+Allow for CDB lookups from within rules in OpenArmor (OpenArmor-analysisd) of all possible 
 fields.
 
 Use cases
@@ -15,7 +15,7 @@ Anything that has a large number of items. Some examples:
 - named with recursive logs checking the www.malwaredomains.com list for suspicious domains
 - lists of approved users by server
 - mstark (on irc) originally came up with suggestion for approved software based on a md5 list
-- IP address lookups - there are a large number of lists of suspicious or known bad IP addresses to match inside of ossec rules
+- IP address lookups - there are a large number of lists of suspicious or known bad IP addresses to match inside of OpenArmor rules
 
 Syntax for Lists 
 ----------------
@@ -94,32 +94,32 @@ check_value attribute:
       <list field="srcip" lookup="address_match_key_value" check_value="^reject">rules/records</list>
       
     
-ossec.conf 
+OpenArmor.conf 
 ~~~~~~~~~~
 
-Each list will need to be defined and told to be available using the ossec.conf file. 
+Each list will need to be defined and told to be available using the OpenArmor.conf file. 
 Using the following syntax:
 
 .. code-block:: xml 
 
-    <ossec_config>
+    <OpenArmor_config>
         <rules>
             <list>rules/records</list>
 
 Commands
 ~~~~~~~~
 
-CDB files must be compiled before they can be used.  :ref:`ossec-makelists` is used 
+CDB files must be compiled before they can be used.  :ref:`OpenArmor-makelists` is used 
 to compile lists.  
 
-The command :ref:`ossec-makelists` will process and compile all lists if the master text 
+The command :ref:`OpenArmor-makelists` will process and compile all lists if the master text 
 rules have been changed. Basicly logic is as follows:
 
-- Read ossec.conf for all lists 
+- Read OpenArmor.conf for all lists 
 - Check the mtime of each list and compare it to the mtime of the compiled .cdb file
 - if mtime is newer create new database file ending in .tmp
 - use atomic rename to change the .tmp to .cdb. This will invalidate all mmap pages 
-  currently in use by ossec-analysisd and will cause them to be reloaded with the new 
+  currently in use by OpenArmor-analysisd and will cause them to be reloaded with the new 
   data as needed
 
 List text file format

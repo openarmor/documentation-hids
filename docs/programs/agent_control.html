@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>agent_control &#8212; OSSEC</title>
+    <title>agent_control &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../index.html"><img src="../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../index.html"><img src="../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -183,7 +183,7 @@ on your server and it also allows you to restart (run now) the syscheck/rootchec
 <dl class="std option">
 <dt id="cmdoption-agent_control-R">
 <span id="cmdoption-agent-control-r"></span><code class="sig-name descname"><span class="pre">-R</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;agent_id&gt;</span></code><a class="headerlink" href="#cmdoption-agent_control-R" title="Permalink to this definition">¶</a></dt>
-<dd><p>Restarts the OSSEC processes on the agent</p>
+<dd><p>Restarts the OpenArmor processes on the agent</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Requires active response to be enabled.</p>
@@ -220,9 +220,9 @@ with <a class="reference internal" href="#cmdoption-agent_control-a"><code class
 <h3>Example 1: Listing all active agents<a class="headerlink" href="#example-1-listing-all-active-agents" title="Permalink to this headline">¶</a></h3>
 <p>The first interesting argument is <a class="reference internal" href="#cmdoption-agent_control-lc"><code class="xref std std-option docutils literal notranslate"><span class="pre">agent_control</span> <span class="pre">-lc</span></code></a>, to list the connected (active agents). To list
 all of them, use <a class="reference internal" href="#cmdoption-agent_control-l"><code class="xref std std-option docutils literal notranslate"><span class="pre">agent_control</span> <span class="pre">-l</span></code></a> only.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/ossec/bin/agent_control -lc
-<span class="go">OSSEC HIDS agent_control. List of available agents:</span>
-<span class="go">ID: 000, Name: enigma.ossec.net (server), IP: 127.0.0.1, Active/Local</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/OpenArmor/bin/agent_control -lc
+<span class="go">OpenArmor HIDS agent_control. List of available agents:</span>
+<span class="go">ID: 000, Name: enigma.OpenArmor.net (server), IP: 127.0.0.1, Active/Local</span>
 <span class="go">ID: 002, Name: winhome, IP: 192.168.2.190, Active</span>
 <span class="go">ID: 005, Name: jul, IP: 192.168.2.0/24, Active</span>
 <span class="go">ID: 165, Name: esqueleto2, IP: 192.168.2.99, Active</span>
@@ -233,16 +233,16 @@ all of them, use <a class="reference internal" href="#cmdoption-agent_control-l"
 <div class="section" id="example-2-querying-information-from-agent-002">
 <h3>Example 2: Querying information from agent 002<a class="headerlink" href="#example-2-querying-information-from-agent-002" title="Permalink to this headline">¶</a></h3>
 <p>To query an agent, just use the <a class="reference internal" href="#cmdoption-agent_control-i"><code class="xref std std-option docutils literal notranslate"><span class="pre">agent_control</span> <span class="pre">-i</span></code></a> option followed by the agent id.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/ossec/bin/agent_control -i <span class="m">002</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/OpenArmor/bin/agent_control -i <span class="m">002</span>
 
-<span class="go">OSSEC HIDS agent_control. Agent information:</span>
+<span class="go">OpenArmor HIDS agent_control. Agent information:</span>
 <span class="go">Agent ID: 002</span>
 <span class="go">Agent Name: winhome</span>
 <span class="go">IP address: 192.168.2.190</span>
 <span class="go">Status: Active</span>
 
 <span class="go">Operating system: Microsoft Windows XP Professional (Build 2600)</span>
-<span class="go">Client version: OSSEC HIDS v1.5-SNP-080412</span>
+<span class="go">Client version: OpenArmor HIDS v1.5-SNP-080412</span>
 <span class="go">Last keep alive: Fri Apr 25 14:33:03 2008</span>
 
 <span class="go">Syscheck last started at: Fri Apr 25 05:07:13 2008</span>
@@ -254,9 +254,9 @@ all of them, use <a class="reference internal" href="#cmdoption-agent_control-l"
 <h3>Example 3: Executing syscheck and rootcheck scan immediately<a class="headerlink" href="#example-3-executing-syscheck-and-rootcheck-scan-immediately" title="Permalink to this headline">¶</a></h3>
 <p>To execute the syscheck/rootcheck scan immediately, use the <a class="reference internal" href="#cmdoption-agent_control-r"><code class="xref std std-option docutils literal notranslate"><span class="pre">agent_control</span> <span class="pre">-r</span></code></a>
 option followed by the <a class="reference internal" href="#cmdoption-agent_control-u"><code class="xref std std-option docutils literal notranslate"><span class="pre">agent_control</span> <span class="pre">-u</span></code></a> with the agent id.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/ossec/bin/agent_control -r -u <span class="m">000</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/OpenArmor/bin/agent_control -r -u <span class="m">000</span>
 
-<span class="go">OSSEC HIDS agent_control: Restarting Syscheck/Rootcheck locally.</span>
+<span class="go">OpenArmor HIDS agent_control: Restarting Syscheck/Rootcheck locally.</span>
 </pre></div>
 </div>
 </div>
@@ -275,8 +275,8 @@ option followed by the <a class="reference internal" href="#cmdoption-agent_cont
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

@@ -1,6 +1,6 @@
 .. _gpg::
 
-OSSEC PGP/GPG keys
+OpenArmor PGP/GPG keys
 ------------------
 
 .. toctree::

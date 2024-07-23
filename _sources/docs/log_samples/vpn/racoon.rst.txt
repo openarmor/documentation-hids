@@ -1,7 +1,7 @@
 Log Samples from Racoon VPN
 ---------------------------
 
-*submited by Charles (kef_list <kef_list@ibacom.es>) to the Ossec List.
+*submited by Charles (kef_list <kef_list@ibacom.es>) to the OpenArmor List.
 
 
 

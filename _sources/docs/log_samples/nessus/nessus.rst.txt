@@ -100,12 +100,12 @@ Nessus scan in a web server log
   192.168.100.55 - - [16/Aug/2006:14:29:58 -0300] "GET /xml/ HTTP/1.1" 404 309 "-" "Mozilla/4.75 [en] (X11, U; Nessus)"
   192.168.100.55 - - [16/Aug/2006:14:29:58 -0300] "GET /wwwjoin/ HTTP/1.1" 404 313 "-" "Mozilla/4.75 [en] (X11, U; Nessus)"
 
-How ossec would alert
+How OpenArmor would alert
 ^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block::console
 
-  OSSEC HIDS Notification.
+  OpenArmor HIDS Notification.
   2006 Aug 16 14:29:58
 
   Received From: copacabana->/var/log/apache2/access.log
@@ -127,7 +127,7 @@ How ossec would alert
 
 
 
-  OSSEC HIDS Notification.
+  OpenArmor HIDS Notification.
   2006 Aug 16 14:29:58
 
   Received From: copacabana->/var/log/apache2/access.log
@@ -149,7 +149,7 @@ How ossec would alert
 
 
 
-  OSSEC HIDS Notification.
+  OpenArmor HIDS Notification.
   2006 Aug 16 14:29:58
 
   Received From: copacabana->/var/log/apache2/access.log
@@ -171,7 +171,7 @@ How ossec would alert
 
 
 
-  OSSEC HIDS Notification.
+  OpenArmor HIDS Notification.
   2006 Aug 16 14:29:58
 
   Received From: copacabana->/var/log/apache2/access.log

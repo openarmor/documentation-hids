@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agentless Scripts &#8212; OSSEC</title>
+    <title>Agentless Scripts &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -68,18 +68,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -140,12 +140,12 @@ gtag('config', 'UA-138780766-1');
     <div class="col-md-12">
       
   <ul class="simple">
-<li><p>This page was reproduced here with permission from Jeremy Rossi.  Original post was <a class="reference external" href="http://praetorianprefect.com/archives/2009/11/ossec-agentless-scripts/">Praetorian Prefect: OSSEC: Agentless scripts</a></p></li>
+<li><p>This page was reproduced here with permission from Jeremy Rossi.  Original post was <a class="reference external" href="http://praetorianprefect.com/archives/2009/11/OpenArmor-agentless-scripts/">Praetorian Prefect: OpenArmor: Agentless scripts</a></p></li>
 </ul>
 <div class="section" id="agentless-scripts">
 <h1>Agentless Scripts<a class="headerlink" href="#agentless-scripts" title="Permalink to this headline">¶</a></h1>
-<p>All scripts that work with OSSEC agentless security monitoring use stdout for communication and reporting to the OSSEC server. This makes writing scripts for OSSEC simple as you do not need to do anything more then print or echo to stdout. The format of the output does need to meet the OSSEC specification, but that is a very simple thing to do.</p>
-<p>Before we move to the specification details I need to explain that OSSEC agentless runs to different types of scripts. Namely the following:</p>
+<p>All scripts that work with OpenArmor agentless security monitoring use stdout for communication and reporting to the OpenArmor server. This makes writing scripts for OpenArmor simple as you do not need to do anything more then print or echo to stdout. The format of the output does need to meet the OpenArmor specification, but that is a very simple thing to do.</p>
+<p>Before we move to the specification details I need to explain that OpenArmor agentless runs to different types of scripts. Namely the following:</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 9%" />
@@ -157,17 +157,17 @@ gtag('config', 'UA-138780766-1');
 </thead>
 <tbody>
 <tr class="row-even"><td><p>periodic_diff</p></td>
-<td><p>Scripts output data to the OSSEC agentless process that will then be compared to past runs and if there are differences an OSSEC alert will be generated.</p></td>
+<td><p>Scripts output data to the OpenArmor agentless process that will then be compared to past runs and if there are differences an OpenArmor alert will be generated.</p></td>
 </tr>
 <tr class="row-odd"><td><p>periodic</p></td>
-<td><p>Scripts output controlled messages to the OSSEC agentless process that will then be processed accordingly.</p></td>
+<td><p>Scripts output controlled messages to the OpenArmor agentless process that will then be processed accordingly.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="periodic-diff-specification">
 <h1>Periodic diff Specification<a class="headerlink" href="#periodic-diff-specification" title="Permalink to this headline">¶</a></h1>
-<p>The output for periodic_diff is very simple, any and all output after the agentless command .STORE: now. and before the next OSSEC Command will be stored and compared for differences. This type of script is mostly used for hardware devices such as Cisco IOS, Juniper JunOS, and other products.</p>
+<p>The output for periodic_diff is very simple, any and all output after the agentless command .STORE: now. and before the next OpenArmor Command will be stored and compared for differences. This type of script is mostly used for hardware devices such as Cisco IOS, Juniper JunOS, and other products.</p>
 <p>Scripts that use the periodic_diff make use of the following commands:</p>
 <table class="docutils align-default">
 <colgroup>
@@ -180,18 +180,18 @@ gtag('config', 'UA-138780766-1');
 </thead>
 <tbody>
 <tr class="row-even"><td><p>INFO:</p></td>
-<td><p>The string following INFO will be logged to /var/ossec/logs/ossec.log by OSSEC for debugging.</p></td>
+<td><p>The string following INFO will be logged to /var/OpenArmor/logs/OpenArmor.log by OpenArmor for debugging.</p></td>
 </tr>
 <tr class="row-odd"><td><p>ERROR:</p></td>
-<td><p>Error needs to be reported. The string following this command is forwarded to the OSSEC manager, and the OSSEC process closes down the script.</p></td>
+<td><p>Error needs to be reported. The string following this command is forwarded to the OpenArmor manager, and the OpenArmor process closes down the script.</p></td>
 </tr>
 <tr class="row-even"><td><p>STORE:</p></td>
 <td><p>All the lines that follows this command will be added stored and compared to previous runs of the script.</p></td>
 </tr>
 </tbody>
 </table>
-<p>Here is an example of a periodic_diff script that comes with OSSEC. (Please note with all agentless scripts you must be in the root of the OSSEC install for them to function correctly.)</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">obsd46#( cd /var/ossec &amp;&amp; ./agentless/ssh_pixconfig_diff cisco@172.17.0.1 &#39;show hardware&#39; )</span>
+<p>Here is an example of a periodic_diff script that comes with OpenArmor. (Please note with all agentless scripts you must be in the root of the OpenArmor install for them to function correctly.)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">obsd46#( cd /var/OpenArmor &amp;&amp; ./agentless/ssh_pixconfig_diff cisco@172.17.0.1 &#39;show hardware&#39; )</span>
 <span class="go">spawn ssh -c des cisco@172.17.0.1</span>
 <span class="go">No valid ciphers for protocol version 2 given, using defaults.</span>
 <span class="go">Password:</span>
@@ -274,11 +274,11 @@ gtag('config', 'UA-138780766-1');
 <span class="go">INFO: Finished.</span>
 </pre></div>
 </div>
-<p>In this example above the script would store the contents between <code class="docutils literal notranslate"><span class="pre">STORE:</span> <span class="pre">now</span></code> and <code class="docutils literal notranslate"><span class="pre">INFO:</span> <span class="pre">Finished.</span></code> If this is the first time that OSSEC agentless has run this command no alerts would be generated and the contents would have been saved for later comparisons. If OSSEC agentless has a stored copy from a previous execution it will compare the files and if there are any differences it will generate an alert.</p>
+<p>In this example above the script would store the contents between <code class="docutils literal notranslate"><span class="pre">STORE:</span> <span class="pre">now</span></code> and <code class="docutils literal notranslate"><span class="pre">INFO:</span> <span class="pre">Finished.</span></code> If this is the first time that OpenArmor agentless has run this command no alerts would be generated and the contents would have been saved for later comparisons. If OpenArmor agentless has a stored copy from a previous execution it will compare the files and if there are any differences it will generate an alert.</p>
 </div>
 <div class="section" id="periodic-specification">
 <h1>Periodic Specification<a class="headerlink" href="#periodic-specification" title="Permalink to this headline">¶</a></h1>
-<p>The periodic specification has more options and gives more control to the script writer on what actions OSSEC will take. Once again stdout is used for communication so script writing is easy.</p>
+<p>The periodic specification has more options and gives more control to the script writer on what actions OpenArmor will take. Once again stdout is used for communication so script writing is easy.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 6%" />
@@ -291,16 +291,16 @@ gtag('config', 'UA-138780766-1');
 </thead>
 <tbody>
 <tr class="row-even"><td><p>INFO:</p></td>
-<td><p>The string following INFO will be logged to /var/ossec/logs/ossec.log by OSSEC for debugging.</p></td>
+<td><p>The string following INFO will be logged to /var/OpenArmor/logs/OpenArmor.log by OpenArmor for debugging.</p></td>
 </tr>
 <tr class="row-odd"><td><p>ERROR:</p></td>
-<td><p>Error needs to be reported. The string following this command is forwarded to the OSSEC manager, and the OSSEC process closes down the script.</p></td>
+<td><p>Error needs to be reported. The string following this command is forwarded to the OpenArmor manager, and the OpenArmor process closes down the script.</p></td>
 </tr>
 <tr class="row-even"><td><p>FWD:</p></td>
 <td><p>The string following FWD is a colon delimited list of stats on a given file.</p></td>
 </tr>
 <tr class="row-odd"><td><p>LOG:</p></td>
-<td><p>The string following LOG: will be passed into ossec-analysisd and processed like all other log messages.</p></td>
+<td><p>The string following LOG: will be passed into OpenArmor-analysisd and processed like all other log messages.</p></td>
 </tr>
 </tbody>
 </table>
@@ -323,7 +323,7 @@ gtag('config', 'UA-138780766-1');
 </thead>
 <tbody>
 <tr class="row-even"><td><p>FWD:</p></td>
-<td><p>The OSSEC Command</p></td>
+<td><p>The OpenArmor Command</p></td>
 </tr>
 <tr class="row-odd"><td><p>19419</p></td>
 <td><p>Total size of file, in bytes</p></td>
@@ -348,8 +348,8 @@ gtag('config', 'UA-138780766-1');
 </tr>
 </tbody>
 </table>
-<p>Using this format OSSEC can store the information about a file and then in the future run compare that they are the same. If for some reason they are not the same an alert will be generated. Here is an example of a password change on a linux system:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">OSSEC HIDS Notification.</span>
+<p>Using this format OpenArmor can store the information about a file and then in the future run compare that they are the same. If for some reason they are not the same an alert will be generated. Here is an example of a password change on a linux system:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">OpenArmor HIDS Notification.</span>
 <span class="go">2009 Sep 21 15:19:00</span>
 
 <span class="go">Received From: (ssh_integrity_check_linux) root@172.17.20.20-&gt;syscheck</span>
@@ -379,8 +379,8 @@ gtag('config', 'UA-138780766-1');
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

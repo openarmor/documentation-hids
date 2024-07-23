@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Log monitoring/analysis &#8212; OSSEC</title>
+    <title>Log monitoring/analysis &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -151,15 +151,15 @@ gtag('config', 'UA-138780766-1');
       
   <div class="section" id="log-monitoring-analysis">
 <span id="manual-analysis"></span><h1>Log monitoring/analysis<a class="headerlink" href="#log-monitoring-analysis" title="Permalink to this headline">¶</a></h1>
-<p>Log Analysis (or log inspection) is done inside OSSEC by the logcollector and
+<p>Log Analysis (or log inspection) is done inside OpenArmor by the logcollector and
 analysisd processes. The first one collects the events and the second one
 analyzes (decodes, filters and classifies) them.</p>
-<p>It is done in real time, so as soon as an event is written OSSEC will process
-them. OSSEC can read events from internal log files, from the Windows event
+<p>It is done in real time, so as soon as an event is written OpenArmor will process
+them. OpenArmor can read events from internal log files, from the Windows event
 log and also receive them directly via remote syslog.</p>
 <div class="section" id="what-is-log-analysis">
 <h2>What is log analysis?<a class="headerlink" href="#what-is-log-analysis" title="Permalink to this headline">¶</a></h2>
-<p>Inside OSSEC we call log analysis a LIDS, or log-based intrusion detection. The
+<p>Inside OpenArmor we call log analysis a LIDS, or log-based intrusion detection. The
 goal is to detect attacks, misuse or system errors using the logs.</p>
 <p>LIDS - Log-based intrusion detection or security log analysis are the processes
 or techniques used to detect attacks on a specific network, system or application
@@ -204,13 +204,13 @@ software misuse, policy violations and other forms of inappropriate activities.<
 </div>
 <div class="section" id="configuration-options">
 <h2>Configuration Options<a class="headerlink" href="#configuration-options" title="Permalink to this headline">¶</a></h2>
-<p>These options should be specified locally in each agent’s ossec.conf file or the
+<p>These options should be specified locally in each agent’s OpenArmor.conf file or the
 share agent.conf. Inside the <code class="docutils literal notranslate"><span class="pre">&lt;localfile&gt;</span></code> element, you can have the following
 options.</p>
 </div>
 <div class="section" id="monitoring-logs">
 <h2>Monitoring logs<a class="headerlink" href="#monitoring-logs" title="Permalink to this headline">¶</a></h2>
-<p>With in OSSEC there are two major methods for monitoring logs: file and process.  Each
+<p>With in OpenArmor there are two major methods for monitoring logs: file and process.  Each
 method has its own page and examples.</p>
 <div class="toctree-wrapper compound">
 <ul>
@@ -256,8 +256,8 @@ method has its own page and examples.</p>
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

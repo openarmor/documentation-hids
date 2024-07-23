@@ -1,6 +1,6 @@
 .. _install-mingw: 
 
-This is an example of installing MinGW and required packages for compiling the OSSEC Windows Agent on CentOS 7.
+This is an example of installing MinGW and required packages for compiling the OpenArmor Windows Agent on CentOS 7.
 
 .. code-block:: console
 
@@ -8,7 +8,7 @@ This is an example of installing MinGW and required packages for compiling the O
    # yum makecache fast
    # yum install mingw32-gcc.x86_64
    # yum install mingw32-nsis.x86_64
-   # cd /home/user/ossec-hids-master/src
+   # cd /home/user/OpenArmor-hids-master/src
    # make clean
    # make TARGET=winagent
    # cd win32

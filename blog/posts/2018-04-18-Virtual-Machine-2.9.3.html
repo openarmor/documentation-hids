@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>OSSEC Virtual Appliance 2.9.3 &#8212; OSSEC</title>
+    <title>OpenArmor Virtual Appliance 2.9.3 &#8212; OpenArmor</title>
     
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -61,8 +61,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../index.html"><img src="../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../index.html"><img src="../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.3</b></span>
       </div>
 
@@ -173,15 +173,15 @@
     <ul class="nav nav-list">
       
       
-      <li><a class="reference internal" href="2019-02-05-3.2.0-RELEASE.html">Feb 02 - OSSEC 3.2.0</a></li>
+      <li><a class="reference internal" href="2019-02-05-3.2.0-RELEASE.html">Feb 02 - OpenArmor 3.2.0</a></li>
       
-      <li><a class="reference internal" href="2018-10-19-3.1.0-RELEASE.html">Oct 19 - OSSEC 3.1.0</a></li>
+      <li><a class="reference internal" href="2018-10-19-3.1.0-RELEASE.html">Oct 19 - OpenArmor 3.1.0</a></li>
       
-      <li><a class="reference internal" href="2018-08-01-3.0.0-RELEASE.html">Aug 01 - OSSEC 3.0.0</a></li>
+      <li><a class="reference internal" href="2018-08-01-3.0.0-RELEASE.html">Aug 01 - OpenArmor 3.0.0</a></li>
       
-      <li><a class="reference internal" href="2018-06-20-2.9.4-RELEASE.html">Jun 20 - OSSEC 2.9.4</a></li>
+      <li><a class="reference internal" href="2018-06-20-2.9.4-RELEASE.html">Jun 20 - OpenArmor 2.9.4</a></li>
       
-      <li><a class="reference internal" href="2018-05-15-ossec-3-repo.html">May 15 - OSSEC HIDS 3.0 Snapshots</a></li>
+      <li><a class="reference internal" href="2018-05-15-OpenArmor-3-repo.html">May 15 - OpenArmor HIDS 3.0 Snapshots</a></li>
       
     </ul>
   </li>
@@ -256,17 +256,17 @@
       </div>
     <div class="col-md-9">
       
-  <div class="section" id="ossec-virtual-appliance-2-9-3">
-<h1>OSSEC Virtual Appliance 2.9.3<a class="headerlink" href="#ossec-virtual-appliance-2-9-3" title="Permalink to this headline">¶</a></h1>
-<p>Longtime OSSEC Contributor Vic Hargrave has released an update to the OSSEC Virtual appliance.</p>
+  <div class="section" id="OpenArmor-virtual-appliance-2-9-3">
+<h1>OpenArmor Virtual Appliance 2.9.3<a class="headerlink" href="#OpenArmor-virtual-appliance-2-9-3" title="Permalink to this headline">¶</a></h1>
+<p>Longtime OpenArmor Contributor Vic Hargrave has released an update to the OpenArmor Virtual appliance.</p>
 <p><strong>Download</strong></p>
-<p><a class="reference external" href="https://ossec.github.io/downloads.html">https://ossec.github.io/downloads.html</a></p>
+<p><a class="reference external" href="https://OpenArmor.github.io/downloads.html">https://OpenArmor.github.io/downloads.html</a></p>
 <p><strong>README</strong></p>
 <ol class="arabic">
 <li><p class="first">This virtual appliance contains the following facilities:</p>
 <ul class="simple">
 <li>CentOS 7.4</li>
-<li>OSSEC 2.9.3</li>
+<li>OpenArmor 2.9.3</li>
 <li>Elasticsearch-Logstash-Kibana (ELK) 6.1.1</li>
 <li>Cerebro 0.7.2</li>
 </ul>
@@ -275,25 +275,25 @@
 We recommend using VirtualBox which can import the OVA image directly.  We used VirtualBox
 to create this appliance and the OVA.</p>
 </li>
-<li><p class="first">To unpack the appliance, unzip the package with gunzip then import the ossec-vm-2.9.3.ova
+<li><p class="first">To unpack the appliance, unzip the package with gunzip then import the OpenArmor-vm-2.9.3.ova
 into your virtualization application.  We recommend VirtualBox for running appliance.</p>
 </li>
 <li><p class="first">The appliance network interface is configured to use NAT mode.  To use this appliance as a
-regular OSSEC server you must configure the network interface on the appliance to use bridged
+regular OpenArmor server you must configure the network interface on the appliance to use bridged
 mode and set a static IP address on the CentOS guest. See this UnixCraft article on how to do
 this <a class="reference external" href="https://www.cyberciti.biz/faq/howto-setting-rhel7-centos-7-static-ip-configuration/">https://www.cyberciti.biz/faq/howto-setting-rhel7-centos-7-static-ip-configuration/</a>.</p>
 </li>
-<li><p class="first">The appliance features a Kibana dashboard to visualize OSSEC alerts. Once in bridged mode,
+<li><p class="first">The appliance features a Kibana dashboard to visualize OpenArmor alerts. Once in bridged mode,
 you can access Kibana from a browser externally with the static IP of the appliance using
 port 5601:</p>
 <blockquote>
 <div><p><a class="reference external" href="http:/">http:/</a>/&lt;appliance-static-ip&gt;:5601</p>
 </div></blockquote>
-<p>Click on &#8220;Dashboard&#8221; then select &#8220;OSSEC Dashboard&#8221; to display a dashboard that has 3 panels</p>
+<p>Click on &#8220;Dashboard&#8221; then select &#8220;OpenArmor Dashboard&#8221; to display a dashboard that has 3 panels</p>
 <ul class="simple">
-<li>OSSEC Alerts Over Time: Bar graph displaying the number of events per unit time.</li>
+<li>OpenArmor Alerts Over Time: Bar graph displaying the number of events per unit time.</li>
 <li>Top Alerts Per Agent: Pie chart showing the top 20 alerts per each of the top 20 most active agents.</li>
-<li>OSSEC Alert Data: Table displaying individual alerts and their corresponding fields/values.</li>
+<li>OpenArmor Alert Data: Table displaying individual alerts and their corresponding fields/values.</li>
 </ul>
 </li>
 <li><p class="first">You can use Cerebro (formally Kopf) to manage the Elasticsearch instance on the appliance by
@@ -304,25 +304,25 @@ opening this URL in a browser:</p>
 <p>Enter the Elasticsearch URL, <a class="reference external" href="http://">http://</a>/&lt;vm-static-ip&gt;:9200, in the node address text box on the
 Cerebro startup screen then click on the &#8220;Connect&#8221; button.</p>
 </li>
-<li><p class="first">Two CentOS users are defined: &#8220;ossec&#8221; and &#8220;root&#8221;.  The root password is &#8220;_0ssec_&#8221;.  The &#8220;ossec&#8221;
+<li><p class="first">Two CentOS users are defined: &#8220;OpenArmor&#8221; and &#8220;root&#8221;.  The root password is &#8220;_0ssec_&#8221;.  The &#8220;OpenArmor&#8221;
 user does not have a password.  When you start up the VM and get to the login console, just hit
-ENTER if you want to login as &#8220;ossec&#8221;.</p>
+ENTER if you want to login as &#8220;OpenArmor&#8221;.</p>
 </li>
-<li><p class="first">OSSEC and ELK were installed with yum.  To upgrade either just run yum with the &#8220;upgrade&#8221; option:</p>
+<li><p class="first">OpenArmor and ELK were installed with yum.  To upgrade either just run yum with the &#8220;upgrade&#8221; option:</p>
 <blockquote>
-<div><p>yum upgrade ossec-hids -y
+<div><p>yum upgrade OpenArmor-hids -y
 yum upgrade &lt;elasticsearch|logstash|kibana&gt; -y</p>
 </div></blockquote>
 </li>
-<li><p class="first">OSSEC is installed in /var/ossec.</p>
+<li><p class="first">OpenArmor is installed in /var/OpenArmor.</p>
 </li>
 <li><p class="first">ELK and Cerebro components are installed in /usr/share/&lt;elasticsearch|logstash|kibana|cerebro&gt;.</p>
 </li>
-<li><p class="first">The Logstash pipeline ingestion file for OSSEC is /etc/logstash/conf.d/ossec.conf.</p>
+<li><p class="first">The Logstash pipeline ingestion file for OpenArmor is /etc/logstash/conf.d/OpenArmor.conf.</p>
 </li>
-<li><p class="first">You can start and stop OSSEC, ELK, and Cerebro services with the systemctl command:</p>
+<li><p class="first">You can start and stop OpenArmor, ELK, and Cerebro services with the systemctl command:</p>
 <blockquote>
-<div><p>systemctl &lt;start|stop&gt; &lt;ossec-hids|elasticsearch|logstash|kibana|cerebro&gt;.service</p>
+<div><p>systemctl &lt;start|stop&gt; &lt;OpenArmor-hids|elasticsearch|logstash|kibana|cerebro&gt;.service</p>
 </div></blockquote>
 </li>
 </ol>
@@ -337,9 +337,9 @@ yum upgrade &lt;elasticsearch|logstash|kibana&gt; -y</p>
   <span style="float: left;">
   
   
-  <a href="2018-04-09-OSSECON-2018.html">
+  <a href="2018-04-09-OpenArmorON-2018.html">
     <i class="fa fa-arrow-circle-left"></i>
-    OSSEC CON 2018
+    OpenArmor CON 2018
   </a>
   
   </span>
@@ -370,8 +370,8 @@ yum upgrade &lt;elasticsearch|logstash|kibana&gt; -y</p>
       
     </p>
     <p>
-        &copy; Copyright 2010-2019, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2019, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.2 - 
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>

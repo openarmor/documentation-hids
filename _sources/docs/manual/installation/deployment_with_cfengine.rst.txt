@@ -1,7 +1,7 @@
 Integration and Deployment with cfengine
 -----------------------------------------
 
-I recently required a larger deployment of OSSEC-HIDS without too much manual intervention.  Almost every OSSEC-HIDS tutorial I've across says this is possible, yet I was unable to find a tutorial demonstrating it.   So, in the spirit of open source, I'm contributing a brief overview.
+I recently required a larger deployment of OpenArmor-HIDS without too much manual intervention.  Almost every OpenArmor-HIDS tutorial I've across says this is possible, yet I was unable to find a tutorial demonstrating it.   So, in the spirit of open source, I'm contributing a brief overview.
 
 Prerequisites:
 ^^^^^^^^^^^^^^
@@ -11,7 +11,7 @@ In order to facilitate the key request, I chose to generate a file with the rele
 Configuring the cfengine clients:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-I added a group to my ``cfagent.conf`` for my ossec server named: ``hg_ossec_server`` (host group). I then created an ``ossec-hids.cf`` containing the following:
+I added a group to my ``cfagent.conf`` for my OpenArmor server named: ``hg_OpenArmor_server`` (host group). I then created an ``OpenArmor-hids.cf`` containing the following:
 
 * control
 
@@ -21,105 +21,105 @@ My control sections sets up the variables I'll be using in the rest of the file.
 
   control:
     any::
-      ossec_key_dir = (/usr/local/cfkeys/ossec)
-      ossec_req_dir = ( $(util_updir)/ossec )
+      OpenArmor_key_dir = (/usr/local/cfkeys/OpenArmor)
+      OpenArmor_req_dir = ( $(util_updir)/OpenArmor )
 
 * package
 
-I'm using yum to automatically install OSSEC-HIDS from my local RPM Repository.
+I'm using yum to automatically install OpenArmor-HIDS from my local RPM Repository.
 
 .. code-block:: console
 
   packages:
-    !hg_ossec_server::
-        ossec-hids                  action=install
-        ossec-hids-client           action=install
+    !hg_OpenArmor_server::
+        OpenArmor-hids                  action=install
+        OpenArmor-hids-client           action=install
 
 * links
 
-The Links section just links ossec-agent.conf to ossec.conf on the clients.
+The Links section just links OpenArmor-agent.conf to OpenArmor.conf on the clients.
 
 .. code-block:: console
 
   links:
-    !hg_ossec_server::
-      /var/ossec/etc/ossec.conf -> /var/ossec/etc/ossec-agent.conf
+    !hg_OpenArmor_server::
+      /var/OpenArmor/etc/OpenArmor.conf -> /var/OpenArmor/etc/OpenArmor-agent.conf
 
 * copy
 
-I manage the ``ossec-agent.conf`` in cfengine, because my cfengine configurations are all stored in a subversion repository.  The first stanza in copy just pushes the most recent copy of the ``ossec-agent.conf`` file to my network, setting the dynamic class ``dc_restart_ossec`` if the copy occurs.
+I manage the ``OpenArmor-agent.conf`` in cfengine, because my cfengine configurations are all stored in a subversion repository.  The first stanza in copy just pushes the most recent copy of the ``OpenArmor-agent.conf`` file to my network, setting the dynamic class ``dc_restart_OpenArmor`` if the copy occurs.
 
 .. code-block:: console
 
   copy:
-    !hg_ossec_server::
-        $(distribute)/ossec-agent.conf      dest=/var/ossec/etc/ossec-agent.conf
+    !hg_OpenArmor_server::
+        $(distribute)/OpenArmor-agent.conf      dest=/var/OpenArmor/etc/OpenArmor-agent.conf
                                             server=$(policyhost)
                                             mode=640
-                                            group=ossec
+                                            group=OpenArmor
                                             type=sum
-                                            define=dc_restart_ossec
+                                            define=dc_restart_OpenArmor
 
-This second stanza in the ``copy`` section copies a file from our ossec key directory to the client.keys file on the client.  This copy only happens if the two files are different.  It also sets ``dc_restart_ossec`` if the copy occurs.
+This second stanza in the ``copy`` section copies a file from our OpenArmor key directory to the client.keys file on the client.  This copy only happens if the two files are different.  It also sets ``dc_restart_OpenArmor`` if the copy occurs.
 
 .. code-block:: console
 
-        $(ossec_key_dir)/$(host).ossec    dest=/var/ossec/etc/client.keys
+        $(OpenArmor_key_dir)/$(host).OpenArmor    dest=/var/OpenArmor/etc/client.keys
                                           server=$(policyhost)
                                           mode=640
-                                          group=ossec
+                                          group=OpenArmor
                                           type=sum
-                                          define=dc_restart_ossec
+                                          define=dc_restart_OpenArmor
 
 * processes
 
-My processes block checks to ensure that OSSEC-HIDS is running the correct daemons.
+My processes block checks to ensure that OpenArmor-HIDS is running the correct daemons.
 
 .. code-block:: console
 
   processes:
-    !hg_ossec_server::
-        "ossec-agentd" elsedefine=dc_restart_ossec
-    ``hg_ossec_server``::
-        "ossec-remoted" elsedefine=dc_restart_ossec
+    !hg_OpenArmor_server::
+        "OpenArmor-agentd" elsedefine=dc_restart_OpenArmor
+    ``hg_OpenArmor_server``::
+        "OpenArmor-remoted" elsedefine=dc_restart_OpenArmor
 
 * shellcommands
 
-This section is where the certificate request occurs through some devious mechanisms I designed for no other reason than to amuse myself.  Hopefully, it amuses others as well.  The first thing it does is issue a command that echo's the client eth0 ipv4 address to a file named ''host.ossec'' in the ossec request directory I defined.   The ``hg_ossec_server`` class will use this to generate a cert to place in the aforementioned copy block.
+This section is where the certificate request occurs through some devious mechanisms I designed for no other reason than to amuse myself.  Hopefully, it amuses others as well.  The first thing it does is issue a command that echo's the client eth0 ipv4 address to a file named ''host.OpenArmor'' in the OpenArmor request directory I defined.   The ``hg_OpenArmor_server`` class will use this to generate a cert to place in the aforementioned copy block.
 
 .. code-block:: console
 
   shellcommands:
-    !hg_ossec_server::
-        "/usr/bin/ssh util@$(policyhost) -i $(util_privkey) 'echo $(global.ipv4[eth0]) > $(ossec_req_dir)/$(host).ossec'"
+    !hg_OpenArmor_server::
+        "/usr/bin/ssh util@$(policyhost) -i $(util_privkey) 'echo $(global.ipv4[eth0]) > $(OpenArmor_req_dir)/$(host).OpenArmor'"
 
-The last statement checks to see if anyone defined ``dc_restart_ossec``, and restart ossec-hids if it was defined.
+The last statement checks to see if anyone defined ``dc_restart_OpenArmor``, and restart OpenArmor-hids if it was defined.
 
 .. code-block:: console
 
-    dc_restart_ossec::
-        "/sbin/service ossec-hids restart"
+    dc_restart_OpenArmor::
+        "/sbin/service OpenArmor-hids restart"
 
 Ok, so who cares?
 ^^^^^^^^^^^^^^^^^
 
-Well, now, our clients are setup to install, configure, and run OSSEC-HIDS as well as issuing a request for their certificate.  However, the certificate directory on the server is empty and so none of them will actually run.  This is a problem.
+Well, now, our clients are setup to install, configure, and run OpenArmor-HIDS as well as issuing a request for their certificate.  However, the certificate directory on the server is empty and so none of them will actually run.  This is a problem.
 
-Configuring the OSSEC Server w/cfengine
+Configuring the OpenArmor Server w/cfengine
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The cfengine part of this was a pain for me because of the order of the actions I had defined and the extent of work I had done incorrectly in the past.  I could have figured out an interesting way to handle this, but I didn't want to scrap my entire cfengine config and start from scratch.  So I created a perl script that allowed me to use the ``manage_agents`` script without interaction.  It does require the ``Expect.pm`` & ``Regexp::Common`` from CPAN, but is otherwise stock Perl 5.8.x.  I also wrote a shell script wrapper to handle running the perl script and culminating the results.  I saved these two scripts in ``/root/security``, so if you put them elsewhere, make sure to update the shell script wrapper.
 
-The scripts for managing keys can be downloaded `here <http://db0.us/~brad/cfengine-ossec-scripts.tar.gz>`_
+The scripts for managing keys can be downloaded `here <http://db0.us/~brad/cfengine-OpenArmor-scripts.tar.gz>`_
 
 The cfengine bit was really simple, it just had to call my wrapper shell script and set the class.  I did this with a control block:
 
 .. code-block:: console
 
   control:
-   hg_ossec_server::
-     AddClasses = ( ExecResult(/root/security/ossec-scan.sh) )
+   hg_OpenArmor_server::
+     AddClasses = ( ExecResult(/root/security/OpenArmor-scan.sh) )
 
-The combination of the two scripts and this one line in the cfengine configuration handle creating, removing, and exporting the keys, as well as configuring the ``dc_restart_ossec`` class if there have been changes.
+The combination of the two scripts and this one line in the cfengine configuration handle creating, removing, and exporting the keys, as well as configuring the ``dc_restart_OpenArmor`` class if there have been changes.
 
 

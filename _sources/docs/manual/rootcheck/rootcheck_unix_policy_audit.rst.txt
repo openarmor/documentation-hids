@@ -1,11 +1,11 @@
 .. _rootcheck_unix_policy_audit:
 
 
-Understanding the Unix policy auditing on OSSEC
+Understanding the Unix policy auditing on OpenArmor
 ===============================================
 
-OSSEC's policy monitor allows you to verify that all your systems conform to a set of policies regarding configuration settings and applications usage. 
-They are configured centrally on the ossec server 
+OpenArmor's policy monitor allows you to verify that all your systems conform to a set of policies regarding configuration settings and applications usage. 
+They are configured centrally on the OpenArmor server 
 and pushed down to the agents. It also checks if a system in in compliance with the CIS Security Benchmarks
 and VMware security hardening guidelines.
 
@@ -58,4 +58,4 @@ To control the policy database, use the '''rootcheck_control''' tool.
 
 
 
-This page was originally authored by Daniel Cid for the OSSEC wiki.
+This page was originally authored by Daniel Cid for the OpenArmor wiki.

@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detecting portscans with OSSEC and iplog &#8212; OSSEC</title>
+    <title>Detecting portscans with OpenArmor and iplog &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -68,18 +68,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -139,8 +139,8 @@ gtag('config', 'UA-138780766-1');
   <div class="row">
     <div class="col-md-12">
       
-  <div class="section" id="detecting-portscans-with-ossec-and-iplog">
-<h1>Detecting portscans with OSSEC and iplog<a class="headerlink" href="#detecting-portscans-with-ossec-and-iplog" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="detecting-portscans-with-OpenArmor-and-iplog">
+<h1>Detecting portscans with OpenArmor and iplog<a class="headerlink" href="#detecting-portscans-with-OpenArmor-and-iplog" title="Permalink to this headline">¶</a></h1>
 <p>iplog is a TCP/IP traffic logger. Currently, it is capable of logging TCP, UDP, and ICMP traffic. iplog is able to detect TCP port scans, TCP null scans, FIN scans, UDP and ICMP “smurf” attacks, bogus TCP flags, TCP SYN scans, TCP “Xmas” scans, ICMP ping floods, UDP scans, and IP fragment attacks. iplog is able to run in promiscuous mode and monitor traffic to all hosts on a network. iplog uses libpcap to read data from the network and can be ported to any system that supports pthreads and on which libpcap will function.</p>
 <div class="section" id="iplog-conf">
 <h2>iplog.conf:<a class="headerlink" href="#iplog-conf" title="Permalink to this headline">¶</a></h2>
@@ -370,8 +370,8 @@ Nov 14 19:11:29 ICMP: ping flood mode expired for 10.10.150.1 - received a total
 </pre></div>
 </div>
 </div>
-<div class="section" id="ossec-hids-iplog-sensor-implementation">
-<h2>OSSEC (HIDS) + iplog (sensor) implementation:<a class="headerlink" href="#ossec-hids-iplog-sensor-implementation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="OpenArmor-hids-iplog-sensor-implementation">
+<h2>OpenArmor (HIDS) + iplog (sensor) implementation:<a class="headerlink" href="#OpenArmor-hids-iplog-sensor-implementation" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Work in progress</p></li>
 <li><p>TODO: improve regex, decoders and rules. p0f complementation?</p></li>
@@ -471,9 +471,9 @@ Nov 14 18:30:30 TCP: Xmas scan detected [ports 636,256,554,389,1723,53,443,21,33
 <div class="section" id="iplog-rules">
 <h2>iplog rules:<a class="headerlink" href="#iplog-rules" title="Permalink to this headline">¶</a></h2>
 <p>Only for working decoders:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd /var/ossec/rules</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd /var/OpenArmor/rules</span>
 <span class="go">touch iplog_rules.xml</span>
-<span class="go">chown root:ossec iplog_rules.xml</span>
+<span class="go">chown root:OpenArmor iplog_rules.xml</span>
 <span class="go">chmod 550 iplog_rules.xml</span>
 </pre></div>
 </div>
@@ -486,9 +486,9 @@ Nov 14 18:30:30 TCP: Xmas scan detected [ports 636,256,554,389,1723,53,443,21,33
 <span class="go">&lt;/group&gt;</span>
 </pre></div>
 </div>
-<p>ossec.conf’</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd /var/ossec/etc</span>
-<span class="go">vi  ossec.conf</span>
+<p>OpenArmor.conf’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd /var/OpenArmor/etc</span>
+<span class="go">vi  OpenArmor.conf</span>
 </pre></div>
 </div>
 <p>include in the correct place:</p>
@@ -507,15 +507,15 @@ Nov 14 18:30:30 TCP: Xmas scan detected [ports 636,256,554,389,1723,53,443,21,33
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">iplog -d</span>
 </pre></div>
 </div>
-<p>restart ossec
+<p>restart OpenArmor
 .. code-block:: console</p>
 <blockquote>
-<div><p>/var/ossec/bin/ossec-control restart</p>
+<div><p>/var/OpenArmor/bin/OpenArmor-control restart</p>
 </div></blockquote>
 <p>test with nmap (see before)</p>
 </div>
-<div class="section" id="ossec-active-response">
-<h2>OSSEC active-response:<a class="headerlink" href="#ossec-active-response" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="OpenArmor-active-response">
+<h2>OpenArmor active-response:<a class="headerlink" href="#OpenArmor-active-response" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="firewall-drop-freebsd-ipfw">
 <h2>Firewall Drop: FreeBSD-IPFW:<a class="headerlink" href="#firewall-drop-freebsd-ipfw" title="Permalink to this headline">¶</a></h2>
@@ -524,7 +524,7 @@ Nov 14 18:30:30 TCP: Xmas scan detected [ports 636,256,554,389,1723,53,443,21,33
 <span class="go">/sbin/ipfw add 00001 deny ip from any to table\(00002\)</span>
 </pre></div>
 </div>
-<p>Change  /var/ossec/active-response/bin/firewall-drop.sh to adjust to the red lines</p>
+<p>Change  /var/OpenArmor/active-response/bin/firewall-drop.sh to adjust to the red lines</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span>!/bin/sh
 <span class="gp"># </span>Adds an IP to the IPFW drop list.
 <span class="gp"># </span>Only works with IPFW.
@@ -532,7 +532,7 @@ Nov 14 18:30:30 TCP: Xmas scan detected [ports 636,256,554,389,1723,53,443,21,33
 <span class="gp"># </span>please change it here.
 <span class="gp"># </span>Expect: srcip
 <span class="gp"># </span>Author: Rafael Capovilla - under @ <span class="o">(</span> at <span class="o">)</span> underlinux.com.br
-<span class="gp"># </span>Author: Daniel B. Cid - dcid @ <span class="o">(</span> at <span class="o">)</span> ossec.net
+<span class="gp"># </span>Author: Daniel B. Cid - dcid @ <span class="o">(</span> at <span class="o">)</span> OpenArmor.net
 <span class="gp"># </span>Last modified: May <span class="m">07</span>, <span class="m">2006</span>
 <span class="go">UNAME=`uname`</span>
 <span class="go">IPFW=&quot;/sbin/ipfw&quot;</span>
@@ -546,7 +546,7 @@ Nov 14 18:30:30 TCP: Xmas scan detected [ports 636,256,554,389,1723,53,443,21,33
 <span class="go">cd $LOCAL</span>
 <span class="go">cd ../</span>
 <span class="go">PWD=`pwd`</span>
-<span class="go">echo &quot;`date` $0 $1 $2 $3&quot; &gt;&gt; ${PWD}/ossec-hids-responses.log</span>
+<span class="go">echo &quot;`date` $0 $1 $2 $3&quot; &gt;&gt; ${PWD}/OpenArmor-hids-responses.log</span>
 <span class="gp"># </span>Checking <span class="k">for</span> an IP
 <span class="go">if [ &quot;x${IP}&quot; = &quot;x&quot; ]; then</span>
 <span class="go">  echo &quot;$0: &lt;action&gt; &lt;username&gt; &lt;ip&gt;&quot;</span>
@@ -579,7 +579,7 @@ Nov 14 18:30:30 TCP: Xmas scan detected [ports 636,256,554,389,1723,53,443,21,33
 <span class="go">exit 1;</span>
 </pre></div>
 </div>
-<p>Include in <code class="docutils literal notranslate"><span class="pre">/var/ossec/etc/ossec.conf</span></code>:</p>
+<p>Include in <code class="docutils literal notranslate"><span class="pre">/var/OpenArmor/etc/OpenArmor.conf</span></code>:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;command&gt;</span>
 <span class="go">  &lt;name&gt;firewall-drop&lt;/name&gt;</span>
 <span class="go">  &lt;executable&gt;firewall-drop.sh&lt;/executable&gt;</span>
@@ -594,11 +594,11 @@ Nov 14 18:30:30 TCP: Xmas scan detected [ports 636,256,554,389,1723,53,443,21,33
 <span class="go">&lt;/active-response&gt;</span>
 </pre></div>
 </div>
-<p>restart ossec:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/var/ossec/bin/ossec-control restart</span>
+<p>restart OpenArmor:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/var/OpenArmor/bin/OpenArmor-control restart</span>
 </pre></div>
 </div>
-<p>Scan your machine (caution OSSEC will block the scanner IP) from online scanner server like: <a class="reference external" href="http://www.derkeiler.com/Service/PortScan/">http://www.derkeiler.com/Service/PortScan/</a>, or from a remote machine with:</p>
+<p>Scan your machine (caution OpenArmor will block the scanner IP) from online scanner server like: <a class="reference external" href="http://www.derkeiler.com/Service/PortScan/">http://www.derkeiler.com/Service/PortScan/</a>, or from a remote machine with:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">nmap -sT -PI -PT 1.2.3.4</span>
 </pre></div>
 </div>
@@ -607,7 +607,7 @@ Nov 14 18:30:30 TCP: Xmas scan detected [ports 636,256,554,389,1723,53,443,21,33
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">tail -f /var/ossec/active-response/ossec-hids-responses.log</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">tail -f /var/OpenArmor/active-response/OpenArmor-hids-responses.log</span>
 </pre></div>
 </div>
 <p>if you want to flush the banned IPs in the table</p>
@@ -660,8 +660,8 @@ Nov 14 18:30:30 TCP: Xmas scan detected [ports 636,256,554,389,1723,53,443,21,33
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

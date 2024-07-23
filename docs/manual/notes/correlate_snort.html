@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Correlating multiple snort IDS with ossec &#8212; OSSEC</title>
+    <title>Correlating multiple snort IDS with OpenArmor &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -68,18 +68,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -139,15 +139,15 @@ gtag('config', 'UA-138780766-1');
   <div class="row">
     <div class="col-md-12">
       
-  <div class="section" id="correlating-multiple-snort-ids-with-ossec">
-<h1>Correlating multiple snort IDS with ossec<a class="headerlink" href="#correlating-multiple-snort-ids-with-ossec" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="correlating-multiple-snort-ids-with-OpenArmor">
+<h1>Correlating multiple snort IDS with OpenArmor<a class="headerlink" href="#correlating-multiple-snort-ids-with-OpenArmor" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><p>Taken from <a class="reference external" href="http://dcid.me/2006/12/correlating-multiple-snort-ids-with-ossec/">OSSEC blog</a> by <a class="reference external" href="http://www.dcid.me/">Daniel Cid</a></p></li>
+<li><p>Taken from <a class="reference external" href="http://dcid.me/2006/12/correlating-multiple-snort-ids-with-OpenArmor/">OpenArmor blog</a> by <a class="reference external" href="http://www.dcid.me/">Daniel Cid</a></p></li>
 </ul>
-<p>I was asked recently what is the best way to correlate multiple <a class="reference external" href="http://www.snort.org">snort</a> events with OSSEC.
-The idea would be to generate an ossec alert (by e-mail and possible an active response)
+<p>I was asked recently what is the best way to correlate multiple <a class="reference external" href="http://www.snort.org">snort</a> events with OpenArmor.
+The idea would be to generate an OpenArmor alert (by e-mail and possible an active response)
 if a specific number of snort rules are fired from the same source IP address (in any order)..</p>
-<p>The easiest way to solve this is by creating a local ossec rule (inside <code class="docutils literal notranslate"><span class="pre">local_rules.xml</span></code>) to match
+<p>The easiest way to solve this is by creating a local OpenArmor rule (inside <code class="docutils literal notranslate"><span class="pre">local_rules.xml</span></code>) to match
 if any of the desired snort signatures are fired:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;rule id=&quot;100015&quot; level=&quot;6&quot;&gt;</span>
 <span class="go">  &lt;if_sid&gt;20101&lt;/if_sid&gt;</span>
@@ -159,7 +159,7 @@ if any of the desired snort signatures are fired:</p>
 </div>
 <p>Note that <code class="docutils literal notranslate"><span class="pre">1:xx</span></code>, <code class="docutils literal notranslate"><span class="pre">1:yy</span></code> are the snort ids that you are interested to watch. We use the <code class="docutils literal notranslate"><span class="pre">&lt;if_sid&gt;</span></code> to
 make sure that this rule is only tested if it is an IDS event (see rule 20101).</p>
-<p>Now, we create another ossec rule with a higher severity that will only be fired if the above rule
+<p>Now, we create another OpenArmor rule with a higher severity that will only be fired if the above rule
 (100015) is generated at least 4 times from the same source ip within 3 minutes (180 seconds):</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;rule id=&quot;100016&quot; frequency=&quot;4&quot; level=&quot;10&quot; timeframe=&quot;180&quot;&gt;</span>
 <span class="go">  &lt;if_matched_sid&gt;100015&lt;/if_matched_sid&gt;</span>
@@ -183,8 +183,8 @@ make sure that this rule is only tested if it is an IDS event (see rule 20101).<
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

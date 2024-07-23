@@ -1,17 +1,17 @@
 How to start helping with the project?
 --------------------------------------
 
-OSSEC is maintained by a small group of people from around the world. If you wish to
+OpenArmor is maintained by a small group of people from around the world. If you wish to
 get involved, there are multiple ways to do so.
 
 
-Testing OSSEC:
+Testing OpenArmor:
 ^^^^^^^^^^^^^^
 
-The easiest way of getting involved with OSSEC is by helping testing it.
+The easiest way of getting involved with OpenArmor is by helping testing it.
 
 
-Translating OSSEC:
+Translating OpenArmor:
 ^^^^^^^^^^^^^^^^^^
 
 .. warning:
@@ -19,10 +19,10 @@ Translating OSSEC:
    Translations have not been worked on for a long time.
    They are most likely out of date, and possibly incorrect at this point in time.
 
-Translating OSSEC is easy. We already support many languages, but new ones are more than welcome and fixes
+Translating OpenArmor is easy. We already support many languages, but new ones are more than welcome and fixes
 for the ones we have already too.
 
-After you download OSSEC and untar/ungzip it, you will find the messages to be translated inside the etc/templates 
+After you download OpenArmor and untar/ungzip it, you will find the messages to be translated inside the etc/templates 
 directory:
 
 .. code-block:: console
@@ -44,20 +44,20 @@ If you want to support a new language, just copy the English one to your country
    $ cp -pr en br
    $ vim br/messages.txt
 
-Documenting OSSEC:
+Documenting OpenArmor:
 ^^^^^^^^^^^^^^^^^^
 
-The OSSEC documentation is hosted in the `ossec-docs <https://github.com/ossec/ossec-docs>`_ github repository.
+The OpenArmor documentation is hosted in the `OpenArmor-docs <https://github.com/OpenArmor/OpenArmor-docs>`_ github repository.
 Issues and pull requests can be submitted on the site.
-Emails containing details of issues can also be sent to the `ossec-list <https://groups.google.com/forum/#!forum/ossec-list>`_ google group.
+Emails containing details of issues can also be sent to the `OpenArmor-list <https://groups.google.com/forum/#!forum/OpenArmor-list>`_ google group.
 
 
-Development of OSSEC:
+Development of OpenArmor:
 ^^^^^^^^^^^^^^^^^^^^^
 
-The OSSEC code is hosted in the `ossec-hids <https://github.com/ossec/ossec-hids>`_ github repository.
+The OpenArmor code is hosted in the `OpenArmor-hids <https://github.com/OpenArmor/OpenArmor-hids>`_ github repository.
 Issues and pull requests can be submited on the site.
 
-Contributing to the development of OSSEC's code base will most likely require knwoledge of **C**,
+Contributing to the development of OpenArmor's code base will most likely require knwoledge of **C**,
 and will take time learning how the internals work.
 

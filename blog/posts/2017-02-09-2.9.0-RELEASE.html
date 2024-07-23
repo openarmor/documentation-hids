@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>OSSEC 2.9.0 &#8212; OSSEC</title>
+    <title>OpenArmor 2.9.0 &#8212; OpenArmor</title>
     
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -61,8 +61,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../index.html"><img src="../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../index.html"><img src="../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.3</b></span>
       </div>
 
@@ -173,15 +173,15 @@
     <ul class="nav nav-list">
       
       
-      <li><a class="reference internal" href="2019-02-05-3.2.0-RELEASE.html">Feb 02 - OSSEC 3.2.0</a></li>
+      <li><a class="reference internal" href="2019-02-05-3.2.0-RELEASE.html">Feb 02 - OpenArmor 3.2.0</a></li>
       
-      <li><a class="reference internal" href="2018-10-19-3.1.0-RELEASE.html">Oct 19 - OSSEC 3.1.0</a></li>
+      <li><a class="reference internal" href="2018-10-19-3.1.0-RELEASE.html">Oct 19 - OpenArmor 3.1.0</a></li>
       
-      <li><a class="reference internal" href="2018-08-01-3.0.0-RELEASE.html">Aug 01 - OSSEC 3.0.0</a></li>
+      <li><a class="reference internal" href="2018-08-01-3.0.0-RELEASE.html">Aug 01 - OpenArmor 3.0.0</a></li>
       
-      <li><a class="reference internal" href="2018-06-20-2.9.4-RELEASE.html">Jun 20 - OSSEC 2.9.4</a></li>
+      <li><a class="reference internal" href="2018-06-20-2.9.4-RELEASE.html">Jun 20 - OpenArmor 2.9.4</a></li>
       
-      <li><a class="reference internal" href="2018-05-15-ossec-3-repo.html">May 15 - OSSEC HIDS 3.0 Snapshots</a></li>
+      <li><a class="reference internal" href="2018-05-15-OpenArmor-3-repo.html">May 15 - OpenArmor HIDS 3.0 Snapshots</a></li>
       
     </ul>
   </li>
@@ -256,8 +256,8 @@
       </div>
     <div class="col-md-9">
       
-  <div class="section" id="ossec-2-9-0">
-<h1>OSSEC 2.9.0<a class="headerlink" href="#ossec-2-9-0" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="OpenArmor-2-9-0">
+<h1>OpenArmor 2.9.0<a class="headerlink" href="#OpenArmor-2-9-0" title="Permalink to this headline">¶</a></h1>
 <p><strong>Changelog</strong></p>
 <p><strong>Release Maintainers</strong></p>
 <p>Dan Parriott</p>
@@ -269,12 +269,12 @@
 <li>Report file deletion, even without realtime enabled</li>
 <li>Report modifications made on directories</li>
 <li>Corrects bug so that files created between the first and second scan are reported as new files</li>
-<li>Corrects bug that made changes reverting a file to the state it was in when ossec started unreported</li>
+<li>Corrects bug that made changes reverting a file to the state it was in when OpenArmor started unreported</li>
 <li>Avoids computing hashes multiple times to improve performance</li>
 <li>Make the time between two syscheck wakeups configurable in internal_options</li>
-<li>Add support for the “nodiff” option when using report_changes, sensitive files tagged with in ossec.conf will not have their contents included in an alert.</li>
+<li>Add support for the “nodiff” option when using report_changes, sensitive files tagged with in OpenArmor.conf will not have their contents included in an alert.</li>
 <li>IPv6 support</li>
-<li>Support to call an external mailer. This solves the problem of supporting encryption when sending mail alerts in OSSEC. The &lt;smtp_server&gt; field can now be prepended with “/” to designate a local binary. Example: “&lt;smtp_server&gt;/usr/sbin/sendmail -t&lt;/smtp_server&gt;”.</li>
+<li>Support to call an external mailer. This solves the problem of supporting encryption when sending mail alerts in OpenArmor. The &lt;smtp_server&gt; field can now be prepended with “/” to designate a local binary. Example: “&lt;smtp_server&gt;/usr/sbin/sendmail -t&lt;/smtp_server&gt;”.</li>
 <li>Slack notification support</li>
 </ul>
 <p><strong>New Rules / Decoders</strong></p>
@@ -304,11 +304,11 @@
 <li>PR #4, Authd, Bugfix for Openssl operations on non-blocking socket</li>
 <li>PR #563: IPv6 support</li>
 <li>PR #599, Allow for the log format in proftpd 1.3.5+</li>
-<li>PR #610: Execd, Reduce system load caused by simultaneous active response processes during ossec stop. #610</li>
+<li>PR #610: Execd, Reduce system load caused by simultaneous active response processes during OpenArmor stop. #610</li>
 <li>PR #615: Adds support for Binding src IP to ‘local_ip’ config value in agentd. In mulihomed host environment we have a big problem with binding agent to correct ip. By default agentd used ip-addr of interface, from which sented ip-packets.</li>
 <li>PR #617: Agentd, Add CLIENT to DEFINES for winagent target #617 Bugfix #595</li>
 <li>PR #622: Fix for CVE-2015-3222</li>
-<li>PR #631, Log failure when ossec fails to remove a PID file</li>
+<li>PR #631, Log failure when OpenArmor fails to remove a PID file</li>
 <li>PR #652, Syscheck, add support for the “-t” flag to display XML parsing errors in agent.conf on agents</li>
 <li>PR #657: Syscheck, Allows scanning of directories with , in the name. Let directory check_something=”no” options to work. This means you can do instead of listing out all the ones you want to use.</li>
 <li>PR #670: Syscheck, Bugfix for report_changes</li>
@@ -319,10 +319,10 @@
 <li>PR #699: Encompassing only complete statements with conditional directives.</li>
 <li>PR #717: Active Response, add Slack (www.slack.com) notification support</li>
 <li>PR #720: Fixes for the statfs error spam</li>
-<li>PR #724: Authd, bugfix for issue #642, This brings ossec-authd into parity with whatever the MAX_AGENTS is set at build time</li>
+<li>PR #724: Authd, bugfix for issue #642, This brings OpenArmor-authd into parity with whatever the MAX_AGENTS is set at build time</li>
 <li>PR #726: Make syslog/cef consistent with json/splunk and add classification field to alerts.</li>
-<li>PR #727: Maild, Add support for “email_reply_to”. This allows configuring the Reply-To: field in email alerts sent from ossec-maild</li>
-<li>PR #740: Remoted, bugfix for issue #739, Ossec will now report the agent ID of the agent that tries to connect</li>
+<li>PR #727: Maild, Add support for “email_reply_to”. This allows configuring the Reply-To: field in email alerts sent from OpenArmor-maild</li>
+<li>PR #740: Remoted, bugfix for issue #739, OpenArmor will now report the agent ID of the agent that tries to connect</li>
 <li>PR #744: Syscheck, Bugfix for issue #42, corrects issue on windows that would produce an incorrect hash</li>
 <li>PR #749: Windows, Changed Makefile to use Windows subsystem only with UI manager</li>
 <li>PR #750: Analysisd, Fixes glob() impelemtation bug, adds Hourly/Daily options to logcollector, improved dfalts to analysisd diff alerts.</li>
@@ -339,7 +339,7 @@
 <li>PR #798: System Audit, Add RHEL/CentOS/Cloudlinux 7 CIS benchmarks</li>
 <li>PR #802: Database support, Allow for longer entries in the system information column</li>
 <li>PR #849 Format string security fix</li>
-<li>PR #864 Fix ossec-logtest to chroot when testing check_diff rules</li>
+<li>PR #864 Fix OpenArmor-logtest to chroot when testing check_diff rules</li>
 <li>PR #870 Fix installer permissions on the etc/shared directory</li>
 <li>PR #878 Fix version field to correctly report &#8220;2.9.0&#8221; instead of 2.8.3</li>
 <li>PR #909 Bugfix for decoders.d/rules.d logtest</li>
@@ -350,7 +350,7 @@
 <li>PR #986 - Prevent manage_agents from chrooting in bulk mode</li>
 </ul>
 <p><strong>Download</strong></p>
-<p><a class="reference external" href="https://github.com/ossec/ossec-hids/releases">https://github.com/ossec/ossec-hids/releases</a></p>
+<p><a class="reference external" href="https://github.com/OpenArmor/OpenArmor-hids/releases">https://github.com/OpenArmor/OpenArmor-hids/releases</a></p>
 </div>
 
   <div class="section">
@@ -362,9 +362,9 @@
   <span style="float: left;">
   
   
-  <a href="2016-06-30-OSSEC-2.9.0-rc2-RELEASE.html">
+  <a href="2016-06-30-OpenArmor-2.9.0-rc2-RELEASE.html">
     <i class="fa fa-arrow-circle-left"></i>
-    OSSEC 2.9.0 RC2
+    OpenArmor 2.9.0 RC2
   </a>
   
   </span>
@@ -373,7 +373,7 @@
   
   
   <a href="2017-06-19-2.9.1-RELEASE.html">
-    OSSEC 2.9.1
+    OpenArmor 2.9.1
     <i class="fa fa-arrow-circle-right"></i>
   </a>
   </span>
@@ -395,8 +395,8 @@
       
     </p>
     <p>
-        &copy; Copyright 2010-2019, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2019, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.2 - 
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>

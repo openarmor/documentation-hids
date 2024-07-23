@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OSSEC Processes and Data &#8212; OSSEC</title>
+    <title>OpenArmor Processes and Data &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -68,18 +68,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../index.html"><img src="../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -139,8 +139,8 @@ gtag('config', 'UA-138780766-1');
   <div class="row">
     <div class="col-md-12">
       
-  <div class="section" id="ossec-processes-and-data">
-<span id="ossec-logic"></span><h1>OSSEC Processes and Data<a class="headerlink" href="#ossec-processes-and-data" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="OpenArmor-processes-and-data">
+<span id="OpenArmor-logic"></span><h1>OpenArmor Processes and Data<a class="headerlink" href="#OpenArmor-processes-and-data" title="Permalink to this headline">¶</a></h1>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 20%" />
@@ -152,56 +152,56 @@ gtag('config', 'UA-138780766-1');
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>ossec-analysisd</p></td>
+<tr class="row-even"><td><p>OpenArmor-analysisd</p></td>
 <td><p>Master program. Analyzes data from the logs, syscheck,rootcheck, etc.
-Runs as an unprivileged (ossec) user under chroot.</p></td>
+Runs as an unprivileged (OpenArmor) user under chroot.</p></td>
 </tr>
-<tr class="row-odd"><td><p>ossec-execd</p></td>
+<tr class="row-odd"><td><p>OpenArmor-execd</p></td>
 <td><p>Execute active responses by calling the configured scripts. Runs as root.</p></td>
 </tr>
-<tr class="row-even"><td><p>ossec-maild</p></td>
-<td><p>Send e-mail alerts. Runs as an unprivileged user (ossecm) under chroot.</p></td>
+<tr class="row-even"><td><p>OpenArmor-maild</p></td>
+<td><p>Send e-mail alerts. Runs as an unprivileged user (OpenArmorm) under chroot.</p></td>
 </tr>
-<tr class="row-odd"><td><p>ossec-remoted</p></td>
+<tr class="row-odd"><td><p>OpenArmor-remoted</p></td>
 <td><p>Server side socket for server/client communications.
-Runs as an unprivileged user (ossecr) under chroot.</p></td>
+Runs as an unprivileged user (OpenArmorr) under chroot.</p></td>
 </tr>
-<tr class="row-even"><td><p>ossec-agentd</p></td>
+<tr class="row-even"><td><p>OpenArmor-agentd</p></td>
 <td><p>Agent side socket for server/client communications.
-Runs as an unprivileged user (ossec) under chroot.</p></td>
+Runs as an unprivileged user (OpenArmor) under chroot.</p></td>
 </tr>
-<tr class="row-odd"><td><p>ossec-logcollector</p></td>
+<tr class="row-odd"><td><p>OpenArmor-logcollector</p></td>
 <td><p>Monitor log files and windows event logs (do not use tail).</p></td>
 </tr>
-<tr class="row-even"><td><p>ossec-syscheckd</p></td>
+<tr class="row-even"><td><p>OpenArmor-syscheckd</p></td>
 <td><p>Does integrity checking and rootkit detection (rootcheck is a module of it).</p></td>
 </tr>
-<tr class="row-odd"><td><p>ossec-csyslogd</p></td>
-<td><p>Client syslog tool to forward OSSEC alerts to remote syslog servers
+<tr class="row-odd"><td><p>OpenArmor-csyslogd</p></td>
+<td><p>Client syslog tool to forward OpenArmor alerts to remote syslog servers
 (including SIM/SEMs and log management systems).</p></td>
 </tr>
-<tr class="row-even"><td><p>ossec-monitord</p></td>
+<tr class="row-even"><td><p>OpenArmor-monitord</p></td>
 <td><p>Monitor agent connectivity and compress daily log files.</p></td>
 </tr>
 </tbody>
 </table>
 <ul class="simple">
-<li><p>ossec-logcollector on agent machine tails log file &amp; sends to ossec-agent.</p></li>
-<li><p>ossec-agent routes the information to the ossec-server (on server system).</p></li>
-<li><p>ossec-remoted receives data, uncompress and unencrypt it and sends to analysisd.</p></li>
-<li><p>ossec-analysisd detects an actionable issue.</p></li>
-<li><p>ossec-analysisd actions:</p></li>
+<li><p>OpenArmor-logcollector on agent machine tails log file &amp; sends to OpenArmor-agent.</p></li>
+<li><p>OpenArmor-agent routes the information to the OpenArmor-server (on server system).</p></li>
+<li><p>OpenArmor-remoted receives data, uncompress and unencrypt it and sends to analysisd.</p></li>
+<li><p>OpenArmor-analysisd detects an actionable issue.</p></li>
+<li><p>OpenArmor-analysisd actions:</p></li>
 </ul>
 <blockquote>
 <div><ul class="simple">
-<li><p>ossec-analysisd sends information to ossec-execd (if response is configured to run in the server side).</p></li>
-<li><p>ossec-analysisd sends information to ossec-remoted (if response is configured to run in the agent).</p></li>
+<li><p>OpenArmor-analysisd sends information to OpenArmor-execd (if response is configured to run in the server side).</p></li>
+<li><p>OpenArmor-analysisd sends information to OpenArmor-remoted (if response is configured to run in the agent).</p></li>
 </ul>
 </div></blockquote>
 <ul class="simple">
-<li><p>ossec-maild monitors analysisd and generate e-mail alert.</p></li>
-<li><p>If active response is enabled on the agent, ossec-remoted on the manager sends the active response to ossec-agent on the agent and ossec-agent sends it to ossec-execed.</p></li>
-<li><p>ossec-execd calls an active response script</p></li>
+<li><p>OpenArmor-maild monitors analysisd and generate e-mail alert.</p></li>
+<li><p>If active response is enabled on the agent, OpenArmor-remoted on the manager sends the active response to OpenArmor-agent on the agent and OpenArmor-agent sends it to OpenArmor-execed.</p></li>
+<li><p>OpenArmor-execd calls an active response script</p></li>
 </ul>
 </div>
 
@@ -217,8 +217,8 @@ Runs as an unprivileged user (ossec) under chroot.</p></td>
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

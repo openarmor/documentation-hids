@@ -1,26 +1,26 @@
 .. manual_rule_testing:
 
-Testing OSSEC rules/decoders
+Testing OpenArmor rules/decoders
 ============================
 
 
-The first problem most people have when troubleshooting OSSEC or trying to write new 
+The first problem most people have when troubleshooting OpenArmor or trying to write new 
 rules and decoders is how to test them. In the past, this would require
-manually restarting OSSEC or creating a testing installation. As of 
-version 1.6, there is a tool to simplify this task (ossec-logtest).
+manually restarting OpenArmor or creating a testing installation. As of 
+version 1.6, there is a tool to simplify this task (OpenArmor-logtest).
 
-Testing using ossec-logtest
+Testing using OpenArmor-logtest
 ---------------------------
 
-The tool `ossec-logtest` is installed into ``/var/ossec/bin``. 
-It will read the current rules and decoder (from ``/var/ossec`` ) and accept 
+The tool `OpenArmor-logtest` is installed into ``/var/OpenArmor/bin``. 
+It will read the current rules and decoder (from ``/var/OpenArmor`` ) and accept 
 log input from stdin:
 
 .. code-block:: console 
 
-    # /var/ossec/bin/ossec-logtest
-    2008/07/04 09:57:28 ossec-testrule: INFO: Started (pid: 12683).
-    ossec-testrule: Type one log per line.
+    # /var/OpenArmor/bin/OpenArmor-logtest
+    2008/07/04 09:57:28 OpenArmor-testrule: INFO: Started (pid: 12683).
+    OpenArmor-testrule: Type one log per line.
 
     Jul 4 09:42:16 enigma sshd[11990]: Accepted password for dcid from 192.168.2.10 port 35259 ssh2
 
@@ -42,23 +42,23 @@ log input from stdin:
     **Alert to be generated.
 
 In the above example, we provided an authentication success log and 
-ossec-logtest showed us how it would be decoded, what information was extracted 
+OpenArmor-logtest showed us how it would be decoded, what information was extracted 
 and which rule fired. In the next example, we can see how it would extract a 
 user logoff message from Windows:
 
 .. code-block:: console 
 
-    # /var/ossec/bin/ossec-logtest
-    2008/07/04 09:57:28 ossec-testrule: INFO: Started (pid: 12683).
-    ossec-testrule: Type one log per line.
+    # /var/OpenArmor/bin/OpenArmor-logtest
+    2008/07/04 09:57:28 OpenArmor-testrule: INFO: Started (pid: 12683).
+    OpenArmor-testrule: Type one log per line.
 
-    WinEvtLog: Security: AUDIT_SUCCESS(538): Security: lac: OSSEC-HM: OSSEC-HM: User Logoff: User Name: lac Domain: OSSEC-HM Logon ID: (0×0,0xF784D5) Logon Type: 2
+    WinEvtLog: Security: AUDIT_SUCCESS(538): Security: lac: OpenArmor-HM: OpenArmor-HM: User Logoff: User Name: lac Domain: OpenArmor-HM Logon ID: (0×0,0xF784D5) Logon Type: 2
 
     **Phase 1: Completed pre-decoding.
-    full event: ‘WinEvtLog: Security: AUDIT_SUCCESS(538): Security: lac: OSSEC-HM: OSSEC-HM: User Logoff: User Name: lac Domain: OSSEC-HM Logon ID: (0×0,0xF784D5) Logon Type: 2′
+    full event: ‘WinEvtLog: Security: AUDIT_SUCCESS(538): Security: lac: OpenArmor-HM: OpenArmor-HM: User Logoff: User Name: lac Domain: OpenArmor-HM Logon ID: (0×0,0xF784D5) Logon Type: 2′
     hostname: ‘enigma’
     program_name: ‘(null)’
-    log: ‘WinEvtLog: Security: AUDIT_SUCCESS(538): Security: lac: OSSEC-HM: OSSEC-HM: User Logoff: User Name: lac Domain: OSSEC-HM Logon ID: (0×0,0xF784D5) Logon Type: 2′
+    log: ‘WinEvtLog: Security: AUDIT_SUCCESS(538): Security: lac: OpenArmor-HM: OpenArmor-HM: User Logoff: User Name: lac Domain: OpenArmor-HM Logon ID: (0×0,0xF784D5) Logon Type: 2′
 
     **Phase 2: Completed decoding.
     decoder: ‘windows’
@@ -66,7 +66,7 @@ user logoff message from Windows:
     id: ‘538′
     extra_data: ‘Security’
     dstuser: ‘lac’
-    system_name: ‘OSSEC-HM’
+    system_name: ‘OpenArmor-HM’
 
     **Phase 3: Completed filtering (rules).
     Rule id: ‘18149′
@@ -75,14 +75,14 @@ user logoff message from Windows:
     **Alert to be generated.
 
 
-In addition to the information above, `ossec-logtest -v` can be used 
+In addition to the information above, `OpenArmor-logtest -v` can be used 
 to follow the log through the rule path:
 
 .. code-block:: console 
 
-    # /var/ossec/bin/ossec-logtest -v
-    2008/07/04 10:05:43 ossec-testrule: INFO: Started (pid: 23007).
-    ossec-testrule: Type one log per line.
+    # /var/OpenArmor/bin/OpenArmor-logtest -v
+    2008/07/04 10:05:43 OpenArmor-testrule: INFO: Started (pid: 23007).
+    OpenArmor-testrule: Type one log per line.
 
     Jul 4 10:05:30 enigma sshd[27588]: Failed password for invalid user test2 from 127.0.0.1 port 19130 ssh2
 

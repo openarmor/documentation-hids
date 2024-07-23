@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sending output to a Database &#8212; OSSEC</title>
+    <title>Sending output to a Database &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -151,14 +151,14 @@ gtag('config', 'UA-138780766-1');
       
   <div class="section" id="sending-output-to-a-database">
 <span id="manual-out-database"></span><h1>Sending output to a Database<a class="headerlink" href="#sending-output-to-a-database" title="Permalink to this headline">¶</a></h1>
-<p>OSSEC supports MySQL and PostgreSQL database outputs.</p>
+<p>OpenArmor supports MySQL and PostgreSQL database outputs.</p>
 <div class="section" id="configuration-options">
 <h2>Configuration options<a class="headerlink" href="#configuration-options" title="Permalink to this headline">¶</a></h2>
-<p>These configurations options can be specified in the server or local install ossec.conf file.</p>
+<p>These configurations options can be specified in the server or local install OpenArmor.conf file.</p>
 </div>
 <div class="section" id="enabling-database-support">
 <h2>Enabling Database Support<a class="headerlink" href="#enabling-database-support" title="Permalink to this headline">¶</a></h2>
-<p>You must have the MySQL or PgSQL Client libraries installed on the OSSEC server. Typically something like</p>
+<p>You must have the MySQL or PgSQL Client libraries installed on the OpenArmor server. Typically something like</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Ubuntu</span>
 <span class="gp"># </span>apt install mysql-server libmysqld-dev
 <span class="go">  or</span>
@@ -170,8 +170,8 @@ gtag('config', 'UA-138780766-1');
 <span class="gp"># </span>yum install postgresql-devel
 </pre></div>
 </div>
-<p>You then need to set the DATABASE environment variable and run the “./install.sh” script, to compile OSSEC with the appropriate database support.</p>
-<p>If OSSEC had been previously compiled without database support the files created during the previous build should be removed from the <cite>src</cite> directory.</p>
+<p>You then need to set the DATABASE environment variable and run the “./install.sh” script, to compile OpenArmor with the appropriate database support.</p>
+<p>If OpenArmor had been previously compiled without database support the files created during the previous build should be removed from the <cite>src</cite> directory.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span><span class="nb">cd</span> src
 <span class="gp"># </span>make clean
 </pre></div>
@@ -187,7 +187,7 @@ gtag('config', 'UA-138780766-1');
 <h2>Enable Database output in the configuration<a class="headerlink" href="#enable-database-output-in-the-configuration" title="Permalink to this headline">¶</a></h2>
 <p>After installation is complete database support needs to be enabled.
 The following command will enable the database daemon on the next restart.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/ossec/bin/ossec-control <span class="nb">enable</span> database
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/OpenArmor/bin/OpenArmor-control <span class="nb">enable</span> database
 </pre></div>
 </div>
 </div>
@@ -197,13 +197,13 @@ The following command will enable the database daemon on the next restart.</p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="mysql-database-output.html">Configuring MySQL</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="mysql-database-output.html#database-setup">Database Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mysql-database-output.html#ossec-setup">OSSEC Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mysql-database-output.html#OpenArmor-setup">OpenArmor Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mysql-database-output.html#complete-mysql-output">Complete MySQL Output</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pgsql-database-output.html">Configuring PgSQL</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="pgsql-database-output.html#database-setup">Database Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pgsql-database-output.html#ossec-setup">OSSEC Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pgsql-database-output.html#OpenArmor-setup">OpenArmor Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pgsql-database-output.html#complete-pgsql-output">Complete PgSQL Output</a></li>
 </ul>
 </li>
@@ -224,8 +224,8 @@ The following command will enable the database daemon on the next restart.</p>
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

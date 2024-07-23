@@ -18,7 +18,7 @@ New Features
 
 * SQLite whitelist support for syscheck
 * Pagerduty Active Response
-* OSSEC agent selinux module
+* OpenArmor agent selinux module
 * Win32 agent-auth support
 
 Updates
@@ -48,9 +48,9 @@ General
 * PR #1259, for issue #1145, fixes for RHEL getaddrinfo/ipv6
 * PR #1428, for issue #1425, check owner option doesnt work on windows agent
 * PR #1428, for issue #1425, check owner option doesnt work on windows agent
-* PR #1421, for issue #1421, fixes for ossec-slack.sh alerts path
-* PR #1422, for issue #1421, fixes for ossec-slack.sh active-response path
-* PR #1421, for issue #1421, fixes for ossec-slack.sh path
+* PR #1421, for issue #1421, fixes for OpenArmor-slack.sh alerts path
+* PR #1422, for issue #1421, fixes for OpenArmor-slack.sh active-response path
+* PR #1421, for issue #1421, fixes for OpenArmor-slack.sh path
 * PR #1409 for issue #1402, Real-time file monitoring stops working if several files are encrypted at the same time
 * PR #1100, fix for open received files in binary mode on windows
 * PR #1350, fix for basename, Missing agent.conf messags are reportied as warnings
@@ -181,12 +181,12 @@ Whats New
 * Report file deletion, even without realtime enabled
 * Report modifications made on directories
 * Corrects bug so that files created between the first and second scan are reported as new files
-* Corrects bug that made changes reverting a file to the state it was in when ossec started unreported
+* Corrects bug that made changes reverting a file to the state it was in when OpenArmor started unreported
 * Avoids computing hashes multiple times to improve performance
 * Make the time between two syscheck wakeups configurable in internal_options
-* Add support for the “nodiff” option when using report_changes, sensitive files tagged with in ossec.conf will not have their contents included in an alert.
+* Add support for the “nodiff” option when using report_changes, sensitive files tagged with in OpenArmor.conf will not have their contents included in an alert.
 * IPv6 support
-* Support to call an external mailer. This solves the problem of supporting encryption when sending mail alerts in OSSEC. The <smtp_server> field can now be prepended with “/” to designate a local binary. Example: “<smtp_server>/usr/sbin/sendmail -t</smtp_server>”.
+* Support to call an external mailer. This solves the problem of supporting encryption when sending mail alerts in OpenArmor. The <smtp_server> field can now be prepended with “/” to designate a local binary. Example: “<smtp_server>/usr/sbin/sendmail -t</smtp_server>”.
 * Slack notification support
 
 New Rules / Decoders
@@ -216,11 +216,11 @@ General
 * PR #4, Authd, Bugfix for Openssl operations on non-blocking socket
 * PR #563: IPv6 support
 * PR #599, Allow for the log format in proftpd 1.3.5+
-* PR #610: Execd, Reduce system load caused by simultaneous active response processes during ossec stop. #610
+* PR #610: Execd, Reduce system load caused by simultaneous active response processes during OpenArmor stop. #610
 * PR #615: Adds support for Binding src IP to ‘local_ip’ config value in agentd. In mulihomed host environment we have a big problem with binding agent to correct ip. By default agentd used ip-addr of interface, from which sented ip-packets.
 * PR #617: Agentd, Add CLIENT to DEFINES for winagent target #617 Bugfix #595
 * PR #622: Fix for CVE-2015-3222
-* PR #631, Log failure when ossec fails to remove a PID file
+* PR #631, Log failure when OpenArmor fails to remove a PID file
 * PR #652, Syscheck, add support for the “-t” flag to display XML parsing errors in agent.conf on agents
 * PR #657: Syscheck, Allows scanning of directories with , in the name. Let directory check_something=”no” options to work. This means you can do instead of listing out all the ones you want to use.
 * PR #670: Syscheck, Bugfix for report_changes
@@ -231,10 +231,10 @@ General
 * PR #699: Encompassing only complete statements with conditional directives.
 * PR #717: Active Response, add Slack (www.slack.com) notification support
 * PR #720: Fixes for the statfs error spam
-* PR #724: Authd, bugfix for issue #642, This brings ossec-authd into parity with whatever the MAX_AGENTS is set at build time
+* PR #724: Authd, bugfix for issue #642, This brings OpenArmor-authd into parity with whatever the MAX_AGENTS is set at build time
 * PR #726: Make syslog/cef consistent with json/splunk and add classification field to alerts.
-* PR #727: Maild, Add support for “email_reply_to”. This allows configuring the Reply-To: field in email alerts sent from ossec-maild
-* PR #740: Remoted, bugfix for issue #739, Ossec will now report the agent ID of the agent that tries to connect
+* PR #727: Maild, Add support for “email_reply_to”. This allows configuring the Reply-To: field in email alerts sent from OpenArmor-maild
+* PR #740: Remoted, bugfix for issue #739, OpenArmor will now report the agent ID of the agent that tries to connect
 * PR #744: Syscheck, Bugfix for issue #42, corrects issue on windows that would produce an incorrect hash
 * PR #749: Windows, Changed Makefile to use Windows subsystem only with UI manager
 * PR #750: Analysisd, Fixes glob() impelemtation bug, adds Hourly/Daily options to logcollector, improved dfalts to analysisd diff alerts.
@@ -251,7 +251,7 @@ General
 * PR #798: System Audit, Add RHEL/CentOS/Cloudlinux 7 CIS benchmarks
 * PR #802: Database support, Allow for longer entries in the system information column
 * PR #849 Format string security fix
-* PR #864 Fix ossec-logtest to chroot when testing check_diff rules
+* PR #864 Fix OpenArmor-logtest to chroot when testing check_diff rules
 * PR #870 Fix installer permissions on the etc/shared directory
 * PR #878 Fix version field to correctly report "2.9.0" instead of 2.8.3
 * PR #909 Bugfix for decoders.d/rules.d logtest
@@ -314,7 +314,7 @@ Released Sept 9, 2014:
 * Rules/decoders: Removed bro-ids_rules.xml (ddpbsd)
 * Removed event ID 676, 672 in msauth_rules.xml (mstarks01)
 * contrib: zeromq_pubsub.py - No description (jrossi)
-* contrib: ossec-eps.sh, a script to calculate events-per-second (mstarks01)
+* contrib: OpenArmor-eps.sh, a script to calculate events-per-second (mstarks01)
 
 
 
@@ -325,13 +325,13 @@ Released Sept 9, 2014:
 * Extended filesize from an integer to a long integer in syscheck
 * Heartbeat interval is now configurable:
 
-  * `notify_time <../syntax/head_ossec_config.client.html#element-notify_time>`_
+  * `notify_time <../syntax/head_OpenArmor_config.client.html#element-notify_time>`_
 
-  * `time-reconnect <../syntax/head_ossec_config.client.html#element-time-reconnect>`_
+  * `time-reconnect <../syntax/head_OpenArmor_config.client.html#element-time-reconnect>`_
 
-* `custom_alert_output <../syntax/head_ossec_config.global.html#element-custom_alert_output>`_ added
+* `custom_alert_output <../syntax/head_OpenArmor_config.global.html#element-custom_alert_output>`_ added
 * ``ip-customblock.sh`` active-response script added
-* ossec2snorby scripts added to contrib
+* OpenArmor2snorby scripts added to contrib
 
 
 
@@ -340,7 +340,7 @@ Released Sept 9, 2014:
 
 * agent profiles
 
-  * `ossec.conf <../syntax/head_ossec_config.client.html#element-server-ip>`_
+  * `OpenArmor.conf <../syntax/head_OpenArmor_config.client.html#element-server-ip>`_
 
   * `agent.conf <../syntax/head_agent_config.html#element-agent_config_options>`_
 
@@ -350,21 +350,21 @@ Released Sept 9, 2014:
 
 * New hybrid mode: server + agent functionality on the same system (NOT REALLY DOCUMENTED, ARE ANY OF THE INSTALLATION TYPES WELL DOCUMENTED?)
 
-* contrib/ossec2rss.php: ossec alerts in an rss format
+* contrib/OpenArmor2rss.php: OpenArmor alerts in an rss format
 
-* GeoIP data in `alerts <../syntax/head_ossec_config.global.html#geoip_db_path>`_
+* GeoIP data in `alerts <../syntax/head_OpenArmor_config.global.html#geoip_db_path>`_
 
-* OSSEC server can be specified by hostname in the agent's ossec.conf `server-hostname <../syntax/head_ossec_config.client.html#element-server-hostname>`_
+* OpenArmor server can be specified by hostname in the agent's OpenArmor.conf `server-hostname <../syntax/head_OpenArmor_config.client.html#element-server-hostname>`_
 
-* ossec-authd can now add IP addresses to the client.keys file instead of using ``any`` with `the -i flag <../programs/ossec-authd.html#cmdoption-ossec-authd-i>`_ from Jason Stelzer
+* OpenArmor-authd can now add IP addresses to the client.keys file instead of using ``any`` with `the -i flag <../programs/OpenArmor-authd.html#cmdoption-OpenArmor-authd-i>`_ from Jason Stelzer
 
-* support for prelink to reduce false positives `refilter_cmd <../syntax/head_ossec_config.syscheck.html>`_
+* support for prelink to reduce false positives `refilter_cmd <../syntax/head_OpenArmor_config.syscheck.html>`_
 
-* Added knowbs to turn on or off rootcheck features `check_* <../syntax/head_ossec_config.syscheck.html>`_
+* Added knowbs to turn on or off rootcheck features `check_* <../syntax/head_OpenArmor_config.syscheck.html>`_
 
-* Added support for json and splunk output (along with syslog and cef) `format <../syntax/head_ossec_config.syslog_output.html>`_
+* Added support for json and splunk output (along with syslog and cef) `format <../syntax/head_OpenArmor_config.syslog_output.html>`_
 
-* Changed ``-f`` to ``-v`` in ossec-logtest
+* Changed ``-f`` to ``-v`` in OpenArmor-logtest
 
 * Added ``-f`` to manage_agents to create agent keys in bulk
 

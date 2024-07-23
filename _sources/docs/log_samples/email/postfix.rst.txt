@@ -15,9 +15,9 @@ Postfix internal error:
 Email rejected (source blacklisted):
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
- postfix/smtpd[10419]: NOQUEUE: reject: RCPT from unknown[200.71.50.65]: 554 Service unavailable; Client host [200.71.50.65] blocked using sbl-xbl.spamhaus.org; http://www.spamhaus.org/query/bl?ip=200.71.50.65; from=<kpxbeiu@superig.com.br> to=<cleresilva@lac.ossec.net> proto=SMTP helo=<Static-IP-cr200715065.cable.net.co>
+ postfix/smtpd[10419]: NOQUEUE: reject: RCPT from unknown[200.71.50.65]: 554 Service unavailable; Client host [200.71.50.65] blocked using sbl-xbl.spamhaus.org; http://www.spamhaus.org/query/bl?ip=200.71.50.65; from=<kpxbeiu@superig.com.br> to=<cleresilva@lac.OpenArmor.net> proto=SMTP helo=<Static-IP-cr200715065.cable.net.co>
 
- postfix/smtpd[13496]: NOQUEUE: reject: RCPT from pool-71-121-135-165.sttlwa.dsl-w.verizon.net[71.121.135.165]: 554 Service unavailable; Client host [71.121.135.165] blocked using sbl-xbl.spamhaus.org; http://www.spamhaus.org/query/bl?ip=71.121.135.165; from=<vxznjomowm@directnet.com.br> to=<lala@lac.ossec.net> proto=SMTP helo=<pool-71-121-135-165.sttlwa.dsl-w.verizon.net>
+ postfix/smtpd[13496]: NOQUEUE: reject: RCPT from pool-71-121-135-165.sttlwa.dsl-w.verizon.net[71.121.135.165]: 554 Service unavailable; Client host [71.121.135.165] blocked using sbl-xbl.spamhaus.org; http://www.spamhaus.org/query/bl?ip=71.121.135.165; from=<vxznjomowm@directnet.com.br> to=<lala@lac.OpenArmor.net> proto=SMTP helo=<pool-71-121-135-165.sttlwa.dsl-w.verizon.net>
 
 
 Spam attempts:

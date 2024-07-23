@@ -1,7 +1,7 @@
 
-.. _ossec_config.database_output: 
+.. _OpenArmor_config.database_output: 
 
-ossec.conf: Database Output options
+OpenArmor.conf: Database Output options
 ===================================
 
 Overview 
@@ -18,23 +18,23 @@ Database Output options are available in the the following installation types:
 Location 
 ^^^^^^^^
 
-All database_output options must be configured in the /var/ossec/etc/ossec.conf 
-and used within the <ossec_config> tag.  
+All database_output options must be configured in the /var/OpenArmor/etc/OpenArmor.conf 
+and used within the <OpenArmor_config> tag.  
 
 XML excerpt to show location:
 
 .. code-block:: xml 
 
-    <ossec_config> 
+    <OpenArmor_config> 
         <database_output> 
             <!-- 
             Database Output options here
             --> 
         </database_output> 
-    </ossec_config> 
+    </OpenArmor_config> 
 
 
 Options
 -------
 
-.. include:: ossec_config.database_output.trst 
+.. include:: OpenArmor_config.database_output.trst 

@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agentless Monitoring &#8212; OSSEC</title>
+    <title>Agentless Monitoring &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -162,8 +162,8 @@ exactly what has changed.</p>
 </div>
 <div class="section" id="getting-started-with-agentless">
 <h2>Getting started with agentless<a class="headerlink" href="#getting-started-with-agentless" title="Permalink to this headline">¶</a></h2>
-<p>After you installed OSSEC, you need to enable the agentless monitoring:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/ossec/bin/ossec-control <span class="nb">enable</span> agentless
+<p>After you installed OpenArmor, you need to enable the agentless monitoring:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/OpenArmor/bin/OpenArmor-control <span class="nb">enable</span> agentless
 </pre></div>
 </div>
 <p>And provide the SSH authentication to the host you want to access. For Cisco devices
@@ -171,12 +171,12 @@ exactly what has changed.</p>
 The same thing applies if you want to add support for “su”, it must be the additional
 parameter. In this example, I am adding a Linux box (example.net) and a PIX firewall
 (pix.fw.local):</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/ossec/agentless/register_host.sh add root@example.net mypass1
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/OpenArmor/agentless/register_host.sh add root@example.net mypass1
 <span class="go">  *Host root@example.netl added.</span>
-<span class="gp"># </span>/var/ossec/agentless/register_host.sh add pix@pix.fw.local pixpass enablepass
+<span class="gp"># </span>/var/OpenArmor/agentless/register_host.sh add pix@pix.fw.local pixpass enablepass
 <span class="go">  *Host pix@pix.fw.local added.</span>
 
-<span class="gp"># </span>/var/ossec/agentless/register_host.sh list
+<span class="gp"># </span>/var/OpenArmor/agentless/register_host.sh list
 <span class="go">  *Available hosts:</span>
 <span class="go">pix@pix.fw.local</span>
 <span class="go">root@example.net</span>
@@ -189,16 +189,16 @@ parameter. In this example, I am adding a Linux box (example.net) and a PIX fire
 <p>If you want to use public key authentication instead of
 passwords, you need to provide NOPASS as the password and
 create the public key:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>sudo -u ossec ssh-keygen
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>sudo -u OpenArmor ssh-keygen
 </pre></div>
 </div>
-<p>It will create the public keys inside /var/ossec/.ssh .  After that, just scp the
+<p>It will create the public keys inside /var/OpenArmor/.ssh .  After that, just scp the
 public key to the remote box and your password less connection should work.</p>
 </div>
 <div class="section" id="configuring-agentless">
 <h2>Configuring agentless<a class="headerlink" href="#configuring-agentless" title="Permalink to this headline">¶</a></h2>
 <p>Once you have added all your systems, you need to configure
-OSSEC to monitor them. By default, we have 4 agentless types
+OpenArmor to monitor them. By default, we have 4 agentless types
 (but we plan to add more soon):</p>
 <ul class="simple">
 <li><p>ssh_integrity_check_bsd</p></li>
@@ -206,9 +206,9 @@ OSSEC to monitor them. By default, we have 4 agentless types
 <li><p>ssh_generic_diff</p></li>
 <li><p>ssh_pixconfig_diff</p></li>
 </ul>
-<p>For the first two, you give a list of directories in the configuration and OSSEC
+<p>For the first two, you give a list of directories in the configuration and OpenArmor
 will do the integrity checking of them on the remote box. On the
-ssh_generic_diff, you give a set of commands to run on the remote box and OSSEC
+ssh_generic_diff, you give a set of commands to run on the remote box and OpenArmor
 will alert when the output of them changes. The ssh_pixconfig_diff will alert
 when a Cisco PIX/router configuration changes.</p>
 <p>So, for my first system (<a class="reference external" href="mailto:root&#37;&#52;&#48;example&#46;net">root<span>&#64;</span>example<span>&#46;</span>net</a>), I will monitor the /bin, /etc and /sbin
@@ -249,12 +249,12 @@ commands in the arguments option. To use “su”, you need to set the value
 </div>
 <div class="section" id="running-the-completed-setup">
 <h2>Running the completed setup<a class="headerlink" href="#running-the-completed-setup" title="Permalink to this headline">¶</a></h2>
-<p>Once the configuration is completed, you can restart OSSEC. You should see
-something like “Started ossec-agentlessd” in the output. Before each agentless
-connection is started, OSSEC will do a configuration check to make sure
-everything is fine. Look at /var/ossec/logs/ossec.log for any error. If you see:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2008/12/12 15:20:06 ossec-agentlessd: ERROR: Expect command not found (or bad arguments) for &#39;ssh_integrity_check_bsd&#39;.</span>
-<span class="go">2008/12/12 15:20:06 ossec-agentlessd: ERROR: Test failed for &#39;ssh_integrity_check_bsd&#39; (127). Ignoring.&#39;</span>
+<p>Once the configuration is completed, you can restart OpenArmor. You should see
+something like “Started OpenArmor-agentlessd” in the output. Before each agentless
+connection is started, OpenArmor will do a configuration check to make sure
+everything is fine. Look at /var/OpenArmor/logs/OpenArmor.log for any error. If you see:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2008/12/12 15:20:06 OpenArmor-agentlessd: ERROR: Expect command not found (or bad arguments) for &#39;ssh_integrity_check_bsd&#39;.</span>
+<span class="go">2008/12/12 15:20:06 OpenArmor-agentlessd: ERROR: Test failed for &#39;ssh_integrity_check_bsd&#39; (127). Ignoring.&#39;</span>
 </pre></div>
 </div>
 <p>It means that you don’t have the expect library installed on the server (it is
@@ -263,13 +263,13 @@ Ubuntu you can do the following to install:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>apt-get install expect
 </pre></div>
 </div>
-<p>After installing expect, you can restart OSSEC and you should see:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2008/12/12 15:24:12 ossec-agentlessd: INFO: Test passed for &#39;ssh_integrity_check_bsd&#39;.&#39;</span>
+<p>After installing expect, you can restart OpenArmor and you should see:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2008/12/12 15:24:12 OpenArmor-agentlessd: INFO: Test passed for &#39;ssh_integrity_check_bsd&#39;.&#39;</span>
 </pre></div>
 </div>
 <p>When it connects to the remote system, you will also see:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2008/12/12 15:25:19 ossec-agentlessd: INFO: ssh_integrity_check_bsd: root@example.net: Starting.</span>
-<span class="go">2008/12/12 15:25:46 ossec-agentlessd: INFO: ssh_integrity_check_bsd: root@example.net: Finished.</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2008/12/12 15:25:19 OpenArmor-agentlessd: INFO: ssh_integrity_check_bsd: root@example.net: Starting.</span>
+<span class="go">2008/12/12 15:25:46 OpenArmor-agentlessd: INFO: ssh_integrity_check_bsd: root@example.net: Finished.</span>
 </pre></div>
 </div>
 </div>
@@ -277,14 +277,14 @@ Ubuntu you can do the following to install:</p>
 <h2>Alerts<a class="headerlink" href="#alerts" title="Permalink to this headline">¶</a></h2>
 <p>These are some of the alerts you will get:</p>
 <p>For the ssh_generic_diff:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">OSSEC</span> <span class="n">HIDS</span> <span class="n">Notification</span><span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">OpenArmor</span> <span class="n">HIDS</span> <span class="n">Notification</span><span class="o">.</span>
 <span class="mi">2008</span> <span class="n">Dec</span> <span class="mi">12</span> <span class="mi">01</span><span class="p">:</span><span class="mi">58</span><span class="p">:</span><span class="mi">30</span>
 
 <span class="n">Received</span> <span class="n">From</span><span class="p">:</span> <span class="p">(</span><span class="n">ssh_generic_diff</span><span class="p">)</span> <span class="n">root</span><span class="nd">@example</span><span class="o">.</span><span class="n">net</span><span class="o">-&gt;</span><span class="n">agentless</span>
 <span class="n">Rule</span><span class="p">:</span> <span class="mi">555</span> <span class="n">fired</span> <span class="p">(</span><span class="n">level</span> <span class="mi">7</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Integrity checksum for agentless device changed.&quot;</span>
 <span class="n">Portion</span> <span class="n">of</span> <span class="n">the</span> <span class="n">log</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 
-<span class="n">ossec</span><span class="p">:</span> <span class="n">agentless</span><span class="p">:</span> <span class="n">Change</span> <span class="n">detected</span><span class="p">:</span>
+<span class="n">OpenArmor</span><span class="p">:</span> <span class="n">agentless</span><span class="p">:</span> <span class="n">Change</span> <span class="n">detected</span><span class="p">:</span>
 <span class="mi">35</span><span class="n">c35</span>
 <span class="o">&lt;</span> <span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">-</span><span class="n">r</span><span class="o">-</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">wheel</span> <span class="mi">34</span> <span class="n">Dec</span> <span class="mi">10</span> <span class="mi">03</span><span class="p">:</span><span class="mi">55</span> <span class="n">hosts</span><span class="o">.</span><span class="n">deny</span>
 <span class="o">--</span>
@@ -293,14 +293,14 @@ Ubuntu you can do the following to install:</p>
 </pre></div>
 </div>
 <p>For the PIX:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">OSSEC</span> <span class="n">HIDS</span> <span class="n">Notification</span><span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">OpenArmor</span> <span class="n">HIDS</span> <span class="n">Notification</span><span class="o">.</span>
 <span class="mi">2008</span> <span class="n">Dec</span> <span class="mi">01</span> <span class="mi">15</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">03</span>
 
 <span class="n">Received</span> <span class="n">From</span><span class="p">:</span> <span class="p">(</span><span class="n">ssh_pixconfig_diff</span><span class="p">)</span> <span class="n">pix</span><span class="nd">@pix</span><span class="o">.</span><span class="n">fw</span><span class="o">.</span><span class="n">local</span><span class="o">-&gt;</span><span class="n">agentless</span>
 <span class="n">Rule</span><span class="p">:</span> <span class="mi">555</span> <span class="n">fired</span> <span class="p">(</span><span class="n">level</span> <span class="mi">7</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Integrity checksum for agentless device changed.&quot;</span>
 <span class="n">Portion</span> <span class="n">of</span> <span class="n">the</span> <span class="n">log</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 
-<span class="n">ossec</span><span class="p">:</span> <span class="n">agentless</span><span class="p">:</span> <span class="n">Change</span> <span class="n">detected</span><span class="p">:</span>
+<span class="n">OpenArmor</span><span class="p">:</span> <span class="n">agentless</span><span class="p">:</span> <span class="n">Change</span> <span class="n">detected</span><span class="p">:</span>
 <span class="mi">48</span><span class="n">c48</span>
 <span class="o">&lt;</span> <span class="n">fixup</span> <span class="n">protocol</span> <span class="n">ftp</span> <span class="mi">21</span>
 <span class="o">--</span>
@@ -329,8 +329,8 @@ Ubuntu you can do the following to install:</p>
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

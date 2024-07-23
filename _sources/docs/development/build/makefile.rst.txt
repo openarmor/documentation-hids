@@ -3,7 +3,7 @@
 Makefile
 ========
 
-OSSEC is using (starting with 2.9) a single Makefile to build the binaries
+OpenArmor is using (starting with 2.9) a single Makefile to build the binaries
 for each installation type.
 The ``Makefile`` uses features of `GNU make <http://www.gnu.org/software/make/>`_,
 and it is a requirement of the build process.
@@ -29,14 +29,14 @@ discoverable for other developers.
         V:
         DEBUG:
         DEBUGAD
-        PREFIX:          /var/ossec
+        PREFIX:          /var/OpenArmor
         MAXAGENTS:       2048
         DATABASE:        mysql
     User settings:
-        OSSEC_GROUP:     ossec
-        OSSEC_USER:      ossec
-        OSSEC_USER_MAIL: ossecm
-        OSSEC_USER_REM:  ossecr
+        OpenArmor_GROUP:     OpenArmor
+        OpenArmor_USER:      OpenArmor
+        OpenArmor_USER_MAIL: OpenArmorm
+        OpenArmor_USER_REM:  OpenArmorr
     Lua settings:
         LUA_PLAT:       macosx
     USE settings:
@@ -50,9 +50,9 @@ discoverable for other developers.
         includes:
         libs:
     Defines:
-        -DMAX_AGENTS=2048 -DOSSECHIDS -DDarwin -DHIGHFIRST -DZEROMQ_OUTPUT  -DGEOIP -DUMYSQL
+        -DMAX_AGENTS=2048 -DOpenArmorHIDS -DDarwin -DHIGHFIRST -DZEROMQ_OUTPUT  -DGEOIP -DUMYSQL
     Compiler:
-        CFLAGS          -DMAX_AGENTS=2048 -DOSSECHIDS -DDarwin -DHIGHFIRST -DZEROMQ_OUTPUT  -DGEOIP -DUMYSQL  -Wall -Wextra -O2 -I./ -I./headers/
+        CFLAGS          -DMAX_AGENTS=2048 -DOpenArmorHIDS -DDarwin -DHIGHFIRST -DZEROMQ_OUTPUT  -DGEOIP -DUMYSQL  -Wall -Wextra -O2 -I./ -I./headers/
         LDFLAGS         -lzmq -lczmq -lGeoIP -L/usr/lib/mysql -lmysqlclient
         CC              cc
         MAKE            /Applications/Xcode.app/Contents/Developer/usr/bin/make
@@ -81,7 +81,7 @@ Options / Variables
 
 .. envvar:: PREFIX 
 
-    ``PREFIX`` is the absolute path OSSEC will be installed to.
+    ``PREFIX`` is the absolute path OpenArmor will be installed to.
 
     .. warning::
 
@@ -90,7 +90,7 @@ Options / Variables
 
     **Applies to Target:** all
 
-    **Default:** /var/ossec 
+    **Default:** /var/OpenArmor 
 
     **Allowed:** All valid paths 
 
@@ -98,7 +98,7 @@ Options / Variables
 
 .. versionadded:: 3.0
 
-   ``ZLIB_SYSTEM`` can enable OSSEC to use a pre-installed zlib instead of the bundled version.
+   ``ZLIB_SYSTEM`` can enable OpenArmor to use a pre-installed zlib instead of the bundled version.
 
    **Applies to Target:** all
 
@@ -120,7 +120,7 @@ Options / Variables
 
 .. envvar:: MAXAGENTS 
 
-    OSSEC is compiled with a maximum number of agents on the server/hybrid TARGETS.
+    OpenArmor is compiled with a maximum number of agents on the server/hybrid TARGETS.
     ``MAXAGENTS`` allows users to select values expected for their environment.
 
     **Applies to Target:** server/hybrid
@@ -141,7 +141,7 @@ Options / Variables
 
 .. envvar:: DEBUGAD
 
-    ``DEBUGAD`` enables extra debugging logging in ossec-analysisd.
+    ``DEBUGAD`` enables extra debugging logging in OpenArmor-analysisd.
 
     **Applies to Target:** server/hybrid
 
@@ -149,21 +149,21 @@ Options / Variables
 
     **Allowed:** 0/1
 
-.. envvar:: OSSEC_USER
+.. envvar:: OpenArmor_USER
 
-    **Default:** ossec
+    **Default:** OpenArmor
 
-.. envvar:: OSSEC_GROUP
+.. envvar:: OpenArmor_GROUP
 
-    **Default:** ossec
+    **Default:** OpenArmor
 
-.. envvar:: OSSEC_USER_MAIL
+.. envvar:: OpenArmor_USER_MAIL
 
-    **Default:** ossecm
+    **Default:** OpenArmorm
 
-.. envvar:: OSSEC_USER_REM
+.. envvar:: OpenArmor_USER_REM
 
-    **Default:** ossecr
+    **Default:** OpenArmorr
 
 .. envvar:: LUA_PLAT
 

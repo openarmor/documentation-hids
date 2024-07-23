@@ -1,31 +1,31 @@
 
-.. _ossec-logcollector:
+.. _OpenArmor-logcollector:
 
-ossec-logcollector
+OpenArmor-logcollector
 =============
 
-The ``ossec-logcollector`` daemon monitors configured files and commands for new log messages.
-``ossec-logcollector`` is configured in ossec.conf.  (see :ref:`ossec_config.localfile`)
+The ``OpenArmor-logcollector`` daemon monitors configured files and commands for new log messages.
+``OpenArmor-logcollector`` is configured in OpenArmor.conf.  (see :ref:`OpenArmor_config.localfile`)
 
 
-ossec-logcollector argument options
+OpenArmor-logcollector argument options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. program:: ossec-logcollector
+.. program:: OpenArmor-logcollector
 
 .. option:: -c <config>
 
-    Run ``ossec-logcollector`` using <config> as the configuration file.
+    Run ``OpenArmor-logcollector`` using <config> as the configuration file.
 
-    **Default:** /var/ossec/etc/ossec.conf
+    **Default:** /var/OpenArmor/etc/OpenArmor.conf
 
 .. option:: -d
 
-    Execute ossec-logcollector in debug mode. This option can be used multiple times to increase the verbosity of the debug messages.
+    Execute OpenArmor-logcollector in debug mode. This option can be used multiple times to increase the verbosity of the debug messages.
 
 .. option:: -f
 
-    Run ``ossec-logcollector`` in the foreground.
+    Run ``OpenArmor-logcollector`` in the foreground.
 
 .. option:: -h
 

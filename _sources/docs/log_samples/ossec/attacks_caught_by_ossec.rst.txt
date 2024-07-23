@@ -1,12 +1,12 @@
 Web Scan sample 2
 -----------------
 
-Example of web scan detected by ossec (looking for Wordpress, xmlrpc and awstats):
+Example of web scan detected by OpenArmor (looking for Wordpress, xmlrpc and awstats):
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 
-  OSSEC HIDS Notification.
+  OpenArmor HIDS Notification.
   2007 Mar 23 19:57:38
 
   Received From: teletubbies->/var/log/httpd/error_log
@@ -30,7 +30,7 @@ Example of web scan detected by ossec (looking for Wordpress, xmlrpc and awstats
 
 
 
-  OSSEC HIDS Notification.
+  OpenArmor HIDS Notification.
   2007 Mar 23 19:57:38
 
   Received From: teletubbies->/var/log/httpd/access_log
@@ -54,7 +54,7 @@ Example of web scan detected by ossec (looking for Wordpress, xmlrpc and awstats
 
 
 
-  OSSEC HIDS Notification.
+  OpenArmor HIDS Notification.
   2007 Mar 23 19:57:38
 
   Received From: teletubbies->/var/log/httpd/access_log
@@ -84,7 +84,7 @@ Web scan sample 4:
 
 .. code-block:: console
 
-  OSSEC HIDS Notification.
+  OpenArmor HIDS Notification.
   2007 Aug 15 15:50:43
 
   Received From: xx->/var/log/httpd/error_log
@@ -108,7 +108,7 @@ Web scan sample 4:
 
 
 
-  OSSEC HIDS Notification.
+  OpenArmor HIDS Notification.
   2007 Aug 15 15:50:43
 
   Received From: xx->/var/log/httpd/access_log
@@ -135,7 +135,7 @@ Example of a SSHD brute force attack.
 
 .. code-block:: console
 
-  OSSEC HIDS Notification.
+  OpenArmor HIDS Notification.
   2007 Jun 26 17:40:29
 
   Received From: xx->/var/log/secure
@@ -151,7 +151,7 @@ Example of a SSHD brute force attack.
   Jun 26 17:40:14 xx sshd[7617]: Failed password for invalid user test from 61.146.178.13 port 41797 ssh2
 
 
-  OSSEC HIDS Notification.
+  OpenArmor HIDS Notification.
   2007 Jun 25 15:53:47
 
   Received From: xx->/var/log/secure
@@ -176,7 +176,7 @@ Example of FTP scan detected by monitoring MS FTP logs.
 
 .. code-block:: console
 
-  OSSEC HIDS Notification.
+  OpenArmor HIDS Notification.
   2006 Oct 19 04:57:59
 
   Received From: (ftp-server-1) 172.16.1.99->\WINNT\System32\LogFiles\MSFTPSVC1\ex061019.log
@@ -198,7 +198,7 @@ Example of FTP scan detected by monitoring MS FTP logs.
 
 
 
-  OSSEC HIDS Notification.
+  OpenArmor HIDS Notification.
   2006 Oct 19 04:57:59
 
   Received From: (ftp-server-1) 172.16.1.99->\WINNT\System32\LogFiles\MSFTPSVC1\ex061019.log
@@ -219,7 +219,7 @@ Example of FTP scan detected by monitoring MS FTP logs.
 
 
 
-  OSSEC HIDS Notification.
+  OpenArmor HIDS Notification.
   2006 Oct 19 04:57:59
 
   Received From: (ftp-server-1) 172.16.1.99->\WINNT\System32\LogFiles\MSFTPSVC1\ex061019.log
@@ -243,7 +243,7 @@ Multiple firewall denies on the Windows firewall:
 Example of multiple firewall denies detected.
 .. code-block:: console
 
-  Received From: (ossec64) 192.168.2.25->\Windows\pfirewall.log
+  Received From: (OpenArmor64) 192.168.2.25->\Windows\pfirewall.log
   Rule: 4151 fired (level 10) -> "Multiple Firewall drop events from same source."
   Portion of the log(s):
 
@@ -268,7 +268,7 @@ Example of spam attempts detected (postix log analysis)
 
 .. code-block:: console
 
-  OSSEC HIDS Notification.
+  OpenArmor HIDS Notification.
   2006 Oct 24 18:46:29
 
   Received From: (xx) 200.1.2.a->/var/log/maillog
@@ -287,11 +287,11 @@ postfix/smtpd[6741]: NOQUEUE: reject: RCPT from unknown[201.82.55.24]: 503 <nplx
 SQL Injection attempt detected:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Example of an SQL injection detected by ossec:
+Example of an SQL injection detected by OpenArmor:
 
 .. code-block:: console
 
-  OSSEC HIDS Notification.
+  OpenArmor HIDS Notification.
   2006 Sep 12 09:45:56
 
   Received From: (spongebob) 1.2.3.4->/usr/pages/xx/logs/access_log
@@ -313,7 +313,7 @@ http://www.offensivecomputing.net/?q=node/378
 
 .. code-block:: console
 
-  OSSEC HIDS Notification.
+  OpenArmor HIDS Notification.
   2007 Jan 30 04:38:37
 
   Received From: (xxx) 2.2.3.4->/usr/local/squid/var/logs/access.log
@@ -335,11 +335,11 @@ http://www.offensivecomputing.net/?q=node/378
 
 ==Multiple WordPress (blog) comment spam attempts==
 
-Attempts to submit spammer comments to the ossec blog:
+Attempts to submit spammer comments to the OpenArmor blog:
 
 .. code-block:: console
 
-  OSSEC HIDS Notification.
+  OpenArmor HIDS Notification.
   2007 Jun 22 09:02:41
 
   Received From: xx->/var/log/httpd/xx.access.log
@@ -365,7 +365,7 @@ E-mail scan (vpopmail):
 
 .. code-block:: console
 
-  OSSEC HIDS Notification.
+  OpenArmor HIDS Notification.
   2007 Aug 15 21:22:53
 
   Received From: mail->/var/log/messages
@@ -393,7 +393,7 @@ Not really an attack, but a serious issue if your web server is out of space.
 
 .. code-block:: console
 
-  OSSEC HIDS Notification.
+  OpenArmor HIDS Notification.
   2007 Aug 16 22:49:38
 
   Received From: enigma->/var/log/messages
@@ -409,7 +409,7 @@ Not really an attack, but a serious issue if your web server is out of space.
 
 
 
-Custom SQL injection against ossec.net:
+Custom SQL injection against OpenArmor.net:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
@@ -418,10 +418,10 @@ Someone trying our web application to display the latest rules. Of course, it di
 
 .. code-block:: console
 
-  OSSEC HIDS Notification.
+  OpenArmor HIDS Notification.
   2007 Aug 27 21:43:48
 
-  Received From: teletubbies->/var/log/httpd/ossec.access.log
+  Received From: teletubbies->/var/log/httpd/OpenArmor.access.log
   Rule: 31106 fired (level 12) -> "A web attack returned code 200 (success)."
   Portion of the log(s):
 
@@ -442,14 +442,14 @@ a computer misuse.
 
 .. code-block:: console
 
-  OSSEC HIDS Notification.
+  OpenArmor HIDS Notification.
   2008 Aug 27 14:37:36
 
   Received From: (lili3win) 192.168.2.0->WinEvtLog
   Rule: 18147 fired (level 5) -> "Application Installed."
   Portion of the log(s):
 
-  WinEvtLog: Application: INFORMATION(11707): MsiInstaller: lac: OSSEC64: OSSEC64: Product: Microsoft Office Live Meeting 2007 -- Installation completed successfully. (NULL) (NULL) (NULL)
+  WinEvtLog: Application: INFORMATION(11707): MsiInstaller: lac: OpenArmor64: OpenArmor64: Product: Microsoft Office Live Meeting 2007 -- Installation completed successfully. (NULL) (NULL) (NULL)
 
 
 
@@ -460,7 +460,7 @@ By monitoring VMware ESX logs, you can get alerts when a virtual machine is stop
 
 .. code-block:: console
 
-  OSSEC HIDS Notification.
+  OpenArmor HIDS Notification.
   2008 Aug 28 15:53:11
 
   Received From: enigma->/var/log/messages

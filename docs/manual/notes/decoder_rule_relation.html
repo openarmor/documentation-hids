@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Question: How does the decoder.xml relate to the rules? &#8212; OSSEC</title>
+    <title>Question: How does the decoder.xml relate to the rules? &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -68,18 +68,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -143,7 +143,7 @@ gtag('config', 'UA-138780766-1');
 <h1>Question: How does the decoder.xml relate to the rules?<a class="headerlink" href="#question-how-does-the-decoder-xml-relate-to-the-rules" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="answer">
 <h2>Answer:<a class="headerlink" href="#answer" title="Permalink to this headline">¶</a></h2>
-<p>The decoder.xml file can be used to capture certain bits of information from the logs that ossec is monitoring.  These bits of information can be passed to rules as XML objects.  Take for example, the pair of rules below:</p>
+<p>The decoder.xml file can be used to capture certain bits of information from the logs that OpenArmor is monitoring.  These bits of information can be passed to rules as XML objects.  Take for example, the pair of rules below:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;rule id=&quot;3100&quot; level=&quot;0&quot;&gt;</span>
 <span class="go">  &lt;decoded_as&gt;web-accesslog&lt;/decoded_as&gt;</span>
 <span class="go">  &lt;category&gt;web-log&lt;/category&gt;</span>
@@ -167,7 +167,7 @@ gtag('config', 'UA-138780766-1');
 <span class="go">&lt;/decoder&gt;</span>
 </pre></div>
 </div>
-<p>Looking at the regular expression we can see that the source IP, the URL, and the HTTP Result Code are captured.  The first set of parentheses denotes that this part of the expression is the source IP, the second set denotes the URL, and the last set is the ID code, which for the example is the HTTP result code.  Going back to the second rule above, its construct contains the <code class="docutils literal notranslate"><span class="pre">&lt;id&gt;&lt;/id&gt;</span></code> tags, which, in this case (rule #3101), is used to match a 400 HTTP result code.  Something else worth noting is the multiple &lt;regex&gt; tags in this example.  This is simply done to provide enhanced clarity and preventing lines over 80 characters.  The values inside both tags are concatenated before being processed by ossec.</p>
+<p>Looking at the regular expression we can see that the source IP, the URL, and the HTTP Result Code are captured.  The first set of parentheses denotes that this part of the expression is the source IP, the second set denotes the URL, and the last set is the ID code, which for the example is the HTTP result code.  Going back to the second rule above, its construct contains the <code class="docutils literal notranslate"><span class="pre">&lt;id&gt;&lt;/id&gt;</span></code> tags, which, in this case (rule #3101), is used to match a 400 HTTP result code.  Something else worth noting is the multiple &lt;regex&gt; tags in this example.  This is simply done to provide enhanced clarity and preventing lines over 80 characters.  The values inside both tags are concatenated before being processed by OpenArmor.</p>
 <p>These regex variables can also be passed to active-response command constructs like the one show below:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;command&gt;</span>
 <span class="go">  &lt;name&gt;host-deny&lt;/name&gt;</span>
@@ -215,8 +215,8 @@ gtag('config', 'UA-138780766-1');
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

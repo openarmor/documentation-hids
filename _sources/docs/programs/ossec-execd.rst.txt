@@ -1,30 +1,30 @@
 
-.. _ossec-execd:
+.. _OpenArmor-execd:
 
-ossec-execd
+OpenArmor-execd
 ===========
 
-``ossec-execd`` executes active responses by running the configured scripts.
-``ossec-execd`` is configured in the ossec.conf. (see :ref:`ossec_config.active-response`)
+``OpenArmor-execd`` executes active responses by running the configured scripts.
+``OpenArmor-execd`` is configured in the OpenArmor.conf. (see :ref:`OpenArmor_config.active-response`)
 
-ossec-execd argument options
+OpenArmor-execd argument options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. program:: ossec-execd
+.. program:: OpenArmor-execd
 
 .. option:: -c <config>
 
-    Run ``ossec-execd`` using <config> as the configuration file.
+    Run ``OpenArmor-execd`` using <config> as the configuration file.
 
-    **Default:** /var/ossec/etc/ossec.conf
+    **Default:** /var/OpenArmor/etc/OpenArmor.conf
 
 .. option:: -d
 
-    Execute ossec-execd in debug mode. This option can be used multiple times to increase the verbosity of the debug messages.
+    Execute OpenArmor-execd in debug mode. This option can be used multiple times to increase the verbosity of the debug messages.
 
 .. option:: -f
 
-    Run ``ossec-execd`` in the foreground.
+    Run ``OpenArmor-execd`` in the foreground.
 
 .. option:: -g
 

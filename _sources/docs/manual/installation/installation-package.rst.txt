@@ -4,13 +4,13 @@
 Package Installation
 ====================
 
-The OSSEC project has made RPM and deb packages available.
-Links to the packages can be found on the OSSEC `download page <http://www.ossec.net/?page_id=19>`_
+The OpenArmor project has made RPM and deb packages available.
+Links to the packages can be found on the OpenArmor `download page <http://theopenarmor.org/?page_id=19>`_
 
 RPM Installation
 ----------------
 
-OSSEC's RPMs are made available by `AtomiCorp <http://www.atomicorp.com>`_.
+OpenArmor's RPMs are made available by `AtomiCorp <http://www.atomicorp.com>`_.
 
 The RPMs can be installed by adding the AtomiCorp yum repository:
 
@@ -18,23 +18,23 @@ The RPMs can be installed by adding the AtomiCorp yum repository:
 
    # wget -q -O - https://updates.atomicorp.com/installers/atomic | sh 
 
-Next use ``yum`` to install the specific packages. For an OSSEC server run:
+Next use ``yum`` to install the specific packages. For an OpenArmor server run:
 
 .. code-block:: console
 
-   # yum install ossec-hids ossec-hids-server
+   # yum install OpenArmor-hids OpenArmor-hids-server
 
 And for an agent run:
 
 .. code-block:: console
 
-   # yum install ossec-hids ossec-hids-agent
+   # yum install OpenArmor-hids OpenArmor-hids-agent
 
 
 Deb Installation
 ----------------
 
-OSSEC's DEB packages are made available by `Atomicorp <http://www.atomicorp.com>`_.
+OpenArmor's DEB packages are made available by `Atomicorp <http://www.atomicorp.com>`_.
 
 Run the Repo installer:
 
@@ -48,40 +48,40 @@ Update the repository:
 
     # apt-get update
 
-Install OSSEC HIDS server/manager:
+Install OpenArmor HIDS server/manager:
 
 .. code-block:: console
 
-    # apt-get install ossec-hids-server
+    # apt-get install OpenArmor-hids-server
 
-Or install OSSEC HIDS agent:
+Or install OpenArmor HIDS agent:
 
 .. code-block:: console
 
-    # apt-get install ossec-hids-agent
+    # apt-get install OpenArmor-hids-agent
 
 pkg Installation
 ----------------
 
-Some of the BSD operating systems offer OSSEC packages you can use. Here you have
+Some of the BSD operating systems offer OpenArmor packages you can use. Here you have
 FreeBSD and OpenBSD as example.
 
 * **FreeBSD**
 
 You are going to work together with ``pkg`` here. Just choose which type of setup you need
-(agent, local monitoring, or server/manager) and install the respective OSSEC package.
+(agent, local monitoring, or server/manager) and install the respective OpenArmor package.
 
-Should you opt to install an OSSEC Server/Manager:
-
-.. code-block:: console
-
-   # pkg install ossec-hids-server
-
-If you want to install an OSSEC Agent:
+Should you opt to install an OpenArmor Server/Manager:
 
 .. code-block:: console
 
-   # pkg install ossec-hids-agent
+   # pkg install OpenArmor-hids-server
+
+If you want to install an OpenArmor Agent:
+
+.. code-block:: console
+
+   # pkg install OpenArmor-hids-agent
 
 .. note::
 
@@ -92,9 +92,9 @@ If you want to install an OSSEC Agent:
 
 Here you must work with ``pkg_add`` instead of `pkg`, but no worries it's the same concept.
 
-As it only offers one package, here is how to install OSSEC HIDS on OpenBSD:
+As it only offers one package, here is how to install OpenArmor HIDS on OpenBSD:
 
 .. code-block:: console
 
-   # pkg_add ossec-hids
+   # pkg_add OpenArmor-hids
 

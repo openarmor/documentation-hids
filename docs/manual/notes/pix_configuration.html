@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>How to configure PIX and OSSEC &#8212; OSSEC</title>
+    <title>How to configure PIX and OpenArmor &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -68,18 +68,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -139,8 +139,8 @@ gtag('config', 'UA-138780766-1');
   <div class="row">
     <div class="col-md-12">
       
-  <div class="section" id="how-to-configure-pix-and-ossec">
-<h1>How to configure PIX and OSSEC<a class="headerlink" href="#how-to-configure-pix-and-ossec" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="how-to-configure-pix-and-OpenArmor">
+<h1>How to configure PIX and OpenArmor<a class="headerlink" href="#how-to-configure-pix-and-OpenArmor" title="Permalink to this headline">¶</a></h1>
 <p>by Dale Neufeld &lt;canuck.eh ( at ) gmail.com&gt;</p>
 <p>This is a very basic setup and the PIX offers a lot more options for syslog configuration including using a different port.</p>
 <ol class="arabic simple">
@@ -170,15 +170,15 @@ gtag('config', 'UA-138780766-1');
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>Ensure your OSSEC host is seeing the PIX syslog messages</p></li>
+<li><p>Ensure your OpenArmor host is seeing the PIX syslog messages</p></li>
 </ol>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>tcpdump -i eth0 -A -s <span class="m">0</span> udp port <span class="m">514</span> and host &lt;pix_ip&gt;
 </pre></div>
 </div>
 <ol class="arabic simple" start="3">
-<li><p>Configure OSSEC to listen</p></li>
+<li><p>Configure OpenArmor to listen</p></li>
 </ol>
-<p>Add the following to ossec.conf</p>
+<p>Add the following to OpenArmor.conf</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;remote&gt;</span>
 <span class="go">   &lt;connection&gt;syslog&lt;/connection&gt;</span>
 <span class="go">   &lt;allowed-ips&gt;192.168.2.1&lt;/allowed-ips&gt;  &lt;!--ip addr of the device--&gt;</span>
@@ -187,9 +187,9 @@ gtag('config', 'UA-138780766-1');
 </pre></div>
 </div>
 <ol class="arabic simple" start="4">
-<li><p>Restart the ossec service to begin listening</p></li>
+<li><p>Restart the OpenArmor service to begin listening</p></li>
 </ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/ossec/bin/ossec-control restart
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/OpenArmor/bin/OpenArmor-control restart
 </pre></div>
 </div>
 </div>
@@ -206,8 +206,8 @@ gtag('config', 'UA-138780766-1');
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

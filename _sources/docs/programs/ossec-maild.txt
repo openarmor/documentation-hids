@@ -1,41 +1,41 @@
 
-.. _ossec-maild:
+.. _OpenArmor-maild:
 
-ossec-maild
+OpenArmor-maild
 =============
 
-The ``ossec-maild`` daemon sends OSSEC alerts via email.
-``ossec-maild`` is started by ossec-control.
-Configuration for ossec-maild is handled in the ossec.conf. (see :ref:`ossec_config.global`)
+The ``OpenArmor-maild`` daemon sends OpenArmor alerts via email.
+``OpenArmor-maild`` is started by OpenArmor-control.
+Configuration for OpenArmor-maild is handled in the OpenArmor.conf. (see :ref:`OpenArmor_config.global`)
 
-ossec-maild argument options
+OpenArmor-maild argument options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. program:: ossec-maild
+.. program:: OpenArmor-maild
 
 .. option:: -c <config>
 
-    Run ``ossec-maild`` using <config> as the configuration file.
+    Run ``OpenArmor-maild`` using <config> as the configuration file.
 
-    **Default:** /var/ossec/etc/ossec.conf
+    **Default:** /var/OpenArmor/etc/OpenArmor.conf
 
 .. option:: -D <dir>
 
     Chroot to <dir>.
 
-    **Default:** /var/ossec
+    **Default:** /var/OpenArmor
 
 .. option:: -d
 
-    Execute ossec-maild in debug mode. This option can be used multiple times to increase the verbosity of the debug messages.
+    Execute OpenArmor-maild in debug mode. This option can be used multiple times to increase the verbosity of the debug messages.
 
 .. option:: -f
 
-    Run ``ossec-maild`` in the foreground.
+    Run ``OpenArmor-maild`` in the foreground.
 
 .. option:: -g <group>
 
-    Run ``ossec-maild`` as <group>.
+    Run ``OpenArmor-maild`` as <group>.
 
 .. option:: -h
 
@@ -47,9 +47,9 @@ ossec-maild argument options
 
 .. option:: -u <user>
 
-    Run ``ossec-maild`` as <user>.
+    Run ``OpenArmor-maild`` as <user>.
 
-    **Default:** ossecm
+    **Default:** OpenArmorm
 
 .. option:: -V
 

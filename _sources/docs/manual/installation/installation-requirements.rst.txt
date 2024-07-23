@@ -3,7 +3,7 @@
 Installation requirements
 ==========================
 
-For UNIX systems, OSSEC only requires gnu make, gcc, and libc.
+For UNIX systems, OpenArmor only requires gnu make, gcc, and libc.
 OpenSSL is a suggested, but optional, prerequisite. 
 However, you always have the option to pre-compile
 it on one system and move the binaries to the final box.
@@ -13,7 +13,7 @@ PCRE2
 
 .. versionadded:: 3.3
 
-PCRE2 support has been added to OSSEC v3.3. The build system can either use the system's PCRE2 libraries,
+PCRE2 support has been added to OpenArmor v3.3. The build system can either use the system's PCRE2 libraries,
 or the necessary bits can be built as part of the installation process.
 
 .. versionadded:: 3.4
@@ -21,12 +21,12 @@ or the necessary bits can be built as part of the installation process.
 As of v3.4 the default build process has set `PCRE2_SYSTEM`, and expects pcre2 to be installed on the system.
 On many Linux systems the necessary packages would be `dev` or `devel` packages specifically.
 
-Alternatively, OSSEC can build and use pcre2 without installing the packages.
+Alternatively, OpenArmor can build and use pcre2 without installing the packages.
 To do this the `pcre2-10.32` sources must be installed in `src/external`:
 
 .. code-block:: console
 
-   $ cd ossec-hids-*
+   $ cd OpenArmor-hids-*
    $ wget https://ftp.pcre.org/pub/pcre/pcre2-10.32.tar.gz
    $ tar xzf pcre2-10.32.tar.gz -C src/external
 
@@ -34,20 +34,20 @@ If you use the `pcre2-10.32` sources, set the `PCRE2_SYSTEM` variable to no:
 
 .. code-block:: console
 
-   # cd ossec-hids-*
+   # cd OpenArmor-hids-*
    # PCRE2_SYSTEM=no ./install.sh
 
 To use the system's PCRE2, set the `PCRE2_SYSTEM` variable to yes:
 
 .. code-block:: console
 
-   # cd ossec-hids-*
+   # cd OpenArmor-hids-*
    # PCRE2_SYSTEM=yes ./install.sh
 
 zlib
 ----
 
-`zlib <https://www.zlib.net/>`_ is included with OSSEC in `src/external/zlib-1.2.11`. In previous
+`zlib <https://www.zlib.net/>`_ is included with OpenArmor in `src/external/zlib-1.2.11`. In previous
 versions this included version was used by default during the build process, but this changed to 
 using the system zlib. Ensure the correct zlib development packages are installed.
 
@@ -55,7 +55,7 @@ To use the included version of zlib, simply set `ZLIB_SYSTEM` to `no`:
 
 .. code-block:: console
 
-   # cd ossec-hids-*
+   # cd OpenArmor-hids-*
    # ZLIB_SYSTEM=no ./install.sh
 
 libevent
@@ -63,7 +63,7 @@ libevent
 
 .. versionadded:: 3.5
 
-`libevent <http://libevent.org/>`_ was added for `ossec-agentd` and `ossec-maild`. A development package
+`libevent <http://libevent.org/>`_ was added for `OpenArmor-agentd` and `OpenArmor-maild`. A development package
 for this should be installed on the system.
 
 RedHat / Centos / Fedora / Amazon Linux
@@ -106,7 +106,7 @@ On Debian 10 Buster, `zlib` could be `libz`.
    apt-get install libz-dev
 
 On Ubuntu you will need the *build-essential* package in order to
-compile and install OSSEC.
+compile and install OpenArmor.
 
 To install the package run the following command.
 
@@ -168,23 +168,23 @@ need to be installed.
 FreeBSD
 -------
 
-If you want to build and install OSSEC on FreeBSD you can work together with
+If you want to build and install OpenArmor on FreeBSD you can work together with
 its `FreeBSD Ports Collection <https://www.freebsd.org/ports>`_.
 
-There you can find and setup **ossec-hids-agent**, **ossec-hids-local** or
-**ossec-hids-server**.
+There you can find and setup **OpenArmor-hids-agent**, **OpenArmor-hids-local** or
+**OpenArmor-hids-server**.
 
 If you want to build and install only the the required dependencies to run an
-OSSEC server/manager, without installing it:
+OpenArmor server/manager, without installing it:
 
 .. code-block:: console
 
-   # cd /usr/ports/security/ossec-hids-server
+   # cd /usr/ports/security/OpenArmor-hids-server
    # make
 
 If you want to install this particular port, you should run ``make install``.
 
-FreeBSD also offers pre-compiled packages for OSSEC and all its dependencies. If you
+FreeBSD also offers pre-compiled packages for OpenArmor and all its dependencies. If you
 want to install them you must work with
 `pkg <https://www.freebsd.org/doc/handbook/pkgng-intro.html>`_.
 
@@ -192,13 +192,13 @@ OpenBSD
 -------
 
 As OpenBSD also has its own `OpenBSD Ports Collection <https://www.openbsd.org/faq/ports/ports.html>`_,
-you can build and install OSSEC using it if you want.
+you can build and install OpenArmor using it if you want.
 
-It only offers **security/ossec-hids**, so:
+It only offers **security/OpenArmor-hids**, so:
 
 .. code-block:: console
 
-   cd /usr/ports/security/ossec-hids
+   cd /usr/ports/security/OpenArmor-hids
    make
 
 Just like the previous example with FreeBSD, if you want to install it all (not just the

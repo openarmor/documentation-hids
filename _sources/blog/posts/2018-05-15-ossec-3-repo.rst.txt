@@ -1,14 +1,14 @@
 .. post:: May 15, 2018
-   :tags: ossec, beta
+   :tags: OpenArmor, beta
    :category: Announcements
    :author: Scott R. Shinn
 
 
 ========================
-OSSEC HIDS 3.0 Snapshots
+OpenArmor HIDS 3.0 Snapshots
 ========================
 
-OSSEC 3.0 release candidate builds are available from our testing Yum/Apt repo for the following distributions:
+OpenArmor 3.0 release candidate builds are available from our testing Yum/Apt repo for the following distributions:
 
 
 * Amazon Linux
@@ -33,6 +33,6 @@ Updates for Fedora 28,  Ubuntu 18, and Kali linux are on the way!
 
 **Download**
 
-`https://updates.atomicorp.com/channels/ossec-3-testing <https://updates.atomicorp.com/channels/ossec-3-testing>`_
+`https://updates.atomicorp.com/channels/OpenArmor-3-testing <https://updates.atomicorp.com/channels/OpenArmor-3-testing>`_
 
 

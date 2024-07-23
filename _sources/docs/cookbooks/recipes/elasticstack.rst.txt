@@ -3,7 +3,7 @@
 Using filebeat, logstash, and elasticsearch:
 ============================================
 
-Enable json alert output in ossec.conf:
+Enable json alert output in OpenArmor.conf:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: xml
@@ -19,10 +19,10 @@ Configure filebeat to read alerts.json in filebeat.yml:
 
    - input_type: log
    paths:
-     - /var/ossec/logs/alerts/alerts.json
+     - /var/OpenArmor/logs/alerts/alerts.json
 
    json.keys_under_root: true
-   fields: {log_type: osseclogs}
+   fields: {log_type: OpenArmorlogs}
 
 Configure logstash:
 ^^^^^^^^^^^^^^^^^^^
@@ -33,15 +33,15 @@ Configure logstash:
      beats {
        id => "beats_test"
        port => 9001
-       type => "ossec"
+       type => "OpenArmor"
      }
    }
 
    filter {
-     if([fields][log_type] == "osseclogs") {
+     if([fields][log_type] == "OpenArmorlogs") {
        mutate {
          replace => {
-           "[type]" => "osseclogs"
+           "[type]" => "OpenArmorlogs"
          }
        }
      }
@@ -49,9 +49,9 @@ Configure logstash:
 
    output {
 
-     if([type] == "osseclogs") {
+     if([type] == "OpenArmorlogs") {
        elasticsearch {
-         index => "ossec-%{+YYYY.MM.dd}"
+         index => "OpenArmor-%{+YYYY.MM.dd}"
        }
      }
    }

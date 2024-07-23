@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Using filebeat, logstash, and elasticsearch: &#8212; OSSEC</title>
+    <title>Using filebeat, logstash, and elasticsearch: &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -151,8 +151,8 @@ gtag('config', 'UA-138780766-1');
       
   <div class="section" id="using-filebeat-logstash-and-elasticsearch">
 <span id="cookbooks-recpies-elasticstack"></span><h1>Using filebeat, logstash, and elasticsearch:<a class="headerlink" href="#using-filebeat-logstash-and-elasticsearch" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="enable-json-alert-output-in-ossec-conf">
-<h2>Enable json alert output in ossec.conf:<a class="headerlink" href="#enable-json-alert-output-in-ossec-conf" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="enable-json-alert-output-in-OpenArmor-conf">
+<h2>Enable json alert output in OpenArmor.conf:<a class="headerlink" href="#enable-json-alert-output-in-OpenArmor-conf" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;global&gt;</span>
   <span class="nt">&lt;jsonout_output&gt;</span>yes<span class="nt">&lt;/jsonout_output&gt;</span>
 <span class="nt">&lt;/global&gt;</span>
@@ -163,10 +163,10 @@ gtag('config', 'UA-138780766-1');
 <h2>Configure filebeat to read alerts.json in filebeat.yml:<a class="headerlink" href="#configure-filebeat-to-read-alerts-json-in-filebeat-yml" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">- input_type: log</span>
 <span class="go">paths:</span>
-<span class="go">  - /var/ossec/logs/alerts/alerts.json</span>
+<span class="go">  - /var/OpenArmor/logs/alerts/alerts.json</span>
 
 <span class="go">json.keys_under_root: true</span>
-<span class="go">fields: {log_type: osseclogs}</span>
+<span class="go">fields: {log_type: OpenArmorlogs}</span>
 </pre></div>
 </div>
 </div>
@@ -176,15 +176,15 @@ gtag('config', 'UA-138780766-1');
 <span class="go">  beats {</span>
 <span class="go">    id =&gt; &quot;beats_test&quot;</span>
 <span class="go">    port =&gt; 9001</span>
-<span class="go">    type =&gt; &quot;ossec&quot;</span>
+<span class="go">    type =&gt; &quot;OpenArmor&quot;</span>
 <span class="go">  }</span>
 <span class="go">}</span>
 
 <span class="go">filter {</span>
-<span class="go">  if([fields][log_type] == &quot;osseclogs&quot;) {</span>
+<span class="go">  if([fields][log_type] == &quot;OpenArmorlogs&quot;) {</span>
 <span class="go">    mutate {</span>
 <span class="go">      replace =&gt; {</span>
-<span class="go">        &quot;[type]&quot; =&gt; &quot;osseclogs&quot;</span>
+<span class="go">        &quot;[type]&quot; =&gt; &quot;OpenArmorlogs&quot;</span>
 <span class="go">      }</span>
 <span class="go">    }</span>
 <span class="go">  }</span>
@@ -192,9 +192,9 @@ gtag('config', 'UA-138780766-1');
 
 <span class="go">output {</span>
 
-<span class="go">  if([type] == &quot;osseclogs&quot;) {</span>
+<span class="go">  if([type] == &quot;OpenArmorlogs&quot;) {</span>
 <span class="go">    elasticsearch {</span>
-<span class="go">      index =&gt; &quot;ossec-%{+YYYY.MM.dd}&quot;</span>
+<span class="go">      index =&gt; &quot;OpenArmor-%{+YYYY.MM.dd}&quot;</span>
 <span class="go">    }</span>
 <span class="go">  }</span>
 <span class="go">}</span>
@@ -215,8 +215,8 @@ gtag('config', 'UA-138780766-1');
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

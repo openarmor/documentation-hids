@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Migrating/backing up the manager &#8212; OSSEC</title>
+    <title>Migrating/backing up the manager &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -68,18 +68,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -143,26 +143,26 @@ gtag('config', 'UA-138780766-1');
 <h1>Migrating/backing up the manager<a class="headerlink" href="#migrating-backing-up-the-manager" title="Permalink to this headline">¶</a></h1>
 <p>If you need to migrate the manager to another system (or just want to backup the current setup), these are the files you need:</p>
 <p>These are the two locations where the keys are saved for all the agents.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/var/ossec/etc/client.keys</span>
-<span class="go">/var/ossec/queue/rids/</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/var/OpenArmor/etc/client.keys</span>
+<span class="go">/var/OpenArmor/queue/rids/</span>
 </pre></div>
 </div>
 <p>These are the configuration files you may want to keep</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/var/ossec/etc/*.conf</span>
-<span class="go">/var/ossec/rules</span>
-<span class="go">/var/ossec/etc/*.xml</span>
-<span class="go">/var/ossec/etc/shared/agent.conf</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/var/OpenArmor/etc/*.conf</span>
+<span class="go">/var/OpenArmor/rules</span>
+<span class="go">/var/OpenArmor/etc/*.xml</span>
+<span class="go">/var/OpenArmor/etc/shared/agent.conf</span>
 </pre></div>
 </div>
 <p>These are the databases where we store data for the agents.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/var/ossec/queue/syscheck</span>
-<span class="go">/var/ossec/queue/rootcheck</span>
-<span class="go">/var/ossec/queue/fts</span>
-<span class="go">/var/ossec/queue/agentless</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/var/OpenArmor/queue/syscheck</span>
+<span class="go">/var/OpenArmor/queue/rootcheck</span>
+<span class="go">/var/OpenArmor/queue/fts</span>
+<span class="go">/var/OpenArmor/queue/agentless</span>
 </pre></div>
 </div>
 <p>Logs stored if they are needed.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/var/ossec/logs</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/var/OpenArmor/logs</span>
 </pre></div>
 </div>
 </div>
@@ -179,8 +179,8 @@ gtag('config', 'UA-138780766-1');
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

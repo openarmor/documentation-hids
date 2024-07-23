@@ -7,8 +7,8 @@ Log Samples from Squid
 
 .. code-block:: console
 
-  644 1.2.3.4 TCP_CLIENT_REFRESH_MISS/404 4456 GET http://www.ossec.net/x1 - DIRECT/2.3.4.5 text/html
-  1292 1.2.3.4 TCP_CLIENT_REFRESH_MISS/404 4456 GET http://www.ossec.net/x2 - DIRECT/2.3.4.5 text/html
+  644 1.2.3.4 TCP_CLIENT_REFRESH_MISS/404 4456 GET http://theopenarmor.org/x1 - DIRECT/2.3.4.5 text/html
+  1292 1.2.3.4 TCP_CLIENT_REFRESH_MISS/404 4456 GET http://theopenarmor.org/x2 - DIRECT/2.3.4.5 text/html
 
 403 error (forbidden) -- Attempting to proxy SMTP over the web:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

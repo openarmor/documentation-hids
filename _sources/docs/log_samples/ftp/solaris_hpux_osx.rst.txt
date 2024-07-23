@@ -6,8 +6,8 @@ Connection attempt:
 
 ..code-block:: console
 
-  May 28 15:50:36 sol1 ftpd[28370]: connection from slacker.lab.ossec.net at Sun May 28 15:50:36 2006
-  May 28 15:50:36 sol1 ftpd[28370]: FTP LOGIN FROM slacker.lab.ossec.net, test-user
+  May 28 15:50:36 sol1 ftpd[28370]: connection from slacker.lab.OpenArmor.net at Sun May 28 15:50:36 2006
+  May 28 15:50:36 sol1 ftpd[28370]: FTP LOGIN FROM slacker.lab.OpenArmor.net, test-user
 
 
 Connection refused:
@@ -15,7 +15,7 @@ Connection refused:
 
 ..code-block:: console
 
-  Jun  3 13:37:10 sol2 ftpd[327802]: refused connect from spongebob.lab.ossec.net
+  Jun  3 13:37:10 sol2 ftpd[327802]: refused connect from spongebob.lab.OpenArmor.net
 
 
 
@@ -24,7 +24,7 @@ Login failed:
 
 ..code-block:: console
 
-  Jun  2 16:44:05 sol2 ftpd[28662]: repeated login failures from spongebob.lab.ossec.net
+  Jun  2 16:44:05 sol2 ftpd[28662]: repeated login failures from spongebob.lab.OpenArmor.net
   Sep 11 08:59:41 xxx ftpd[18658]:  PAM_ERROR_MSG: Account is disabled - see Account Administrator.
 
 
@@ -33,7 +33,7 @@ Login failed:
 
 ..code-block:: console
 
-  Jun  2 16:44:05 sol2 ftpd[28662]: repeated login failures from spongebob.lab.ossec.net
+  Jun  2 16:44:05 sol2 ftpd[28662]: repeated login failures from spongebob.lab.OpenArmor.net
 
 
 Transactions:

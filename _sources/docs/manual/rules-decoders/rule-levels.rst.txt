@@ -27,7 +27,7 @@ them or after them.
 
 07 - "Bad word" matching. They include words like "bad", "error", etc. These events are most of the time unclassified and may have some security relevance.
 
-08 - First time seen - Include first time seen events. First time an IDS event is fired or the first time an user logged in. If you just started using OSSEC HIDS these messages will probably be frequently. After a while they should go away, It also includes security relevant actions (like the starting of a sniffer or something like that).
+08 - First time seen - Include first time seen events. First time an IDS event is fired or the first time an user logged in. If you just started using OpenArmor HIDS these messages will probably be frequently. After a while they should go away, It also includes security relevant actions (like the starting of a sniffer or something like that).
 
 09 - Error from invalid source - Include attempts to login as an unknown user or from an invalid source. May have security relevance (specially if repeated). They also include errors regarding the "admin" (root) account.
 

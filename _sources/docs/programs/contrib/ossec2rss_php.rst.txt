@@ -1,2 +1,2 @@
-ossec2rss_php
+OpenArmor2rss_php
 =============

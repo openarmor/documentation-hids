@@ -56,7 +56,7 @@ URLs:
 
 
 
-Example of ossec parsing it:
+Example of OpenArmor parsing it:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: console

@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sending output to prelude &#8212; OSSEC</title>
+    <title>Sending output to prelude &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -152,16 +152,16 @@ gtag('config', 'UA-138780766-1');
   <div class="section" id="sending-output-to-prelude">
 <span id="manual-out-prelude"></span><h1>Sending output to prelude<a class="headerlink" href="#sending-output-to-prelude" title="Permalink to this headline">¶</a></h1>
 <p>Prelude is a Hybrid IDS that uses IDMEF to receive alert information from external devices.
-If you are a Prelude user and wish to send your OSSEC alerts to Prelude, do the following:</p>
+If you are a Prelude user and wish to send your OpenArmor alerts to Prelude, do the following:</p>
 <div class="section" id="enabling-prelude-support">
 <h2>Enabling Prelude Support<a class="headerlink" href="#enabling-prelude-support" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You must have the Prelude libraries installed on the OSSEC server.</p>
+<p>You must have the Prelude libraries installed on the OpenArmor server.</p>
 </div>
-<p>Before you run the “./install.sh” script execute the following to compile OSSEC with
+<p>Before you run the “./install.sh” script execute the following to compile OpenArmor with
 prelude support.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span><span class="nb">cd</span> ossec-hids-*
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span><span class="nb">cd</span> OpenArmor-hids-*
 <span class="gp"># </span><span class="nb">cd</span> src<span class="p">;</span> make setprelude<span class="p">;</span> <span class="nb">cd</span> ..
 <span class="gp"># </span>./install.sh
 </pre></div>
@@ -169,7 +169,7 @@ prelude support.</p>
 </div>
 <div class="section" id="enable-prelude-output-in-the-configuration">
 <h2>Enable Prelude output in the configuration<a class="headerlink" href="#enable-prelude-output-in-the-configuration" title="Permalink to this headline">¶</a></h2>
-<p>Just add the following entry to your ossec.conf inside the &lt;global&gt; section.</p>
+<p>Just add the following entry to your OpenArmor.conf inside the &lt;global&gt; section.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;prelude_output&gt;</span>yes<span class="nt">&lt;/prelude_output&gt;</span>
 </pre></div>
 </div>
@@ -178,7 +178,7 @@ prelude support.</p>
 <h2>Prelude extra options<a class="headerlink" href="#prelude-extra-options" title="Permalink to this headline">¶</a></h2>
 <p>You can define your own profile and set the log level from which you can send alerts to
 prelude with those parameters.  Once again in the &lt;global&gt; section.</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;prelude_profile&gt;</span>MyOssecProfile<span class="nt">&lt;/prelude_profile&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;prelude_profile&gt;</span>MyOpenArmorProfile<span class="nt">&lt;/prelude_profile&gt;</span>
 <span class="nt">&lt;prelude_log_level&gt;</span>6<span class="nt">&lt;/prelude_log_level&gt;</span>
 </pre></div>
 </div>
@@ -197,8 +197,8 @@ prelude with those parameters.  Once again in the &lt;global&gt; section.</p>
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

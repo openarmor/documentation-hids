@@ -4,18 +4,18 @@
 Log monitoring/analysis 
 ======================= 
 
-Log Analysis (or log inspection) is done inside OSSEC by the logcollector and 
+Log Analysis (or log inspection) is done inside OpenArmor by the logcollector and 
 analysisd processes. The first one collects the events and the second one 
 analyzes (decodes, filters and classifies) them.
 
-It is done in real time, so as soon as an event is written OSSEC will process 
-them. OSSEC can read events from internal log files, from the Windows event 
+It is done in real time, so as soon as an event is written OpenArmor will process 
+them. OpenArmor can read events from internal log files, from the Windows event 
 log and also receive them directly via remote syslog.
 
 What is log analysis?
 ---------------------
 
-Inside OSSEC we call log analysis a LIDS, or log-based intrusion detection. The 
+Inside OpenArmor we call log analysis a LIDS, or log-based intrusion detection. The 
 goal is to detect attacks, misuse or system errors using the logs.
 
 LIDS - Log-based intrusion detection or security log analysis are the processes 
@@ -55,16 +55,16 @@ Quick Facts
 Configuration Options 
 ---------------------
 
-These options should be specified locally in each agent's ossec.conf file or the 
+These options should be specified locally in each agent's OpenArmor.conf file or the 
 share agent.conf. Inside the ``<localfile>`` element, you can have the following 
 options. 
 
-.. include:: ../../syntax/ossec_config.localfile.trst 
+.. include:: ../../syntax/OpenArmor_config.localfile.trst 
 
 Monitoring logs 
 --------------- 
 
-With in OSSEC there are two major methods for monitoring logs: file and process.  Each 
+With in OpenArmor there are two major methods for monitoring logs: file and process.  Each 
 method has its own page and examples. 
 
 .. toctree::

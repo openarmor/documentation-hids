@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ossec-control &#8212; OSSEC</title>
+    <title>OpenArmor-control &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -22,8 +22,8 @@
     <link rel="author" title="About these documents" href="../../about.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="ossec-csyslogd" href="ossec-csyslogd.html" />
-    <link rel="prev" title="ossec-authd" href="ossec-authd.html" />
+    <link rel="next" title="OpenArmor-csyslogd" href="OpenArmor-csyslogd.html" />
+    <link rel="prev" title="OpenArmor-authd" href="OpenArmor-authd.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../index.html"><img src="../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../index.html"><img src="../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -117,11 +117,11 @@ gtag('config', 'UA-138780766-1');
               
                 
   <li>
-    <a href="ossec-authd.html" title="Previous Chapter: ossec-authd"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; ossec-authd</span>
+    <a href="OpenArmor-authd.html" title="Previous Chapter: OpenArmor-authd"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; OpenArmor-authd</span>
     </a>
   </li>
   <li>
-    <a href="ossec-csyslogd.html" title="Next Chapter: ossec-csyslogd"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">ossec-csyslogd &raquo;</span>
+    <a href="OpenArmor-csyslogd.html" title="Next Chapter: OpenArmor-csyslogd"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">OpenArmor-csyslogd &raquo;</span>
     </a>
   </li>
               
@@ -149,42 +149,42 @@ gtag('config', 'UA-138780766-1');
   <div class="row">
     <div class="col-md-12">
       
-  <div class="section" id="ossec-control">
-<span id="id1"></span><h1>ossec-control<a class="headerlink" href="#ossec-control" title="Permalink to this headline">¶</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">ossec-control</span></code> is a script to start, stop, configure, or check on the status of OSSEC processes.
+  <div class="section" id="OpenArmor-control">
+<span id="id1"></span><h1>OpenArmor-control<a class="headerlink" href="#OpenArmor-control" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">OpenArmor-control</span></code> is a script to start, stop, configure, or check on the status of OpenArmor processes.
 <code class="docutils literal notranslate"><span class="pre">ossc-control</span></code> can enable or disable client-syslog, database logging, agentless configurations, and debug mode.</p>
-<div class="section" id="ossec-control-argument-options">
-<h2>ossec-control argument options<a class="headerlink" href="#ossec-control-argument-options" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="OpenArmor-control-argument-options">
+<h2>OpenArmor-control argument options<a class="headerlink" href="#OpenArmor-control-argument-options" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><dl class="simple" id="ossec-control-start">
-<dt><strong>start</strong></dt><dd><p>Start the OSSEC processes.</p>
+<div><dl class="simple" id="OpenArmor-control-start">
+<dt><strong>start</strong></dt><dd><p>Start the OpenArmor processes.</p>
 </dd>
 </dl>
-<dl class="simple" id="ossec-control-stop">
-<dt><strong>stop</strong></dt><dd><p>Stop the OSSEC processes.</p>
+<dl class="simple" id="OpenArmor-control-stop">
+<dt><strong>stop</strong></dt><dd><p>Stop the OpenArmor processes.</p>
 </dd>
 </dl>
-<dl class="simple" id="ossec-control-restart">
-<dt><strong>restart</strong></dt><dd><p>Restart the OSSEC processes.</p>
+<dl class="simple" id="OpenArmor-control-restart">
+<dt><strong>restart</strong></dt><dd><p>Restart the OpenArmor processes.</p>
 </dd>
 </dl>
-<dl id="ossec-control-reload">
-<dt><strong>reload</strong></dt><dd><p>Restart all OSSEC processes except <code class="docutils literal notranslate"><span class="pre">ossec-execd</span></code>. This allows an agent to reload without losing active response status.</p>
+<dl id="OpenArmor-control-reload">
+<dt><strong>reload</strong></dt><dd><p>Restart all OpenArmor processes except <code class="docutils literal notranslate"><span class="pre">OpenArmor-execd</span></code>. This allows an agent to reload without losing active response status.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is only available on an OSSEC agent.</p>
+<p>This is only available on an OpenArmor agent.</p>
 </div>
 </dd>
 </dl>
-<dl class="simple" id="ossec-control-status">
-<dt><strong>status</strong></dt><dd><p>Determine which OSSEC processes are running.</p>
+<dl class="simple" id="OpenArmor-control-status">
+<dt><strong>status</strong></dt><dd><p>Determine which OpenArmor processes are running.</p>
 </dd>
 </dl>
-<dl id="ossec-control-enable">
-<dt><strong>enable</strong></dt><dd><p>Enable OSSEC functionality.</p>
+<dl id="OpenArmor-control-enable">
+<dt><strong>enable</strong></dt><dd><p>Enable OpenArmor functionality.</p>
 <blockquote>
-<div><dl id="ossec-control-enable-database">
-<dt><strong>database</strong></dt><dd><p>Enable the <code class="docutils literal notranslate"><span class="pre">ossec-dbd</span></code> daemon for logging to a database.</p>
+<div><dl id="OpenArmor-control-enable-database">
+<dt><strong>database</strong></dt><dd><p>Enable the <code class="docutils literal notranslate"><span class="pre">OpenArmor-dbd</span></code> daemon for logging to a database.</p>
 <p><strong>Available:</strong> Server and local installs only.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -192,28 +192,28 @@ gtag('config', 'UA-138780766-1');
 </div>
 </dd>
 </dl>
-<dl id="ossec-control-enable-client-syslog">
-<dt><strong>client-syslog</strong></dt><dd><p>Enable <code class="docutils literal notranslate"><span class="pre">ossec-csyslogd</span></code> for logging to remote syslog.</p>
+<dl id="OpenArmor-control-enable-client-syslog">
+<dt><strong>client-syslog</strong></dt><dd><p>Enable <code class="docutils literal notranslate"><span class="pre">OpenArmor-csyslogd</span></code> for logging to remote syslog.</p>
 <p><strong>Available:</strong> Server and local installs only.</p>
 </dd>
 </dl>
-<dl id="ossec-control-enable-agentless">
-<dt><strong>agentless</strong></dt><dd><p>Enable <code class="docutils literal notranslate"><span class="pre">ossec-agentlessd</span></code> for running commands on systems without OSSEC agents.</p>
+<dl id="OpenArmor-control-enable-agentless">
+<dt><strong>agentless</strong></dt><dd><p>Enable <code class="docutils literal notranslate"><span class="pre">OpenArmor-agentlessd</span></code> for running commands on systems without OpenArmor agents.</p>
 <p><strong>Available:</strong> Server and local installs only.</p>
 </dd>
 </dl>
-<dl class="simple" id="ossec-control-enable-debug">
-<dt><strong>debug</strong></dt><dd><p>Run all OSSEC daemons in debug mode.</p>
+<dl class="simple" id="OpenArmor-control-enable-debug">
+<dt><strong>debug</strong></dt><dd><p>Run all OpenArmor daemons in debug mode.</p>
 </dd>
 </dl>
 </div></blockquote>
 </dd>
 </dl>
-<dl id="ossec-control-disable">
-<dt><strong>disable</strong></dt><dd><p>Disable OSSEC functionality.</p>
+<dl id="OpenArmor-control-disable">
+<dt><strong>disable</strong></dt><dd><p>Disable OpenArmor functionality.</p>
 <blockquote>
-<div><dl id="ossec-control-disable-database">
-<dt><strong>database</strong></dt><dd><p>Disable the <code class="docutils literal notranslate"><span class="pre">ossec-dbd</span></code> daemon for logging to a database.</p>
+<div><dl id="OpenArmor-control-disable-database">
+<dt><strong>database</strong></dt><dd><p>Disable the <code class="docutils literal notranslate"><span class="pre">OpenArmor-dbd</span></code> daemon for logging to a database.</p>
 <p><strong>Available:</strong> Server and local installs only.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -221,19 +221,19 @@ gtag('config', 'UA-138780766-1');
 </div>
 </dd>
 </dl>
-<dl id="ossec-control-disable-client-syslog">
+<dl id="OpenArmor-control-disable-client-syslog">
 <dt><strong>client-syslog</strong></dt><dd><blockquote>
-<div><p>Disable <code class="docutils literal notranslate"><span class="pre">ossec-csyslogd</span></code> for logging to remote syslog.</p>
+<div><p>Disable <code class="docutils literal notranslate"><span class="pre">OpenArmor-csyslogd</span></code> for logging to remote syslog.</p>
 </div></blockquote>
 <p><strong>Available:</strong> Server and local installs only.</p>
 </dd>
 </dl>
-<dl id="ossec-control-disable-agentless">
-<dt><strong>agentless</strong></dt><dd><p>Disable <code class="docutils literal notranslate"><span class="pre">ossec-agentlessd</span></code> for running commands on systems without OSSEC agents.</p>
+<dl id="OpenArmor-control-disable-agentless">
+<dt><strong>agentless</strong></dt><dd><p>Disable <code class="docutils literal notranslate"><span class="pre">OpenArmor-agentlessd</span></code> for running commands on systems without OpenArmor agents.</p>
 <p><strong>Available:</strong> Server and local installs only.</p>
 </dd>
 </dl>
-<dl class="simple" id="ossec-control-disable-debug">
+<dl class="simple" id="OpenArmor-control-disable-debug">
 <dt><strong>debug</strong></dt><dd><p>Turn off debug mode.</p>
 </dd>
 </dl>
@@ -242,13 +242,13 @@ gtag('config', 'UA-138780766-1');
 </dl>
 </div></blockquote>
 </div>
-<div class="section" id="ossec-control-example-usage">
-<h2>ossec-control example usage<a class="headerlink" href="#ossec-control-example-usage" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="example-running-ossec-control">
-<h3>Example: Running ossec-control<a class="headerlink" href="#example-running-ossec-control" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/ossec/bin/ossec-control
+<div class="section" id="OpenArmor-control-example-usage">
+<h2>OpenArmor-control example usage<a class="headerlink" href="#OpenArmor-control-example-usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example-running-OpenArmor-control">
+<h3>Example: Running OpenArmor-control<a class="headerlink" href="#example-running-OpenArmor-control" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/OpenArmor/bin/OpenArmor-control
 
-<span class="go">Usage: /var/ossec/bin/ossec-control {start|stop|restart|status|enable|disable}</span>
+<span class="go">Usage: /var/OpenArmor/bin/OpenArmor-control {start|stop|restart|status|enable|disable}</span>
 </pre></div>
 </div>
 </div>
@@ -267,8 +267,8 @@ gtag('config', 'UA-138780766-1');
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agent systems behind NAT or with dynamic IPs (DHCP) &#8212; OSSEC</title>
+    <title>Agent systems behind NAT or with dynamic IPs (DHCP) &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -22,7 +22,7 @@
     <link rel="author" title="About these documents" href="../../../about.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Adding an agent with ossec-authd" href="agent-auth.html" />
+    <link rel="next" title="Adding an agent with OpenArmor-authd" href="agent-auth.html" />
     <link rel="prev" title="Managing Agents" href="agent-management.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -121,7 +121,7 @@ gtag('config', 'UA-138780766-1');
     </a>
   </li>
   <li>
-    <a href="agent-auth.html" title="Next Chapter: Adding an agent with ossec-authd"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Adding an age... &raquo;</span>
+    <a href="agent-auth.html" title="Next Chapter: Adding an agent with OpenArmor-authd"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Adding an age... &raquo;</span>
     </a>
   </li>
               
@@ -168,11 +168,11 @@ in the 192.168.2.0/24 network, just provide the IP address of the agent as
 <div class="section" id="nat-example">
 <h2>NAT Example<a class="headerlink" href="#nat-example" title="Permalink to this headline">¶</a></h2>
 <p>The same applies to systems behind a NAT device.
-The OSSEC server will see all agents behind the NAT as if they have the
+The OpenArmor server will see all agents behind the NAT as if they have the
 same IP address.</p>
 <p>For example, you have systems 192.168.1.2, 192.168.1.3 and
 192.168.1.4 behind a nat server that connects to network 10.1.1.0/24 with
-the ossec server on it.</p>
+the OpenArmor server on it.</p>
 <p>In this case, you need to config the agents as if their IP was 10.1.1.0/24,
 because this is the IP that the server is seeing (not their original IP).
 Using <code class="docutils literal notranslate"><span class="pre">any</span></code> instead of an IP address or range is also a valid option, allowing
@@ -208,8 +208,8 @@ the following format:</p>
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

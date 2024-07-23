@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Process Monitoring &#8212; OSSEC</title>
+    <title>Process Monitoring &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -153,10 +153,10 @@ gtag('config', 'UA-138780766-1');
 <span id="manual-procmon"></span><h1>Process Monitoring<a class="headerlink" href="#process-monitoring" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>We love logs. Inside OSSEC we treat everything as if it is a log and parse it
+<p>We love logs. Inside OpenArmor we treat everything as if it is a log and parse it
 appropriately with our rules. However, some information is not available in log
 files but we still want to monitor it. To solve that gap, we added the ability
-to monitor the output of commands via OSSEC, and treat the output of those commands just like they were log files.</p>
+to monitor the output of commands via OpenArmor, and treat the output of those commands just like they were log files.</p>
 </div>
 <div class="section" id="configuration-examples">
 <h2>Configuration examples<a class="headerlink" href="#configuration-examples" title="Permalink to this headline">¶</a></h2>
@@ -164,31 +164,31 @@ to monitor the output of commands via OSSEC, and treat the output of those comma
 <h3>Disk space utilization (df -h) example<a class="headerlink" href="#disk-space-utilization-df-h-example" title="Permalink to this headline">¶</a></h3>
 <p>For example, if you wanted to monitor the disk space utilization, you would need
 to setup a cron job to dump the output of <code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">-h</span></code> to a log file (maybe
-/var/log/df.log) and configure OSSEC to look at it.</p>
-<p>As of OSSEC version 2.3 you can monitor commands directly in OSSEC
-following configuration (in /var/ossec/etc/ossec.conf):</p>
+/var/log/df.log) and configure OpenArmor to look at it.</p>
+<p>As of OpenArmor version 2.3 you can monitor commands directly in OpenArmor
+following configuration (in /var/OpenArmor/etc/OpenArmor.conf):</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;localfile&gt;</span>
     <span class="nt">&lt;log_format&gt;</span>command<span class="nt">&lt;/log_format&gt;</span>
     <span class="nt">&lt;command&gt;</span>df -h<span class="nt">&lt;/command&gt;</span>
 <span class="nt">&lt;/localfile&gt;</span>
 </pre></div>
 </div>
-<p>Since we already have a sample rule for df -h included with OSSEC you would see
+<p>Since we already have a sample rule for df -h included with OpenArmor you would see
 the following when any partition reached 100%:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span> <span class="n">Alert</span> <span class="mf">1257451341.28290</span><span class="p">:</span> <span class="n">mail</span> <span class="o">-</span> <span class="n">ossec</span><span class="p">,</span><span class="n">low_diskspace</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span> <span class="n">Alert</span> <span class="mf">1257451341.28290</span><span class="p">:</span> <span class="n">mail</span> <span class="o">-</span> <span class="n">OpenArmor</span><span class="p">,</span><span class="n">low_diskspace</span><span class="p">,</span>
 <span class="mi">2009</span> <span class="n">Nov</span> <span class="mi">05</span> <span class="mi">16</span><span class="p">:</span><span class="mi">02</span><span class="p">:</span><span class="mi">21</span> <span class="p">(</span><span class="n">home</span><span class="o">-</span><span class="n">ubuntu</span><span class="p">)</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">0.0</span><span class="o">-&gt;</span><span class="n">df</span> <span class="o">-</span><span class="n">h</span>
 
 <span class="n">Rule</span><span class="p">:</span> <span class="mi">531</span> <span class="p">(</span><span class="n">level</span> <span class="mi">7</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Partition usage reached 100% (disk space monitor).&quot;</span>
 <span class="n">Src</span> <span class="n">IP</span><span class="p">:</span> <span class="p">(</span><span class="n">none</span><span class="p">)</span>
 <span class="n">User</span><span class="p">:</span> <span class="p">(</span><span class="n">none</span><span class="p">)</span>
-<span class="n">ossec</span><span class="p">:</span> <span class="n">output</span><span class="p">:</span> <span class="s1">&#39;df -h&#39;</span><span class="p">:</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sdb1</span> <span class="mi">24</span><span class="n">G</span> <span class="mi">12</span><span class="n">G</span> <span class="mi">11</span><span class="n">G</span> <span class="mi">100</span><span class="o">%</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">backup</span>
+<span class="n">OpenArmor</span><span class="p">:</span> <span class="n">output</span><span class="p">:</span> <span class="s1">&#39;df -h&#39;</span><span class="p">:</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sdb1</span> <span class="mi">24</span><span class="n">G</span> <span class="mi">12</span><span class="n">G</span> <span class="mi">11</span><span class="n">G</span> <span class="mi">100</span><span class="o">%</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">backup</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="load-average-uptime-example">
 <h3>Load average (uptime) Example<a class="headerlink" href="#load-average-uptime-example" title="Permalink to this headline">¶</a></h3>
 <p>Another example, if you want to monitor the load average, you can configure
-OSSEC to monitor the “uptime” command and alert when it is higher than 2, for
+OpenArmor to monitor the “uptime” command and alert when it is higher than 2, for
 example:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;localfile&gt;</span>
     <span class="nt">&lt;log_format&gt;</span>command<span class="nt">&lt;/log_format&gt;</span>
@@ -196,10 +196,10 @@ example:</p>
 <span class="nt">&lt;/localfile&gt;</span>
 </pre></div>
 </div>
-<p>And in the rule (in /var/ossec/rules/local_rules.xml):</p>
+<p>And in the rule (in /var/OpenArmor/rules/local_rules.xml):</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;rule</span> <span class="na">id=</span><span class="s">&quot;100101&quot;</span> <span class="na">level=</span><span class="s">&quot;7&quot;</span> <span class="na">ignore=</span><span class="s">&quot;7200&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;if_sid&gt;</span>530<span class="nt">&lt;/if_sid&gt;</span>
-    <span class="nt">&lt;match&gt;</span>ossec: output: &#39;uptime&#39;: <span class="nt">&lt;/match&gt;</span>
+    <span class="nt">&lt;match&gt;</span>OpenArmor: output: &#39;uptime&#39;: <span class="nt">&lt;/match&gt;</span>
     <span class="nt">&lt;regex&gt;</span>load averages: 2.<span class="nt">&lt;/regex&gt;</span>
     <span class="nt">&lt;description&gt;</span>Load average reached 2..<span class="nt">&lt;/description&gt;</span>
 <span class="nt">&lt;/rule&gt;</span>
@@ -215,8 +215,8 @@ a look at the new &lt;check_diff /&gt; option in the rules (available on the lat
 snapshot).</p>
 <p>To demonstrate with an example, we will create a rule to alert when there is
 a new port open in listening mode on our server.</p>
-<p>First, we configure OSSEC to run the <code class="docutils literal notranslate"><span class="pre">netstat</span> <span class="pre">-tan</span> <span class="pre">|grep</span> <span class="pre">LISTEN</span></code> command
-by adding the following to ossec.conf:</p>
+<p>First, we configure OpenArmor to run the <code class="docutils literal notranslate"><span class="pre">netstat</span> <span class="pre">-tan</span> <span class="pre">|grep</span> <span class="pre">LISTEN</span></code> command
+by adding the following to OpenArmor.conf:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;localfile&gt;</span>
     <span class="nt">&lt;log_format&gt;</span>full_command<span class="nt">&lt;/log_format&gt;</span>
     <span class="nt">&lt;command&gt;</span>netstat -tan |grep LISTEN|grep -v 127.0.0.1<span class="nt">&lt;/command&gt;</span>
@@ -226,7 +226,7 @@ by adding the following to ossec.conf:</p>
 <p>After that, I add a rule to alert when its output changes:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;rule</span> <span class="na">id=</span><span class="s">&quot;140123&quot;</span> <span class="na">level=</span><span class="s">&quot;7&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;if_sid&gt;</span>530<span class="nt">&lt;/if_sid&gt;</span>
-    <span class="nt">&lt;match&gt;</span>ossec: output: &#39;netstat -tan |grep LISTEN<span class="nt">&lt;/match&gt;</span>
+    <span class="nt">&lt;match&gt;</span>OpenArmor: output: &#39;netstat -tan |grep LISTEN<span class="nt">&lt;/match&gt;</span>
     <span class="nt">&lt;check_diff</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;description&gt;</span>Listened ports have changed.<span class="nt">&lt;/description&gt;</span>
 <span class="nt">&lt;/rule&gt;</span>
@@ -236,21 +236,21 @@ by adding the following to ossec.conf:</p>
 event, it will store in an internal database. Every time it receives the same
 event, it will compare against what we have store and only alert if the output
 changes.</p>
-<p>In our example, after configuring OSSEC, I started netcat to listen on port
+<p>In our example, after configuring OpenArmor, I started netcat to listen on port
 23456 and that’s the alert I got:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">OSSEC</span> <span class="n">HIDS</span> <span class="n">Notification</span><span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">OpenArmor</span> <span class="n">HIDS</span> <span class="n">Notification</span><span class="o">.</span>
 <span class="mi">2010</span> <span class="n">Mar</span> <span class="mi">11</span> <span class="mi">19</span><span class="p">:</span><span class="mi">56</span><span class="p">:</span><span class="mi">30</span>
 
 <span class="n">Received</span> <span class="n">From</span><span class="p">:</span> <span class="n">XYZ</span><span class="o">-&gt;</span><span class="n">netstat</span> <span class="o">-</span><span class="n">tan</span> <span class="o">|</span><span class="n">grep</span> <span class="n">LISTEN</span><span class="o">|</span><span class="n">grep</span> <span class="o">-</span><span class="n">v</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span>
 <span class="n">Rule</span><span class="p">:</span> <span class="mi">140123</span> <span class="n">fired</span> <span class="p">(</span><span class="n">level</span> <span class="mi">7</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Listened ports have changed.&quot;</span>
 <span class="n">Portion</span> <span class="n">of</span> <span class="n">the</span> <span class="n">log</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 
-<span class="n">ossec</span><span class="p">:</span> <span class="n">output</span><span class="p">:</span> <span class="s1">&#39;netstat -tan |grep LISTEN|grep -v 127.0.0.1&#39;</span><span class="p">:</span>
+<span class="n">OpenArmor</span><span class="p">:</span> <span class="n">output</span><span class="p">:</span> <span class="s1">&#39;netstat -tan |grep LISTEN|grep -v 127.0.0.1&#39;</span><span class="p">:</span>
 <span class="n">tcp4</span>       <span class="mi">0</span>      <span class="mi">0</span> <span class="o">*.</span><span class="mi">23456</span>           <span class="o">*.*</span>               <span class="n">LISTEN</span>
 <span class="n">tcp4</span>       <span class="mi">0</span>      <span class="mi">0</span> <span class="o">*.</span><span class="mi">3306</span>            <span class="o">*.*</span>               <span class="n">LISTEN</span>
 <span class="n">tcp4</span>       <span class="mi">0</span>      <span class="mi">0</span> <span class="o">*.</span><span class="mi">25</span>              <span class="o">*.*</span>               <span class="n">LISTEN</span>
 <span class="n">Previous</span> <span class="n">output</span><span class="p">:</span>
-<span class="n">ossec</span><span class="p">:</span> <span class="n">output</span><span class="p">:</span> <span class="s1">&#39;netstat -tan |grep LISTEN|grep -v 127.0.0.1&#39;</span><span class="p">:</span>
+<span class="n">OpenArmor</span><span class="p">:</span> <span class="n">output</span><span class="p">:</span> <span class="s1">&#39;netstat -tan |grep LISTEN|grep -v 127.0.0.1&#39;</span><span class="p">:</span>
 <span class="n">tcp4</span>       <span class="mi">0</span>      <span class="mi">0</span> <span class="o">*.</span><span class="mi">3306</span>            <span class="o">*.*</span>               <span class="n">LISTEN</span>
 <span class="n">tcp4</span>       <span class="mi">0</span>      <span class="mi">0</span> <span class="o">*.</span><span class="mi">25</span>              <span class="o">*.*</span>               <span class="n">LISTEN</span>
 </pre></div>
@@ -258,8 +258,8 @@ changes.</p>
 </div>
 <div class="section" id="detecting-usb-storage-usage">
 <h3>Detecting USB Storage Usage<a class="headerlink" href="#detecting-usb-storage-usage" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="http://blog.rootshell.be/2010/03/15/detecting-usb-storage-usage-with-ossec/">Xavier Mertens</a> wrote a very interesting article on Detecting USB Storage Usage with
-OSSEC. He used our policy auditing module for that, but I think USB monitoring
+<p><a class="reference external" href="http://blog.rootshell.be/2010/03/15/detecting-usb-storage-usage-with-OpenArmor/">Xavier Mertens</a> wrote a very interesting article on Detecting USB Storage Usage with
+OpenArmor. He used our policy auditing module for that, but I think USB monitoring
 can be done in a much easier way with our new <a href="#id1"><span class="problematic" id="id2">:xml:`check_diff`</span></a> feature.</p>
 <p>To get started, first configure your Windows agents to monitor the USBSTOR
 registry entry using the reg command:</p>
@@ -274,21 +274,21 @@ registry entry using the reg command:</p>
 <p>Next create a local rule for that command:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;rule</span> <span class="na">id=</span><span class="s">&quot;140125&quot;</span> <span class="na">level=</span><span class="s">&quot;7&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;if_sid&gt;</span>530<span class="nt">&lt;/if_sid&gt;</span>
-    <span class="nt">&lt;match&gt;</span>ossec: output: &#39;reg QUERY<span class="nt">&lt;/match&gt;</span>
+    <span class="nt">&lt;match&gt;</span>OpenArmor: output: &#39;reg QUERY<span class="nt">&lt;/match&gt;</span>
     <span class="nt">&lt;check_diff</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;description&gt;</span>New USB device connected<span class="nt">&lt;/description&gt;</span>
 <span class="nt">&lt;/rule&gt;</span>
 </pre></div>
 </div>
 <p>Now after a few minutes you will see a directory at
-<code class="docutils literal notranslate"><span class="pre">/var/ossec/queue/diff/[agent_name]/[rule_id]</span></code> with the current snapshot of this
+<code class="docutils literal notranslate"><span class="pre">/var/OpenArmor/queue/diff/[agent_name]/[rule_id]</span></code> with the current snapshot of this
 command. Once someone adds a new USB device you will get this alert:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>** Alert 1268687754.35062: mail  - local,syslog,
 2010 Mar 15 18:15:54 (xx-netbook) any-&gt;reg QUERY HKLMSYSTEMCurrentControlSetEnumUSBSTOR
 Rule: 140125 (level 7) -&gt; &#39;New USB device connected&#39;
 Src IP: (none)
 User: (none)
-ossec: output: &#39;reg QUERY HKLMSYSTEMCurrentControlSetEnumUSBSTOR&#39;:! REG.EXE VERSION 3.0
+OpenArmor: output: &#39;reg QUERY HKLMSYSTEMCurrentControlSetEnumUSBSTOR&#39;:! REG.EXE VERSION 3.0
 
 HKEY_LOCAL_MACHINESYSTEMCurrentControlSetEnumUSBSTOR
 HKEY_LOCAL_MACHINESYSTEMCurrentControlSetEnumUSBSTORDisk&amp;Ven_&amp;Prod_USB_Flash_Memory&amp;Rev_5.00
@@ -302,7 +302,7 @@ HKEY_LOCAL_MACHINESYSTEMCurrentControlSetEnumUSBSTORDisk&amp;Ven_USB_2.0&amp;Pro
 
 Previous output:
 
-ossec: output: &#39;reg QUERY HKLMSYSTEMCurrentControlSetEnumUSBSTOR&#39;:
+OpenArmor: output: &#39;reg QUERY HKLMSYSTEMCurrentControlSetEnumUSBSTOR&#39;:
 ! REG.EXE VERSION 3.0
 HKEY_LOCAL_MACHINESYSTEMCurrentControlSetEnumUSBSTOR
 HKEY_LOCAL_MACHINESYSTEMCurrentControlSetEnumUSBSTORDisk&amp;Ven_&amp;Prod_USB_Flash_Memory&amp;Rev_5.00
@@ -330,8 +330,8 @@ HKEY_LOCAL_MACHINESYSTEMCurrentControlSetEnumUSBSTORDisk&amp;Ven_USB_2.0&amp;Pro
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

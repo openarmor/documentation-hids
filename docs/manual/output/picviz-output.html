@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Sending alerts to picviz &#8212; OSSEC</title>
+    <title>Sending alerts to picviz &#8212; OpenArmor</title>
     
     <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -61,8 +61,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.0</b></span>
       </div>
 
@@ -125,24 +125,24 @@ improvements are needed.</p>
 <div class="section" id="installation-of-picviz">
 <h2>Installation of PicViz<a class="headerlink" href="#installation-of-picviz" title="Permalink to this headline">¶</a></h2>
 <p>This is out of the scope for this document, but the development version from
-svn is required for PicViz to work with OSSEC.</p>
+svn is required for PicViz to work with OpenArmor.</p>
 </div>
-<div class="section" id="setup-ossec-for-picviz">
-<h2>Setup OSSEC for PicViz<a class="headerlink" href="#setup-ossec-for-picviz" title="Permalink to this headline">¶</a></h2>
-<p>Configure OSSEC to send events to PicViz.  The following configuration
-needs to be added to /var/ossec/etc/ossec.conf.</p>
-<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;ossec_config&gt;</span>
+<div class="section" id="setup-OpenArmor-for-picviz">
+<h2>Setup OpenArmor for PicViz<a class="headerlink" href="#setup-OpenArmor-for-picviz" title="Permalink to this headline">¶</a></h2>
+<p>Configure OpenArmor to send events to PicViz.  The following configuration
+needs to be added to /var/OpenArmor/etc/OpenArmor.conf.</p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;OpenArmor_config&gt;</span>
     <span class="nt">&lt;global&gt;</span>
         <span class="nt">&lt;picviz_output&gt;</span>yes<span class="nt">&lt;/picviz_output&gt;</span>
-        <span class="nt">&lt;picviz_socket&gt;</span>/var/ossec/picviz.socket<span class="nt">&lt;/picviz_socket&gt;</span>
+        <span class="nt">&lt;picviz_socket&gt;</span>/var/OpenArmor/picviz.socket<span class="nt">&lt;/picviz_socket&gt;</span>
 </pre></div>
 </div>
-<p>For more full details on this section of the config see <a class="reference internal" href="../../syntax/head_ossec_config.global.html#ossec-config-global"><span class="std std-ref">ossec.conf: Global options</span></a>.</p>
+<p>For more full details on this section of the config see <a class="reference internal" href="../../syntax/head_OpenArmor_config.global.html#OpenArmor-config-global"><span class="std std-ref">OpenArmor.conf: Global options</span></a>.</p>
 </div>
 <div class="section" id="start-up-picviz">
 <h2>Start up PicViz<a class="headerlink" href="#start-up-picviz" title="Permalink to this headline">¶</a></h2>
-<p>On the picviz side, an OSSEC template is available in the template directory and Picviz should be run like this:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> pcv -Tpngcairo -o ossec.png -s /var/ossec/picviz.socket -t templates/ossec.pgdt -a
+<p>On the picviz side, an OpenArmor template is available in the template directory and Picviz should be run like this:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> pcv -Tpngcairo -o OpenArmor.png -s /var/OpenArmor/picviz.socket -t templates/OpenArmor.pgdt -a
 </pre></div>
 </div>
 </div>
@@ -164,8 +164,8 @@ needs to be added to /var/ossec/etc/ossec.conf.</p>
       
     </p>
     <p>
-        &copy; Copyright 2010-2017, OSSEC Project Team.<br/>
-    OSSEC trademark and <b>ossec.net</b> domain owned by <a href="http://www.trendmicro.com" target="_blank">Trend Micro, Inc.</a><br/>
+        &copy; Copyright 2010-2017, OpenArmor Project Team.<br/>
+    OpenArmor trademark and <b>OpenArmor.net</b> domain owned by <a href="http://www.trendmicro.com" target="_blank">Trend Micro, Inc.</a><br/>
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.2 - 
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>

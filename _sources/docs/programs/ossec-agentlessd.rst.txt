@@ -1,13 +1,13 @@
 
-.. _ossec-agentlessd:
+.. _OpenArmor-agentlessd:
 
-ossec-agentlessd
+OpenArmor-agentlessd
 ================
 
-ossec-agentlessd argument options
+OpenArmor-agentlessd argument options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. program:: ossec-agentlessd
+.. program:: OpenArmor-agentlessd
 
 .. option:: -c <config>
 
@@ -19,11 +19,11 @@ ossec-agentlessd argument options
 
 .. option:: -d
    
-    Execute ossec-agentlessd in debug mode. This option can be used multiple times to increase the verbosity of the debug messages.
+    Execute OpenArmor-agentlessd in debug mode. This option can be used multiple times to increase the verbosity of the debug messages.
 
 .. option:: -f
 
-    Run ossec-agentlessd in the foreground.
+    Run OpenArmor-agentlessd in the foreground.
 
 .. option:: -g <group>
 
@@ -43,6 +43,6 @@ ossec-agentlessd argument options
 
 .. option:: -V 
 
-    Display OSSEC Version and license information.
+    Display OpenArmor Version and license information.
 
 

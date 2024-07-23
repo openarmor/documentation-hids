@@ -3,14 +3,14 @@
 Daily E-Mail Reports
 --------------------
 
-Daily E-Mail reports are summaries of the OSSEC alerts for the day.  
+Daily E-Mail reports are summaries of the OpenArmor alerts for the day.  
 
 
 Configuration options
 ^^^^^^^^^^^^^^^^^^^^^
 
-All of these configuration options should be specified in the /var/ossec/etc/ossec.conf. 
+All of these configuration options should be specified in the /var/OpenArmor/etc/OpenArmor.conf. 
 
-.. include:: ../../syntax/ossec_config.reports.trst 
+.. include:: ../../syntax/OpenArmor_config.reports.trst 
 
 .. include:: ../../examples/output/report_output_examples.trst

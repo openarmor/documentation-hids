@@ -5,7 +5,7 @@
 
 
 ===============
-OSSEC 3.1.0
+OpenArmor 3.1.0
 ===============
 
 
@@ -58,23 +58,23 @@ We'd also like to thank all the other fantastic contributors to the project, who
 * (@c0r3dump3d) - Correct and expand spanish translation PR #1541
 * (@ddpbsd) - Adjust the tests for sysmon rules PR #1548
 * (@MangyCoyote) - install.sh - case for s-nail patch can't be applied if `mail` is not installed PR #1539
-* (@atomicturtle) - ossec-authd Fix for foreground flags PR #1538
-* (@atomicturtle) - ossec-authd Add -f foreground flag support PR #1537
+* (@atomicturtle) - OpenArmor-authd Fix for foreground flags PR #1538
+* (@atomicturtle) - OpenArmor-authd Add -f foreground flag support PR #1537
 * (@featzor) - psad signature match level 6 PR #1517
 * (@Bob-Andrews) - Corrected rootcheck CIS tests for cis_win2012r2_domainL2_rcl.txt, is_win2012r2_memberL2_rcl.txt, cis_win2016_domainL2_rcl.txt PR #1521
 * (@franciosi) - Updated README.md, correts small typos PR #1519
 * (@ddpbsd) - Fix the subject handling. Issue submitted by Michael Starks #1370 PR #1377
-* (@foygl) - ossec-slack.sh, Fix and clean up output for Slack integration PR #1508
+* (@foygl) - OpenArmor-slack.sh, Fix and clean up output for Slack integration PR #1508
 * (@ddpbsd) - From issue #1514, a duplicate `_gsid1 == 0` -> `_gsid0 == 0` PR #1515
 * (@Bob-Andrews) - cis_win2016_domainL1_rcl.txt, Corrected Check - Registry Hive PR #1511
-* (@ashley-dunn) - Fix "bellow" typos in ossec-[client|local|server].sh files PR #1512
-* (@ddpbsd) - Fix the log location in the ossec-slack AR script. PR #1422
+* (@ashley-dunn) - Fix "bellow" typos in OpenArmor-[client|local|server].sh files PR #1512
+* (@ddpbsd) - Fix the log location in the OpenArmor-slack AR script. PR #1422
 * (@phamvuong) - BUGFIX: remove default value for authpass PR #1464
 * (@calve) - Bump version definition in defs.h PR #1504
 * (@ddpbsd) - More coverity fixes PR #1497
 * (@ddpbsd) - Modify status() to not return 1 when maild is not running PR #1501
 * (@ddpbsd) - Coverity fixes PR #1490
-* (@Bob-Andrews) - Moved file to ossec-hids/ src/rootcheck/db/ PR #1493
+* (@Bob-Andrews) - Moved file to OpenArmor-hids/ src/rootcheck/db/ PR #1493
 * (@ddpbsd) - Make sure there's room for the full alert id in json alerts PR #1487
 * (@ddpbsd) - Fix an issue in the nodiff option which could ignore files it isn't supposed to PR #1486
 * (@ddpbsd) - Hard coded user/group changed to appropriate variables PR #1484

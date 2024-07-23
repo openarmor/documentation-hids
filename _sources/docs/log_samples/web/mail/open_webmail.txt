@@ -15,8 +15,8 @@ Logout:
 
 .. code-block:: console
 
-  Sat May  7 07:37:06 2005 - [15347] (1.2.3.4) lcid - logout - lcid*www.ossec.net-session-0.685629963447479
-  Sat May  7 15:26:11 2005 - [7082] (1.2.3.4) l.cid - logout - l.cid*www.ossec.net-session-0.782612791556073
+  Sat May  7 07:37:06 2005 - [15347] (1.2.3.4) lcid - logout - lcid*theopenarmor.org-session-0.685629963447479
+  Sat May  7 15:26:11 2005 - [7082] (1.2.3.4) l.cid - logout - l.cid*theopenarmor.org-session-0.782612791556073
 
 
 Invalid access:

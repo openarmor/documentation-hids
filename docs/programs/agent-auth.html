@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>agent-auth &#8212; OSSEC</title>
+    <title>agent-auth &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../index.html"><img src="../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../index.html"><img src="../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -151,7 +151,7 @@ gtag('config', 'UA-138780766-1');
       
   <div class="section" id="agent-auth">
 <span id="id1"></span><h1>agent-auth<a class="headerlink" href="#agent-auth" title="Permalink to this headline">¶</a></h1>
-<p>The agent-auth program is the client application used with <a class="reference internal" href="ossec-authd.html#ossec-authd"><span class="std std-ref">ossec-authd</span></a> to automatically add agents to an OSSEC manager.</p>
+<p>The agent-auth program is the client application used with <a class="reference internal" href="OpenArmor-authd.html#OpenArmor-authd"><span class="std std-ref">OpenArmor-authd</span></a> to automatically add agents to an OpenArmor manager.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>By default there is no authentication or authorization involved in this transaction, so it is recommended that
@@ -169,8 +169,8 @@ this daemon only be run when a new agent is being added.</p>
 <dl class="std option">
 <dt id="cmdoption-agent-auth-D">
 <span id="cmdoption-agent-auth-d"></span><code class="sig-name descname"><span class="pre">-D</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-agent-auth-D" title="Permalink to this definition">¶</a></dt>
-<dd><p>Directory where OSSEC is installed.
-<strong>Default</strong> /var/ossec</p>
+<dd><p>Directory where OpenArmor is installed.
+<strong>Default</strong> /var/OpenArmor</p>
 </dd></dl>
 
 <dl class="std option">
@@ -206,27 +206,27 @@ this daemon only be run when a new agent is being added.</p>
 <dl class="std option">
 <dt id="cmdoption-agent-auth-p">
 <code class="sig-name descname"><span class="pre">-p</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;port&gt;</span></code><a class="headerlink" href="#cmdoption-agent-auth-p" title="Permalink to this definition">¶</a></dt>
-<dd><p>Port ossec-authd is running on.</p>
+<dd><p>Port OpenArmor-authd is running on.</p>
 <p><strong>Default</strong> 1515</p>
 </dd></dl>
 
 <dl class="std option">
 <dt id="cmdoption-agent-auth-V">
 <span id="cmdoption-agent-auth-v"></span><code class="sig-name descname"><span class="pre">-V</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-agent-auth-V" title="Permalink to this definition">¶</a></dt>
-<dd><p>Display OSSEC Version and license information.</p>
+<dd><p>Display OpenArmor Version and license information.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt id="cmdoption-agent-auth-1">
 <code class="sig-name descname"><span class="pre">-v</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;path&gt;</span></code><a class="headerlink" href="#cmdoption-agent-auth-1" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load the PEM encoded CA Certificate that will be used to verify <a class="reference internal" href="ossec-authd.html#ossec-authd"><span class="std std-ref">ossec-authd</span></a> if desired. If this option is used then
-<a class="reference internal" href="ossec-authd.html#ossec-authd"><span class="std std-ref">ossec-authd</span></a> must present a valid certificate signed by this CA.</p>
+<dd><p>Load the PEM encoded CA Certificate that will be used to verify <a class="reference internal" href="OpenArmor-authd.html#OpenArmor-authd"><span class="std std-ref">OpenArmor-authd</span></a> if desired. If this option is used then
+<a class="reference internal" href="OpenArmor-authd.html#OpenArmor-authd"><span class="std std-ref">OpenArmor-authd</span></a> must present a valid certificate signed by this CA.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt id="cmdoption-agent-auth-x">
 <code class="sig-name descname"><span class="pre">-x</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;path&gt;</span></code><a class="headerlink" href="#cmdoption-agent-auth-x" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load the PEM encoded certificate that will be presented to <a class="reference internal" href="ossec-authd.html#ossec-authd"><span class="std std-ref">ossec-authd</span></a> during establishment of the SSL connection.</p>
+<dd><p>Load the PEM encoded certificate that will be presented to <a class="reference internal" href="OpenArmor-authd.html#OpenArmor-authd"><span class="std std-ref">OpenArmor-authd</span></a> during establishment of the SSL connection.</p>
 </dd></dl>
 
 </div>
@@ -234,7 +234,7 @@ this daemon only be run when a new agent is being added.</p>
 <span id="optional-server-authentication"></span><h2>Optional Server Authentication - client side<a class="headerlink" href="#optional-server-authentication-client-side" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">agent-auth</span></code> can verify that the server it’s connecting to presents a valid X.509 certificate when requesting
 a key. This is optional and is only useful if hosts in your environment have access to the root certificate of
-the CA that signed the certificate presented by <a class="reference internal" href="ossec-authd.html#ossec-authd"><span class="std std-ref">ossec-authd</span></a>. If server certificate verification is desired
+the CA that signed the certificate presented by <a class="reference internal" href="OpenArmor-authd.html#OpenArmor-authd"><span class="std std-ref">OpenArmor-authd</span></a>. If server certificate verification is desired
 then the relevant CA certificate must be loaded with the -v option, then if the server does not present a valid
 certificate the agent will not be allocated a key.</p>
 <p>A certificate presented by the server may be found to be invalid for the following reasons:</p>
@@ -244,21 +244,21 @@ certificate the agent will not be allocated a key.</p>
 subject alternative name extension field.</p></li>
 <li><p>It is expired.</p></li>
 </ul>
-<p>While server authentication is optional it is highly recommended that it be used if possible when running ossec-authd
+<p>While server authentication is optional it is highly recommended that it be used if possible when running OpenArmor-authd
 and agent-auth.</p>
 </div>
 <div class="section" id="optional-client-authentication">
 <span id="id2"></span><h2>Optional Client Authentication<a class="headerlink" href="#optional-client-authentication" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">agent-auth</span></code> can present its own certificate to the server for verification. This is mandatory if <a class="reference internal" href="ossec-authd.html#ossec-authd"><span class="std std-ref">ossec-authd</span></a>
+<p><code class="docutils literal notranslate"><span class="pre">agent-auth</span></code> can present its own certificate to the server for verification. This is mandatory if <a class="reference internal" href="OpenArmor-authd.html#OpenArmor-authd"><span class="std std-ref">OpenArmor-authd</span></a>
 was run with the -v option and optional otherwise. This is only useful if hosts in your environment are assigned
-certificates when they’re provisioned (or at some point before being added to OSSEC). Use the -x and -k options
+certificates when they’re provisioned (or at some point before being added to OpenArmor). Use the -x and -k options
 to load a certificate and private key.</p>
 </div>
 <div class="section" id="agent-auth-example-usage">
 <h2>agent-auth example usage<a class="headerlink" href="#agent-auth-example-usage" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-adding-an-agent-with-a-hostname">
 <h3>Example: Adding an agent with a hostname<a class="headerlink" href="#example-adding-an-agent-with-a-hostname" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/ossec/bin/agent-auth -m <span class="m">192</span>.168.1.1 -p <span class="m">1515</span> -A example-agent
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/OpenArmor/bin/agent-auth -m <span class="m">192</span>.168.1.1 -p <span class="m">1515</span> -A example-agent
 <span class="go">INFO: Connected to 192.168.1.1:1515</span>
 <span class="go">INFO: Using agent name as: melancia</span>
 <span class="go">INFO: Send request to manager. Waiting for reply.</span>
@@ -268,9 +268,9 @@ to load a certificate and private key.</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="example-adding-an-agent-and-verifying-the-certificate-presented-by-ossec-authd">
-<h3>Example: Adding an agent and verifying the certificate presented by ossec-authd<a class="headerlink" href="#example-adding-an-agent-and-verifying-the-certificate-presented-by-ossec-authd" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/ossec/bin/agent-auth -m ossec-manager.localdomain -p <span class="m">1515</span> -v /etc/pki/CA/certs/internal_CA.cert
+<div class="section" id="example-adding-an-agent-and-verifying-the-certificate-presented-by-OpenArmor-authd">
+<h3>Example: Adding an agent and verifying the certificate presented by OpenArmor-authd<a class="headerlink" href="#example-adding-an-agent-and-verifying-the-certificate-presented-by-OpenArmor-authd" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/OpenArmor/bin/agent-auth -m OpenArmor-manager.localdomain -p <span class="m">1515</span> -v /etc/pki/CA/certs/internal_CA.cert
 <span class="go">INFO: Connected to 192.168.1.1:1515</span>
 <span class="go">INFO: Verifying manager&#39;s certificate</span>
 <span class="go">INFO: Using agent name as: melancia</span>
@@ -278,9 +278,9 @@ to load a certificate and private key.</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="example-adding-an-agent-and-presenting-a-certificate-to-ossec-authd">
-<h3>Example: Adding an agent and presenting a certificate to ossec-authd<a class="headerlink" href="#example-adding-an-agent-and-presenting-a-certificate-to-ossec-authd" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/ossec/bin/agent-auth -m ossec-manager.localdomain -p <span class="m">1515</span> -x /var/ossec/etc/client.cert -k /var/ossec/etc/client.key
+<div class="section" id="example-adding-an-agent-and-presenting-a-certificate-to-OpenArmor-authd">
+<h3>Example: Adding an agent and presenting a certificate to OpenArmor-authd<a class="headerlink" href="#example-adding-an-agent-and-presenting-a-certificate-to-OpenArmor-authd" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/OpenArmor/bin/agent-auth -m OpenArmor-manager.localdomain -p <span class="m">1515</span> -x /var/OpenArmor/etc/client.cert -k /var/OpenArmor/etc/client.key
 <span class="go">INFO: Connected to 192.168.1.1:1515</span>
 <span class="go">INFO: Using agent name as: melancia</span>
 <span class="go">...</span>
@@ -302,8 +302,8 @@ to load a certificate and private key.</p>
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

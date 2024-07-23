@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adding an agent with ossec-authd &#8212; OSSEC</title>
+    <title>Adding an agent with OpenArmor-authd &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -149,28 +149,28 @@ gtag('config', 'UA-138780766-1');
   <div class="row">
     <div class="col-md-12">
       
-  <div class="section" id="adding-an-agent-with-ossec-authd">
-<span id="agent-auth"></span><h1>Adding an agent with ossec-authd<a class="headerlink" href="#adding-an-agent-with-ossec-authd" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="adding-an-agent-with-OpenArmor-authd">
+<span id="agent-auth"></span><h1>Adding an agent with OpenArmor-authd<a class="headerlink" href="#adding-an-agent-with-OpenArmor-authd" title="Permalink to this headline">¶</a></h1>
 <p>It is possible to add a key to a system via an automated method.
-<a class="reference external" href="../../programs/ossec-authd.html">ossec-authd</a> and <a class="reference external" href="../../programs/agent-auth.html">agent-auth</a> provide this functionality.</p>
+<a class="reference external" href="../../programs/OpenArmor-authd.html">OpenArmor-authd</a> and <a class="reference external" href="../../programs/agent-auth.html">agent-auth</a> provide this functionality.</p>
 <div class="section" id="id2">
-<h2>ossec-authd<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">ossec-authd</span></code> will run on the server adding agents and distributing authentication keys.</p>
+<h2>OpenArmor-authd<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">OpenArmor-authd</span></code> will run on the server adding agents and distributing authentication keys.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>There is currently no authentication, so any host that can connect to the port ossec-authd listens to can obtain an OSSEC agent key.
-It is recommended that the OSSEC manager’s firewall be used to help limit connections.</p>
+<p>There is currently no authentication, so any host that can connect to the port OpenArmor-authd listens to can obtain an OpenArmor agent key.
+It is recommended that the OpenArmor manager’s firewall be used to help limit connections.</p>
 </div>
-<p>Run ossec-authd, listening on port 1515:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/var/ossec/bin/ossec-authd -p 1515</span>
+<p>Run OpenArmor-authd, listening on port 1515:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/var/OpenArmor/bin/OpenArmor-authd -p 1515</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id3">
 <h2>agent-auth<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">agent-auth</span></code> will connect to an ossec-authd instance to receive, and install an agent key.</p>
+<p><code class="docutils literal notranslate"><span class="pre">agent-auth</span></code> will connect to an OpenArmor-authd instance to receive, and install an agent key.</p>
 <p>Run agent-auth connecting to the manager on IP 192.168.1.12 port 1515:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/var/ossec/bin/agent-auth -m 192.168.1.12 -p 1515</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/var/OpenArmor/bin/agent-auth -m 192.168.1.12 -p 1515</span>
 </pre></div>
 </div>
 </div>
@@ -188,8 +188,8 @@ It is recommended that the OSSEC manager’s firewall be used to help limit conn
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

@@ -5,7 +5,7 @@
 
 
 ===============
-OSSEC 2.9.0 
+OpenArmor 2.9.0 
 ===============
 
 
@@ -29,17 +29,17 @@ Scott R. Shinn (Atomicorp, Inc.)
 
 - Corrects bug so that files created between the first and second scan are reported as new files
 
-- Corrects bug that made changes reverting a file to the state it was in when ossec started unreported
+- Corrects bug that made changes reverting a file to the state it was in when OpenArmor started unreported
 
 - Avoids computing hashes multiple times to improve performance
 
 - Make the time between two syscheck wakeups configurable in internal_options
 
-- Add support for the “nodiff” option when using report_changes, sensitive files tagged with in ossec.conf will not have their contents included in an alert.
+- Add support for the “nodiff” option when using report_changes, sensitive files tagged with in OpenArmor.conf will not have their contents included in an alert.
 
 - IPv6 support
 
-- Support to call an external mailer. This solves the problem of supporting encryption when sending mail alerts in OSSEC. The <smtp_server> field can now be prepended with “/” to designate a local binary. Example: “<smtp_server>/usr/sbin/sendmail -t</smtp_server>”.
+- Support to call an external mailer. This solves the problem of supporting encryption when sending mail alerts in OpenArmor. The <smtp_server> field can now be prepended with “/” to designate a local binary. Example: “<smtp_server>/usr/sbin/sendmail -t</smtp_server>”.
 
 - Slack notification support
 
@@ -92,7 +92,7 @@ Scott R. Shinn (Atomicorp, Inc.)
 
 - PR #599, Allow for the log format in proftpd 1.3.5+
 
-- PR #610: Execd, Reduce system load caused by simultaneous active response processes during ossec stop. #610
+- PR #610: Execd, Reduce system load caused by simultaneous active response processes during OpenArmor stop. #610
 
 - PR #615: Adds support for Binding src IP to ‘local_ip’ config value in agentd. In mulihomed host environment we have a big problem with binding agent to correct ip. By default agentd used ip-addr of interface, from which sented ip-packets.
 
@@ -100,7 +100,7 @@ Scott R. Shinn (Atomicorp, Inc.)
 
 - PR #622: Fix for CVE-2015-3222
 
-- PR #631, Log failure when ossec fails to remove a PID file
+- PR #631, Log failure when OpenArmor fails to remove a PID file
 
 - PR #652, Syscheck, add support for the “-t” flag to display XML parsing errors in agent.conf on agents
 
@@ -122,13 +122,13 @@ Scott R. Shinn (Atomicorp, Inc.)
 
 - PR #720: Fixes for the statfs error spam
 
-- PR #724: Authd, bugfix for issue #642, This brings ossec-authd into parity with whatever the MAX_AGENTS is set at build time
+- PR #724: Authd, bugfix for issue #642, This brings OpenArmor-authd into parity with whatever the MAX_AGENTS is set at build time
 
 - PR #726: Make syslog/cef consistent with json/splunk and add classification field to alerts.
 
-- PR #727: Maild, Add support for “email_reply_to”. This allows configuring the Reply-To: field in email alerts sent from ossec-maild
+- PR #727: Maild, Add support for “email_reply_to”. This allows configuring the Reply-To: field in email alerts sent from OpenArmor-maild
 
-- PR #740: Remoted, bugfix for issue #739, Ossec will now report the agent ID of the agent that tries to connect
+- PR #740: Remoted, bugfix for issue #739, OpenArmor will now report the agent ID of the agent that tries to connect
 
 - PR #744: Syscheck, Bugfix for issue #42, corrects issue on windows that would produce an incorrect hash
 
@@ -162,7 +162,7 @@ Scott R. Shinn (Atomicorp, Inc.)
 
 - PR #849 Format string security fix
 
-- PR #864 Fix ossec-logtest to chroot when testing check_diff rules
+- PR #864 Fix OpenArmor-logtest to chroot when testing check_diff rules
 
 - PR #870 Fix installer permissions on the etc/shared directory
 
@@ -184,5 +184,5 @@ Scott R. Shinn (Atomicorp, Inc.)
 
 **Download**
 
-`https://github.com/ossec/ossec-hids/releases <https://github.com/ossec/ossec-hids/releases>`_
+`https://github.com/OpenArmor/OpenArmor-hids/releases <https://github.com/OpenArmor/OpenArmor-hids/releases>`_
 

@@ -1,20 +1,20 @@
 
-.. _ossec-analysisd:
+.. _OpenArmor-analysisd:
 
-ossec-analysisd
+OpenArmor-analysisd
 ===============
 
-``ossec-analysisd`` receives the log messages and compares them to the rules. It will create alerts when a log message matches an applicable rule.
+``OpenArmor-analysisd`` receives the log messages and compares them to the rules. It will create alerts when a log message matches an applicable rule.
 
 
-ossec-analysisd argument options
+OpenArmor-analysisd argument options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. program:: ossec-analysisd
+.. program:: OpenArmor-analysisd
 
 .. option:: -c <config>
 
-    Configuration file ossec-analysisd should use.
+    Configuration file OpenArmor-analysisd should use.
 
 .. option:: -D <dir>
 
@@ -22,11 +22,11 @@ ossec-analysisd argument options
 
 .. option:: -d
 
-    Execute ossec-analysisd in debug mode. This can be used more than once to increase the verbosity of the debug messages.
+    Execute OpenArmor-analysisd in debug mode. This can be used more than once to increase the verbosity of the debug messages.
 
 .. option:: -f
 
-    Run ossec-agentlessd in the foreground.
+    Run OpenArmor-agentlessd in the foreground.
 
 .. option:: -g <group>
 

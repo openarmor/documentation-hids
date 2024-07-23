@@ -8,52 +8,52 @@ Source Downloads
 +--------------+-----------------------------------------------+-------------+
 | Latest development snapshots                                               |
 +==============+===============================================+=============+
-| Server/Agent | https://github.com/ossec/ossec-hids/releases                |
+| Server/Agent | https://github.com/OpenArmor/OpenArmor-hids/releases                |
 +--------------+-----------------------------------------------+-------------+
-| Packages     | https://updates.atomicorp.com/channels/ossec-3-testing      |
+| Packages     | https://updates.atomicorp.com/channels/OpenArmor-3-testing      |
 +--------------+-----------------------------------------------+-------------+
-| Web UI       | https://github.com/ossec/ossec-wui/releases                 |
+| Web UI       | https://github.com/OpenArmor/OpenArmor-wui/releases                 |
 +--------------+-----------------------------------------------+-------------+
-| Docs         | https://github.com/ossec/ossec-docs                         |
+| Docs         | https://github.com/OpenArmor/OpenArmor-docs                         |
 +--------------+-----------------------------------------------+-------------+
 
 +---------------------+-----------------------------------------------+--------------------------+----------------+
 | Latest Stable Release (3.2.0)                                       | Checksum                 | Signature      |
 +=====================+===============================================+==========================+================+
-| Server/Agent Unix   | `ossec-hids-3.2.0.tar.gz`_ – `Release Notes`_ |                          | `GPG Unix`_    |      
+| Server/Agent Unix   | `OpenArmor-hids-3.2.0.tar.gz`_ – `Release Notes`_ |                          | `GPG Unix`_    |      
 +---------------------+-----------------------------------------------+--------------------------+----------------+
-| Agent Windows       | `ossec-agent-win32-3.2.0.exe`_                |                          | `GPG Windows`_ |
+| Agent Windows       | `OpenArmor-agent-win32-3.2.0.exe`_                |                          | `GPG Windows`_ |
 +---------------------+-----------------------------------------------+--------------------------+----------------+
-| Chocolatey Package  | `ossec-client.3.3.0.nupkg`_                   |                          |                |
+| Chocolatey Package  | `OpenArmor-client.3.3.0.nupkg`_                   |                          |                |
 +---------------------+-----------------------------------------------+--------------------------+----------------+
-| Virtual Appliance   | `ossec-vm-2.9.3.ova`_ – `README`_             | `VA Checksum`_           |                |
+| Virtual Appliance   | `OpenArmor-vm-2.9.3.ova`_ – `README`_             | `VA Checksum`_           |                |
 +---------------------+-----------------------------------------------+--------------------------+----------------+
-| Docker Container    | `atomicorp/ossec-docker`_                     |                          |                |
+| Docker Container    | `atomicorp/OpenArmor-docker`_                     |                          |                |
 +---------------------+-----------------------------------------------+--------------------------+----------------+
 
-.. _ossec-hids-3.2.0.tar.gz: https://github.com/ossec/ossec-hids/archive/3.2.0.tar.gz
-.. _Release Notes: https://github.com/ossec/ossec-hids/releases/tag/3.2.0
-.. _GPG Unix: https://github.com/ossec/ossec-hids/releases/download/3.2.0/ossec-hids-3.2.0.tar.gz.asc
-.. _ossec-agent-win32-3.2.0.exe: https://updates.atomicorp.com/channels/atomic/windows/ossec-agent-win32-3.2.0-6132.exe
-.. _GPG Windows: http://updates.atomicorp.com/channels/atomic/windows/ossec-agent-win32-3.2.0-6132.exe.asc
-.. _ossec-client.3.3.0.nupkg: https://chocolatey.org/api/v2/package/ossec-client/3.3.0
-.. _ossec-vm-2.9.3.ova: http://updates.atomicorp.com/channels/atomic/virtual-machines/ossec-vm-2.9.3.ova
-.. _README: http://updates.atomicorp.com/channels/atomic/virtual-machines/ossec-vm-2.9.3.README
-.. _VA Checksum: http://updates.atomicorp.com/channels/atomic/virtual-machines/ossec-vm-2.9.3-checksum.txt
-.. _atomicorp/ossec-docker: https://hub.docker.com/r/atomicorp/ossec-docker/
+.. _OpenArmor-hids-3.2.0.tar.gz: https://github.com/OpenArmor/OpenArmor-hids/archive/3.2.0.tar.gz
+.. _Release Notes: https://github.com/OpenArmor/OpenArmor-hids/releases/tag/3.2.0
+.. _GPG Unix: https://github.com/OpenArmor/OpenArmor-hids/releases/download/3.2.0/OpenArmor-hids-3.2.0.tar.gz.asc
+.. _OpenArmor-agent-win32-3.2.0.exe: https://updates.atomicorp.com/channels/atomic/windows/OpenArmor-agent-win32-3.2.0-6132.exe
+.. _GPG Windows: http://updates.atomicorp.com/channels/atomic/windows/OpenArmor-agent-win32-3.2.0-6132.exe.asc
+.. _OpenArmor-client.3.3.0.nupkg: https://chocolatey.org/api/v2/package/OpenArmor-client/3.3.0
+.. _OpenArmor-vm-2.9.3.ova: http://updates.atomicorp.com/channels/atomic/virtual-machines/OpenArmor-vm-2.9.3.ova
+.. _README: http://updates.atomicorp.com/channels/atomic/virtual-machines/OpenArmor-vm-2.9.3.README
+.. _VA Checksum: http://updates.atomicorp.com/channels/atomic/virtual-machines/OpenArmor-vm-2.9.3-checksum.txt
+.. _atomicorp/OpenArmor-docker: https://hub.docker.com/r/atomicorp/OpenArmor-docker/
 
 +---------------------+--------------------------------+--------------------------------------------------------------------------+----------------------+
 | v3.2.0              | Download                       | Checksum                                                                 | Signature            |
 +=====================+================================+==========================================================================+======================+
-| Unix Server/Agent   | `ossec-hids-3.2.0.tar.gz`_     | SHA256 b36cc4db73c265f5fd65f2b5450d69e332316612b5602a3e310ae8907e9d2548  | `GPG-unix-v3`_       |
+| Unix Server/Agent   | `OpenArmor-hids-3.2.0.tar.gz`_     | SHA256 b36cc4db73c265f5fd65f2b5450d69e332316612b5602a3e310ae8907e9d2548  | `GPG-unix-v3`_       |
 +---------------------+--------------------------------+--------------------------------------------------------------------------+----------------------+
-| Windows Agent       | `ossec-agent-win32-3.2.0.exe`_ | SHA256 ea291d729a14991cac0025d5de36d2cf516f6fdb0fa4f9ef4d99f428f46651bc  | `GPG-windows-v3`_    |
+| Windows Agent       | `OpenArmor-agent-win32-3.2.0.exe`_ | SHA256 ea291d729a14991cac0025d5de36d2cf516f6fdb0fa4f9ef4d99f428f46651bc  | `GPG-windows-v3`_    |
 +---------------------+--------------------------------+--------------------------------------------------------------------------+----------------------+
 
-.. _ossec-hids-3.2.0.tar.gz: https://github.com/ossec/ossec-hids/archive/3.2.0.tar.gz
-.. _ossec-agent-win32-3.2.0.exe: https://updates.atomicorp.com/channels/atomic/windows/ossec-agent-win32-3.2.0-6132.exe
-.. _GPG-windows-v3: https://updates.atomicorp.com/channels/atomic/windows/ossec-agent-win32-3.2.0-6132.exe.asc
-.. _GPG-unix-v3: https://github.com/ossec/ossec-hids/releases/download/3.2.0/ossec-hids-3.2.0.tar.gz.asc
+.. _OpenArmor-hids-3.2.0.tar.gz: https://github.com/OpenArmor/OpenArmor-hids/archive/3.2.0.tar.gz
+.. _OpenArmor-agent-win32-3.2.0.exe: https://updates.atomicorp.com/channels/atomic/windows/OpenArmor-agent-win32-3.2.0-6132.exe
+.. _GPG-windows-v3: https://updates.atomicorp.com/channels/atomic/windows/OpenArmor-agent-win32-3.2.0-6132.exe.asc
+.. _GPG-unix-v3: https://github.com/OpenArmor/OpenArmor-hids/releases/download/3.2.0/OpenArmor-hids-3.2.0.tar.gz.asc
 
 
 RHEL, CentOS, Fedora and others
@@ -96,9 +96,9 @@ Available in the `Atomicorp repository <https://updates.atomicorp.com/channels/a
 +-----------------------------------------------------------------------------------------+
 | Amazon Linux                                                                            |
 +==============+==========================================================================+
-| Amazon       | `<https://updates.atomicorp.com/channels/ossec/amazon/1/x86_64/RPMS/>`_  |
+| Amazon       | `<https://updates.atomicorp.com/channels/OpenArmor/amazon/1/x86_64/RPMS/>`_  |
 +--------------+--------------------------------------------------------------------------+
-| Amazon (LTS) | `<https://updates.atomicorp.com/channels/ossec/amazon/2/x86_64/RPMS/>`_  |
+| Amazon (LTS) | `<https://updates.atomicorp.com/channels/OpenArmor/amazon/2/x86_64/RPMS/>`_  |
 +--------------+--------------------------------------------------------------------------+
 
 .. _atomic-release-1.0-21.el5.art.noarch.rpm: https://updates.atomicorp.com/channels/atomic/centos/5/i386/RPMS/atomic-release-1.0-21.el5.art.noarch.rpm
@@ -121,24 +121,24 @@ Ubuntu, and Debian
 +---------------------------------------------------------------------------------------+
 | Ubuntu                                                                                |
 +==============+========================================================================+
-| 12 (precise) | `<https://updates.atomicorp.com/channels/ossec/ubuntu/pool/main/o/>`_  | 
+| 12 (precise) | `<https://updates.atomicorp.com/channels/OpenArmor/ubuntu/pool/main/o/>`_  | 
 +--------------+------------------------------------------------------------------------+
-| 14 (trusty)  | `<https://updates.atomicorp.com/channels/ossec/ubuntu/pool/main/o/>`_  | 
+| 14 (trusty)  | `<https://updates.atomicorp.com/channels/OpenArmor/ubuntu/pool/main/o/>`_  | 
 +--------------+------------------------------------------------------------------------+
-| 16 (xenial)  | `<https://updates.atomicorp.com/channels/ossec/ubuntu/pool/main/o/>`_  | 
+| 16 (xenial)  | `<https://updates.atomicorp.com/channels/OpenArmor/ubuntu/pool/main/o/>`_  | 
 +--------------+------------------------------------------------------------------------+
-| 18 (bionic)  | `<https://updates.atomicorp.com/channels/ossec/ubuntu/pool/main/o/>`_  | 
+| 18 (bionic)  | `<https://updates.atomicorp.com/channels/OpenArmor/ubuntu/pool/main/o/>`_  | 
 +--------------+------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------+
 | Debian                                                                                |
 +==============+========================================================================+
-| 7 (wheezy)   | `<https://updates.atomicorp.com/channels/ossec/debian/pool/main/o/>`_  | 
+| 7 (wheezy)   | `<https://updates.atomicorp.com/channels/OpenArmor/debian/pool/main/o/>`_  | 
 +--------------+------------------------------------------------------------------------+
-| 8 (jessie)   | `<https://updates.atomicorp.com/channels/ossec/debian/pool/main/o/>`_  | 
+| 8 (jessie)   | `<https://updates.atomicorp.com/channels/OpenArmor/debian/pool/main/o/>`_  | 
 +--------------+------------------------------------------------------------------------+
-| 9 (stretch)  | `<https://updates.atomicorp.com/channels/ossec/debian/pool/main/o/>`_  | 
+| 9 (stretch)  | `<https://updates.atomicorp.com/channels/OpenArmor/debian/pool/main/o/>`_  | 
 +--------------+------------------------------------------------------------------------+
 
 
@@ -156,10 +156,10 @@ Automated installer:
      wget -q -O - https://updates.atomicorp.com/installers/atomic | sudo bash
     
      # Server
-     sudo yum install ossec-hids-server 
+     sudo yum install OpenArmor-hids-server 
 
      # Agent
-     sudo yum install ossec-hids-agent
+     sudo yum install OpenArmor-hids-agent
 
 
 
@@ -169,21 +169,21 @@ Manual Yum/DNF installation on Centos, Redhat, Amazon Linux or Fedora
 
 1. Download the atomic-release file for your distribution
 
-2. Install the atomic-release package (Note: This includes the OSSEC GPG key)
+2. Install the atomic-release package (Note: This includes the OpenArmor GPG key)
 
 .. code:: console
 
    sudo rpm -Uvh atomic-release*rpm
 
-3. Install ossec package
+3. Install OpenArmor package
 
 .. code:: console
 
    # Server
-   sudo yum install ossec-hids server
+   sudo yum install OpenArmor-hids server
 
    # Agent
-   sudo yum install ossec-hids-agent
+   sudo yum install OpenArmor-hids-agent
 
 
 
@@ -199,10 +199,10 @@ APT Automated Installation on Ubuntu and Debian
     sudo apt-get update
 
     # Server 
-    sudo apt-get install ossec-hids-server 
+    sudo apt-get install OpenArmor-hids-server 
 
     # Agent
-    sudo apt-get install ossec-hids-agent
+    sudo apt-get install OpenArmor-hids-agent
 
 
 Manual APT Installation on Ubuntu and Debian
@@ -234,10 +234,10 @@ Manual APT Installation on Ubuntu and Debian
     sudo apt-get update
 
     # Server 
-    sudo apt-get install ossec-hids-server 
+    sudo apt-get install OpenArmor-hids-server 
 
     # Agent
-    sudo apt-get install ossec-hids-agent
+    sudo apt-get install OpenArmor-hids-agent
 
 
 GPG / PGP key
@@ -248,7 +248,7 @@ GPG / PGP key
 +-----------------------+-----------------------------------------------------------+
 | Package Signing Key   | https://www.atomicorp.com/RPM-GPG-KEY.atomicorp.txt       |
 +-----------------------+-----------------------------------------------------------+
-| Source Signing Key  c | https://ossec.github.io/files/OSSEC-ARCHIVE-KEY.asc       |
+| Source Signing Key  c | https://OpenArmor.github.io/files/OpenArmor-ARCHIVE-KEY.asc       |
 +-----------------------+-----------------------------------------------------------+
 
 Before you install any package from our project, we recommend that you
@@ -257,14 +257,14 @@ to using gpg. You first need to import our public key:
 
 .. code:: console
 
-    # wget https://ossec.github.io/files/OSSEC-ARCHIVE-KEY.asc
-    # gpg --import OSSEC-ARCHIVE-KEY.asc
+    # wget https://OpenArmor.github.io/files/OpenArmor-ARCHIVE-KEY.asc
+    # gpg --import OpenArmor-ARCHIVE-KEY.asc
 
 And then verify each file against its signature:
 
 .. code:: console
 
-    ossec-test# gpg --verify file.asc 
+    OpenArmor-test# gpg --verify file.asc 
 
 You should get the following result:
 
@@ -285,52 +285,52 @@ saying “gpg: Note: This key has expired!”, make sure to update the key and r
 Presentation Slides
 ~~~~~~~~~~~~~~~~~~~
 
-Several of the OSSEC Project Team members have presented at conferences. 
+Several of the OpenArmor Project Team members have presented at conferences. 
 Here is a collection of materials from some of those presentations.
 
 +----------------------------------------------------------------------+
-| `Decoding AWS CloudTrail with OSSEC`_                                |
+| `Decoding AWS CloudTrail with OpenArmor`_                                |
 +----------------------------------------------------------------------+
-| `Log Analysis Using OSSEC`_                                          |
+| `Log Analysis Using OpenArmor`_                                          |
 +----------------------------------------------------------------------+
-| `Making the Most of OSSEC`_                                          |
+| `Making the Most of OpenArmor`_                                          |
 +----------------------------------------------------------------------+
-| `Malware Detection with OSSEC`_                                      |
+| `Malware Detection with OpenArmor`_                                      |
 +----------------------------------------------------------------------+
 | `Open Source Security`_                                              |
 +----------------------------------------------------------------------+
-| `OSSEC Active Response and Self Healing`_                            |
+| `OpenArmor Active Response and Self Healing`_                            |
 +----------------------------------------------------------------------+
-| `OSSEC and OSSIM Unified Open Source Security`_                      |
+| `OpenArmor and OSSIM Unified Open Source Security`_                      |
 +----------------------------------------------------------------------+
-| `OSSEC at Scale`_                                                    |
+| `OpenArmor at Scale`_                                                    |
 +----------------------------------------------------------------------+
-| `OSSEC Con 2012 Day 1`_                                              |
+| `OpenArmor Con 2012 Day 1`_                                              |
 +----------------------------------------------------------------------+
-| `OSSEC Con 2012 Day 2`_                                              |
+| `OpenArmor Con 2012 Day 2`_                                              |
 +----------------------------------------------------------------------+
-| `OSSEC Log Management with Elasticsearch`_                           |
+| `OpenArmor Log Management with Elasticsearch`_                           |
 +----------------------------------------------------------------------+
-| `OSSEC PCI Solution 2.0`_                                            |
+| `OpenArmor PCI Solution 2.0`_                                            |
 +----------------------------------------------------------------------+
  
-.. _Decoding AWS CloudTrail with OSSEC: https://bintray.com/artifact/download/ossec/ossec-presentations/Decoding_AWS_CloudTrail_with_OSSEC.pptx
-.. _Log Analysis Using OSSEC: https://bintray.com/artifact/download/ossec/ossec-presentations/Log_Analysis_using_OSSEC.pdf
-.. _Making the Most of OSSEC: https://bintray.com/artifact/download/ossec/ossec-presentations/Making_the_Most_of_OSSEC.pdf 
-.. _Malware Detection with OSSEC: https://bintray.com/artifact/download/ossec/ossec-presentations/Malware_Detection_with_OSSEC.pptx
-.. _Open Source Security: https://bintray.com/artifact/download/ossec/ossec-presentations/OpenSourceSecurity_2013.pptx
-.. _OSSEC Active Response and Self Healing: https://bintray.com/artifact/download/ossec/ossec-presentations/OSSEC_Active_Response_and_Self_Healing.pdf
-.. _OSSEC and OSSIM Unified Open Source Security: https://bintray.com/artifact/download/ossec/ossec-presentations/OSSEC_and_OSSIM_Unified_Open_Source_Security.pdf
-.. _OSSEC at Scale: https://bintray.com/artifact/download/ossec/ossec-presentations/OSSEC_at_Scale.pdf
-.. _OSSEC Con 2012 Day 1: https://bintray.com/artifact/download/ossec/ossec-presentations/OSSEC_Con_2012-day-1.pdf
-.. _OSSEC Con 2012 Day 2: https://bintray.com/artifact/download/ossec/ossec-presentations/OSSEC_Con_2012-day-2.pdf
-.. _OSSEC Log Management with Elasticsearch: https://bintray.com/artifact/download/ossec/ossec-presentations/OSSEC_Log_Mangement_with_Elasticsearch.pptx
-.. _OSSEC PCI Solution 2.0: https://bintray.com/artifact/download/ossec/ossec-presentations/OSSEC_PCI_Solution_2.0.pdf
+.. _Decoding AWS CloudTrail with OpenArmor: https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/Decoding_AWS_CloudTrail_with_OpenArmor.pptx
+.. _Log Analysis Using OpenArmor: https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/Log_Analysis_using_OpenArmor.pdf
+.. _Making the Most of OpenArmor: https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/Making_the_Most_of_OpenArmor.pdf 
+.. _Malware Detection with OpenArmor: https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/Malware_Detection_with_OpenArmor.pptx
+.. _Open Source Security: https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/OpenSourceSecurity_2013.pptx
+.. _OpenArmor Active Response and Self Healing: https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/OpenArmor_Active_Response_and_Self_Healing.pdf
+.. _OpenArmor and OSSIM Unified Open Source Security: https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/OpenArmor_and_OSSIM_Unified_Open_Source_Security.pdf
+.. _OpenArmor at Scale: https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/OpenArmor_at_Scale.pdf
+.. _OpenArmor Con 2012 Day 1: https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/OpenArmor_Con_2012-day-1.pdf
+.. _OpenArmor Con 2012 Day 2: https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/OpenArmor_Con_2012-day-2.pdf
+.. _OpenArmor Log Management with Elasticsearch: https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/OpenArmor_Log_Mangement_with_Elasticsearch.pptx
+.. _OpenArmor PCI Solution 2.0: https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/OpenArmor_PCI_Solution_2.0.pdf
 
 Contribute back!
 ~~~~~~~~~~~~~~~~
 
-If you find ossec useful and would like to contribute back to the
+If you find OpenArmor useful and would like to contribute back to the
 community, please contact us. We have a lot of work to do and any help
 is appreciated.
 

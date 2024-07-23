@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CDB List lookups from within Rules &#8212; OSSEC</title>
+    <title>CDB List lookups from within Rules &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -23,7 +23,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Create Custom decoder and rules" href="create-custom.html" />
-    <link rel="prev" title="Testing OSSEC rules/decoders" href="testing.html" />
+    <link rel="prev" title="Testing OpenArmor rules/decoders" href="testing.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -117,7 +117,7 @@ gtag('config', 'UA-138780766-1');
               
                 
   <li>
-    <a href="testing.html" title="Previous Chapter: Testing OSSEC rules/decoders"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Testing OSSEC...</span>
+    <a href="testing.html" title="Previous Chapter: Testing OpenArmor rules/decoders"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Testing OpenArmor...</span>
     </a>
   </li>
   <li>
@@ -151,7 +151,7 @@ gtag('config', 'UA-138780766-1');
       
   <div class="section" id="cdb-list-lookups-from-within-rules">
 <span id="manual-rule-lists"></span><h1>CDB List lookups from within Rules<a class="headerlink" href="#cdb-list-lookups-from-within-rules" title="Permalink to this headline">¶</a></h1>
-<p>Allow for CDB lookups from within rules in OSSEC (ossec-analysisd) of all possible
+<p>Allow for CDB lookups from within rules in OpenArmor (OpenArmor-analysisd) of all possible
 fields.</p>
 <div class="section" id="use-cases">
 <h2>Use cases<a class="headerlink" href="#use-cases" title="Permalink to this headline">¶</a></h2>
@@ -160,7 +160,7 @@ fields.</p>
 <li><p>named with recursive logs checking the www.malwaredomains.com list for suspicious domains</p></li>
 <li><p>lists of approved users by server</p></li>
 <li><p>mstark (on irc) originally came up with suggestion for approved software based on a md5 list</p></li>
-<li><p>IP address lookups - there are a large number of lists of suspicious or known bad IP addresses to match inside of ossec rules</p></li>
+<li><p>IP address lookups - there are a large number of lists of suspicious or known bad IP addresses to match inside of OpenArmor rules</p></li>
 </ul>
 </div>
 <div class="section" id="syntax-for-lists">
@@ -223,11 +223,11 @@ check_value attribute:</p>
 </div>
 </div>
 </div>
-<div class="section" id="ossec-conf">
-<h3>ossec.conf<a class="headerlink" href="#ossec-conf" title="Permalink to this headline">¶</a></h3>
-<p>Each list will need to be defined and told to be available using the ossec.conf file.
+<div class="section" id="OpenArmor-conf">
+<h3>OpenArmor.conf<a class="headerlink" href="#OpenArmor-conf" title="Permalink to this headline">¶</a></h3>
+<p>Each list will need to be defined and told to be available using the OpenArmor.conf file.
 Using the following syntax:</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ossec_config&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;OpenArmor_config&gt;</span>
     <span class="nt">&lt;rules&gt;</span>
         <span class="nt">&lt;list&gt;</span>rules/records<span class="nt">&lt;/list&gt;</span>
 </pre></div>
@@ -235,16 +235,16 @@ Using the following syntax:</p>
 </div>
 <div class="section" id="commands">
 <h3>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h3>
-<p>CDB files must be compiled before they can be used.  <a class="reference internal" href="../../programs/ossec-makelists.html#ossec-makelists"><span class="std std-ref">ossec-makelists</span></a> is used
+<p>CDB files must be compiled before they can be used.  <a class="reference internal" href="../../programs/OpenArmor-makelists.html#OpenArmor-makelists"><span class="std std-ref">OpenArmor-makelists</span></a> is used
 to compile lists.</p>
-<p>The command <a class="reference internal" href="../../programs/ossec-makelists.html#ossec-makelists"><span class="std std-ref">ossec-makelists</span></a> will process and compile all lists if the master text
+<p>The command <a class="reference internal" href="../../programs/OpenArmor-makelists.html#OpenArmor-makelists"><span class="std std-ref">OpenArmor-makelists</span></a> will process and compile all lists if the master text
 rules have been changed. Basically logic is as follows:</p>
 <ul class="simple">
-<li><p>Read ossec.conf for all lists</p></li>
+<li><p>Read OpenArmor.conf for all lists</p></li>
 <li><p>Check the mtime of each list and compare it to the mtime of the compiled .cdb file</p></li>
 <li><p>if mtime is newer create new database file ending in .tmp</p></li>
 <li><p>use atomic rename to change the .tmp to .cdb. This will invalidate all mmap pages
-currently in use by ossec-analysisd and will cause them to be reloaded with the new
+currently in use by OpenArmor-analysisd and will cause them to be reloaded with the new
 data as needed</p></li>
 </ul>
 </div>
@@ -302,8 +302,8 @@ for creating lists that need fine control. Example of IP address list file:</p>
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

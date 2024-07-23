@@ -1,7 +1,7 @@
-.. _ossec_config.alerts:
+.. _OpenArmor_config.alerts:
 
 
-ossec.conf: Alerts Options
+OpenArmor.conf: Alerts Options
 ==========================
 
 Overview 
@@ -18,22 +18,22 @@ Alerts options are available in the the following installation types:
 Location 
 ^^^^^^^^
 
-All alerts options must be configured in the /var/ossec/etc/ossec.conf 
-and used within the <ossec_config> tag.  
+All alerts options must be configured in the /var/OpenArmor/etc/OpenArmor.conf 
+and used within the <OpenArmor_config> tag.  
 
 XML excerpt to show location:
 
 .. code-block:: xml 
 
-    <ossec_config> 
+    <OpenArmor_config> 
         <alerts> 
             <!-- 
             alerts options here
             --> 
         </alerts> 
-    </ossec_config> 
+    </OpenArmor_config> 
 
 Options 
 ------- 
 
-.. include:: ./ossec_config.alerts.trst
+.. include:: ./OpenArmor_config.alerts.trst

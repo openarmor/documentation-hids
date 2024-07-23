@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Testing OSSEC rules/decoders &#8212; OSSEC</title>
+    <title>Testing OpenArmor rules/decoders &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -149,20 +149,20 @@ gtag('config', 'UA-138780766-1');
   <div class="row">
     <div class="col-md-12">
       
-  <div class="section" id="testing-ossec-rules-decoders">
-<h1>Testing OSSEC rules/decoders<a class="headerlink" href="#testing-ossec-rules-decoders" title="Permalink to this headline">¶</a></h1>
-<p>The first problem most people have when troubleshooting OSSEC or trying to write new
+  <div class="section" id="testing-OpenArmor-rules-decoders">
+<h1>Testing OpenArmor rules/decoders<a class="headerlink" href="#testing-OpenArmor-rules-decoders" title="Permalink to this headline">¶</a></h1>
+<p>The first problem most people have when troubleshooting OpenArmor or trying to write new
 rules and decoders is how to test them. In the past, this would require
-manually restarting OSSEC or creating a testing installation. As of
-version 1.6, there is a tool to simplify this task (ossec-logtest).</p>
-<div class="section" id="testing-using-ossec-logtest">
-<h2>Testing using ossec-logtest<a class="headerlink" href="#testing-using-ossec-logtest" title="Permalink to this headline">¶</a></h2>
-<p>The tool <cite>ossec-logtest</cite> is installed into <code class="docutils literal notranslate"><span class="pre">/var/ossec/bin</span></code>.
-It will read the current rules and decoder (from <code class="docutils literal notranslate"><span class="pre">/var/ossec</span></code> ) and accept
+manually restarting OpenArmor or creating a testing installation. As of
+version 1.6, there is a tool to simplify this task (OpenArmor-logtest).</p>
+<div class="section" id="testing-using-OpenArmor-logtest">
+<h2>Testing using OpenArmor-logtest<a class="headerlink" href="#testing-using-OpenArmor-logtest" title="Permalink to this headline">¶</a></h2>
+<p>The tool <cite>OpenArmor-logtest</cite> is installed into <code class="docutils literal notranslate"><span class="pre">/var/OpenArmor/bin</span></code>.
+It will read the current rules and decoder (from <code class="docutils literal notranslate"><span class="pre">/var/OpenArmor</span></code> ) and accept
 log input from stdin:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/ossec/bin/ossec-logtest
-<span class="go">2008/07/04 09:57:28 ossec-testrule: INFO: Started (pid: 12683).</span>
-<span class="go">ossec-testrule: Type one log per line.</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/OpenArmor/bin/OpenArmor-logtest
+<span class="go">2008/07/04 09:57:28 OpenArmor-testrule: INFO: Started (pid: 12683).</span>
+<span class="go">OpenArmor-testrule: Type one log per line.</span>
 
 <span class="go">Jul 4 09:42:16 enigma sshd[11990]: Accepted password for dcid from 192.168.2.10 port 35259 ssh2</span>
 
@@ -185,20 +185,20 @@ log input from stdin:</p>
 </pre></div>
 </div>
 <p>In the above example, we provided an authentication success log and
-ossec-logtest showed us how it would be decoded, what information was extracted
+OpenArmor-logtest showed us how it would be decoded, what information was extracted
 and which rule fired. In the next example, we can see how it would extract a
 user logoff message from Windows:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/ossec/bin/ossec-logtest
-<span class="go">2008/07/04 09:57:28 ossec-testrule: INFO: Started (pid: 12683).</span>
-<span class="go">ossec-testrule: Type one log per line.</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/OpenArmor/bin/OpenArmor-logtest
+<span class="go">2008/07/04 09:57:28 OpenArmor-testrule: INFO: Started (pid: 12683).</span>
+<span class="go">OpenArmor-testrule: Type one log per line.</span>
 
-<span class="go">WinEvtLog: Security: AUDIT_SUCCESS(538): Security: lac: OSSEC-HM: OSSEC-HM: User Logoff: User Name: lac Domain: OSSEC-HM Logon ID: (0×0,0xF784D5) Logon Type: 2</span>
+<span class="go">WinEvtLog: Security: AUDIT_SUCCESS(538): Security: lac: OpenArmor-HM: OpenArmor-HM: User Logoff: User Name: lac Domain: OpenArmor-HM Logon ID: (0×0,0xF784D5) Logon Type: 2</span>
 
 <span class="go">**Phase 1: Completed pre-decoding.</span>
-<span class="go">full event: ‘WinEvtLog: Security: AUDIT_SUCCESS(538): Security: lac: OSSEC-HM: OSSEC-HM: User Logoff: User Name: lac Domain: OSSEC-HM Logon ID: (0×0,0xF784D5) Logon Type: 2′</span>
+<span class="go">full event: ‘WinEvtLog: Security: AUDIT_SUCCESS(538): Security: lac: OpenArmor-HM: OpenArmor-HM: User Logoff: User Name: lac Domain: OpenArmor-HM Logon ID: (0×0,0xF784D5) Logon Type: 2′</span>
 <span class="go">hostname: ‘enigma’</span>
 <span class="go">program_name: ‘(null)’</span>
-<span class="go">log: ‘WinEvtLog: Security: AUDIT_SUCCESS(538): Security: lac: OSSEC-HM: OSSEC-HM: User Logoff: User Name: lac Domain: OSSEC-HM Logon ID: (0×0,0xF784D5) Logon Type: 2′</span>
+<span class="go">log: ‘WinEvtLog: Security: AUDIT_SUCCESS(538): Security: lac: OpenArmor-HM: OpenArmor-HM: User Logoff: User Name: lac Domain: OpenArmor-HM Logon ID: (0×0,0xF784D5) Logon Type: 2′</span>
 
 <span class="go">**Phase 2: Completed decoding.</span>
 <span class="go">decoder: ‘windows’</span>
@@ -206,7 +206,7 @@ user logoff message from Windows:</p>
 <span class="go">id: ‘538′</span>
 <span class="go">extra_data: ‘Security’</span>
 <span class="go">dstuser: ‘lac’</span>
-<span class="go">system_name: ‘OSSEC-HM’</span>
+<span class="go">system_name: ‘OpenArmor-HM’</span>
 
 <span class="go">**Phase 3: Completed filtering (rules).</span>
 <span class="go">Rule id: ‘18149′</span>
@@ -215,11 +215,11 @@ user logoff message from Windows:</p>
 <span class="go">**Alert to be generated.</span>
 </pre></div>
 </div>
-<p>In addition to the information above, <cite>ossec-logtest -v</cite> can be used
+<p>In addition to the information above, <cite>OpenArmor-logtest -v</cite> can be used
 to follow the log through the rule path:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/ossec/bin/ossec-logtest -v
-<span class="go">2008/07/04 10:05:43 ossec-testrule: INFO: Started (pid: 23007).</span>
-<span class="go">ossec-testrule: Type one log per line.</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/OpenArmor/bin/OpenArmor-logtest -v
+<span class="go">2008/07/04 10:05:43 OpenArmor-testrule: INFO: Started (pid: 23007).</span>
+<span class="go">OpenArmor-testrule: Type one log per line.</span>
 
 <span class="go">Jul 4 10:05:30 enigma sshd[27588]: Failed password for invalid user test2 from 127.0.0.1 port 19130 ssh2</span>
 
@@ -275,8 +275,8 @@ to follow the log through the rule path:</p>
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

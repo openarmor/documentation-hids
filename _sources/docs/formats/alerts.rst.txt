@@ -1,4 +1,4 @@
-OSSEC alert log samples
+OpenArmor alert log samples
 =======================
 
 

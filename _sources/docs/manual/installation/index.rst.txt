@@ -3,7 +3,7 @@
 Installation 
 ============
 
-The best installation tutorial is available in the `OSSEC book <http://www.amazon.com/OSSEC-Host-Based-Intrusion-Detection-Guide/dp/159749240X>`_. 
+The best installation tutorial is available in the `OpenArmor book <http://www.amazon.com/OpenArmor-Host-Based-Intrusion-Detection-Guide/dp/159749240X>`_. 
 
 
 .. toctree::
@@ -15,8 +15,8 @@ The best installation tutorial is available in the `OSSEC book <http://www.amazo
     installation-binary
     install-virtual-server
     install-source-unattended
-    compile-ossec-on-windows
-    compile-ossec-mingw
+    compile-OpenArmor-on-windows
+    compile-OpenArmor-mingw
     deployment_with_cfengine
     updates
 

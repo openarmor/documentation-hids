@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Package Installation &#8212; OSSEC</title>
+    <title>Package Installation &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -22,7 +22,7 @@
     <link rel="author" title="About these documents" href="../../../about.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Compiling OSSEC for a Binary Installation" href="installation-binary.html" />
+    <link rel="next" title="Compiling OpenArmor for a Binary Installation" href="installation-binary.html" />
     <link rel="prev" title="Windows Agent Installation" href="installation-windows.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -121,7 +121,7 @@ gtag('config', 'UA-138780766-1');
     </a>
   </li>
   <li>
-    <a href="installation-binary.html" title="Next Chapter: Compiling OSSEC for a Binary Installation"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Compiling OSS... &raquo;</span>
+    <a href="installation-binary.html" title="Next Chapter: Compiling OpenArmor for a Binary Installation"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Compiling OSS... &raquo;</span>
     </a>
   </li>
               
@@ -151,27 +151,27 @@ gtag('config', 'UA-138780766-1');
       
   <div class="section" id="package-installation">
 <span id="manual-install-package"></span><h1>Package Installation<a class="headerlink" href="#package-installation" title="Permalink to this headline">¶</a></h1>
-<p>The OSSEC project has made RPM and deb packages available.
-Links to the packages can be found on the OSSEC <a class="reference external" href="http://www.ossec.net/?page_id=19">download page</a></p>
+<p>The OpenArmor project has made RPM and deb packages available.
+Links to the packages can be found on the OpenArmor <a class="reference external" href="http://theopenarmor.org/?page_id=19">download page</a></p>
 <div class="section" id="rpm-installation">
 <h2>RPM Installation<a class="headerlink" href="#rpm-installation" title="Permalink to this headline">¶</a></h2>
-<p>OSSEC’s RPMs are made available by <a class="reference external" href="http://www.atomicorp.com">AtomiCorp</a>.</p>
+<p>OpenArmor’s RPMs are made available by <a class="reference external" href="http://www.atomicorp.com">AtomiCorp</a>.</p>
 <p>The RPMs can be installed by adding the AtomiCorp yum repository:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>wget -q -O - https://updates.atomicorp.com/installers/atomic <span class="p">|</span> sh
 </pre></div>
 </div>
-<p>Next use <code class="docutils literal notranslate"><span class="pre">yum</span></code> to install the specific packages. For an OSSEC server run:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>yum install ossec-hids ossec-hids-server
+<p>Next use <code class="docutils literal notranslate"><span class="pre">yum</span></code> to install the specific packages. For an OpenArmor server run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>yum install OpenArmor-hids OpenArmor-hids-server
 </pre></div>
 </div>
 <p>And for an agent run:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>yum install ossec-hids ossec-hids-agent
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>yum install OpenArmor-hids OpenArmor-hids-agent
 </pre></div>
 </div>
 </div>
 <div class="section" id="deb-installation">
 <h2>Deb Installation<a class="headerlink" href="#deb-installation" title="Permalink to this headline">¶</a></h2>
-<p>OSSEC’s DEB packages are made available by <a class="reference external" href="http://www.atomicorp.com">Atomicorp</a>.</p>
+<p>OpenArmor’s DEB packages are made available by <a class="reference external" href="http://www.atomicorp.com">Atomicorp</a>.</p>
 <p>Run the Repo installer:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>wget -q -O - https://updates.atomicorp.com/installers/atomic <span class="p">|</span> sudo bash
 </pre></div>
@@ -180,30 +180,30 @@ Links to the packages can be found on the OSSEC <a class="reference external" hr
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>apt-get update
 </pre></div>
 </div>
-<p>Install OSSEC HIDS server/manager:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>apt-get install ossec-hids-server
+<p>Install OpenArmor HIDS server/manager:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>apt-get install OpenArmor-hids-server
 </pre></div>
 </div>
-<p>Or install OSSEC HIDS agent:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>apt-get install ossec-hids-agent
+<p>Or install OpenArmor HIDS agent:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>apt-get install OpenArmor-hids-agent
 </pre></div>
 </div>
 </div>
 <div class="section" id="pkg-installation">
 <h2>pkg Installation<a class="headerlink" href="#pkg-installation" title="Permalink to this headline">¶</a></h2>
-<p>Some of the BSD operating systems offer OSSEC packages you can use. Here you have
+<p>Some of the BSD operating systems offer OpenArmor packages you can use. Here you have
 FreeBSD and OpenBSD as example.</p>
 <ul class="simple">
 <li><p><strong>FreeBSD</strong></p></li>
 </ul>
 <p>You are going to work together with <code class="docutils literal notranslate"><span class="pre">pkg</span></code> here. Just choose which type of setup you need
-(agent, local monitoring, or server/manager) and install the respective OSSEC package.</p>
-<p>Should you opt to install an OSSEC Server/Manager:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>pkg install ossec-hids-server
+(agent, local monitoring, or server/manager) and install the respective OpenArmor package.</p>
+<p>Should you opt to install an OpenArmor Server/Manager:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>pkg install OpenArmor-hids-server
 </pre></div>
 </div>
-<p>If you want to install an OSSEC Agent:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>pkg install ossec-hids-agent
+<p>If you want to install an OpenArmor Agent:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>pkg install OpenArmor-hids-agent
 </pre></div>
 </div>
 <div class="admonition note">
@@ -215,8 +215,8 @@ read more about it <a class="reference external" href="https://www.dragonflybsd.
 <li><p><strong>OpenBSD</strong></p></li>
 </ul>
 <p>Here you must work with <code class="docutils literal notranslate"><span class="pre">pkg_add</span></code> instead of <cite>pkg</cite>, but no worries it’s the same concept.</p>
-<p>As it only offers one package, here is how to install OSSEC HIDS on OpenBSD:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>pkg_add ossec-hids
+<p>As it only offers one package, here is how to install OpenArmor HIDS on OpenBSD:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>pkg_add OpenArmor-hids
 </pre></div>
 </div>
 </div>
@@ -234,8 +234,8 @@ read more about it <a class="reference external" href="https://www.dragonflybsd.
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

@@ -4,11 +4,11 @@ Manager/Agent Installation
 ==========================
 
 
-Installation of OSSEC HIDS is very simple, the ``install.sh`` shell script automating most of it.
+Installation of OpenArmor HIDS is very simple, the ``install.sh`` shell script automating most of it.
 There are a few questions to be answered before the installation will occur, one of the most 
 important being which type of installation is desired.
 It is important to choose the correct installation type: server, agent, local, or hybrid.
-More information on them can be found on the `OSSEC Architecture page <../ossec-architecture.html>`_.
+More information on them can be found on the `OpenArmor Architecture page <../OpenArmor-architecture.html>`_.
 
 .. note::
 
@@ -34,35 +34,35 @@ More information on them can be found on the `OSSEC Architecture page <../ossec-
 
     .. code-block:: console 
 
-        # tar -zxvf ossec-hids-*.tar.gz (or gunzip -d; tar -xvf)
-        # cd ossec-hids-* 
+        # tar -zxvf OpenArmor-hids-*.tar.gz (or gunzip -d; tar -xvf)
+        # cd OpenArmor-hids-* 
         # ./install.sh
 
-4. The OSSEC manager listens on UDP port 1514. Any firewalls between the agents and 
+4. The OpenArmor manager listens on UDP port 1514. Any firewalls between the agents and 
    the manager will need to allow this traffic.
 
 5. The server, agent, and hybrid installations will require additional configuration. 
    More information can be found on the `Managing the agents page <../agent/agent-management.html>`_.
 
-6. Start OSSEC HIDS by running the following command:
+6. Start OpenArmor HIDS by running the following command:
 
     .. code-block:: console 
 
-        # /var/ossec/bin/ossec-control start  
+        # /var/OpenArmor/bin/OpenArmor-control start  
 
 
 Manual Installation
 ===================
 
-OSSEC can also be installed in a more manual fashion.
-No modifications will be made to the `ossec.conf` file, so it will have to be configured after installation.
-The `ossec`, `ossecm` and `ossecr` users will still be created automatically.
+OpenArmor can also be installed in a more manual fashion.
+No modifications will be made to the `OpenArmor.conf` file, so it will have to be configured after installation.
+The `OpenArmor`, `OpenArmorm` and `OpenArmorr` users will still be created automatically.
 
 After the source tarball is downloaded and extracted:
 
 .. code-block:: console
 
-   cd ossec-hids-*/src
+   cd OpenArmor-hids-*/src
    make TARGET=<server|local|agent>
    make install
 

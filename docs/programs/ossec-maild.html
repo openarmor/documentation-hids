@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ossec-maild &#8212; OSSEC</title>
+    <title>OpenArmor-maild &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -22,8 +22,8 @@
     <link rel="author" title="About these documents" href="../../about.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="ossec-makelists" href="ossec-makelists.html" />
-    <link rel="prev" title="ossec-logtest" href="ossec-logtest.html" />
+    <link rel="next" title="OpenArmor-makelists" href="OpenArmor-makelists.html" />
+    <link rel="prev" title="OpenArmor-logtest" href="OpenArmor-logtest.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../index.html"><img src="../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../index.html"><img src="../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -117,11 +117,11 @@ gtag('config', 'UA-138780766-1');
               
                 
   <li>
-    <a href="ossec-logtest.html" title="Previous Chapter: ossec-logtest"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; ossec-logtest</span>
+    <a href="OpenArmor-logtest.html" title="Previous Chapter: OpenArmor-logtest"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; OpenArmor-logtest</span>
     </a>
   </li>
   <li>
-    <a href="ossec-makelists.html" title="Next Chapter: ossec-makelists"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">ossec-makelists &raquo;</span>
+    <a href="OpenArmor-makelists.html" title="Next Chapter: OpenArmor-makelists"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">OpenArmor-makelists &raquo;</span>
     </a>
   </li>
               
@@ -149,67 +149,67 @@ gtag('config', 'UA-138780766-1');
   <div class="row">
     <div class="col-md-12">
       
-  <div class="section" id="ossec-maild">
-<span id="id1"></span><h1>ossec-maild<a class="headerlink" href="#ossec-maild" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="docutils literal notranslate"><span class="pre">ossec-maild</span></code> daemon sends OSSEC alerts via email.
-<code class="docutils literal notranslate"><span class="pre">ossec-maild</span></code> is started by ossec-control.
-Configuration for ossec-maild is handled in the ossec.conf. (see <a class="reference internal" href="../syntax/head_ossec_config.global.html#ossec-config-global"><span class="std std-ref">ossec.conf: Global options</span></a>)</p>
-<div class="section" id="ossec-maild-argument-options">
-<h2>ossec-maild argument options<a class="headerlink" href="#ossec-maild-argument-options" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="OpenArmor-maild">
+<span id="id1"></span><h1>OpenArmor-maild<a class="headerlink" href="#OpenArmor-maild" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">OpenArmor-maild</span></code> daemon sends OpenArmor alerts via email.
+<code class="docutils literal notranslate"><span class="pre">OpenArmor-maild</span></code> is started by OpenArmor-control.
+Configuration for OpenArmor-maild is handled in the OpenArmor.conf. (see <a class="reference internal" href="../syntax/head_OpenArmor_config.global.html#OpenArmor-config-global"><span class="std std-ref">OpenArmor.conf: Global options</span></a>)</p>
+<div class="section" id="OpenArmor-maild-argument-options">
+<h2>OpenArmor-maild argument options<a class="headerlink" href="#OpenArmor-maild-argument-options" title="Permalink to this headline">¶</a></h2>
 <dl class="std option">
-<dt id="cmdoption-ossec-maild-c">
-<code class="sig-name descname"><span class="pre">-c</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;config&gt;</span></code><a class="headerlink" href="#cmdoption-ossec-maild-c" title="Permalink to this definition">¶</a></dt>
-<dd><p>Run <code class="docutils literal notranslate"><span class="pre">ossec-maild</span></code> using &lt;config&gt; as the configuration file.</p>
-<p><strong>Default:</strong> /var/ossec/etc/ossec.conf</p>
+<dt id="cmdoption-OpenArmor-maild-c">
+<code class="sig-name descname"><span class="pre">-c</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;config&gt;</span></code><a class="headerlink" href="#cmdoption-OpenArmor-maild-c" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run <code class="docutils literal notranslate"><span class="pre">OpenArmor-maild</span></code> using &lt;config&gt; as the configuration file.</p>
+<p><strong>Default:</strong> /var/OpenArmor/etc/OpenArmor.conf</p>
 </dd></dl>
 
 <dl class="std option">
-<dt id="cmdoption-ossec-maild-D">
-<span id="cmdoption-ossec-maild-d"></span><code class="sig-name descname"><span class="pre">-D</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;dir&gt;</span></code><a class="headerlink" href="#cmdoption-ossec-maild-D" title="Permalink to this definition">¶</a></dt>
+<dt id="cmdoption-OpenArmor-maild-D">
+<span id="cmdoption-OpenArmor-maild-d"></span><code class="sig-name descname"><span class="pre">-D</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;dir&gt;</span></code><a class="headerlink" href="#cmdoption-OpenArmor-maild-D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Chroot to &lt;dir&gt;.</p>
-<p><strong>Default:</strong> /var/ossec</p>
+<p><strong>Default:</strong> /var/OpenArmor</p>
 </dd></dl>
 
 <dl class="std option">
-<dt id="cmdoption-ossec-maild-0">
-<code class="sig-name descname"><span class="pre">-d</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-ossec-maild-0" title="Permalink to this definition">¶</a></dt>
-<dd><p>Execute ossec-maild in debug mode. This option can be used multiple times to increase the verbosity of the debug messages.</p>
+<dt id="cmdoption-OpenArmor-maild-0">
+<code class="sig-name descname"><span class="pre">-d</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-OpenArmor-maild-0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute OpenArmor-maild in debug mode. This option can be used multiple times to increase the verbosity of the debug messages.</p>
 </dd></dl>
 
 <dl class="std option">
-<dt id="cmdoption-ossec-maild-f">
-<code class="sig-name descname"><span class="pre">-f</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-ossec-maild-f" title="Permalink to this definition">¶</a></dt>
-<dd><p>Run <code class="docutils literal notranslate"><span class="pre">ossec-maild</span></code> in the foreground.</p>
+<dt id="cmdoption-OpenArmor-maild-f">
+<code class="sig-name descname"><span class="pre">-f</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-OpenArmor-maild-f" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run <code class="docutils literal notranslate"><span class="pre">OpenArmor-maild</span></code> in the foreground.</p>
 </dd></dl>
 
 <dl class="std option">
-<dt id="cmdoption-ossec-maild-g">
-<code class="sig-name descname"><span class="pre">-g</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;group&gt;</span></code><a class="headerlink" href="#cmdoption-ossec-maild-g" title="Permalink to this definition">¶</a></dt>
-<dd><p>Run <code class="docutils literal notranslate"><span class="pre">ossec-maild</span></code> as &lt;group&gt;.</p>
+<dt id="cmdoption-OpenArmor-maild-g">
+<code class="sig-name descname"><span class="pre">-g</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;group&gt;</span></code><a class="headerlink" href="#cmdoption-OpenArmor-maild-g" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run <code class="docutils literal notranslate"><span class="pre">OpenArmor-maild</span></code> as &lt;group&gt;.</p>
 </dd></dl>
 
 <dl class="std option">
-<dt id="cmdoption-ossec-maild-h">
-<code class="sig-name descname"><span class="pre">-h</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-ossec-maild-h" title="Permalink to this definition">¶</a></dt>
+<dt id="cmdoption-OpenArmor-maild-h">
+<code class="sig-name descname"><span class="pre">-h</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-OpenArmor-maild-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Display the help message.</p>
 </dd></dl>
 
 <dl class="std option">
-<dt id="cmdoption-ossec-maild-t">
-<code class="sig-name descname"><span class="pre">-t</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-ossec-maild-t" title="Permalink to this definition">¶</a></dt>
+<dt id="cmdoption-OpenArmor-maild-t">
+<code class="sig-name descname"><span class="pre">-t</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-OpenArmor-maild-t" title="Permalink to this definition">¶</a></dt>
 <dd><p>Test configuration.</p>
 </dd></dl>
 
 <dl class="std option">
-<dt id="cmdoption-ossec-maild-u">
-<code class="sig-name descname"><span class="pre">-u</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;user&gt;</span></code><a class="headerlink" href="#cmdoption-ossec-maild-u" title="Permalink to this definition">¶</a></dt>
-<dd><p>Run <code class="docutils literal notranslate"><span class="pre">ossec-maild</span></code> as &lt;user&gt;.</p>
-<p><strong>Default:</strong> ossecm</p>
+<dt id="cmdoption-OpenArmor-maild-u">
+<code class="sig-name descname"><span class="pre">-u</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;user&gt;</span></code><a class="headerlink" href="#cmdoption-OpenArmor-maild-u" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run <code class="docutils literal notranslate"><span class="pre">OpenArmor-maild</span></code> as &lt;user&gt;.</p>
+<p><strong>Default:</strong> OpenArmorm</p>
 </dd></dl>
 
 <dl class="std option">
-<dt id="cmdoption-ossec-maild-V">
-<span id="cmdoption-ossec-maild-v"></span><code class="sig-name descname"><span class="pre">-V</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-ossec-maild-V" title="Permalink to this definition">¶</a></dt>
+<dt id="cmdoption-OpenArmor-maild-V">
+<span id="cmdoption-OpenArmor-maild-v"></span><code class="sig-name descname"><span class="pre">-V</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-OpenArmor-maild-V" title="Permalink to this definition">¶</a></dt>
 <dd><p>Version and license information.</p>
 </dd></dl>
 
@@ -228,8 +228,8 @@ Configuration for ossec-maild is handled in the ossec.conf. (see <a class="refer
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

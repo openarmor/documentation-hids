@@ -5,7 +5,7 @@
 
 
 ===============
-OSSEC 2.9.3 
+OpenArmor 2.9.3 
 ===============
 
 
@@ -86,5 +86,5 @@ New Rules / Decoders
 
 **Download**
 
-`https://github.com/ossec/ossec-hids/releases <https://github.com/ossec/ossec-hids/releases>`_
+`https://github.com/OpenArmor/OpenArmor-hids/releases <https://github.com/OpenArmor/OpenArmor-hids/releases>`_
 

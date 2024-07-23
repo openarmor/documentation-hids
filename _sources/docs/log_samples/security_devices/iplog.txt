@@ -257,7 +257,7 @@ Nov 18 19:28:07 ICMP/UDP: smurf attack mode expired for 201.223.41.0 - received 
 
 <font color="red">Nov 14 15:57:56 TCP: Bogus TCP flags set by 10.10.160.2:60873 (dest port 25)</font>
 
-='''OSSEC (HIDS) + iplog (sensor) implementation'''=
+='''OpenArmor (HIDS) + iplog (sensor) implementation'''=
 *Work in progress
 *TODO: improve regex, decoders and rules. p0f complementation?
 *Configuration tested in FreeBSD 6.1 and archlinux gimmick
@@ -342,9 +342,9 @@ Nov 14 15:57:56 TCP: Bogus TCP flags set by 10.10.160.2:60873 (dest port 25)
 
 Only for working decoders
 
- cd ~/ossec/rules
+ cd ~/OpenArmor/rules
  touch iplog_rules.xml
- chown root:ossec iplog_rules.xml
+ chown root:OpenArmor iplog_rules.xml
  chmod 550 iplog_rules.xml
 
 in iplog_rules.xml include:
@@ -356,10 +356,10 @@ in iplog_rules.xml include:
   </rule>
  </group>
 
-=='''ossec.conf'''==
+=='''OpenArmor.conf'''==
 
- cd ~/ossec/etc
- vi  ossec.conf
+ cd ~/OpenArmor/etc
+ vi  OpenArmor.conf
 
 include in the correct place:
 
@@ -378,13 +378,13 @@ start iplog
 
  iplog -d 
 
-restart ossec
+restart OpenArmor
 
- ~/ossec/bin/ossec-control restart
+ ~/OpenArmor/bin/OpenArmor-control restart
 
 test with nmap (see before)
 
-='''OSSEC active-response'''=
+='''OpenArmor active-response'''=
 
 =='''Firewall Drop: FreeBSD-IPFW'''==
 add to your ipfw script the follow lines, if you are using the 00001 rule number disoccupying:
@@ -392,7 +392,7 @@ add to your ipfw script the follow lines, if you are using the 00001 rule number
  /sbin/ipfw add 00001 deny ip from table\(00002\) to any
  /sbin/ipfw add 00001 deny ip from any to table\(00002\)
 
-Change  ~/ossec/active-response/bin/firewall-drop.sh to adjust to the red lines
+Change  ~/OpenArmor/active-response/bin/firewall-drop.sh to adjust to the red lines
 
  <nowiki>#!/bin/sh</nowiki>
  <nowiki># Adds an IP to the IPFW drop list.</nowiki>
@@ -401,7 +401,7 @@ Change  ~/ossec/active-response/bin/firewall-drop.sh to adjust to the red lines
  <nowiki># please change it here.</nowiki>
  <nowiki># Expect: srcip</nowiki>
  <nowiki># Author: Rafael Capovilla - under @ ( at ) underlinux.com.br</nowiki>
- <nowiki># Author: Daniel B. Cid - dcid @ ( at ) ossec.net</nowiki>
+ <nowiki># Author: Daniel B. Cid - dcid @ ( at ) OpenArmor.net</nowiki>
  <nowiki># Last modified: May 07, 2006</nowiki>
  UNAME=`uname`
  IPFW="/sbin/ipfw"
@@ -415,7 +415,7 @@ Change  ~/ossec/active-response/bin/firewall-drop.sh to adjust to the red lines
  cd $LOCAL
  cd ../
  PWD=`pwd`
- echo "`date` $0 $1 $2 $3" >> ${PWD}/ossec-hids-responses.log
+ echo "`date` $0 $1 $2 $3" >> ${PWD}/OpenArmor-hids-responses.log
  <nowiki># Checking for an IP</nowiki>
  if [ "x${IP}" = "x" ]; then
    echo "$0: <action> <username> <ip>" 
@@ -447,7 +447,7 @@ Change  ~/ossec/active-response/bin/firewall-drop.sh to adjust to the red lines
  <nowiki># Not FreeBSD</nowiki>
  exit 1;
 
-Include in ~/ossec/etc/ossec.conf:
+Include in ~/OpenArmor/etc/OpenArmor.conf:
 
   <command>
     <name>firewall-drop</name>
@@ -462,16 +462,16 @@ Include in ~/ossec/etc/ossec.conf:
        <rules_id>99990</rules_id>
   </active-response>
 
-restart ossec:
- ~/ossec/bin/ossec-control restart
+restart OpenArmor:
+ ~/OpenArmor/bin/OpenArmor-control restart
 
-Scan your machine (caution OSSEC will block the scanner IP) from online scanner server like: http://www.derkeiler.com/Service/PortScan/, or from a remote machine with: 
+Scan your machine (caution OpenArmor will block the scanner IP) from online scanner server like: http://www.derkeiler.com/Service/PortScan/, or from a remote machine with: 
  nmap -sT -PI -PT 1.2.3.4
 
 look if the active-response works with:
  /sbin/ipfw table 2 list
 or
- tail -f ~/ossec/active-response/ossec-hids-responses.log
+ tail -f ~/OpenArmor/active-response/OpenArmor-hids-responses.log
 
 if you want to flush the banned IPs in the table
  /sbin/ipfw table 2 flush

@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Directory path loading of rules and decoders &#8212; OSSEC</title>
+    <title>Directory path loading of rules and decoders &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -152,18 +152,18 @@ gtag('config', 'UA-138780766-1');
   <div class="section" id="directory-path-loading-of-rules-and-decoders">
 <span id="manual-rule-decoder-dir"></span><h1>Directory path loading of rules and decoders<a class="headerlink" href="#directory-path-loading-of-rules-and-decoders" title="Permalink to this headline">¶</a></h1>
 <p>To allow whole directories of files to be loaded as decoders, lists, or rules
-by ossec-anaylistd.</p>
+by OpenArmor-anaylistd.</p>
 <div class="section" id="use-case">
 <h2>Use case<a class="headerlink" href="#use-case" title="Permalink to this headline">¶</a></h2>
 <p>Greatly simplifies working with decoders as there can be as many files as needed.
 Also will make packaging of rules and decoders a simple unzip/untar and restart
 operation. This will also greatly reduce the amount of code needed to manage
-the upgrade scripts of ossec.</p>
+the upgrade scripts of OpenArmor.</p>
 </div>
 <div class="section" id="details">
 <h2>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="syntax-for-ossec">
-<h3>Syntax for OSSEC<a class="headerlink" href="#syntax-for-ossec" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="syntax-for-OpenArmor">
+<h3>Syntax for OpenArmor<a class="headerlink" href="#syntax-for-OpenArmor" title="Permalink to this headline">¶</a></h3>
 <p>All Directory loading is done in alphabetical form. This is much like init.d
 where the use of numeric prefixes on file names can affect the order of
 loading. Example of file names and the order they would be loaded:</p>
@@ -176,23 +176,23 @@ loading. Example of file names and the order they would be loaded:</p>
 <h4>Directory loading<a class="headerlink" href="#directory-loading" title="Permalink to this headline">¶</a></h4>
 <p>The basic format for selection of rules file is as follows. This will load all
 files in the rules dir that match the regex <code class="docutils literal notranslate"><span class="pre">_rules.xml$</span></code>.</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ossec_config&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;OpenArmor_config&gt;</span>
     <span class="nt">&lt;rules&gt;</span>
         <span class="nt">&lt;rule_dir</span> <span class="na">pattern=</span><span class="s">&quot;_rules.xml&quot;</span><span class="nt">&gt;</span>rules<span class="nt">&lt;/rule_dir&gt;</span>
 </pre></div>
 </div>
 <p>The pattern is optional and defaults to _rules.xml for rules loading so this
 could be written as:</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ossec_config&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;OpenArmor_config&gt;</span>
     <span class="nt">&lt;rules&gt;</span>
         <span class="nt">&lt;rule_dir&gt;</span>rules<span class="nt">&lt;/rule_dir&gt;</span>
 </pre></div>
 </div>
-<p>Order of the directives in ossec.conf is still respected, and duplicate files
+<p>Order of the directives in OpenArmor.conf is still respected, and duplicate files
 will not be loaded. In the following example 00_setup_rules.xml is always
 loaded first, and will <em>NOT</em> be loaded a second time by the rule_dir
 directive.</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ossec_config&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;OpenArmor_config&gt;</span>
     <span class="nt">&lt;rules&gt;</span>
         <span class="nt">&lt;include&gt;</span>rules/00_setup_rules.xml<span class="nt">&lt;/include&gt;</span>
         <span class="nt">&lt;rule_dir&gt;</span>rules<span class="nt">&lt;/rule_dir&gt;</span>
@@ -232,7 +232,7 @@ subdirectories.</p>
 </div></blockquote>
 </li>
 </ul>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ossec_config&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;OpenArmor_config&gt;</span>
     <span class="nt">&lt;rules&gt;</span>
         <span class="nt">&lt;decoder&gt;</span>etc/decoder.xml<span class="nt">&lt;/decoder&gt;</span>
         <span class="nt">&lt;decoder_dir&gt;</span>rules/plugins<span class="nt">&lt;/decoder_dir&gt;</span>
@@ -241,7 +241,7 @@ subdirectories.</p>
         <span class="nt">&lt;rule_dir</span> <span class="na">pattern=</span><span class="s">&quot;.xml$&quot;</span><span class="nt">&gt;</span>rules/<span class="nt">&lt;/rule_dir&gt;</span>
         <span class="nt">&lt;rule_dir&gt;</span>rules/plugins<span class="nt">&lt;/rule_dir&gt;</span>
     <span class="nt">&lt;/rules&gt;</span>
-<span class="nt">&lt;/ossec_config&gt;</span>
+<span class="nt">&lt;/OpenArmor_config&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -260,8 +260,8 @@ subdirectories.</p>
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

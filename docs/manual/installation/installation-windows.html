@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Windows Agent Installation &#8212; OSSEC</title>
+    <title>Windows Agent Installation &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -153,16 +153,16 @@ gtag('config', 'UA-138780766-1');
 <span id="manual-win-install"></span><h1>Windows Agent Installation<a class="headerlink" href="#windows-agent-installation" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>OSSEC only supports Windows systems as agents, and they
-will require an OSSEC server to function.</p>
+<p>OpenArmor only supports Windows systems as agents, and they
+will require an OpenArmor server to function.</p>
 </div>
 <div class="section" id="step-1-opening-the-agent-manager-menu">
 <h2>Step 1: Opening the Agent Manager menu<a class="headerlink" href="#step-1-opening-the-agent-manager-menu" title="Permalink to this headline">¶</a></h2>
-<p>The first step of this process is to get into the Agent Manager menu. From the ossec server, type the following command:</p>
-<p><cite>/var/ossec/bin/manage_agents</cite></p>
+<p>The first step of this process is to get into the Agent Manager menu. From the OpenArmor server, type the following command:</p>
+<p><cite>/var/OpenArmor/bin/manage_agents</cite></p>
 <p>The menu should look like this:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">****************************************</span>
-<span class="go">* OSSEC HIDS v2.5-SNP-100809 Agent manager.*</span>
+<span class="go">* OpenArmor HIDS v2.5-SNP-100809 Agent manager.*</span>
 <span class="go">* The following options are available:*</span>
 <span class="go">***************************************</span>
 
@@ -191,7 +191,7 @@ will require an OSSEC server to function.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">An</span> <span class="n">ID</span> <span class="k">for</span> <span class="n">the</span> <span class="n">new</span> <span class="n">agent</span><span class="p">[</span><span class="mi">001</span><span class="p">]:</span>
 </pre></div>
 </div>
-<p>Lastly, it asks for confirmation of all the information provided. Then it appends all of the agent information to /var/ossec/etc/client.keys and returns to the main menu.</p>
+<p>Lastly, it asks for confirmation of all the information provided. Then it appends all of the agent information to /var/OpenArmor/etc/client.keys and returns to the main menu.</p>
 </div>
 <div class="section" id="step-3-extracting-a-key">
 <h2>Step 3: Extracting a Key<a class="headerlink" href="#step-3-extracting-a-key" title="Permalink to this headline">¶</a></h2>
@@ -207,9 +207,9 @@ will require an OSSEC server to function.</p>
 </div>
 <div class="section" id="step-4-the-windows-side">
 <h2>Step 4: The Windows Side<a class="headerlink" href="#step-4-the-windows-side" title="Permalink to this headline">¶</a></h2>
-<p>Next up, download the executable named Agent Windows from <a class="reference external" href="https://ossec.github.io/downloads.html">https://ossec.github.io/downloads.html</a>. Run through the install wizard with all defaults. It should launch the Ossec Agent Manager when it’s done. The Ossec Agent Manager looks like this:</p>
-<p><img alt="image0" src="https://github.com/Vendetta547/ossec-docs/blob/patch-1/OSSEC-Agent-Manager-Windows.png" /></p>
-<p>Enter the IP address of your ossec server in the first text field, and enter the extracted key that was copied to the clipboard earlier to the second textfield. Finally, click on the manage tab and hit restart.</p>
+<p>Next up, download the executable named Agent Windows from <a class="reference external" href="https://OpenArmor.github.io/downloads.html">https://OpenArmor.github.io/downloads.html</a>. Run through the install wizard with all defaults. It should launch the OpenArmor Agent Manager when it’s done. The OpenArmor Agent Manager looks like this:</p>
+<p><img alt="image0" src="https://github.com/Vendetta547/OpenArmor-docs/blob/patch-1/OpenArmor-Agent-Manager-Windows.png" /></p>
+<p>Enter the IP address of your OpenArmor server in the first text field, and enter the extracted key that was copied to the clipboard earlier to the second textfield. Finally, click on the manage tab and hit restart.</p>
 </div>
 </div>
 
@@ -225,8 +225,8 @@ will require an OSSEC server to function.</p>
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

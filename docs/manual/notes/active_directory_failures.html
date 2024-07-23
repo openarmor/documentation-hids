@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Why am I getting multiple 675 events from AD + Samba? &#8212; OSSEC</title>
+    <title>Why am I getting multiple 675 events from AD + Samba? &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -68,18 +68,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -154,7 +154,7 @@ This <a class="reference external" href="http://blog.scottlowe.org/2006/10/23/ev
 <span class="go">3. Logs the 675 error in the Event log.</span>
 </pre></div>
 </div>
-<p>To avoid receiving multiple <code class="docutils literal notranslate"><span class="pre">18152</span> <span class="pre">fired</span> <span class="pre">(level</span> <span class="pre">10)</span> <span class="pre">-&gt;</span> <span class="pre">&quot;Multiple</span> <span class="pre">Windows</span> <span class="pre">Logon</span> <span class="pre">Failures.&quot;</span></code> on OSSEC, you can ignore this specific event id, with the following local rule (ignoring 675 error with Failure code 0x19):</p>
+<p>To avoid receiving multiple <code class="docutils literal notranslate"><span class="pre">18152</span> <span class="pre">fired</span> <span class="pre">(level</span> <span class="pre">10)</span> <span class="pre">-&gt;</span> <span class="pre">&quot;Multiple</span> <span class="pre">Windows</span> <span class="pre">Logon</span> <span class="pre">Failures.&quot;</span></code> on OpenArmor, you can ignore this specific event id, with the following local rule (ignoring 675 error with Failure code 0x19):</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;rule id=&quot;xyz&quot; level=&quot;0&quot;&gt;</span>
 <span class="go">  &lt;if_sid&gt;18106&lt;/if_sid&gt;</span>
 <span class="go">  &lt;id&gt;^675&lt;/id&gt;</span>
@@ -162,7 +162,7 @@ This <a class="reference external" href="http://blog.scottlowe.org/2006/10/23/ev
 <span class="go">&lt;/rule&gt;</span>
 </pre></div>
 </div>
-<p><em>This behavior was reported by Nicolas Arias &lt;nicolas.arias at xx.com&gt; at the OSSEC mailing list.</em></p>
+<p><em>This behavior was reported by Nicolas Arias &lt;nicolas.arias at xx.com&gt; at the OpenArmor mailing list.</em></p>
 </div>
 
 
@@ -177,8 +177,8 @@ This <a class="reference external" href="http://blog.scottlowe.org/2006/10/23/ev
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

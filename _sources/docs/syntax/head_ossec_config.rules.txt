@@ -1,7 +1,7 @@
-.. _ossec_config.rules: 
+.. _OpenArmor_config.rules: 
 
 
-ossec.conf: Rules options
+OpenArmor.conf: Rules options
 =========================
 
 Overview 
@@ -18,23 +18,23 @@ Rules options are available in the the following installation types:
 Location 
 ^^^^^^^^
 
-All global options must be configured in the /var/ossec/etc/ossec.conf 
-and used within the <ossec_config> tag.  
+All global options must be configured in the /var/OpenArmor/etc/OpenArmor.conf 
+and used within the <OpenArmor_config> tag.  
 
 XML excerpt to show location:
 
 .. code-block:: xml 
 
-    <ossec_config> 
+    <OpenArmor_config> 
         <rules> 
             <!-- 
             Rules options here
             --> 
         </rules> 
-    </ossec_config> 
+    </OpenArmor_config> 
 
 
 Options
 -------
 
-.. include:: ossec_config.rules.trst 
+.. include:: OpenArmor_config.rules.trst 

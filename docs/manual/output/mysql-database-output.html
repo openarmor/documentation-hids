@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Configuring MySQL &#8212; OSSEC</title>
+    <title>Configuring MySQL &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -157,12 +157,12 @@ gtag('config', 'UA-138780766-1');
 <code class="docutils literal notranslate"><span class="pre">src/os_dbd</span></code> directory of the distribution) with the following commands.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>mysql -u root -p
 
-<span class="go">mysql&gt; create database ossec;</span>
+<span class="go">mysql&gt; create database OpenArmor;</span>
 
-<span class="go">mysql&gt; grant INSERT,SELECT,UPDATE,CREATE,DELETE,EXECUTE on ossec.* to ossecuser@&lt;ossec ip&gt;;</span>
+<span class="go">mysql&gt; grant INSERT,SELECT,UPDATE,CREATE,DELETE,EXECUTE on OpenArmor.* to OpenArmoruser@&lt;OpenArmor ip&gt;;</span>
 <span class="go">Query OK, 0 rows affected (0.00 sec)</span>
 
-<span class="go">mysql&gt; set password for ossecuser@&lt;ossec ip&gt;=PASSWORD(&#39;ossecpass&#39;);</span>
+<span class="go">mysql&gt; set password for OpenArmoruser@&lt;OpenArmor ip&gt;=PASSWORD(&#39;OpenArmorpass&#39;);</span>
 <span class="go">Query OK, 0 rows affected (0.00 sec)</span>
 
 <span class="go">mysql&gt; flush privileges;</span>
@@ -170,24 +170,24 @@ gtag('config', 'UA-138780766-1');
 
 <span class="go">mysql&gt; quit</span>
 
-<span class="gp"># </span>mysql -u root -p ossec &lt; mysql.schema
+<span class="gp"># </span>mysql -u root -p OpenArmor &lt; mysql.schema
 </pre></div>
 </div>
 </div>
-<div class="section" id="ossec-setup">
-<h2>OSSEC Setup<a class="headerlink" href="#ossec-setup" title="Permalink to this headline">¶</a></h2>
-<p>In order for ossec to output alerts and other data into the database the
-/var/ossec/etc/ossec.conf will need to have a &lt;database_output&gt;
+<div class="section" id="OpenArmor-setup">
+<h2>OpenArmor Setup<a class="headerlink" href="#OpenArmor-setup" title="Permalink to this headline">¶</a></h2>
+<p>In order for OpenArmor to output alerts and other data into the database the
+/var/OpenArmor/etc/OpenArmor.conf will need to have a &lt;database_output&gt;
 section added.</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ossec_config&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;OpenArmor_config&gt;</span>
     <span class="nt">&lt;database_output&gt;</span>
         <span class="nt">&lt;hostname&gt;</span>192.168.2.30<span class="nt">&lt;/hostname&gt;</span>
-        <span class="nt">&lt;username&gt;</span>ossecuser<span class="nt">&lt;/username&gt;</span>
-        <span class="nt">&lt;password&gt;</span>ossecpass<span class="nt">&lt;/password&gt;</span>
-        <span class="nt">&lt;database&gt;</span>ossec<span class="nt">&lt;/database&gt;</span>
+        <span class="nt">&lt;username&gt;</span>OpenArmoruser<span class="nt">&lt;/username&gt;</span>
+        <span class="nt">&lt;password&gt;</span>OpenArmorpass<span class="nt">&lt;/password&gt;</span>
+        <span class="nt">&lt;database&gt;</span>OpenArmor<span class="nt">&lt;/database&gt;</span>
         <span class="nt">&lt;type&gt;</span>mysql<span class="nt">&lt;/type&gt;</span>
     <span class="nt">&lt;/database_output&gt;</span>
-<span class="nt">&lt;/ossec_config&gt;</span>
+<span class="nt">&lt;/OpenArmor_config&gt;</span>
 </pre></div>
 </div>
 <p>The values will need to be corrected for your installations hostname, mysql user, password, and
@@ -195,9 +195,9 @@ database.</p>
 </div>
 <div class="section" id="complete-mysql-output">
 <h2>Complete MySQL Output<a class="headerlink" href="#complete-mysql-output" title="Permalink to this headline">¶</a></h2>
-<p>All that is left is to enable the database daemon and restart ossec for the changes to take effect.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/ossec/bin/ossec-control <span class="nb">enable</span> database
-<span class="gp"># </span>/var/ossec/bin/ossec-control restart
+<p>All that is left is to enable the database daemon and restart OpenArmor for the changes to take effect.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/OpenArmor/bin/OpenArmor-control <span class="nb">enable</span> database
+<span class="gp"># </span>/var/OpenArmor/bin/OpenArmor-control restart
 </pre></div>
 </div>
 </div>
@@ -215,8 +215,8 @@ database.</p>
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

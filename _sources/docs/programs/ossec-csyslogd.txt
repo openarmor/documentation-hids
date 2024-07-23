@@ -1,41 +1,41 @@
 
-.. _ossec-csyslogd:
+.. _OpenArmor-csyslogd:
 
-ossec-csyslogd
+OpenArmor-csyslogd
 =============
 
-``ossec-csyslogd`` is a daemon that forwards the OSSEC alerts via syslog.
-Configuration is done in the ``<syslog_output>`` section of the ossec.conf. (see :ref:`ossec_config.syslog_output`)
+``OpenArmor-csyslogd`` is a daemon that forwards the OpenArmor alerts via syslog.
+Configuration is done in the ``<syslog_output>`` section of the OpenArmor.conf. (see :ref:`OpenArmor_config.syslog_output`)
 
 
-ossec-csyslogd argument options
+OpenArmor-csyslogd argument options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. program:: ossec-csyslogd
+.. program:: OpenArmor-csyslogd
 
 .. option:: -c <config>
 
-    Run ``ossec-csyslogd`` using <config> as the configuration file.
+    Run ``OpenArmor-csyslogd`` using <config> as the configuration file.
 
-    **Default:** /var/ossec/etc/ossec.conf
+    **Default:** /var/OpenArmor/etc/OpenArmor.conf
 
 .. option:: -D <dir>
 
     Chroot to <dir>.
 
-    **Default:** /var/ossec
+    **Default:** /var/OpenArmor
 
 .. option:: -d
 
-    Execute ossec-csyslogd in debug mode. This option can be used multiple times to increase the verbosity of the debug messages.
+    Execute OpenArmor-csyslogd in debug mode. This option can be used multiple times to increase the verbosity of the debug messages.
 
 .. option:: -f
 
-    Run ``ossec-csyslogd`` in the foreground.
+    Run ``OpenArmor-csyslogd`` in the foreground.
 
 .. option:: -g <group>
 
-    Run ``ossec-csyslogd`` as <group>.
+    Run ``OpenArmor-csyslogd`` as <group>.
 
 .. option:: -h
 
@@ -47,9 +47,9 @@ ossec-csyslogd argument options
 
 .. option:: -u <user>
 
-    Run ``ossec-csyslogd`` as <user>.
+    Run ``OpenArmor-csyslogd`` as <user>.
 
-    **Default:** ossecm
+    **Default:** OpenArmorm
 
 .. option:: -V
 

@@ -2,10 +2,10 @@
 oRFC: 2 Coding Style Guide
 ==========================
 
-OSSEC Coding Style Guide
+OpenArmor Coding Style Guide
 
 +-----------+--------------------------------------------------------+
-| Name      | OSSEC Style Guide                                      |
+| Name      | OpenArmor Style Guide                                      |
 +-----------+--------------------------------------------------------+
 | Editor    | * Jeremy Rossi <jeremy at jeremyrossi dot com>         |
 |           | * Christian Göttsche <cgzones at googlemail dot com>   |
@@ -29,10 +29,10 @@ document are to be interpreted as described in RFC 2119 [#]_.
 Goals
 ------
 
-The OSSEC Style Guide is meant to provide framework and guide of formating 
-code contributor to OSSEC.  The overall goals are:
+The OpenArmor Style Guide is meant to provide framework and guide of formating 
+code contributor to OpenArmor.  The overall goals are:
 
-* Maximize Readability of code in OSSEC;
+* Maximize Readability of code in OpenArmor;
 * Reduction in the number of bugs by removing ambiguity in code and logic flow;
 * Be as minimally invasive as possible while achieving the stated goals; 
 * Trust the contributor.

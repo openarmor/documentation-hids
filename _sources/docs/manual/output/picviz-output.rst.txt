@@ -13,28 +13,28 @@ Installation of PicViz
 ---------------------- 
 
 This is out of the scope for this document, but the development version from 
-svn is required for PicViz to work with OSSEC.  
+svn is required for PicViz to work with OpenArmor.  
 
-Setup OSSEC for PicViz 
+Setup OpenArmor for PicViz 
 ----------------------
 
-Configure OSSEC to send events to PicViz.  The following configuration 
-needs to be added to /var/ossec/etc/ossec.conf. 
+Configure OpenArmor to send events to PicViz.  The following configuration 
+needs to be added to /var/OpenArmor/etc/OpenArmor.conf. 
 
 .. code-block:: xml
 
-    <ossec_config> 
+    <OpenArmor_config> 
         <global> 
             <picviz_output>yes</picviz_output>
-            <picviz_socket>/var/ossec/picviz.socket</picviz_socket>
+            <picviz_socket>/var/OpenArmor/picviz.socket</picviz_socket>
 
-For more full details on this section of the config see :ref:`ossec_config.global`. 
+For more full details on this section of the config see :ref:`OpenArmor_config.global`. 
 
 Start up PicViz 
 --------------- 
 
-On the picviz side, an OSSEC template is available in the template directory and Picviz should be run like this:
+On the picviz side, an OpenArmor template is available in the template directory and Picviz should be run like this:
 
 .. code-block:: console 
 
-    # pcv -Tpngcairo -o ossec.png -s /var/ossec/picviz.socket -t templates/ossec.pgdt -a 
+    # pcv -Tpngcairo -o OpenArmor.png -s /var/OpenArmor/picviz.socket -t templates/OpenArmor.pgdt -a 

@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>How to add multiple log files to be monitored? &#8212; OSSEC</title>
+    <title>How to add multiple log files to be monitored? &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -68,18 +68,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -144,7 +144,7 @@ gtag('config', 'UA-138780766-1');
 <p>By <a class="reference external" href="http://www.dcid.me">Daniel B. Cid</a></p>
 <div class="section" id="for-unix-agents">
 <h2>For Unix Agents<a class="headerlink" href="#for-unix-agents" title="Permalink to this headline">¶</a></h2>
-<p>If you have multiple log files to be monitored by OSSEC and don’t
+<p>If you have multiple log files to be monitored by OpenArmor and don’t
 want to add each one of them manually, you can configure them using
 posix regular expressions.</p>
 <p>For example, if you have a directory structure like this:</p>
@@ -165,30 +165,30 @@ posix regular expressions.</p>
 </div>
 <div class="section" id="for-windows-agents">
 <h2>For Windows Agents<a class="headerlink" href="#for-windows-agents" title="Permalink to this headline">¶</a></h2>
-<p>For the Windows agent, the built-in globing doesn’t work. At time of writing (OSSEC
-version 1.5) you have to use a script to auto-generate <code class="docutils literal notranslate"><span class="pre">ossec.conf</span></code> if you want to
+<p>For the Windows agent, the built-in globing doesn’t work. At time of writing (OpenArmor
+version 1.5) you have to use a script to auto-generate <code class="docutils literal notranslate"><span class="pre">OpenArmor.conf</span></code> if you want to
 monitor many log files without having to manually enter them. Here’s an example
 batch file to get you started:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">@echo off</span>
 
-<span class="go">set targetfile=&quot;C:\Program Files\ossec-agent\ossec.conf&quot;</span>
+<span class="go">set targetfile=&quot;C:\Program Files\OpenArmor-agent\OpenArmor.conf&quot;</span>
 
-<span class="go">copy &quot;%~dp0\ossec_template.conf&quot; %targetfile%</span>
+<span class="go">copy &quot;%~dp0\OpenArmor_template.conf&quot; %targetfile%</span>
 
-<span class="go">echo ^&lt;ossec_config^&gt; &gt;&gt; %targetfile%</span>
+<span class="go">echo ^&lt;OpenArmor_config^&gt; &gt;&gt; %targetfile%</span>
 <span class="go">echo. &gt;&gt; %targetfile%</span>
 <span class="go">for /D %%l in (D:\Logs\W3SVC*) do echo ^&lt;localfile^&gt;^&lt;location^&gt;%%l\ex%%y%%m%%d.log^&lt;/location^&gt;^&lt;log_format^&gt;iis^&lt;/log_format^&gt;^&lt;/localfile^&gt; &gt;&gt; %targetfile%</span>
-<span class="go">echo ^&lt;/ossec_config^&gt; &gt;&gt; %targetfile%</span>
-<span class="go">net stop &quot;OSSEC Hids&quot;</span>
-<span class="go">net start &quot;OSSEC Hids&quot;</span>
+<span class="go">echo ^&lt;/OpenArmor_config^&gt; &gt;&gt; %targetfile%</span>
+<span class="go">net stop &quot;OpenArmor Hids&quot;</span>
+<span class="go">net start &quot;OpenArmor Hids&quot;</span>
 </pre></div>
 </div>
 <p>Adjust the “for..in” globbing line as needed. In this example, I’m monitoring logs for multiple
 IIS sites which are all in D:Logs. Save it into a file with a .bat extension and put it
-somewhere on your hard drive. Create a file named <code class="docutils literal notranslate"><span class="pre">ossec_template.conf</span></code> in
+somewhere on your hard drive. Create a file named <code class="docutils literal notranslate"><span class="pre">OpenArmor_template.conf</span></code> in
 the <strong>`same directory</strong> as the batch file. You can probably just copy your current
-<code class="docutils literal notranslate"><span class="pre">ossec.conf</span></code> for this file, as this script will only append to it. You can then set
-up a scheduled task to run the batch file to automatically keep your ossec.conf up to date.</p>
+<code class="docutils literal notranslate"><span class="pre">OpenArmor.conf</span></code> for this file, as this script will only append to it. You can then set
+up a scheduled task to run the batch file to automatically keep your OpenArmor.conf up to date.</p>
 </div>
 </div>
 
@@ -204,8 +204,8 @@ up a scheduled task to run the batch file to automatically keep your ossec.conf 
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

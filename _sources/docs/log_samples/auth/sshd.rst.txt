@@ -45,7 +45,7 @@ Software caused connection abort (occurs during some forms of sshd DoS):
   Mar  8 06:13:42 stamina sshd[82181]: error: accept: Software caused connection abort
 
 
-Rule to help OSSEC recognise this error as nothing serious:
+Rule to help OpenArmor recognise this error as nothing serious:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: console
@@ -82,8 +82,8 @@ Invalid user login attempt:
 
 .. code-block:: console
 
-  Jul  7 10:51:24 chaves sshd[19537]: Invalid user admin from spongebob.lab.ossec.net
-  Jul  7 10:53:24 chaves sshd[12914]: Failed password for invalid user test-inv from spongebob.lab.ossec.net
+  Jul  7 10:51:24 chaves sshd[19537]: Invalid user admin from spongebob.lab.OpenArmor.net
+  Jul  7 10:53:24 chaves sshd[12914]: Failed password for invalid user test-inv from spongebob.lab.OpenArmor.net
   Jul  7 10:53:24 kiko sshd[3251]: User dcid not allowed because listed in DenyUsers
 
 

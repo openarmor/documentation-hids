@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>What’s new &#8212; OSSEC</title>
+    <title>What’s new &#8212; OpenArmor</title>
     
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -61,8 +61,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../index.html"><img src="../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../index.html"><img src="../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.3</b></span>
       </div>
 
@@ -126,7 +126,7 @@
 <ul class="simple">
 <li>SQLite whitelist support for syscheck</li>
 <li>Pagerduty Active Response</li>
-<li>OSSEC agent selinux module</li>
+<li>OpenArmor agent selinux module</li>
 <li>Win32 agent-auth support</li>
 </ul>
 <p>Updates</p>
@@ -149,9 +149,9 @@
 <li>PR #1259, for issue #1145, fixes for RHEL getaddrinfo/ipv6</li>
 <li>PR #1428, for issue #1425, check owner option doesnt work on windows agent</li>
 <li>PR #1428, for issue #1425, check owner option doesnt work on windows agent</li>
-<li>PR #1421, for issue #1421, fixes for ossec-slack.sh alerts path</li>
-<li>PR #1422, for issue #1421, fixes for ossec-slack.sh active-response path</li>
-<li>PR #1421, for issue #1421, fixes for ossec-slack.sh path</li>
+<li>PR #1421, for issue #1421, fixes for OpenArmor-slack.sh alerts path</li>
+<li>PR #1422, for issue #1421, fixes for OpenArmor-slack.sh active-response path</li>
+<li>PR #1421, for issue #1421, fixes for OpenArmor-slack.sh path</li>
 <li>PR #1409 for issue #1402, Real-time file monitoring stops working if several files are encrypted at the same time</li>
 <li>PR #1100, fix for open received files in binary mode on windows</li>
 <li>PR #1350, fix for basename, Missing agent.conf messags are reportied as warnings</li>
@@ -272,12 +272,12 @@
 <li>Report file deletion, even without realtime enabled</li>
 <li>Report modifications made on directories</li>
 <li>Corrects bug so that files created between the first and second scan are reported as new files</li>
-<li>Corrects bug that made changes reverting a file to the state it was in when ossec started unreported</li>
+<li>Corrects bug that made changes reverting a file to the state it was in when OpenArmor started unreported</li>
 <li>Avoids computing hashes multiple times to improve performance</li>
 <li>Make the time between two syscheck wakeups configurable in internal_options</li>
-<li>Add support for the “nodiff” option when using report_changes, sensitive files tagged with in ossec.conf will not have their contents included in an alert.</li>
+<li>Add support for the “nodiff” option when using report_changes, sensitive files tagged with in OpenArmor.conf will not have their contents included in an alert.</li>
 <li>IPv6 support</li>
-<li>Support to call an external mailer. This solves the problem of supporting encryption when sending mail alerts in OSSEC. The &lt;smtp_server&gt; field can now be prepended with “/” to designate a local binary. Example: “&lt;smtp_server&gt;/usr/sbin/sendmail -t&lt;/smtp_server&gt;”.</li>
+<li>Support to call an external mailer. This solves the problem of supporting encryption when sending mail alerts in OpenArmor. The &lt;smtp_server&gt; field can now be prepended with “/” to designate a local binary. Example: “&lt;smtp_server&gt;/usr/sbin/sendmail -t&lt;/smtp_server&gt;”.</li>
 <li>Slack notification support</li>
 </ul>
 <p>New Rules / Decoders</p>
@@ -307,11 +307,11 @@
 <li>PR #4, Authd, Bugfix for Openssl operations on non-blocking socket</li>
 <li>PR #563: IPv6 support</li>
 <li>PR #599, Allow for the log format in proftpd 1.3.5+</li>
-<li>PR #610: Execd, Reduce system load caused by simultaneous active response processes during ossec stop. #610</li>
+<li>PR #610: Execd, Reduce system load caused by simultaneous active response processes during OpenArmor stop. #610</li>
 <li>PR #615: Adds support for Binding src IP to ‘local_ip’ config value in agentd. In mulihomed host environment we have a big problem with binding agent to correct ip. By default agentd used ip-addr of interface, from which sented ip-packets.</li>
 <li>PR #617: Agentd, Add CLIENT to DEFINES for winagent target #617 Bugfix #595</li>
 <li>PR #622: Fix for CVE-2015-3222</li>
-<li>PR #631, Log failure when ossec fails to remove a PID file</li>
+<li>PR #631, Log failure when OpenArmor fails to remove a PID file</li>
 <li>PR #652, Syscheck, add support for the “-t” flag to display XML parsing errors in agent.conf on agents</li>
 <li>PR #657: Syscheck, Allows scanning of directories with , in the name. Let directory check_something=”no” options to work. This means you can do instead of listing out all the ones you want to use.</li>
 <li>PR #670: Syscheck, Bugfix for report_changes</li>
@@ -322,10 +322,10 @@
 <li>PR #699: Encompassing only complete statements with conditional directives.</li>
 <li>PR #717: Active Response, add Slack (www.slack.com) notification support</li>
 <li>PR #720: Fixes for the statfs error spam</li>
-<li>PR #724: Authd, bugfix for issue #642, This brings ossec-authd into parity with whatever the MAX_AGENTS is set at build time</li>
+<li>PR #724: Authd, bugfix for issue #642, This brings OpenArmor-authd into parity with whatever the MAX_AGENTS is set at build time</li>
 <li>PR #726: Make syslog/cef consistent with json/splunk and add classification field to alerts.</li>
-<li>PR #727: Maild, Add support for “email_reply_to”. This allows configuring the Reply-To: field in email alerts sent from ossec-maild</li>
-<li>PR #740: Remoted, bugfix for issue #739, Ossec will now report the agent ID of the agent that tries to connect</li>
+<li>PR #727: Maild, Add support for “email_reply_to”. This allows configuring the Reply-To: field in email alerts sent from OpenArmor-maild</li>
+<li>PR #740: Remoted, bugfix for issue #739, OpenArmor will now report the agent ID of the agent that tries to connect</li>
 <li>PR #744: Syscheck, Bugfix for issue #42, corrects issue on windows that would produce an incorrect hash</li>
 <li>PR #749: Windows, Changed Makefile to use Windows subsystem only with UI manager</li>
 <li>PR #750: Analysisd, Fixes glob() impelemtation bug, adds Hourly/Daily options to logcollector, improved dfalts to analysisd diff alerts.</li>
@@ -342,7 +342,7 @@
 <li>PR #798: System Audit, Add RHEL/CentOS/Cloudlinux 7 CIS benchmarks</li>
 <li>PR #802: Database support, Allow for longer entries in the system information column</li>
 <li>PR #849 Format string security fix</li>
-<li>PR #864 Fix ossec-logtest to chroot when testing check_diff rules</li>
+<li>PR #864 Fix OpenArmor-logtest to chroot when testing check_diff rules</li>
 <li>PR #870 Fix installer permissions on the etc/shared directory</li>
 <li>PR #878 Fix version field to correctly report &#8220;2.9.0&#8221; instead of 2.8.3</li>
 <li>PR #909 Bugfix for decoders.d/rules.d logtest</li>
@@ -364,12 +364,12 @@
 <li>Fix eventchannel support for Windows agents.</li>
 <li>Fix hybrid mode.</li>
 </ul>
-<p>Checksum for ossec-hids-2.8.3.tar.gz:
-<a class="reference download internal" href="../../_downloads/ossec-hids-2.8.3.tar.gz.sha256" download=""><code class="xref download docutils literal"><span class="pre">ossec-hids-2.8.3.tar.gz.sha256</span></code></a></p>
-<p>Checkdum for ossec-agent-win32-2.8.3.exe:
-<a class="reference download internal" href="../../_downloads/ossec-agent-win32-2.8.3.exe.sha256" download=""><code class="xref download docutils literal"><span class="pre">ossec-agent-win32-2.8.3.exe.sha256</span></code></a></p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">SHA256 (ossec-agent-win32-2.8.3.exe) = 82c143613c4538101b64ccb6deec8cdf6f88e59a9cc45585c1a81bce8d78f015</span>
-<span class="go">SHA256 (ossec-hids-2.8.3.tar.gz) = 917989e23330d18b0d900e8722392cdbe4f17364a547508742c0fd005a1df7dd</span>
+<p>Checksum for OpenArmor-hids-2.8.3.tar.gz:
+<a class="reference download internal" href="../../_downloads/OpenArmor-hids-2.8.3.tar.gz.sha256" download=""><code class="xref download docutils literal"><span class="pre">OpenArmor-hids-2.8.3.tar.gz.sha256</span></code></a></p>
+<p>Checkdum for OpenArmor-agent-win32-2.8.3.exe:
+<a class="reference download internal" href="../../_downloads/OpenArmor-agent-win32-2.8.3.exe.sha256" download=""><code class="xref download docutils literal"><span class="pre">OpenArmor-agent-win32-2.8.3.exe.sha256</span></code></a></p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">SHA256 (OpenArmor-agent-win32-2.8.3.exe) = 82c143613c4538101b64ccb6deec8cdf6f88e59a9cc45585c1a81bce8d78f015</span>
+<span class="go">SHA256 (OpenArmor-hids-2.8.3.tar.gz) = 917989e23330d18b0d900e8722392cdbe4f17364a547508742c0fd005a1df7dd</span>
 </pre></div>
 </div>
 </div>
@@ -410,7 +410,7 @@
 <li>Rules/decoders: Removed bro-ids_rules.xml (ddpbsd)</li>
 <li>Removed event ID 676, 672 in msauth_rules.xml (mstarks01)</li>
 <li>contrib: zeromq_pubsub.py - No description (jrossi)</li>
-<li>contrib: ossec-eps.sh, a script to calculate events-per-second (mstarks01)</li>
+<li>contrib: OpenArmor-eps.sh, a script to calculate events-per-second (mstarks01)</li>
 </ul>
 </div>
 <div class="section" id="id10">
@@ -419,34 +419,34 @@
 <li>Bug fixes</li>
 <li>Extended filesize from an integer to a long integer in syscheck</li>
 <li>Heartbeat interval is now configurable:<ul>
-<li><a class="reference external" href="../syntax/head_ossec_config.client.html#element-notify_time">notify_time</a></li>
-<li><a class="reference external" href="../syntax/head_ossec_config.client.html#element-time-reconnect">time-reconnect</a></li>
+<li><a class="reference external" href="../syntax/head_OpenArmor_config.client.html#element-notify_time">notify_time</a></li>
+<li><a class="reference external" href="../syntax/head_OpenArmor_config.client.html#element-time-reconnect">time-reconnect</a></li>
 </ul>
 </li>
-<li><a class="reference external" href="../syntax/head_ossec_config.global.html#element-custom_alert_output">custom_alert_output</a> added</li>
+<li><a class="reference external" href="../syntax/head_OpenArmor_config.global.html#element-custom_alert_output">custom_alert_output</a> added</li>
 <li><code class="docutils literal"><span class="pre">ip-customblock.sh</span></code> active-response script added</li>
-<li>ossec2snorby scripts added to contrib</li>
+<li>OpenArmor2snorby scripts added to contrib</li>
 </ul>
 </div>
 <div class="section" id="id11">
 <h2>2.7<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>agent profiles<ul>
-<li><a class="reference external" href="../syntax/head_ossec_config.client.html#element-server-ip">ossec.conf</a></li>
+<li><a class="reference external" href="../syntax/head_OpenArmor_config.client.html#element-server-ip">OpenArmor.conf</a></li>
 <li><a class="reference external" href="../syntax/head_agent_config.html#element-agent_config_options">agent.conf</a></li>
 </ul>
 </li>
 <li>Allow the agents to run remote commands in agent.conf again  <a class="reference external" href="../syntax/head_internal_options.analysisd.html#intopt-logcollector.remote_commands=0">internal_options.conf</a></li>
 <li>New utility: <a class="reference external" href="../programs/util.sh.html">util.sh</a></li>
 <li>New hybrid mode: server + agent functionality on the same system (NOT REALLY DOCUMENTED, ARE ANY OF THE INSTALLATION TYPES WELL DOCUMENTED?)</li>
-<li>contrib/ossec2rss.php: ossec alerts in an rss format</li>
-<li>GeoIP data in <a class="reference external" href="../syntax/head_ossec_config.global.html#geoip_db_path">alerts</a></li>
-<li>OSSEC server can be specified by hostname in the agent&#8217;s ossec.conf <a class="reference external" href="../syntax/head_ossec_config.client.html#element-server-hostname">server-hostname</a></li>
-<li>ossec-authd can now add IP addresses to the client.keys file instead of using <code class="docutils literal"><span class="pre">any</span></code> with <a class="reference external" href="../programs/ossec-authd.html#cmdoption-ossec-authd-i">the -i flag</a> from Jason Stelzer</li>
-<li>support for prelink to reduce false positives <a class="reference external" href="../syntax/head_ossec_config.syscheck.html">refilter_cmd</a></li>
-<li>Added knowbs to turn on or off rootcheck features <a class="reference external" href="../syntax/head_ossec_config.syscheck.html">check_*</a></li>
-<li>Added support for json and splunk output (along with syslog and cef) <a class="reference external" href="../syntax/head_ossec_config.syslog_output.html">format</a></li>
-<li>Changed <code class="docutils literal"><span class="pre">-f</span></code> to <code class="docutils literal"><span class="pre">-v</span></code> in ossec-logtest</li>
+<li>contrib/OpenArmor2rss.php: OpenArmor alerts in an rss format</li>
+<li>GeoIP data in <a class="reference external" href="../syntax/head_OpenArmor_config.global.html#geoip_db_path">alerts</a></li>
+<li>OpenArmor server can be specified by hostname in the agent&#8217;s OpenArmor.conf <a class="reference external" href="../syntax/head_OpenArmor_config.client.html#element-server-hostname">server-hostname</a></li>
+<li>OpenArmor-authd can now add IP addresses to the client.keys file instead of using <code class="docutils literal"><span class="pre">any</span></code> with <a class="reference external" href="../programs/OpenArmor-authd.html#cmdoption-OpenArmor-authd-i">the -i flag</a> from Jason Stelzer</li>
+<li>support for prelink to reduce false positives <a class="reference external" href="../syntax/head_OpenArmor_config.syscheck.html">refilter_cmd</a></li>
+<li>Added knowbs to turn on or off rootcheck features <a class="reference external" href="../syntax/head_OpenArmor_config.syscheck.html">check_*</a></li>
+<li>Added support for json and splunk output (along with syslog and cef) <a class="reference external" href="../syntax/head_OpenArmor_config.syslog_output.html">format</a></li>
+<li>Changed <code class="docutils literal"><span class="pre">-f</span></code> to <code class="docutils literal"><span class="pre">-v</span></code> in OpenArmor-logtest</li>
 <li>Added <code class="docutils literal"><span class="pre">-f</span></code> to manage_agents to create agent keys in bulk</li>
 </ul>
 </div>
@@ -468,8 +468,8 @@
       
     </p>
     <p>
-        &copy; Copyright 2010-2019, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2019, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.2 - 
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>

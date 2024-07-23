@@ -7,14 +7,14 @@ File Monitoring
 Overview 
 --------
 
-OSSEC has a process named ``ossec-logcollector`` that monitors the configured log files for new events. 
-When new log messages arrive, it forwards them to other processes for analysis or transport to an OSSEC server. 
+OpenArmor has a process named ``OpenArmor-logcollector`` that monitors the configured log files for new events. 
+When new log messages arrive, it forwards them to other processes for analysis or transport to an OpenArmor server. 
 
 Configuration
 -------------
 
-The configuration for ossec-logcollector exists in ``/var/ossec/etc/ossec.conf`` in the ``<ossec_config>`` section.
-The syntax can be found in the `localfile syntax page <../../syntax/head_ossec_config.localfile.html>`_
+The configuration for OpenArmor-logcollector exists in ``/var/OpenArmor/etc/OpenArmor.conf`` in the ``<OpenArmor_config>`` section.
+The syntax can be found in the `localfile syntax page <../../syntax/head_OpenArmor_config.localfile.html>`_
 
 Configuration examples
 ---------------------- 
@@ -62,7 +62,7 @@ If the file name contains a "%4", replace it with "/". Example:
 Multiple Files Example 
 ^^^^^^^^^^^^^^^^^^^^^^
 
-To check multiple files, OSSEC supports posix regular expressions. 
+To check multiple files, OpenArmor supports posix regular expressions. 
 For example, to analyze every file that ends with a .log inside the /var/log directory, 
 use the following configuration:
 
@@ -97,7 +97,7 @@ IIS Logs Example
 
 Support for IIS (5 and 6) is available for the NCSA format (web only) and the W3C 
 extended format (for Web, FTP and SMTP). By default, the installation scripts will 
-attempt to configure OSSEC to monitor the first virtual hosts for web (W3SVC1 to 
+attempt to configure OpenArmor to monitor the first virtual hosts for web (W3SVC1 to 
 W3SVC254), ftp (MSFTPSVC1 to MSFTPSVC254) and smtp (SMTPSVC1 to SMTPSVC254). 
 To monitor any other file you need to add a new entry manually.
 

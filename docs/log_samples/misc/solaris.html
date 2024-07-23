@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Log Samples from Solaris 8/9 &#8212; OSSEC</title>
+    <title>Log Samples from Solaris 8/9 &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -68,18 +68,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -141,7 +141,7 @@ gtag('config', 'UA-138780766-1');
       
   <div class="section" id="log-samples-from-solaris-8-9">
 <h1>Log Samples from Solaris 8/9<a class="headerlink" href="#log-samples-from-solaris-8-9" title="Permalink to this headline">¶</a></h1>
-<p>Solaris doesn’t include the source server name in their Syslog message.  So you can’t forward Solaris Syslog message directly to Ossec.</p>
+<p>Solaris doesn’t include the source server name in their Syslog message.  So you can’t forward Solaris Syslog message directly to OpenArmor.</p>
 <p>The Problem: The problem exists in the way, the Syslog messages are formatted from Solaris 8/9. As an example, we take the following sample Syslog message:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Aug  2 11:49:23 su: [ID 366847 auth.info] &#39;su root&#39; succeeded for root on /dev/console</span>
 </pre></div>
@@ -150,7 +150,7 @@ gtag('config', 'UA-138780766-1');
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Aug  2 11:49:23 mymaschine su: [ID 366847 auth.info] &#39;su root&#39; succeeded for root on /dev/console</span>
 </pre></div>
 </div>
-<p>In order to format the Syslog message to be compliant with RFC3164, you need to set-up Syslog-ng and forward the Syslog message to it.  Make sure you change the syslog receiving port of ossec or syslog-ng.</p>
+<p>In order to format the Syslog message to be compliant with RFC3164, you need to set-up Syslog-ng and forward the Syslog message to it.  Make sure you change the syslog receiving port of OpenArmor or syslog-ng.</p>
 <div class="section" id="su">
 <h2>SU:<a class="headerlink" href="#su" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Dec 12 00:00:00 machinename su: [ID 366847 auth.info] &#39;su oracle&#39; succeeded for root on /dev/???</span>
@@ -288,8 +288,8 @@ gtag('config', 'UA-138780766-1');
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

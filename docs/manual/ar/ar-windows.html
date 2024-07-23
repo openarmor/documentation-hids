@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Windows: Active Response Configuration &#8212; OSSEC</title>
+    <title>Windows: Active Response Configuration &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -152,14 +152,14 @@ gtag('config', 'UA-138780766-1');
   <div class="section" id="windows-active-response-configuration">
 <span id="manual-ar-windows"></span><h1>Windows: Active Response Configuration<a class="headerlink" href="#windows-active-response-configuration" title="Permalink to this headline">¶</a></h1>
 <p>To start, you need to enable active response on Windows (disabled by default).
-To do that, just add the following to the agent’s ossec.conf:</p>
+To do that, just add the following to the agent’s OpenArmor.conf:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;active-response&gt;</span>
     <span class="nt">&lt;disabled&gt;</span>no<span class="nt">&lt;/disabled&gt;</span>
 <span class="nt">&lt;/active-response&gt;</span>
 </pre></div>
 </div>
 <p>After that, you need to go to the manager and specify when to run the response.
-Adding the following to ossec.conf will enable the responses for alerts above
+Adding the following to OpenArmor.conf will enable the responses for alerts above
 level 6:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;command&gt;</span>
     <span class="nt">&lt;name&gt;</span>win_nullroute<span class="nt">&lt;/name&gt;</span>
@@ -179,17 +179,17 @@ level 6:</p>
 <p>With the configuration completed (and the manager restarted), you can test the
 active response by running the agent-control script (in this case, I am running
 it on agent id 185 to block ip 2.3.4.5):</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/ossec/bin/agent_control -L
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/OpenArmor/bin/agent_control -L
 
-<span class="go">OSSEC HIDS agent_control. Available active responses:</span>
+<span class="go">OpenArmor HIDS agent_control. Available active responses:</span>
 
 <span class="go">Response name: host-deny600, command: host-deny.sh</span>
 <span class="go">Response name: firewall-drop600, command: firewall-drop.sh</span>
 <span class="go">Response name: win_nullroute600, command: route-null.cmd</span>
 
-<span class="gp"># </span>/var/ossec/bin/agent_control -b <span class="m">2</span>.3.4.5 -f win_nullroute600 -u <span class="m">185</span>
+<span class="gp"># </span>/var/OpenArmor/bin/agent_control -b <span class="m">2</span>.3.4.5 -f win_nullroute600 -u <span class="m">185</span>
 
-<span class="go">OSSEC HIDS agent_control: Running active response &quot;win_nullroute600′ &quot;n: 185</span>
+<span class="go">OpenArmor HIDS agent_control: Running active response &quot;win_nullroute600′ &quot;n: 185</span>
 </pre></div>
 </div>
 <p>And looking at the agent you should see the new entry in the route table:</p>
@@ -201,9 +201,9 @@ it on agent id 185 to block ip 2.3.4.5):</p>
 <span class="go">..</span>
 </pre></div>
 </div>
-<p>If you run into any issues, look at the ossec.log file (on the agent) for any
-entry for ossec-execd. If you enabled it correctly, you will see:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2008/08/20 11:53:49 ossec-execd: INFO: Started (pid: 3896).</span>
+<p>If you run into any issues, look at the OpenArmor.log file (on the agent) for any
+entry for OpenArmor-execd. If you enabled it correctly, you will see:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2008/08/20 11:53:49 OpenArmor-execd: INFO: Started (pid: 3896).</span>
 </pre></div>
 </div>
 </div>
@@ -220,8 +220,8 @@ entry for ossec-execd. If you enabled it correctly, you will see:</p>
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

@@ -1,7 +1,7 @@
 
-.. _ossec_config.global: 
+.. _OpenArmor_config.global: 
 
-ossec.conf: Global options
+OpenArmor.conf: Global options
 ==========================
 
 Overview 
@@ -18,23 +18,23 @@ Global options are available in the the following installation types:
 Location 
 ^^^^^^^^
 
-All global options must be configured in the /var/ossec/etc/ossec.conf 
-and used within the <ossec_config> tag.  
+All global options must be configured in the /var/OpenArmor/etc/OpenArmor.conf 
+and used within the <OpenArmor_config> tag.  
 
 XML excerpt to show location:
 
 .. code-block:: xml 
 
-    <ossec_config> 
+    <OpenArmor_config> 
         <global> 
             <!-- 
             Global options here
             --> 
         </global> 
-    </ossec_config> 
+    </OpenArmor_config> 
 
 
 Options
 -------
 
-.. include:: ossec_config.global.trst 
+.. include:: OpenArmor_config.global.trst 

@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Makefile &#8212; OSSEC</title>
+    <title>Makefile &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -151,7 +151,7 @@ gtag('config', 'UA-138780766-1');
       
   <div class="section" id="makefile">
 <span id="build-makefile"></span><h1>Makefile<a class="headerlink" href="#makefile" title="Permalink to this headline">¶</a></h1>
-<p>OSSEC is using (starting with 2.9) a single Makefile to build the binaries
+<p>OpenArmor is using (starting with 2.9) a single Makefile to build the binaries
 for each installation type.
 The <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> uses features of <a class="reference external" href="http://www.gnu.org/software/make/">GNU make</a>,
 and it is a requirement of the build process.
@@ -171,14 +171,14 @@ discoverable for other developers.</p>
 <span class="go">    V:</span>
 <span class="go">    DEBUG:</span>
 <span class="go">    DEBUGAD</span>
-<span class="go">    PREFIX:          /var/ossec</span>
+<span class="go">    PREFIX:          /var/OpenArmor</span>
 <span class="go">    MAXAGENTS:       2048</span>
 <span class="go">    DATABASE:        mysql</span>
 <span class="go">User settings:</span>
-<span class="go">    OSSEC_GROUP:     ossec</span>
-<span class="go">    OSSEC_USER:      ossec</span>
-<span class="go">    OSSEC_USER_MAIL: ossecm</span>
-<span class="go">    OSSEC_USER_REM:  ossecr</span>
+<span class="go">    OpenArmor_GROUP:     OpenArmor</span>
+<span class="go">    OpenArmor_USER:      OpenArmor</span>
+<span class="go">    OpenArmor_USER_MAIL: OpenArmorm</span>
+<span class="go">    OpenArmor_USER_REM:  OpenArmorr</span>
 <span class="go">Lua settings:</span>
 <span class="go">    LUA_PLAT:       macosx</span>
 <span class="go">USE settings:</span>
@@ -192,9 +192,9 @@ discoverable for other developers.</p>
 <span class="go">    includes:</span>
 <span class="go">    libs:</span>
 <span class="go">Defines:</span>
-<span class="go">    -DMAX_AGENTS=2048 -DOSSECHIDS -DDarwin -DHIGHFIRST -DZEROMQ_OUTPUT  -DGEOIP -DUMYSQL</span>
+<span class="go">    -DMAX_AGENTS=2048 -DOpenArmorHIDS -DDarwin -DHIGHFIRST -DZEROMQ_OUTPUT  -DGEOIP -DUMYSQL</span>
 <span class="go">Compiler:</span>
-<span class="go">    CFLAGS          -DMAX_AGENTS=2048 -DOSSECHIDS -DDarwin -DHIGHFIRST -DZEROMQ_OUTPUT  -DGEOIP -DUMYSQL  -Wall -Wextra -O2 -I./ -I./headers/</span>
+<span class="go">    CFLAGS          -DMAX_AGENTS=2048 -DOpenArmorHIDS -DDarwin -DHIGHFIRST -DZEROMQ_OUTPUT  -DGEOIP -DUMYSQL  -Wall -Wextra -O2 -I./ -I./headers/</span>
 <span class="go">    LDFLAGS         -lzmq -lczmq -lGeoIP -L/usr/lib/mysql -lmysqlclient</span>
 <span class="go">    CC              cc</span>
 <span class="go">    MAKE            /Applications/Xcode.app/Contents/Developer/usr/bin/make</span>
@@ -223,14 +223,14 @@ display the full output without color.</p>
 <dl class="std envvar">
 <dt id="envvar-PREFIX">
 <code class="sig-name descname"><span class="pre">PREFIX</span></code><a class="headerlink" href="#envvar-PREFIX" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">PREFIX</span></code> is the absolute path OSSEC will be installed to.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">PREFIX</span></code> is the absolute path OpenArmor will be installed to.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Please note that paths with SPACES and tabs in them are not supported and
 may cause compilation or runtime issues.</p>
 </div>
 <p><strong>Applies to Target:</strong> all</p>
-<p><strong>Default:</strong> /var/ossec</p>
+<p><strong>Default:</strong> /var/OpenArmor</p>
 <p><strong>Allowed:</strong> All valid paths</p>
 </dd></dl>
 
@@ -240,7 +240,7 @@ may cause compilation or runtime issues.</p>
 <dd></dd></dl>
 
 <div class="versionadded">
-<p><span class="versionmodified added">New in version 3.0: </span><code class="docutils literal notranslate"><span class="pre">ZLIB_SYSTEM</span></code> can enable OSSEC to use a pre-installed zlib instead of the bundled version.</p>
+<p><span class="versionmodified added">New in version 3.0: </span><code class="docutils literal notranslate"><span class="pre">ZLIB_SYSTEM</span></code> can enable OpenArmor to use a pre-installed zlib instead of the bundled version.</p>
 <p><strong>Applies to Target:</strong> all</p>
 <p><strong>Default:</strong> no</p>
 <p><strong>Allowed:</strong> yes/no</p>
@@ -259,7 +259,7 @@ may cause compilation or runtime issues.</p>
 <dl class="std envvar">
 <dt id="envvar-MAXAGENTS">
 <code class="sig-name descname"><span class="pre">MAXAGENTS</span></code><a class="headerlink" href="#envvar-MAXAGENTS" title="Permalink to this definition">¶</a></dt>
-<dd><p>OSSEC is compiled with a maximum number of agents on the server/hybrid TARGETS.
+<dd><p>OpenArmor is compiled with a maximum number of agents on the server/hybrid TARGETS.
 <code class="docutils literal notranslate"><span class="pre">MAXAGENTS</span></code> allows users to select values expected for their environment.</p>
 <p><strong>Applies to Target:</strong> server/hybrid</p>
 <p><strong>Default:</strong> 2048</p>
@@ -278,34 +278,34 @@ may cause compilation or runtime issues.</p>
 <dl class="std envvar">
 <dt id="envvar-DEBUGAD">
 <code class="sig-name descname"><span class="pre">DEBUGAD</span></code><a class="headerlink" href="#envvar-DEBUGAD" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">DEBUGAD</span></code> enables extra debugging logging in ossec-analysisd.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">DEBUGAD</span></code> enables extra debugging logging in OpenArmor-analysisd.</p>
 <p><strong>Applies to Target:</strong> server/hybrid</p>
 <p><strong>Default:</strong> 0</p>
 <p><strong>Allowed:</strong> 0/1</p>
 </dd></dl>
 
 <dl class="std envvar">
-<dt id="envvar-OSSEC_USER">
-<code class="sig-name descname"><span class="pre">OSSEC_USER</span></code><a class="headerlink" href="#envvar-OSSEC_USER" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>Default:</strong> ossec</p>
+<dt id="envvar-OpenArmor_USER">
+<code class="sig-name descname"><span class="pre">OpenArmor_USER</span></code><a class="headerlink" href="#envvar-OpenArmor_USER" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Default:</strong> OpenArmor</p>
 </dd></dl>
 
 <dl class="std envvar">
-<dt id="envvar-OSSEC_GROUP">
-<code class="sig-name descname"><span class="pre">OSSEC_GROUP</span></code><a class="headerlink" href="#envvar-OSSEC_GROUP" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>Default:</strong> ossec</p>
+<dt id="envvar-OpenArmor_GROUP">
+<code class="sig-name descname"><span class="pre">OpenArmor_GROUP</span></code><a class="headerlink" href="#envvar-OpenArmor_GROUP" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Default:</strong> OpenArmor</p>
 </dd></dl>
 
 <dl class="std envvar">
-<dt id="envvar-OSSEC_USER_MAIL">
-<code class="sig-name descname"><span class="pre">OSSEC_USER_MAIL</span></code><a class="headerlink" href="#envvar-OSSEC_USER_MAIL" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>Default:</strong> ossecm</p>
+<dt id="envvar-OpenArmor_USER_MAIL">
+<code class="sig-name descname"><span class="pre">OpenArmor_USER_MAIL</span></code><a class="headerlink" href="#envvar-OpenArmor_USER_MAIL" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Default:</strong> OpenArmorm</p>
 </dd></dl>
 
 <dl class="std envvar">
-<dt id="envvar-OSSEC_USER_REM">
-<code class="sig-name descname"><span class="pre">OSSEC_USER_REM</span></code><a class="headerlink" href="#envvar-OSSEC_USER_REM" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>Default:</strong> ossecr</p>
+<dt id="envvar-OpenArmor_USER_REM">
+<code class="sig-name descname"><span class="pre">OpenArmor_USER_REM</span></code><a class="headerlink" href="#envvar-OpenArmor_USER_REM" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Default:</strong> OpenArmorr</p>
 </dd></dl>
 
 <dl class="std envvar">
@@ -378,8 +378,8 @@ enviromnet to enable.</p>
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

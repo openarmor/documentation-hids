@@ -4,7 +4,7 @@
 agent-auth
 ==========
 
-The agent-auth program is the client application used with :ref:`ossec-authd` to automatically add agents to an OSSEC manager.
+The agent-auth program is the client application used with :ref:`OpenArmor-authd` to automatically add agents to an OpenArmor manager.
 
 .. warning::
 
@@ -23,8 +23,8 @@ agent-auth argument options
 
 .. option:: -D
 
-    Directory where OSSEC is installed.
-    **Default** /var/ossec
+    Directory where OpenArmor is installed.
+    **Default** /var/OpenArmor
 
 .. option:: -d
       
@@ -48,22 +48,22 @@ agent-auth argument options
 
 .. option:: -p <port>
 
-    Port ossec-authd is running on.
+    Port OpenArmor-authd is running on.
 
     **Default** 1515
 
 .. option:: -V 
 
-    Display OSSEC Version and license information.
+    Display OpenArmor Version and license information.
 
 .. option:: -v <path>
 
-   Load the PEM encoded CA Certificate that will be used to verify :ref:`ossec-authd` if desired. If this option is used then
-   :ref:`ossec-authd` must present a valid certificate signed by this CA.
+   Load the PEM encoded CA Certificate that will be used to verify :ref:`OpenArmor-authd` if desired. If this option is used then
+   :ref:`OpenArmor-authd` must present a valid certificate signed by this CA.
 
 .. option:: -x <path>
 
-   Load the PEM encoded certificate that will be presented to :ref:`ossec-authd` during establishment of the SSL connection.
+   Load the PEM encoded certificate that will be presented to :ref:`OpenArmor-authd` during establishment of the SSL connection.
 
 
 .. _optional-server-authentication:
@@ -73,7 +73,7 @@ Optional Server Authentication - client side
 
 ``agent-auth`` can verify that the server it's connecting to presents a valid X.509 certificate when requesting
 a key. This is optional and is only useful if hosts in your environment have access to the root certificate of
-the CA that signed the certificate presented by :ref:`ossec-authd`. If server certificate verification is desired
+the CA that signed the certificate presented by :ref:`OpenArmor-authd`. If server certificate verification is desired
 then the relevant CA certificate must be loaded with the -v option, then if the server does not present a valid
 certificate the agent will not be allocated a key.
 
@@ -84,7 +84,7 @@ A certificate presented by the server may be found to be invalid for the followi
   subject alternative name extension field.
 - It is expired.
 
-While server authentication is optional it is highly recommended that it be used if possible when running ossec-authd
+While server authentication is optional it is highly recommended that it be used if possible when running OpenArmor-authd
 and agent-auth.
 
 .. _optional-client-authentication:
@@ -92,9 +92,9 @@ and agent-auth.
 Optional Client Authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``agent-auth`` can present its own certificate to the server for verification. This is mandatory if :ref:`ossec-authd` 
+``agent-auth`` can present its own certificate to the server for verification. This is mandatory if :ref:`OpenArmor-authd` 
 was run with the -v option and optional otherwise. This is only useful if hosts in your environment are assigned
-certificates when they're provisioned (or at some point before being added to OSSEC). Use the -x and -k options
+certificates when they're provisioned (or at some point before being added to OpenArmor). Use the -x and -k options
 to load a certificate and private key.
 
 
@@ -106,7 +106,7 @@ Example: Adding an agent with a hostname
 
 .. code-block:: console
 
-    # /var/ossec/bin/agent-auth -m 192.168.1.1 -p 1515 -A example-agent
+    # /var/OpenArmor/bin/agent-auth -m 192.168.1.1 -p 1515 -A example-agent
     INFO: Connected to 192.168.1.1:1515
     INFO: Using agent name as: melancia
     INFO: Send request to manager. Waiting for reply.
@@ -114,23 +114,23 @@ Example: Adding an agent with a hostname
     INFO: Valid key created. Finished.
     INFO: Connection closed. 
 
-Example: Adding an agent and verifying the certificate presented by ossec-authd
+Example: Adding an agent and verifying the certificate presented by OpenArmor-authd
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 
-    # /var/ossec/bin/agent-auth -m ossec-manager.localdomain -p 1515 -v /etc/pki/CA/certs/internal_CA.cert
+    # /var/OpenArmor/bin/agent-auth -m OpenArmor-manager.localdomain -p 1515 -v /etc/pki/CA/certs/internal_CA.cert
     INFO: Connected to 192.168.1.1:1515
     INFO: Verifying manager's certificate
     INFO: Using agent name as: melancia
     ...
 
-Example: Adding an agent and presenting a certificate to ossec-authd
+Example: Adding an agent and presenting a certificate to OpenArmor-authd
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 
-    # /var/ossec/bin/agent-auth -m ossec-manager.localdomain -p 1515 -x /var/ossec/etc/client.cert -k /var/ossec/etc/client.key
+    # /var/OpenArmor/bin/agent-auth -m OpenArmor-manager.localdomain -p 1515 -x /var/OpenArmor/etc/client.cert -k /var/OpenArmor/etc/client.key
     INFO: Connected to 192.168.1.1:1515
     INFO: Using agent name as: melancia
     ...

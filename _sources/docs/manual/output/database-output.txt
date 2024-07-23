@@ -4,16 +4,16 @@
 Sending output to a Database
 ----------------------------
 
-OSSEC supports MySQL and PostgreSQL database outputs.
+OpenArmor supports MySQL and PostgreSQL database outputs.
 
 
 Configuration options
 ^^^^^^^^^^^^^^^^^^^^^
 
-These configurations options can be specified in the server or local install ossec.conf file.
+These configurations options can be specified in the server or local install OpenArmor.conf file.
 
 
-.. include:: ../../syntax/ossec_config.database_output.trst 
+.. include:: ../../syntax/OpenArmor_config.database_output.trst 
 
 
 Enabling Database Support
@@ -21,14 +21,14 @@ Enabling Database Support
 
 .. note::
 
-    You must have the MySQL or PgSQL Client libraries installed on the OSSEC server.
+    You must have the MySQL or PgSQL Client libraries installed on the OpenArmor server.
 
-Before you run the "./install.sh" script execute the following to compile OSSEC with
+Before you run the "./install.sh" script execute the following to compile OpenArmor with
 database support. 
 
 .. code-block:: console 
 
-    # cd ossec-hids-*
+    # cd OpenArmor-hids-*
     # cd src; make setdb; cd ..
     # ./install.sh 
 
@@ -40,7 +40,7 @@ The following command will enable the database daemon on the next restart.
 
 .. code-block:: console 
 
-    # /var/ossec/bin/ossec-control enable database 
+    # /var/OpenArmor/bin/OpenArmor-control enable database 
 
 
 Database Specific Setup

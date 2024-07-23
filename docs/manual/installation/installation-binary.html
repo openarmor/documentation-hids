@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Compiling OSSEC for a Binary Installation &#8212; OSSEC</title>
+    <title>Compiling OpenArmor for a Binary Installation &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -149,50 +149,50 @@ gtag('config', 'UA-138780766-1');
   <div class="row">
     <div class="col-md-12">
       
-  <div class="section" id="compiling-ossec-for-a-binary-installation">
-<span id="manual-install-binary"></span><h1>Compiling OSSEC for a Binary Installation<a class="headerlink" href="#compiling-ossec-for-a-binary-installation" title="Permalink to this headline">¶</a></h1>
-<p>OSSEC is typically compiled on each system it is installed on, but this may not always be easy.
-To help in these cases there are a few methods of binary installation available. OSSEC can be
+  <div class="section" id="compiling-OpenArmor-for-a-binary-installation">
+<span id="manual-install-binary"></span><h1>Compiling OpenArmor for a Binary Installation<a class="headerlink" href="#compiling-OpenArmor-for-a-binary-installation" title="Permalink to this headline">¶</a></h1>
+<p>OpenArmor is typically compiled on each system it is installed on, but this may not always be easy.
+To help in these cases there are a few methods of binary installation available. OpenArmor can be
 compiled on one system, and copied to the destination systems. This installation method still
 requires GNU make on the target system.</p>
 <p>There are also RPM and deb packages available for some systems.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>OSSEC has very limited cross compiling facilities. Windows binaries can be built on Linux systems,
+<p>OpenArmor has very limited cross compiling facilities. Windows binaries can be built on Linux systems,
 but binaries for other systems should be built on a system of the same OS and CPU platform.</p>
 </div>
-<div class="section" id="compiling-ossec-for-install-on-a-second-server">
-<span id="manual-install-binary-build"></span><h2>Compiling OSSEC for install on a second server<a class="headerlink" href="#compiling-ossec-for-install-on-a-second-server" title="Permalink to this headline">¶</a></h2>
-<p>First download the OSSEC package corresponding to the version you want to
+<div class="section" id="compiling-OpenArmor-for-install-on-a-second-server">
+<span id="manual-install-binary-build"></span><h2>Compiling OpenArmor for install on a second server<a class="headerlink" href="#compiling-OpenArmor-for-install-on-a-second-server" title="Permalink to this headline">¶</a></h2>
+<p>First download the OpenArmor package corresponding to the version you want to
 install and unpack it (on the system with a compiler).</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>wget -U ossec http://www.ossec.net/files/ossec-hids-2.8.1.tar.gz
-<span class="gp"># </span>tar -zxvf ossec-hids-latest.tar.gz
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>wget -U OpenArmor http://theopenarmor.org/files/OpenArmor-hids-2.8.1.tar.gz
+<span class="gp"># </span>tar -zxvf OpenArmor-hids-latest.tar.gz
 </pre></div>
 </div>
-<p>Enter in the source directory of the downloaded package, and configure OSSEC to build the <code class="docutils literal notranslate"><span class="pre">agent</span></code> version.
+<p>Enter in the source directory of the downloaded package, and configure OpenArmor to build the <code class="docutils literal notranslate"><span class="pre">agent</span></code> version.
 The <code class="docutils literal notranslate"><span class="pre">make</span></code> commands should compile the correct binaries.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span><span class="nb">cd</span> ossec-*/src
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span><span class="nb">cd</span> OpenArmor-*/src
 <span class="gp"># </span>make setagent
 <span class="gp"># </span>make all
 <span class="gp"># </span>make build
 </pre></div>
 </div>
-<p>Modify <cite>ossec-hids-*/etc/preloaded-vars.conf</cite> to set BINARY_INSTALL to yes.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span><span class="nb">echo</span> <span class="s2">&quot;USER_BINARYINSTALL=\&quot;y\&quot;&quot;</span> &gt;&gt; ossec-hids*/etc/preloaded-vars.conf
+<p>Modify <cite>OpenArmor-hids-*/etc/preloaded-vars.conf</cite> to set BINARY_INSTALL to yes.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span><span class="nb">echo</span> <span class="s2">&quot;USER_BINARYINSTALL=\&quot;y\&quot;&quot;</span> &gt;&gt; OpenArmor-hids*/etc/preloaded-vars.conf
 </pre></div>
 </div>
-<p>Finally create an OSSEC package.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>tar -cvf ossec-binary.tar ossec-hids*
+<p>Finally create an OpenArmor package.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>tar -cvf OpenArmor-binary.tar OpenArmor-hids*
 </pre></div>
 </div>
 </div>
-<div class="section" id="installation-of-the-binary-ossec-package">
-<span id="manual-install-binary-install"></span><h2>Installation of the binary OSSEC package<a class="headerlink" href="#installation-of-the-binary-ossec-package" title="Permalink to this headline">¶</a></h2>
-<p>On the target system (that does not have a C compiler) download your ossec-binary.tar
+<div class="section" id="installation-of-the-binary-OpenArmor-package">
+<span id="manual-install-binary-install"></span><h2>Installation of the binary OpenArmor package<a class="headerlink" href="#installation-of-the-binary-OpenArmor-package" title="Permalink to this headline">¶</a></h2>
+<p>On the target system (that does not have a C compiler) download your OpenArmor-binary.tar
 created in the steps above.</p>
 <p>Complete the installation by unarchiving the binary package and running ./install.sh.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>tar xfv ossec-binary.tar
-<span class="gp"># </span><span class="nb">cd</span> ossec-*
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>tar xfv OpenArmor-binary.tar
+<span class="gp"># </span><span class="nb">cd</span> OpenArmor-*
 <span class="gp"># </span>./install.sh
 </pre></div>
 </div>
@@ -212,8 +212,8 @@ created in the steps above.</p>
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

@@ -1,10 +1,10 @@
 Log Samples from Exim
 ---------------------
 
-I've included the ossec bad responses:
+I've included the OpenArmor bad responses:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*error 450 (ossec should probably ignore) -- this particular line is blowback from spam delivery attempt elsewhere with one of our addresses spoofed as "From", and occurs many times in the log files*
+*error 450 (OpenArmor should probably ignore) -- this particular line is blowback from spam delivery attempt elsewhere with one of our addresses spoofed as "From", and occurs many times in the log files*
 
 .. code-block:: console
 
@@ -14,7 +14,7 @@ I've included the ossec bad responses:
 
   exim[14700]: 2006-11-21 15:01:33 1Glsgv-0002wv-00 SMTP error from remote mailer after RCPT TO:<xxxxxxxxxxx@some-domain.com>: host gmail-smtp-in.l.google.com [1.1.1.1]: 450-4.2.1 The Gmail user you are trying to contact is receiving\n450-4.2.1 mail at a rate that prevents additional messages from\n450-4.2.1 being delivered. Please resend your message at a later\n450-4.2.1 time; if the user is able to receive mail at that time,\n450 4.2.1 your message will be delivered. 23si8340522nzn
 
-*error 550 (ossec should ignore after the first time)*
+*error 550 (OpenArmor should ignore after the first time)*
 .. code-block:: console
 
   Received From: (mailserver) 192.168.1.21->/var/log/mail.log
@@ -42,7 +42,7 @@ I've included the ossec bad responses:
   exim[15740]: 2006-11-21 15:16:57 1Gmc36-00045o-00 ** xxxxxxxxxxx@some-domain.com R=local_user_cyrus T=local_delivery_cyrus: Child process of local_delivery_cyrus transport returned 65 (could mean error in input data) from command: /usr/cyrus/bin/deliver
 
 
-*this error 450 should be a 550 -- ossec could ignore (it's a temporary error message for a permanent error, but not much we can do about it)*
+*this error 450 should be a 550 -- OpenArmor could ignore (it's a temporary error message for a permanent error, but not much we can do about it)*
 .. code-block:: console
 
   Received From: (mailserver) 192.168.1.21->/var/log/mail.log

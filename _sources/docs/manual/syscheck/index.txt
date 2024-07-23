@@ -3,15 +3,15 @@
 Syscheck
 ========
 
-**Syscheck** is the name of the integrity checking process inside OSSEC. It runs periodically 
+**Syscheck** is the name of the integrity checking process inside OpenArmor. It runs periodically 
 to check if any configured file (or registry entry on Windows) has changed.
 
 Why Integrity checking?
 -----------------------
 
-This is the explanation from the `OSSEC book`_:
+This is the explanation from the `OpenArmor book`_:
 
-.. _OSSEC book: http://www.amazon.com/OSSEC-Host-Based-Intrusion-Detection-Guide/dp/159749240X
+.. _OpenArmor book: http://www.amazon.com/OpenArmor-Host-Based-Intrusion-Detection-Guide/dp/159749240X
 
     There are multiple types of attacks and many attack vectors, but there
     is one thing unique about all of them: they leave traces and always change
@@ -20,7 +20,7 @@ This is the explanation from the `OSSEC book`_:
     integrity of the system.
 
     Integrity checking is an essential part of intrusion detection, that
-    detects changes in the integrity of the system. OSSEC does that by
+    detects changes in the integrity of the system. OpenArmor does that by
     looking for changes in the MD5/SHA1 checksums of the key files in the
     system and on the Windows registry.
 
@@ -38,7 +38,7 @@ Quick facts
 
 * Where is the database stored? 
   
-  - On the manager in ``/var/ossec/queue/syscheck``.
+  - On the manager in ``/var/OpenArmor/queue/syscheck``.
 
 * How does it help with compliance? (PCI DSS, etc) 
 
@@ -55,17 +55,17 @@ Quick facts
 Realtime options
 ----------------
 
-``ossec-syscheckd`` is able to check file integrity in near realtime on Windows and modern Linux distros. Windows comes with support out of the box, but on Linux systems inotify packages may need to be installed. Check for inotify dev packages, and possibly an inotify-tools package.
+``OpenArmor-syscheckd`` is able to check file integrity in near realtime on Windows and modern Linux distros. Windows comes with support out of the box, but on Linux systems inotify packages may need to be installed. Check for inotify dev packages, and possibly an inotify-tools package.
 
 Configuration options
 ---------------------
 
-These configuration options can be specified in each agent's ossec.conf file, except 
+These configuration options can be specified in each agent's OpenArmor.conf file, except 
 for the ``auto_ignore`` and ``alert_new_file`` which apply to manager and local installs. The 
 ``ignore`` option applies to all agents if specified on the manager.
 
 
-.. include:: ../../syntax/ossec_config.syscheck.trst 
+.. include:: ../../syntax/OpenArmor_config.syscheck.trst 
 
 Configuration Examples
 ----------------------
@@ -114,7 +114,7 @@ In the above example, a rule was created to alert with high severity (12) for ch
 Real time Monitoring
 --------------------
 
-OSSEC supports realtime (continuous) file integrity monitoring on Linux (support was added kernel version 2.6.13) and Windows systems.
+OpenArmor supports realtime (continuous) file integrity monitoring on Linux (support was added kernel version 2.6.13) and Windows systems.
 
 The configuration is very simple. In the ``<directories>`` option where you specify what directories to monitor, adding ``realtime="yes"`` will enable it.
 For example:
@@ -130,8 +130,8 @@ In this case, the directories /etc, /usr/bin and /usr/sbin will be monitored in 
 
 .. warning:: 
 
-    The real time monitoring will not start immediately. First ossec-syscheckd needs to scan the file system and add each sub-directory to the realtime queue.
-    It can take a while for this to finish (wait for the log "ossec-syscheckd: INFO: Starting real time file monitoring" ).
+    The real time monitoring will not start immediately. First OpenArmor-syscheckd needs to scan the file system and add each sub-directory to the realtime queue.
+    It can take a while for this to finish (wait for the log "OpenArmor-syscheckd: INFO: Starting real time file monitoring" ).
 
 .. note:: 
 
@@ -146,7 +146,7 @@ In this case, the directories /etc, /usr/bin and /usr/sbin will be monitored in 
 Report Changes
 --------------
 
-OSSEC supports sending diffs when changes are made to text files on Linux and unix systems.
+OpenArmor supports sending diffs when changes are made to text files on Linux and unix systems.
 
 Configuring syscheck to show diffs is simple, add ``report_changes="yes"`` to the ``<directories`` option. 
 For example:
@@ -161,9 +161,9 @@ For example:
 .. note:: 
 
     Report Changes can only work with text files, and the changes are stored on the agent 
-    inside ``/var/ossec/queue/diff/local/dir/file``. 
+    inside ``/var/OpenArmor/queue/diff/local/dir/file``. 
     
-    If OSSEC has not been compiled with libmagic support, report_changes will copy any file 
+    If OpenArmor has not been compiled with libmagic support, report_changes will copy any file 
     designated, e.g. mp3, iso, executable, /chroot/dev/urandom (which would fill your hard drive). 
     So unless libmagic is used, be very carefull on which directory you enable report_changes.
 

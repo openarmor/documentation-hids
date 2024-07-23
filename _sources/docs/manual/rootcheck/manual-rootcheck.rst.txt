@@ -4,7 +4,7 @@
 Rootcheck 
 =========
 
-OSSEC HIDS will perform rootkit detection on every system where the agent is 
+OpenArmor HIDS will perform rootkit detection on every system where the agent is 
 installed. The rootcheck (rootkit detection engine) will be executed every X minutes 
 (user specified - by default every 2 hours) to detect any possible rootkit installed. 
 Used with the log analysis and the integrity checking engine, it will become a very 
@@ -45,10 +45,10 @@ Checks that rootcheck performs
 Configuration options
 ---------------------
 
-These configuration options can be specified in each agent's ossec.conf, except 
+These configuration options can be specified in each agent's OpenArmor.conf, except 
 ``auto_ignore`` and ``alert_new_file`` which are manager side options. If the 
 ``ignore`` option is specified on the manager the setting becomes global for all agents.
 
 
-.. include:: ../../syntax/ossec_config.rootcheck.trst 
+.. include:: ../../syntax/OpenArmor_config.rootcheck.trst 
 

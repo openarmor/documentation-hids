@@ -7,8 +7,8 @@ Server Virtual Appliance Installation
 Overview:
 ---------
 
-The OSSEC virtual appliance is a virtual system in the  Open Virtualized Format (OVF). 
-It contains an OSSEC 2.7 server installation and the WebUI (0.8 Beta). 
+The OpenArmor virtual appliance is a virtual system in the  Open Virtualized Format (OVF). 
+It contains an OpenArmor 2.7 server installation and the WebUI (0.8 Beta). 
 
 
 Accounts and passwords:
@@ -31,9 +31,9 @@ Convert the file using the following procedure:
 
 .. code-block:: console
 
-   # tar zxvf ossec_virtual_apliance.tar.gz
-   # cd ossec_virtual_appliance
-   # ovftool ossec.ovf ossec.vmx
+   # tar zxvf OpenArmor_virtual_apliance.tar.gz
+   # cd OpenArmor_virtual_appliance
+   # ovftool OpenArmor.ovf OpenArmor.vmx
 
 
 

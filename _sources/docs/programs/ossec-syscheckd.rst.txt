@@ -1,33 +1,33 @@
 
-.. _ossec-syscheckd:
+.. _OpenArmor-syscheckd:
 
-ossec-syscheckd
+OpenArmor-syscheckd
 ===============
 
-The ``ossec-syscheckd`` daemon checks configured files for changes to the checksums, permissions or ownership.
-``ossec-syscheckd`` is started by ossec-control.
-Configuration for ossec-syscheckd is handled in the ossec.conf. 
+The ``OpenArmor-syscheckd`` daemon checks configured files for changes to the checksums, permissions or ownership.
+``OpenArmor-syscheckd`` is started by OpenArmor-control.
+Configuration for OpenArmor-syscheckd is handled in the OpenArmor.conf. 
 
 See :ref:`manual-syscheck` for more detailed configuration information.
 
-ossec-syscheckd argument options
+OpenArmor-syscheckd argument options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. program:: ossec-syscheckd
+.. program:: OpenArmor-syscheckd
 
 .. option:: -c <config>
 
-    Run ``ossec-syscheckd`` using <config> as the configuration file.
+    Run ``OpenArmor-syscheckd`` using <config> as the configuration file.
 
-    **Default:** /var/ossec/etc/ossec.conf
+    **Default:** /var/OpenArmor/etc/OpenArmor.conf
 
 .. option:: -d
 
-    Execute ossec-syscheckd in debug mode. This can be used more than once to increase the verbosity of the debug messages.
+    Execute OpenArmor-syscheckd in debug mode. This can be used more than once to increase the verbosity of the debug messages.
 
 .. option:: -f
 
-    Run ``ossec-syscheckd`` in the foreground.
+    Run ``OpenArmor-syscheckd`` in the foreground.
 
 .. option:: -h
 

@@ -3,9 +3,9 @@
 Center for Internet Security Benchmark for Debian Linux v1.0
 ============================================================
 
-OSSEC Policy monitor can check if a system is in compliance with the
+OpenArmor Policy monitor can check if a system is in compliance with the
 `CIS Security Benchmark for Debian <http://www.cisecurity.org/bench_linux.html>`_.
-OSSEC will only test Debian and Ubuntu/Kubuntu/Xubuntu systems according to this
+OpenArmor will only test Debian and Ubuntu/Kubuntu/Xubuntu systems according to this
 standard.
 
 

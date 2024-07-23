@@ -1,7 +1,7 @@
 Log Samples from Solaris 8/9
 ----------------------------
 
-Solaris doesn't include the source server name in their Syslog message.  So you can't forward Solaris Syslog message directly to Ossec.
+Solaris doesn't include the source server name in their Syslog message.  So you can't forward Solaris Syslog message directly to OpenArmor.
 
 
 
@@ -23,7 +23,7 @@ This message is missing the source, which has to be before the Syslogtag, as it 
 
 
 
-In order to format the Syslog message to be compliant with RFC3164, you need to set-up Syslog-ng and forward the Syslog message to it.  Make sure you change the syslog receiving port of ossec or syslog-ng.
+In order to format the Syslog message to be compliant with RFC3164, you need to set-up Syslog-ng and forward the Syslog message to it.  Make sure you change the syslog receiving port of OpenArmor or syslog-ng.
 
 
 SU:

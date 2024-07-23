@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Installation requirements &#8212; OSSEC</title>
+    <title>Installation requirements &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -151,7 +151,7 @@ gtag('config', 'UA-138780766-1');
       
   <div class="section" id="installation-requirements">
 <span id="install-req"></span><h1>Installation requirements<a class="headerlink" href="#installation-requirements" title="Permalink to this headline">¶</a></h1>
-<p>For UNIX systems, OSSEC only requires gnu make, gcc, and libc.
+<p>For UNIX systems, OpenArmor only requires gnu make, gcc, and libc.
 OpenSSL is a suggested, but optional, prerequisite.
 However, you always have the option to pre-compile
 it on one system and move the binaries to the final box.</p>
@@ -160,38 +160,38 @@ it on one system and move the binaries to the final box.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 3.3.</span></p>
 </div>
-<p>PCRE2 support has been added to OSSEC v3.3. The build system can either use the system’s PCRE2 libraries,
+<p>PCRE2 support has been added to OpenArmor v3.3. The build system can either use the system’s PCRE2 libraries,
 or the necessary bits can be built as part of the installation process.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 3.4.</span></p>
 </div>
 <p>As of v3.4 the default build process has set <cite>PCRE2_SYSTEM</cite>, and expects pcre2 to be installed on the system.
 On many Linux systems the necessary packages would be <cite>dev</cite> or <cite>devel</cite> packages specifically.</p>
-<p>Alternatively, OSSEC can build and use pcre2 without installing the packages.
+<p>Alternatively, OpenArmor can build and use pcre2 without installing the packages.
 To do this the <cite>pcre2-10.32</cite> sources must be installed in <cite>src/external</cite>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span> ossec-hids-*
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span> OpenArmor-hids-*
 <span class="gp">$ </span>wget https://ftp.pcre.org/pub/pcre/pcre2-10.32.tar.gz
 <span class="gp">$ </span>tar xzf pcre2-10.32.tar.gz -C src/external
 </pre></div>
 </div>
 <p>If you use the <cite>pcre2-10.32</cite> sources, set the <cite>PCRE2_SYSTEM</cite> variable to no:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span><span class="nb">cd</span> ossec-hids-*
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span><span class="nb">cd</span> OpenArmor-hids-*
 <span class="gp"># </span><span class="nv">PCRE2_SYSTEM</span><span class="o">=</span>no ./install.sh
 </pre></div>
 </div>
 <p>To use the system’s PCRE2, set the <cite>PCRE2_SYSTEM</cite> variable to yes:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span><span class="nb">cd</span> ossec-hids-*
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span><span class="nb">cd</span> OpenArmor-hids-*
 <span class="gp"># </span><span class="nv">PCRE2_SYSTEM</span><span class="o">=</span>yes ./install.sh
 </pre></div>
 </div>
 </div>
 <div class="section" id="zlib">
 <h2>zlib<a class="headerlink" href="#zlib" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://www.zlib.net/">zlib</a> is included with OSSEC in <cite>src/external/zlib-1.2.11</cite>. In previous
+<p><a class="reference external" href="https://www.zlib.net/">zlib</a> is included with OpenArmor in <cite>src/external/zlib-1.2.11</cite>. In previous
 versions this included version was used by default during the build process, but this changed to
 using the system zlib. Ensure the correct zlib development packages are installed.</p>
 <p>To use the included version of zlib, simply set <cite>ZLIB_SYSTEM</cite> to <cite>no</cite>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span><span class="nb">cd</span> ossec-hids-*
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span><span class="nb">cd</span> OpenArmor-hids-*
 <span class="gp"># </span><span class="nv">ZLIB_SYSTEM</span><span class="o">=</span>no ./install.sh
 </pre></div>
 </div>
@@ -201,7 +201,7 @@ using the system zlib. Ensure the correct zlib development packages are installe
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 3.5.</span></p>
 </div>
-<p><a class="reference external" href="http://libevent.org/">libevent</a> was added for <cite>ossec-agentd</cite> and <cite>ossec-maild</cite>. A development package
+<p><a class="reference external" href="http://libevent.org/">libevent</a> was added for <cite>OpenArmor-agentd</cite> and <cite>OpenArmor-maild</cite>. A development package
 for this should be installed on the system.</p>
 </div>
 <div class="section" id="redhat-centos-fedora-amazon-linux">
@@ -230,7 +230,7 @@ for this should be installed on the system.</p>
 </pre></div>
 </div>
 <p>On Ubuntu you will need the <em>build-essential</em> package in order to
-compile and install OSSEC.</p>
+compile and install OpenArmor.</p>
 <p>To install the package run the following command.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">apt-get install build-essential zlib1g-dev</span>
 </pre></div>
@@ -274,27 +274,27 @@ need to be installed.</p>
 </div>
 <div class="section" id="freebsd">
 <h2>FreeBSD<a class="headerlink" href="#freebsd" title="Permalink to this headline">¶</a></h2>
-<p>If you want to build and install OSSEC on FreeBSD you can work together with
+<p>If you want to build and install OpenArmor on FreeBSD you can work together with
 its <a class="reference external" href="https://www.freebsd.org/ports">FreeBSD Ports Collection</a>.</p>
-<p>There you can find and setup <strong>ossec-hids-agent</strong>, <strong>ossec-hids-local</strong> or
-<strong>ossec-hids-server</strong>.</p>
+<p>There you can find and setup <strong>OpenArmor-hids-agent</strong>, <strong>OpenArmor-hids-local</strong> or
+<strong>OpenArmor-hids-server</strong>.</p>
 <p>If you want to build and install only the the required dependencies to run an
-OSSEC server/manager, without installing it:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span><span class="nb">cd</span> /usr/ports/security/ossec-hids-server
+OpenArmor server/manager, without installing it:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span><span class="nb">cd</span> /usr/ports/security/OpenArmor-hids-server
 <span class="gp"># </span>make
 </pre></div>
 </div>
 <p>If you want to install this particular port, you should run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span></code>.</p>
-<p>FreeBSD also offers pre-compiled packages for OSSEC and all its dependencies. If you
+<p>FreeBSD also offers pre-compiled packages for OpenArmor and all its dependencies. If you
 want to install them you must work with
 <a class="reference external" href="https://www.freebsd.org/doc/handbook/pkgng-intro.html">pkg</a>.</p>
 </div>
 <div class="section" id="openbsd">
 <h2>OpenBSD<a class="headerlink" href="#openbsd" title="Permalink to this headline">¶</a></h2>
 <p>As OpenBSD also has its own <a class="reference external" href="https://www.openbsd.org/faq/ports/ports.html">OpenBSD Ports Collection</a>,
-you can build and install OSSEC using it if you want.</p>
-<p>It only offers <strong>security/ossec-hids</strong>, so:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd /usr/ports/security/ossec-hids</span>
+you can build and install OpenArmor using it if you want.</p>
+<p>It only offers <strong>security/OpenArmor-hids</strong>, so:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd /usr/ports/security/OpenArmor-hids</span>
 <span class="go">make</span>
 </pre></div>
 </div>
@@ -316,8 +316,8 @@ dependencies) you must run <code class="docutils literal notranslate"><span clas
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

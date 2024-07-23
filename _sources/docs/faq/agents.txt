@@ -14,17 +14,17 @@ When looking at historical alerts you don't want to associate alerts from one sy
 
 
 
-ossec-logcollector(PID): ERROR: Unable to open file '/queue/ossec/.agent_info'
+OpenArmor-logcollector(PID): ERROR: Unable to open file '/queue/OpenArmor/.agent_info'
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Ensure there is a <server-ip> configured in the agent's /var/ossec/etc/ossec.conf, and that the IP is correct.
+Ensure there is a <server-ip> configured in the agent's /var/OpenArmor/etc/OpenArmor.conf, and that the IP is correct.
 
 
-The OSSEC agent is unable to resolve hostnames from /etc/hosts
+The OpenArmor agent is unable to resolve hostnames from /etc/hosts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-By default OSSEC chroots many of its daemons to `/var/ossec`. When this happens the `/etc/hosts` file is unreadable.
-To resolve this issue, copy `/etc/hosts` to `/var/ossec/etc/`. A hardlink to `/etc/hosts` can be used if the system
+By default OpenArmor chroots many of its daemons to `/var/OpenArmor`. When this happens the `/etc/hosts` file is unreadable.
+To resolve this issue, copy `/etc/hosts` to `/var/OpenArmor/etc/`. A hardlink to `/etc/hosts` can be used if the system
 is does not have a separate `/var/` partition.
 
 

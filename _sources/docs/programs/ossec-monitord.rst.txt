@@ -1,41 +1,41 @@
 
-.. _ossec-monitord:
+.. _OpenArmor-monitord:
 
-ossec-monitord
+OpenArmor-monitord
 ==============
 
-The ``ossec-monitord`` daemon monitors agent connectivity and compress daily log files.
-``ossec-monitord`` is configured in ossec.conf.  (see :ref:`ossec_config.localfile`)
+The ``OpenArmor-monitord`` daemon monitors agent connectivity and compress daily log files.
+``OpenArmor-monitord`` is configured in OpenArmor.conf.  (see :ref:`OpenArmor_config.localfile`)
 
 
-ossec-monitord argument options
+OpenArmor-monitord argument options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. program:: ossec-monitord
+.. program:: OpenArmor-monitord
 
 .. option:: -c <config>
 
-    Run ``ossec-monitord`` using <config> as the configuration file.
+    Run ``OpenArmor-monitord`` using <config> as the configuration file.
 
-    **Default:** /var/ossec/etc/ossec.conf
+    **Default:** /var/OpenArmor/etc/OpenArmor.conf
 
 .. option:: -D <dir>
 
     Chroot to <dir>.
 
-    **Default:** /var/ossec
+    **Default:** /var/OpenArmor
 
 .. option:: -d
 
-    Execute ossec-monitord in debug mode. This option can be used multiple times to increase the verbosity of the debug messages.
+    Execute OpenArmor-monitord in debug mode. This option can be used multiple times to increase the verbosity of the debug messages.
 
 .. option:: -f
 
-    Run ``ossec-monitord`` in the foreground.
+    Run ``OpenArmor-monitord`` in the foreground.
 
 .. option:: -g <group>
 
-    Run ``ossec-monitord`` as <group>.
+    Run ``OpenArmor-monitord`` as <group>.
 
 .. option:: -h
 
@@ -47,9 +47,9 @@ ossec-monitord argument options
 
 .. option:: -u <user>
 
-    Run ``ossec-monitord`` as <user>.
+    Run ``OpenArmor-monitord`` as <user>.
 
-    **Default:** ossecm
+    **Default:** OpenArmorm
 
 .. option:: -V
 

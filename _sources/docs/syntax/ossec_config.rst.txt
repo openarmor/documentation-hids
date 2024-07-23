@@ -1,12 +1,12 @@
-.. _syntax_ossec_config:
+.. _syntax_OpenArmor_config:
 
-ossec.conf: syntax and options
+OpenArmor.conf: syntax and options
 ==============================
 
 .. toctree::
     :maxdepth: 2
     :glob:
 
-    head_ossec_config*
+    head_OpenArmor_config*
     
 

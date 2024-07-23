@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>syscheck_control &#8212; OSSEC</title>
+    <title>syscheck_control &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
@@ -70,18 +70,18 @@ gtag('config', 'UA-138780766-1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../index.html"><img src="../../_static/ossec_logo_bare_small.png">
-          OSSEC</a>
+        <a class="navbar-brand" href="../../index.html"><img src="../../_static/OpenArmor_logo_bare_small.jpg">
+          OpenArmor</a>
         <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="https://www.ossec.net/about/">About</a></li>
-                <li><a href="https://www.ossec.net/docs/">Documentation</a></li>
-                <li><a href="https://www.ossec.net/register-for-ossec/">Get OSSEC+</a></li>
-                <li><a href="https://www.ossec.net/downloads/">Downloads</a></li>
+                <li><a href="https://theopenarmor.org/about/">About</a></li>
+                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
+                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -220,10 +220,10 @@ If <cite>all</cite> is used as the <cite>AGENT_ID</cite>, the syscheck databases
 <h2>syscheck_control example usage<a class="headerlink" href="#syscheck-control-example-usage" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1-getting-a-list-of-modified-files-for-an-agent">
 <h3>Example 1: Getting a list of modified files for an agent<a class="headerlink" href="#example-1-getting-a-list-of-modified-files-for-an-agent" title="Permalink to this headline">¶</a></h3>
-<p>To retrieve information about files that were monitored by OSSEC and modified after OSSEC was deployed, run <cite>syscheck_control -i AGENT_ID</cite>.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/ossec/bin/syscheck_control -i <span class="m">002</span>
+<p>To retrieve information about files that were monitored by OpenArmor and modified after OpenArmor was deployed, run <cite>syscheck_control -i AGENT_ID</cite>.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/OpenArmor/bin/syscheck_control -i <span class="m">002</span>
 
-<span class="go">Integrity changes for agent &#39;ossec-agent (002) - 192.168.1.86&#39;:</span>
+<span class="go">Integrity changes for agent &#39;OpenArmor-agent (002) - 192.168.1.86&#39;:</span>
 
 <span class="go">Changes for 2009 Dec 21:</span>
 <span class="go">2009 Dec 21 13:52:40,0 - /etc/authorization</span>
@@ -258,8 +258,8 @@ If <cite>all</cite> is used as the <cite>AGENT_ID</cite>, the syscheck databases
 <ul class="simple">
 <li><p>the time stamp when the file was added to the syscheck database</p></li>
 <li><p>the integrity checking values when the file was added to the syscheck database</p></li>
-<li><p>the time stamps when OSSEC detected a modification</p></li>
-<li><p>the integrity checking values for every time OSSEC detected a modification.</p></li>
+<li><p>the time stamps when OpenArmor detected a modification</p></li>
+<li><p>the integrity checking values for every time OpenArmor detected a modification.</p></li>
 </ul>
 <p>The integrity checking values include</p>
 <ul class="simple">
@@ -270,9 +270,9 @@ If <cite>all</cite> is used as the <cite>AGENT_ID</cite>, the syscheck databases
 <li><p>MD5 and SHA1 hashes of the file.</p></li>
 </ul>
 <p>To retrieve this information, run <cite>syscheck_control -i AGENT_ID -f FILENAME</cite>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/ossec/bin/syscheck_control -i <span class="m">002</span> -f /etc/authorization
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/OpenArmor/bin/syscheck_control -i <span class="m">002</span> -f /etc/authorization
 
-<span class="go">Integrity changes for agent &#39;ossec-agent (002) - 192.168.1.86&#39;:</span>
+<span class="go">Integrity changes for agent &#39;OpenArmor-agent (002) - 192.168.1.86&#39;:</span>
 <span class="go">Detailed information for entries matching: &#39;/etc/authorization&#39;</span>
 
 <span class="go">2009 Dec 21 13:52:40,0 - /etc/authorization</span>
@@ -300,21 +300,21 @@ If <cite>all</cite> is used as the <cite>AGENT_ID</cite>, the syscheck databases
 <div class="section" id="example-3-clearing-the-syscheck-database">
 <h3>Example 3: Clearing the syscheck database<a class="headerlink" href="#example-3-clearing-the-syscheck-database" title="Permalink to this headline">¶</a></h3>
 <p>To clear the syscheck database for a certain agent run the following command:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/ossec/bin/syscheck_control -u <span class="m">002</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/OpenArmor/bin/syscheck_control -u <span class="m">002</span>
 
 <span class="go">** Integrity check database updated.</span>
 </pre></div>
 </div>
 <p><cite>syscheck_control -i 002</cite> will now show that no modified files for that agent are in the database:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/ossec/bin/syscheck_control -i <span class="m">002</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/OpenArmor/bin/syscheck_control -i <span class="m">002</span>
 
-<span class="go">Integrity changes for agent &#39;ossec-agent (002) - 192.168.1.86&#39;:</span>
+<span class="go">Integrity changes for agent &#39;OpenArmor-agent (002) - 192.168.1.86&#39;:</span>
 
 <span class="go">** No entries found.</span>
 </pre></div>
 </div>
 <p>To clear the database for all agents and the server run the following command:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/ossec/bin/syscheck_control -u all
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/OpenArmor/bin/syscheck_control -u all
 
 <span class="go">** Integrity check database updated.</span>
 </pre></div>
@@ -336,8 +336,8 @@ If <cite>all</cite> is used as the <cite>AGENT_ID</cite>, the syscheck databases
       
     </p>
     <p>
-        &copy; Copyright 2010-2021, OSSEC Project Team.<br/>
-    OSSEC <b>ossec.net</b> domain owned and maintained by <a href="https://www.ossec.net" target="_blank">OSSEC Foundation</a><br/>
+        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
+    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
     Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
     </p>
   </div>

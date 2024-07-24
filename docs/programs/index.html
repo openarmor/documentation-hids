@@ -6,12 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Man pages &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/bootstrap-3.2.0/css/bootstrap-theme.min.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="../../_static/bootstrap-sphinx.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../_static/bootstrap-3.2.0/css/bootstrap.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../_static/bootstrap-3.2.0/css/bootstrap-theme.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../_static/bootstrap-sphinx.css"
+      type="text/css"
+    />
     <link rel="stylesheet" href="../../_static/parallax.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script
+      id="documentation_options"
+      data-url_root="../../"
+      src="../../_static/documentation_options.js"
+    ></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -24,327 +44,938 @@
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="agent-auth" href="agent-auth.html" />
     <link rel="prev" title="cef log format:" href="../formats/cef.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138780766-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-138780766-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-gtag('config', 'UA-138780766-1');
-</script>
+      gtag("config", "UA-138780766-1");
+    </script>
 
-<script type="text/javascript">
-  var _ss = _ss || [];
-  _ss.push(['_setDomain', 'https://koi-3QNN51VTHS.marketingautomation.services/net']);
-  _ss.push(['_setAccount', 'KOI-4APYNOYP8O']);
-  _ss.push(['_trackPageView']);
-  window._pa = window._pa || {};
-  // _pa.orderId = "myOrderId"; // OPTIONAL: attach unique conversion identifier to conversions
-  // _pa.revenue = "19.99"; // OPTIONAL: attach dynamic purchase values to conversions
-  // _pa.productId = "myProductId"; // OPTIONAL: Include product ID for use with dynamic ads
-  (function() {
-  var ss = document.createElement('script');
-  ss.type = 'text/javascript'; ss.async = true;
-  ss.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'koi-3QNN51VTHS.marketingautomation.services/client/ss.js?ver=2.4.0';
-  var scr = document.getElementsByTagName('script')[0];
-  scr.parentNode.insertBefore(ss, scr);
-  })();
-  </script>
+    <script type="text/javascript">
+      var _ss = _ss || [];
+      _ss.push([
+        "_setDomain",
+        "https://koi-3QNN51VTHS.marketingautomation.services/net",
+      ]);
+      _ss.push(["_setAccount", "KOI-4APYNOYP8O"]);
+      _ss.push(["_trackPageView"]);
+      window._pa = window._pa || {};
+      // _pa.orderId = "myOrderId"; // OPTIONAL: attach unique conversion identifier to conversions
+      // _pa.revenue = "19.99"; // OPTIONAL: attach dynamic purchase values to conversions
+      // _pa.productId = "myProductId"; // OPTIONAL: Include product ID for use with dynamic ads
+      (function () {
+        var ss = document.createElement("script");
+        ss.type = "text/javascript";
+        ss.async = true;
+        ss.src =
+          ("https:" == document.location.protocol ? "https://" : "http://") +
+          "koi-3QNN51VTHS.marketingautomation.services/client/ss.js?ver=2.4.0";
+        var scr = document.getElementsByTagName("script")[0];
+        scr.parentNode.insertBefore(ss, scr);
+      })();
+    </script>
 
-
-
-  </head><body>
-
-  <div id="navbar" class="navbar navbar-inverse navbar-default ">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../../index.html"><img src="../../_static/OpenArmor_logo_bare_small.jpg">
-          OpenArmor</a>
-        <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
-      </div>
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="navbar" class="navbar navbar-inverse navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".nav-collapse"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html"
+            ><img src="../../_static/OpenArmor_logo_bare_small.jpg" />
+            OpenArmor</a
+          >
+          <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
+        </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
-            
-                <li><a href="https://theopenarmor.org/about/">About</a></li>
-                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
-                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
-                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
-            
-            
-              <li class="dropdown globaltoc-container">
-  <a role="button"
-     id="dLabelGlobalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="../../index.html">Site <b class="caret"></b></a>
-  <ul class="dropdown-menu globaltoc"
-      role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul>
-<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">Manual</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently asked questions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cookbooks/index.html">User submitted Cookbooks</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../development/build/index.html">Build, compile, and not much more</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../development/oRFC/index.html">oRFC:</a></li>
-</ul>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../syntax/index.html">Syntax and Options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../formats/index.html">Output Formats</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Man pages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Examples</a></li>
-</ul>
-</ul>
-</li>
-              
-            
-            
-              
-                
-  <li>
-    <a href="../formats/cef.html" title="Previous Chapter: cef log format:"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; cef log format:</span>
-    </a>
-  </li>
-  <li>
-    <a href="agent-auth.html" title="Next Chapter: agent-auth"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">agent-auth &raquo;</span>
-    </a>
-  </li>
-              
-            
-            
-            
-            
+            <li><a href="https://theopenarmor.org/about/">About</a></li>
+            <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+            <li>
+              <a href="https://theopenarmor.org/register-for-OpenArmor/"
+                >Get OpenArmor+</a
+              >
+            </li>
+            <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
+
+            <li class="dropdown globaltoc-container">
+              <a
+                role="button"
+                id="dLabelGlobalToc"
+                data-toggle="dropdown"
+                data-target="#"
+                href="../../index.html"
+                >Site <b class="caret"></b
+              ></a>
+              <ul
+                class="dropdown-menu globaltoc"
+                role="menu"
+                aria-labelledby="dLabelGlobalToc"
+              >
+                <ul>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../manual/index.html"
+                      >Manual</a
+                    >
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../faq/index.html"
+                      >Frequently asked questions</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../cookbooks/index.html"
+                      >User submitted Cookbooks</a
+                    >
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../development/build/index.html"
+                      >Build, compile, and not much more</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../development/oRFC/index.html"
+                      >oRFC:</a
+                    >
+                  </li>
+                </ul>
+                <ul class="current">
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../syntax/index.html"
+                      >Syntax and Options</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../formats/index.html"
+                      >Output Formats</a
+                    >
+                  </li>
+                  <li class="toctree-l1 current">
+                    <a class="current reference internal" href="#">Man pages</a>
+                  </li>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../examples/index.html"
+                      >Examples</a
+                    >
+                  </li>
+                </ul>
+              </ul>
+            </li>
+
+            <li>
+              <a
+                href="../formats/cef.html"
+                title="Previous Chapter: cef log format:"
+                ><span
+                  class="glyphicon glyphicon-chevron-left visible-sm"
+                ></span
+                ><span class="hidden-sm hidden-tablet"
+                  >&laquo; cef log format:</span
+                >
+              </a>
+            </li>
+            <li>
+              <a href="agent-auth.html" title="Next Chapter: agent-auth"
+                ><span
+                  class="glyphicon glyphicon-chevron-right visible-sm"
+                ></span
+                ><span class="hidden-sm hidden-tablet">agent-auth &raquo;</span>
+              </a>
+            </li>
           </ul>
 
-          
-            
-<form class="navbar-form navbar-right" action="../../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-          
+          <form
+            class="navbar-form navbar-right"
+            action="../../search.html"
+            method="get"
+          >
+            <div class="form-group">
+              <input
+                type="text"
+                name="q"
+                class="form-control"
+                placeholder="Search"
+              />
+            </div>
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
         </div>
+      </div>
     </div>
-  </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      
-  <div class="section" id="man-pages">
-<h1>Man pages<a class="headerlink" href="#man-pages" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="agent-auth.html">agent-auth</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="agent-auth.html#agent-auth-argument-options">agent-auth argument options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="agent-auth.html#optional-server-authentication-client-side">Optional Server Authentication - client side</a></li>
-<li class="toctree-l2"><a class="reference internal" href="agent-auth.html#optional-client-authentication">Optional Client Authentication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="agent-auth.html#agent-auth-example-usage">agent-auth example usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="agent-auth.html#example-adding-an-agent-with-a-hostname">Example: Adding an agent with a hostname</a></li>
-<li class="toctree-l3"><a class="reference internal" href="agent-auth.html#example-adding-an-agent-and-verifying-the-certificate-presented-by-OpenArmor-authd">Example: Adding an agent and verifying the certificate presented by OpenArmor-authd</a></li>
-<li class="toctree-l3"><a class="reference internal" href="agent-auth.html#example-adding-an-agent-and-presenting-a-certificate-to-OpenArmor-authd">Example: Adding an agent and presenting a certificate to OpenArmor-authd</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="agent_control.html">agent_control</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="agent_control.html#agent-control-argument-options">agent_control argument options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="agent_control.html#agent-control-example-usage">agent_control example usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="agent_control.html#example-1-listing-all-active-agents">Example 1: Listing all active agents</a></li>
-<li class="toctree-l3"><a class="reference internal" href="agent_control.html#example-2-querying-information-from-agent-002">Example 2: Querying information from agent 002</a></li>
-<li class="toctree-l3"><a class="reference internal" href="agent_control.html#example-3-executing-syscheck-and-rootcheck-scan-immediately">Example 3: Executing syscheck and rootcheck scan immediately</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="clear_stats.html">clear_stats</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="clear_stats.html#clear-stats-argument-options">clear_stats argument options</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="list_agents.html">list_agents</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="list_agents.html#list-agents-argument-options">list_agents argument options</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="manage_agents.html">manage_agents</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="manage_agents.html#manage-agents-argument-options">manage_agents argument options</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="manage_agents.html#usage">Usage</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="OpenArmor-agentd.html">OpenArmor-agentd</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-agentd.html#OpenArmor-agentd-argument-options">OpenArmor-agentd argument options</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="OpenArmor-agentlessd.html">OpenArmor-agentlessd</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-agentlessd.html#OpenArmor-agentlessd-argument-options">OpenArmor-agentlessd argument options</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="OpenArmor-analysisd.html">OpenArmor-analysisd</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-analysisd.html#OpenArmor-analysisd-argument-options">OpenArmor-analysisd argument options</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="OpenArmor-authd.html">OpenArmor-authd</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-authd.html#OpenArmor-authd-argument-options">OpenArmor-authd argument options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-authd.html#creating-ssl-keys">Creating SSL keys</a></li>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-authd.html#optional-client-authentication-server-side">Optional Client Authentication - server side</a></li>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-authd.html#OpenArmor-authd-example-usage">OpenArmor-authd example usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="OpenArmor-authd.html#example-running-OpenArmor-authd">Example: Running OpenArmor-authd</a></li>
-<li class="toctree-l3"><a class="reference internal" href="OpenArmor-authd.html#example-running-OpenArmor-authd-with-client-authentication">Example: Running OpenArmor-authd with client authentication</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="OpenArmor-control.html">OpenArmor-control</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-control.html#OpenArmor-control-argument-options">OpenArmor-control argument options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-control.html#OpenArmor-control-example-usage">OpenArmor-control example usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="OpenArmor-control.html#example-running-OpenArmor-control">Example: Running OpenArmor-control</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="OpenArmor-csyslogd.html">OpenArmor-csyslogd</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-csyslogd.html#OpenArmor-csyslogd-argument-options">OpenArmor-csyslogd argument options</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="OpenArmor-dbd.html">OpenArmor-dbd</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-dbd.html#OpenArmor-dbd-argument-options">OpenArmor-dbd argument options</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="OpenArmor-execd.html">OpenArmor-execd</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-execd.html#OpenArmor-execd-argument-options">OpenArmor-execd argument options</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="OpenArmor-logcollector.html">OpenArmor-logcollector</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-logcollector.html#OpenArmor-logcollector-argument-options">OpenArmor-logcollector argument options</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="OpenArmor-logtest.html">OpenArmor-logtest</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-logtest.html#osssec-logtest-argument-options">osssec-logtest argument options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-logtest.html#caveats">Caveats</a></li>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-logtest.html#OpenArmor-logtest-example-usage">OpenArmor-logtest example usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="OpenArmor-logtest.html#example-1-testing-standard-rules">Example 1: Testing standard rules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="OpenArmor-logtest.html#example-2-using-OpenArmor-for-the-forensic-analysis-of-log-files">Example 2: Using OpenArmor for the forensic analysis of log files</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="OpenArmor-maild.html">OpenArmor-maild</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-maild.html#OpenArmor-maild-argument-options">OpenArmor-maild argument options</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="OpenArmor-makelists.html">OpenArmor-makelists</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-makelists.html#OpenArmor-makelists-argument-options">OpenArmor-makelists argument options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-makelists.html#OpenArmor-makelists-example-usage">OpenArmor-makelists example usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="OpenArmor-makelists.html#example-running-OpenArmor-makelists-and-an-update-is-necessary">Example: Running OpenArmor-makelists and an update is necessary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="OpenArmor-makelists.html#example-running-OpenArmor-makelists-when-no-update-is-necessary">Example: Running OpenArmor-makelists when no update is necessary</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="OpenArmor-monitord.html">OpenArmor-monitord</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-monitord.html#OpenArmor-monitord-argument-options">OpenArmor-monitord argument options</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="OpenArmor-regex.html">OpenArmor-regex</a></li>
-<li class="toctree-l1"><a class="reference internal" href="OpenArmor-remoted.html">OpenArmor-remoted</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-remoted.html#OpenArmor-remoted-argument-options">OpenArmor-remoted argument options</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="OpenArmor-reportd.html">OpenArmor-reportd</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-reportd.html#OpenArmor-reportd-argument-options">OpenArmor-reportd argument options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-reportd.html#OpenArmor-reportd-example-usage">OpenArmor-reportd example usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="OpenArmor-reportd.html#example-1-show-successful-logins">Example 1: Show Successful Logins</a></li>
-<li class="toctree-l3"><a class="reference internal" href="OpenArmor-reportd.html#example-2-show-alerts-level-10-and-greater">Example 2: Show Alerts Level 10 and Greater</a></li>
-<li class="toctree-l3"><a class="reference internal" href="OpenArmor-reportd.html#example-3-show-the-srcip-for-all-users">Example 3: Show the srcip for all users</a></li>
-<li class="toctree-l3"><a class="reference internal" href="OpenArmor-reportd.html#example-4-show-changed-files-as-reported-by-syscheck">Example 4: Show Changed files as reported by Syscheck</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-reportd.html#example-output">Example output</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="OpenArmor-syscheckd.html">OpenArmor-syscheckd</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="OpenArmor-syscheckd.html#OpenArmor-syscheckd-argument-options">OpenArmor-syscheckd argument options</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="rootcheck_control.html">rootcheck_control</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="rootcheck_control.html#rootcheck-control-argument-options">rootcheck_control argument options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rootcheck_control.html#rootcheck-control-example-usage">rootcheck_control example usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="rootcheck_control.html#example-1-getting-a-list-of-system-auditing-policy-monitoring-events">Example 1: Getting a list of system auditing/policy monitoring events</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rootcheck_control.html#example-2-clearing-the-system-auditing-policy-database">Example 2: Clearing the system auditing/policy database</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="syscheck_control.html">syscheck_control</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="syscheck_control.html#syscheck-control-argument-options">syscheck_control argument options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="syscheck_control.html#syscheck-control-example-usage">syscheck_control example usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="syscheck_control.html#example-1-getting-a-list-of-modified-files-for-an-agent">Example 1: Getting a list of modified files for an agent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="syscheck_control.html#example-2-getting-more-detailed-information-about-a-modified-file">Example 2: Getting more detailed information about a modified file</a></li>
-<li class="toctree-l3"><a class="reference internal" href="syscheck_control.html#example-3-clearing-the-syscheck-database">Example 3: Clearing the syscheck database</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="syscheck_update.html">syscheck_update</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="syscheck_update.html#syscheck-update-argument-options">syscheck_update argument options</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="util.sh.html">util.sh</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="util.sh.html#util-sh-argument-options">util.sh argument options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="util.sh.html#util-sh-example-usage">util.sh example usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="util.sh.html#example-running-util-sh">Example: Running util.sh</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="verify-agent-conf.html">verify-agent-conf</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="verify-agent-conf.html#verify-agent-conf-example-usage">verify-agent-conf example usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="verify-agent-conf.html#example-1-running-verify-agent-conf-on-a-working-agent-conf">Example 1: Running verify-agent-conf on a working agent.conf</a></li>
-<li class="toctree-l3"><a class="reference internal" href="verify-agent-conf.html#example-2-running-verify-agent-conf-on-a-non-working-agent-conf">Example 2: Running verify-agent-conf on a non-working agent.conf</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-
-
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section" id="man-pages">
+            <h1>
+              Man pages<a
+                class="headerlink"
+                href="#man-pages"
+                title="Permalink to this headline"
+                >¶</a
+              >
+            </h1>
+            <div class="toctree-wrapper compound">
+              <ul>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="agent-auth.html"
+                    >agent-auth</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="agent-auth.html#agent-auth-argument-options"
+                        >agent-auth argument options</a
+                      >
+                    </li>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="agent-auth.html#optional-server-authentication-client-side"
+                        >Optional Server Authentication - client side</a
+                      >
+                    </li>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="agent-auth.html#optional-client-authentication"
+                        >Optional Client Authentication</a
+                      >
+                    </li>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="agent-auth.html#agent-auth-example-usage"
+                        >agent-auth example usage</a
+                      >
+                      <ul>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="agent-auth.html#example-adding-an-agent-with-a-hostname"
+                            >Example: Adding an agent with a hostname</a
+                          >
+                        </li>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="agent-auth.html#example-adding-an-agent-and-verifying-the-certificate-presented-by-OpenArmor-authd"
+                            >Example: Adding an agent and verifying the
+                            certificate presented by OpenArmor-authd</a
+                          >
+                        </li>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="agent-auth.html#example-adding-an-agent-and-presenting-a-certificate-to-OpenArmor-authd"
+                            >Example: Adding an agent and presenting a
+                            certificate to OpenArmor-authd</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="agent_control.html"
+                    >agent_control</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="agent_control.html#agent-control-argument-options"
+                        >agent_control argument options</a
+                      >
+                    </li>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="agent_control.html#agent-control-example-usage"
+                        >agent_control example usage</a
+                      >
+                      <ul>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="agent_control.html#example-1-listing-all-active-agents"
+                            >Example 1: Listing all active agents</a
+                          >
+                        </li>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="agent_control.html#example-2-querying-information-from-agent-002"
+                            >Example 2: Querying information from agent 002</a
+                          >
+                        </li>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="agent_control.html#example-3-executing-syscheck-and-rootcheck-scan-immediately"
+                            >Example 3: Executing syscheck and rootcheck scan
+                            immediately</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="clear_stats.html"
+                    >clear_stats</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="clear_stats.html#clear-stats-argument-options"
+                        >clear_stats argument options</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="list_agents.html"
+                    >list_agents</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="list_agents.html#list-agents-argument-options"
+                        >list_agents argument options</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="manage_agents.html"
+                    >manage_agents</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="manage_agents.html#manage-agents-argument-options"
+                        >manage_agents argument options</a
+                      >
+                      <ul>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="manage_agents.html#usage"
+                            >Usage</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="OpenArmor-agentd.html"
+                    >OpenArmor-agentd</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-agentd.html#OpenArmor-agentd-argument-options"
+                        >OpenArmor-agentd argument options</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="OpenArmor-agentlessd.html"
+                    >OpenArmor-agentlessd</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-agentlessd.html#OpenArmor-agentlessd-argument-options"
+                        >OpenArmor-agentlessd argument options</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="OpenArmor-analysisd.html"
+                    >OpenArmor-analysisd</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-analysisd.html#OpenArmor-analysisd-argument-options"
+                        >OpenArmor-analysisd argument options</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="OpenArmor-authd.html"
+                    >OpenArmor-authd</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-authd.html#OpenArmor-authd-argument-options"
+                        >OpenArmor-authd argument options</a
+                      >
+                    </li>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-authd.html#creating-ssl-keys"
+                        >Creating SSL keys</a
+                      >
+                    </li>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-authd.html#optional-client-authentication-server-side"
+                        >Optional Client Authentication - server side</a
+                      >
+                    </li>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-authd.html#OpenArmor-authd-example-usage"
+                        >OpenArmor-authd example usage</a
+                      >
+                      <ul>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="OpenArmor-authd.html#example-running-OpenArmor-authd"
+                            >Example: Running OpenArmor-authd</a
+                          >
+                        </li>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="OpenArmor-authd.html#example-running-OpenArmor-authd-with-client-authentication"
+                            >Example: Running OpenArmor-authd with client
+                            authentication</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="OpenArmor-control.html"
+                    >OpenArmor-control</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-control.html#OpenArmor-control-argument-options"
+                        >OpenArmor-control argument options</a
+                      >
+                    </li>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-control.html#OpenArmor-control-example-usage"
+                        >OpenArmor-control example usage</a
+                      >
+                      <ul>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="OpenArmor-control.html#example-running-OpenArmor-control"
+                            >Example: Running OpenArmor-control</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="OpenArmor-csyslogd.html"
+                    >OpenArmor-csyslogd</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-csyslogd.html#OpenArmor-csyslogd-argument-options"
+                        >OpenArmor-csyslogd argument options</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="OpenArmor-dbd.html"
+                    >OpenArmor-dbd</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-dbd.html#OpenArmor-dbd-argument-options"
+                        >OpenArmor-dbd argument options</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="OpenArmor-execd.html"
+                    >OpenArmor-execd</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-execd.html#OpenArmor-execd-argument-options"
+                        >OpenArmor-execd argument options</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a
+                    class="reference internal"
+                    href="OpenArmor-logcollector.html"
+                    >OpenArmor-logcollector</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-logcollector.html#OpenArmor-logcollector-argument-options"
+                        >OpenArmor-logcollector argument options</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="OpenArmor-logtest.html"
+                    >OpenArmor-logtest</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-logtest.html#osssec-logtest-argument-options"
+                        >osssec-logtest argument options</a
+                      >
+                    </li>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-logtest.html#caveats"
+                        >Caveats</a
+                      >
+                    </li>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-logtest.html#OpenArmor-logtest-example-usage"
+                        >OpenArmor-logtest example usage</a
+                      >
+                      <ul>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="OpenArmor-logtest.html#example-1-testing-standard-rules"
+                            >Example 1: Testing standard rules</a
+                          >
+                        </li>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="OpenArmor-logtest.html#example-2-using-OpenArmor-for-the-forensic-analysis-of-log-files"
+                            >Example 2: Using OpenArmor for the forensic
+                            analysis of log files</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="OpenArmor-maild.html"
+                    >OpenArmor-maild</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-maild.html#OpenArmor-maild-argument-options"
+                        >OpenArmor-maild argument options</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="OpenArmor-makelists.html"
+                    >OpenArmor-makelists</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-makelists.html#OpenArmor-makelists-argument-options"
+                        >OpenArmor-makelists argument options</a
+                      >
+                    </li>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-makelists.html#OpenArmor-makelists-example-usage"
+                        >OpenArmor-makelists example usage</a
+                      >
+                      <ul>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="OpenArmor-makelists.html#example-running-OpenArmor-makelists-and-an-update-is-necessary"
+                            >Example: Running OpenArmor-makelists and an update
+                            is necessary</a
+                          >
+                        </li>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="OpenArmor-makelists.html#example-running-OpenArmor-makelists-when-no-update-is-necessary"
+                            >Example: Running OpenArmor-makelists when no update
+                            is necessary</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="OpenArmor-monitord.html"
+                    >OpenArmor-monitord</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-monitord.html#OpenArmor-monitord-argument-options"
+                        >OpenArmor-monitord argument options</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="OpenArmor-regex.html"
+                    >OpenArmor-regex</a
+                  >
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="OpenArmor-remoted.html"
+                    >OpenArmor-remoted</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-remoted.html#OpenArmor-remoted-argument-options"
+                        >OpenArmor-remoted argument options</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="OpenArmor-reportd.html"
+                    >OpenArmor-reportd</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-reportd.html#OpenArmor-reportd-argument-options"
+                        >OpenArmor-reportd argument options</a
+                      >
+                    </li>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-reportd.html#OpenArmor-reportd-example-usage"
+                        >OpenArmor-reportd example usage</a
+                      >
+                      <ul>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="OpenArmor-reportd.html#example-1-show-successful-logins"
+                            >Example 1: Show Successful Logins</a
+                          >
+                        </li>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="OpenArmor-reportd.html#example-2-show-alerts-level-10-and-greater"
+                            >Example 2: Show Alerts Level 10 and Greater</a
+                          >
+                        </li>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="OpenArmor-reportd.html#example-3-show-the-srcip-for-all-users"
+                            >Example 3: Show the srcip for all users</a
+                          >
+                        </li>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="OpenArmor-reportd.html#example-4-show-changed-files-as-reported-by-syscheck"
+                            >Example 4: Show Changed files as reported by
+                            Syscheck</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-reportd.html#example-output"
+                        >Example output</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="OpenArmor-syscheckd.html"
+                    >OpenArmor-syscheckd</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="OpenArmor-syscheckd.html#OpenArmor-syscheckd-argument-options"
+                        >OpenArmor-syscheckd argument options</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="rootcheck_control.html"
+                    >rootcheck_control</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="rootcheck_control.html#rootcheck-control-argument-options"
+                        >rootcheck_control argument options</a
+                      >
+                    </li>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="rootcheck_control.html#rootcheck-control-example-usage"
+                        >rootcheck_control example usage</a
+                      >
+                      <ul>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="rootcheck_control.html#example-1-getting-a-list-of-system-auditing-policy-monitoring-events"
+                            >Example 1: Getting a list of system auditing/policy
+                            monitoring events</a
+                          >
+                        </li>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="rootcheck_control.html#example-2-clearing-the-system-auditing-policy-database"
+                            >Example 2: Clearing the system auditing/policy
+                            database</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="syscheck_control.html"
+                    >syscheck_control</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="syscheck_control.html#syscheck-control-argument-options"
+                        >syscheck_control argument options</a
+                      >
+                    </li>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="syscheck_control.html#syscheck-control-example-usage"
+                        >syscheck_control example usage</a
+                      >
+                      <ul>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="syscheck_control.html#example-1-getting-a-list-of-modified-files-for-an-agent"
+                            >Example 1: Getting a list of modified files for an
+                            agent</a
+                          >
+                        </li>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="syscheck_control.html#example-2-getting-more-detailed-information-about-a-modified-file"
+                            >Example 2: Getting more detailed information about
+                            a modified file</a
+                          >
+                        </li>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="syscheck_control.html#example-3-clearing-the-syscheck-database"
+                            >Example 3: Clearing the syscheck database</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="syscheck_update.html"
+                    >syscheck_update</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="syscheck_update.html#syscheck-update-argument-options"
+                        >syscheck_update argument options</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="util.sh.html">util.sh</a>
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="util.sh.html#util-sh-argument-options"
+                        >util.sh argument options</a
+                      >
+                    </li>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="util.sh.html#util-sh-example-usage"
+                        >util.sh example usage</a
+                      >
+                      <ul>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="util.sh.html#example-running-util-sh"
+                            >Example: Running util.sh</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="verify-agent-conf.html"
+                    >verify-agent-conf</a
+                  >
+                  <ul>
+                    <li class="toctree-l2">
+                      <a
+                        class="reference internal"
+                        href="verify-agent-conf.html#verify-agent-conf-example-usage"
+                        >verify-agent-conf example usage</a
+                      >
+                      <ul>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="verify-agent-conf.html#example-1-running-verify-agent-conf-on-a-working-agent-conf"
+                            >Example 1: Running verify-agent-conf on a working
+                            agent.conf</a
+                          >
+                        </li>
+                        <li class="toctree-l3">
+                          <a
+                            class="reference internal"
+                            href="verify-agent-conf.html#example-2-running-verify-agent-conf-on-a-non-working-agent-conf"
+                            >Example 2: Running verify-agent-conf on a
+                            non-working agent.conf</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-      
-  </div>
-</div>
-<footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      
-    </p>
-    <p>
-        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
-    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
-    Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
-    </p>
-  </div>
-</footer>
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>
+          &copy; Copyright 2010-2021, OpenArmor Project Team.<br />
+          OpenArmor <b>OpenArmor.net</b> domain owned and maintained by
+          <a href="https://theopenarmor.org" target="_blank"
+            >OpenArmor Foundation</a
+          ><br />
+          Home page graphics courtesy of
+          <a href="https://pixabay.com" target="_blank">pixabay</a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

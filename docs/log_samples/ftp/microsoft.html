@@ -5,13 +5,41 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Microsoft FTPD examples &#8212; OpenArmor</title>
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap-theme.min.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/parallax.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <link
+      rel="stylesheet"
+      href="../../../_static/pygments.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/bootstrap-sphinx.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/bootstrap-3.2.0/css/bootstrap-theme.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/bootstrap-sphinx.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/parallax.css"
+      type="text/css"
+    />
+    <script
+      id="documentation_options"
+      data-url_root="../../../"
+      src="../../../_static/documentation_options.js"
+    ></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
@@ -19,131 +47,222 @@
     <script src="../../../_static/js/jquery-fix.js"></script>
     <script src="../../../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
     <script src="../../../_static/bootstrap-sphinx.js"></script>
-    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link
+      rel="author"
+      title="About these documents"
+      href="../../../about.html"
+    />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138780766-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-138780766-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-gtag('config', 'UA-138780766-1');
-</script>
+      gtag("config", "UA-138780766-1");
+    </script>
 
-<script type="text/javascript">
-  var _ss = _ss || [];
-  _ss.push(['_setDomain', 'https://koi-3QNN51VTHS.marketingautomation.services/net']);
-  _ss.push(['_setAccount', 'KOI-4APYNOYP8O']);
-  _ss.push(['_trackPageView']);
-  window._pa = window._pa || {};
-  // _pa.orderId = "myOrderId"; // OPTIONAL: attach unique conversion identifier to conversions
-  // _pa.revenue = "19.99"; // OPTIONAL: attach dynamic purchase values to conversions
-  // _pa.productId = "myProductId"; // OPTIONAL: Include product ID for use with dynamic ads
-  (function() {
-  var ss = document.createElement('script');
-  ss.type = 'text/javascript'; ss.async = true;
-  ss.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'koi-3QNN51VTHS.marketingautomation.services/client/ss.js?ver=2.4.0';
-  var scr = document.getElementsByTagName('script')[0];
-  scr.parentNode.insertBefore(ss, scr);
-  })();
-  </script>
+    <script type="text/javascript">
+      var _ss = _ss || [];
+      _ss.push([
+        "_setDomain",
+        "https://koi-3QNN51VTHS.marketingautomation.services/net",
+      ]);
+      _ss.push(["_setAccount", "KOI-4APYNOYP8O"]);
+      _ss.push(["_trackPageView"]);
+      window._pa = window._pa || {};
+      // _pa.orderId = "myOrderId"; // OPTIONAL: attach unique conversion identifier to conversions
+      // _pa.revenue = "19.99"; // OPTIONAL: attach dynamic purchase values to conversions
+      // _pa.productId = "myProductId"; // OPTIONAL: Include product ID for use with dynamic ads
+      (function () {
+        var ss = document.createElement("script");
+        ss.type = "text/javascript";
+        ss.async = true;
+        ss.src =
+          ("https:" == document.location.protocol ? "https://" : "http://") +
+          "koi-3QNN51VTHS.marketingautomation.services/client/ss.js?ver=2.4.0";
+        var scr = document.getElementsByTagName("script")[0];
+        scr.parentNode.insertBefore(ss, scr);
+      })();
+    </script>
 
-
-
-  </head><body>
-
-  <div id="navbar" class="navbar navbar-inverse navbar-default ">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
-          OpenArmor</a>
-        <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
-      </div>
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="navbar" class="navbar navbar-inverse navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".nav-collapse"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../../index.html"
+            ><img src="../../../_static/OpenArmor_logo_bare_small.jpg" />
+            OpenArmor</a
+          >
+          <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
+        </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
-            
-                <li><a href="https://theopenarmor.org/about/">About</a></li>
-                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
-                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
-                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
-            
-            
-              <li class="dropdown globaltoc-container">
-  <a role="button"
-     id="dLabelGlobalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="../../../index.html">Site <b class="caret"></b></a>
-  <ul class="dropdown-menu globaltoc"
-      role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul>
-<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">Manual</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">Frequently asked questions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../cookbooks/index.html">User submitted Cookbooks</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../development/build/index.html">Build, compile, and not much more</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../development/oRFC/index.html">oRFC:</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../syntax/index.html">Syntax and Options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../formats/index.html">Output Formats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../programs/index.html">Man pages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../examples/index.html">Examples</a></li>
-</ul>
-</ul>
-</li>
-              
-            
-            
-              
-                
-              
-            
-            
-            
-            
+            <li><a href="https://theopenarmor.org/about/">About</a></li>
+            <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+            <li>
+              <a href="https://theopenarmor.org/register-for-OpenArmor/"
+                >Get OpenArmor+</a
+              >
+            </li>
+            <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
+
+            <li class="dropdown globaltoc-container">
+              <a
+                role="button"
+                id="dLabelGlobalToc"
+                data-toggle="dropdown"
+                data-target="#"
+                href="../../../index.html"
+                >Site <b class="caret"></b
+              ></a>
+              <ul
+                class="dropdown-menu globaltoc"
+                role="menu"
+                aria-labelledby="dLabelGlobalToc"
+              >
+                <ul>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../../manual/index.html"
+                      >Manual</a
+                    >
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../../faq/index.html"
+                      >Frequently asked questions</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../cookbooks/index.html"
+                      >User submitted Cookbooks</a
+                    >
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../development/build/index.html"
+                      >Build, compile, and not much more</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../development/oRFC/index.html"
+                      >oRFC:</a
+                    >
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../../syntax/index.html"
+                      >Syntax and Options</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../formats/index.html"
+                      >Output Formats</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../programs/index.html"
+                      >Man pages</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../examples/index.html"
+                      >Examples</a
+                    >
+                  </li>
+                </ul>
+              </ul>
+            </li>
           </ul>
 
-          
-            
-<form class="navbar-form navbar-right" action="../../../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-          
+          <form
+            class="navbar-form navbar-right"
+            action="../../../search.html"
+            method="get"
+          >
+            <div class="form-group">
+              <input
+                type="text"
+                name="q"
+                class="form-control"
+                placeholder="Search"
+              />
+            </div>
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
         </div>
+      </div>
     </div>
-  </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      
-  <div class="section" id="microsoft-ftpd-examples">
-<h1>Microsoft FTPD examples<a class="headerlink" href="#microsoft-ftpd-examples" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="sample-1">
-<h2>Sample 1:<a class="headerlink" href="#sample-1" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">14:03:19 192.168.2.187 [62]USER Administrator 331 0</span>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section" id="microsoft-ftpd-examples">
+            <h1>
+              Microsoft FTPD examples<a
+                class="headerlink"
+                href="#microsoft-ftpd-examples"
+                title="Permalink to this headline"
+                >¶</a
+              >
+            </h1>
+            <div class="section" id="sample-1">
+              <h2>
+                Sample 1:<a
+                  class="headerlink"
+                  href="#sample-1"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">14:03:19 192.168.2.187 [62]USER Administrator 331 0</span>
 <span class="go">14:03:19 192.168.2.187 [62]PASS - 530 1326</span>
 <span class="go">14:03:19 192.168.2.187 [62]USER Administrator 331 0</span>
 <span class="go">14:03:19 192.168.2.187 [62]PASS - 530 1326</span>
@@ -165,21 +284,41 @@ gtag('config', 'UA-138780766-1');
 <span class="go">14:37:54 10.1.2.35 [63]CWD /dir 250 0</span>
 <span class="go">14:37:54 10.1.2.35 [63]CWD / 250 0</span>
 <span class="go">14:37:54 10.1.2.35 [63]RMD /dir/XYIZNWSK 250 0</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="sample-2">
-<h2>Sample 2:<a class="headerlink" href="#sample-2" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">12:48:44 x.x.180.116 [11]USER anonymous 331 0</span>
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="section" id="sample-2">
+              <h2>
+                Sample 2:<a
+                  class="headerlink"
+                  href="#sample-2"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">12:48:44 x.x.180.116 [11]USER anonymous 331 0</span>
 <span class="go">12:48:44 x.x.180.116 [11]PASS IEUser@ 530 1326</span>
 <span class="go">12:48:44 x.x.180.116 [12]USER administrator 331 0</span>
 <span class="go">12:48:44 x.x.180.116 [12]PASS - 530 1326</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="sample-3">
-<h2>Sample 3:<a class="headerlink" href="#sample-3" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span>Software: Microsoft Internet Information Services <span class="m">5</span>.0
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="section" id="sample-3">
+              <h2>
+                Sample 3:<a
+                  class="headerlink"
+                  href="#sample-3"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="gp">#</span>Software: Microsoft Internet Information Services <span class="m">5</span>.0
 <span class="gp">#</span>Version: <span class="m">1</span>.0
 <span class="gp">#</span>Date: <span class="m">2006</span>-09-23 <span class="m">17</span>:49:32
 <span class="gp">#</span>Fields: <span class="nb">time</span> c-ip cs-username s-sitename s-computername s-ip s-port cs-method cs-uri-stem cs-uri-query sc-status sc-win32-status sc-bytes cs-bytes time-taken cs-version cs-host cs<span class="o">(</span>User-Agent<span class="o">)</span> cs<span class="o">(</span>Cookie<span class="o">)</span> cs<span class="o">(</span>Referer<span class="o">)</span>
@@ -194,12 +333,22 @@ gtag('config', 'UA-138780766-1');
 <span class="go">17:58:42 192.168.3.64 Administrator MSFTPSVC1 HAIJO2 192.168.1.12 21 [144]sent /wwwroot/develop/weekrapport.asp - 226 0 14903 0 547 FTP - - - -</span>
 <span class="go">17:58:49 192.168.3.64 Administrator MSFTPSVC1 HAIJO2 192.168.1.12 21 [144]created weekrapport.asp - 226 0 0 14874 594 FTP - - - -</span>
 <span class="go">17:58:57 192.168.3.64 Administrator MSFTPSVC1 HAIJO2 192.168.1.12 21 [144]QUIT - - 250 0 0 0 0 FTP - - - -</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="sample-4">
-<h2>Sample 4:<a class="headerlink" href="#sample-4" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2004-12-30 11:24:41 203.115.228.178 ftp MSFTPSVC1 MULTIMEDIA 192.168.0.203 21 [12]USER ftp - 331 0 FTP - - - -</span>
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="section" id="sample-4">
+              <h2>
+                Sample 4:<a
+                  class="headerlink"
+                  href="#sample-4"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">2004-12-30 11:24:41 203.115.228.178 ftp MSFTPSVC1 MULTIMEDIA 192.168.0.203 21 [12]USER ftp - 331 0 FTP - - - -</span>
 
 <span class="go">2004-12-30 11:24:41 203.115.228.178 - MSFTPSVC1 MULTIMEDIA 192.168.0.203 21 [12]PASS ftp@ftp.net - 530 1326 FTP - -</span>
 
@@ -246,12 +395,22 @@ gtag('config', 'UA-138780766-1');
 <span class="go">2004-12-30 11:24:45 203.115.228.178 user MSFTPSVC1 MULTIMEDIA 192.168.0.203 21 [27]USER user - 331 0 FTP - - - -</span>
 
 <span class="go">2004-12-30 11:24:45 203.115.228.178 webmaster MSFTPSVC1 MULTIMEDIA 192.168.0.203 21 [26]USER webmaster - 331 0 FTP -</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="sample-5">
-<h2>Sample 5:<a class="headerlink" href="#sample-5" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">13:15:45 172.28.129.116 [51]USER xxxxx 331 0</span>
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="section" id="sample-5">
+              <h2>
+                Sample 5:<a
+                  class="headerlink"
+                  href="#sample-5"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">13:15:45 172.28.129.116 [51]USER xxxxx 331 0</span>
 <span class="go">13:15:46 172.28.129.116 [51]PASS - 230 0</span>
 <span class="go">13:15:56 172.28.129.116 [51]MKD 20051103 257 0</span>
 <span class="go">13:15:57 172.28.129.116 [51]CWD 20051103 250 0</span>
@@ -260,28 +419,29 @@ gtag('config', 'UA-138780766-1');
 <span class="go">13:39:13 160.164.22.7 [52]USER anonymous 331 0</span>
 <span class="go">13:39:13 160.164.22.7 [52]PASS opss 530 1326</span>
 <span class="go">13:39:13 160.164.22.7 [52]QUIT - 530 0</span>
-</pre></div>
-</div>
-</div>
-</div>
-
-
+</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-      
-  </div>
-</div>
-<footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      
-    </p>
-    <p>
-        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
-    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
-    Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
-    </p>
-  </div>
-</footer>
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>
+          &copy; Copyright 2010-2021, OpenArmor Project Team.<br />
+          OpenArmor <b>OpenArmor.net</b> domain owned and maintained by
+          <a href="https://theopenarmor.org" target="_blank"
+            >OpenArmor Foundation</a
+          ><br />
+          Home page graphics courtesy of
+          <a href="https://pixabay.com" target="_blank">pixabay</a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

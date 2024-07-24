@@ -5,13 +5,41 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Syscheck &#8212; OpenArmor</title>
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap-theme.min.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/parallax.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <link
+      rel="stylesheet"
+      href="../../../_static/pygments.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/bootstrap-sphinx.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/bootstrap-3.2.0/css/bootstrap-theme.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/bootstrap-sphinx.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/parallax.css"
+      type="text/css"
+    />
+    <script
+      id="documentation_options"
+      data-url_root="../../../"
+      src="../../../_static/documentation_options.js"
+    ></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
@@ -19,712 +47,1648 @@
     <script src="../../../_static/js/jquery-fix.js"></script>
     <script src="../../../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
     <script src="../../../_static/bootstrap-sphinx.js"></script>
-    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link
+      rel="author"
+      title="About these documents"
+      href="../../../about.html"
+    />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Rootcheck Manual" href="../rootcheck/index.html" />
-    <link rel="prev" title="File Monitoring" href="../monitoring/file-log-monitoring.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
+    <link
+      rel="prev"
+      title="File Monitoring"
+      href="../monitoring/file-log-monitoring.html"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138780766-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-138780766-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-gtag('config', 'UA-138780766-1');
-</script>
+      gtag("config", "UA-138780766-1");
+    </script>
 
-<script type="text/javascript">
-  var _ss = _ss || [];
-  _ss.push(['_setDomain', 'https://koi-3QNN51VTHS.marketingautomation.services/net']);
-  _ss.push(['_setAccount', 'KOI-4APYNOYP8O']);
-  _ss.push(['_trackPageView']);
-  window._pa = window._pa || {};
-  // _pa.orderId = "myOrderId"; // OPTIONAL: attach unique conversion identifier to conversions
-  // _pa.revenue = "19.99"; // OPTIONAL: attach dynamic purchase values to conversions
-  // _pa.productId = "myProductId"; // OPTIONAL: Include product ID for use with dynamic ads
-  (function() {
-  var ss = document.createElement('script');
-  ss.type = 'text/javascript'; ss.async = true;
-  ss.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'koi-3QNN51VTHS.marketingautomation.services/client/ss.js?ver=2.4.0';
-  var scr = document.getElementsByTagName('script')[0];
-  scr.parentNode.insertBefore(ss, scr);
-  })();
-  </script>
+    <script type="text/javascript">
+      var _ss = _ss || [];
+      _ss.push([
+        "_setDomain",
+        "https://koi-3QNN51VTHS.marketingautomation.services/net",
+      ]);
+      _ss.push(["_setAccount", "KOI-4APYNOYP8O"]);
+      _ss.push(["_trackPageView"]);
+      window._pa = window._pa || {};
+      // _pa.orderId = "myOrderId"; // OPTIONAL: attach unique conversion identifier to conversions
+      // _pa.revenue = "19.99"; // OPTIONAL: attach dynamic purchase values to conversions
+      // _pa.productId = "myProductId"; // OPTIONAL: Include product ID for use with dynamic ads
+      (function () {
+        var ss = document.createElement("script");
+        ss.type = "text/javascript";
+        ss.async = true;
+        ss.src =
+          ("https:" == document.location.protocol ? "https://" : "http://") +
+          "koi-3QNN51VTHS.marketingautomation.services/client/ss.js?ver=2.4.0";
+        var scr = document.getElementsByTagName("script")[0];
+        scr.parentNode.insertBefore(ss, scr);
+      })();
+    </script>
 
-
-
-  </head><body>
-
-  <div id="navbar" class="navbar navbar-inverse navbar-default ">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
-          OpenArmor</a>
-        <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
-      </div>
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="navbar" class="navbar navbar-inverse navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".nav-collapse"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../../index.html"
+            ><img src="../../../_static/OpenArmor_logo_bare_small.jpg" />
+            OpenArmor</a
+          >
+          <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
+        </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
-            
-                <li><a href="https://theopenarmor.org/about/">About</a></li>
-                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
-                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
-                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
-            
-            
-              <li class="dropdown globaltoc-container">
-  <a role="button"
-     id="dLabelGlobalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="../../../index.html">Site <b class="caret"></b></a>
-  <ul class="dropdown-menu globaltoc"
-      role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Manual</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">Frequently asked questions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../cookbooks/index.html">User submitted Cookbooks</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../development/build/index.html">Build, compile, and not much more</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../development/oRFC/index.html">oRFC:</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../syntax/index.html">Syntax and Options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../formats/index.html">Output Formats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../programs/index.html">Man pages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../examples/index.html">Examples</a></li>
-</ul>
-</ul>
-</li>
-              
-            
-            
-              
-                
-  <li>
-    <a href="../monitoring/file-log-monitoring.html" title="Previous Chapter: File Monitoring"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; File Monitoring</span>
-    </a>
-  </li>
-  <li>
-    <a href="../rootcheck/index.html" title="Next Chapter: Rootcheck Manual"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Rootcheck Manual &raquo;</span>
-    </a>
-  </li>
-              
-            
-            
-            
-            
+            <li><a href="https://theopenarmor.org/about/">About</a></li>
+            <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+            <li>
+              <a href="https://theopenarmor.org/register-for-OpenArmor/"
+                >Get OpenArmor+</a
+              >
+            </li>
+            <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
+
+            <li class="dropdown globaltoc-container">
+              <a
+                role="button"
+                id="dLabelGlobalToc"
+                data-toggle="dropdown"
+                data-target="#"
+                href="../../../index.html"
+                >Site <b class="caret"></b
+              ></a>
+              <ul
+                class="dropdown-menu globaltoc"
+                role="menu"
+                aria-labelledby="dLabelGlobalToc"
+              >
+                <ul class="current">
+                  <li class="toctree-l1 current">
+                    <a class="reference internal" href="../index.html"
+                      >Manual</a
+                    >
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../../faq/index.html"
+                      >Frequently asked questions</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../cookbooks/index.html"
+                      >User submitted Cookbooks</a
+                    >
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../development/build/index.html"
+                      >Build, compile, and not much more</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../development/oRFC/index.html"
+                      >oRFC:</a
+                    >
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../../syntax/index.html"
+                      >Syntax and Options</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../formats/index.html"
+                      >Output Formats</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../programs/index.html"
+                      >Man pages</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../examples/index.html"
+                      >Examples</a
+                    >
+                  </li>
+                </ul>
+              </ul>
+            </li>
+
+            <li>
+              <a
+                href="../monitoring/file-log-monitoring.html"
+                title="Previous Chapter: File Monitoring"
+                ><span
+                  class="glyphicon glyphicon-chevron-left visible-sm"
+                ></span
+                ><span class="hidden-sm hidden-tablet"
+                  >&laquo; File Monitoring</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="../rootcheck/index.html"
+                title="Next Chapter: Rootcheck Manual"
+                ><span
+                  class="glyphicon glyphicon-chevron-right visible-sm"
+                ></span
+                ><span class="hidden-sm hidden-tablet"
+                  >Rootcheck Manual &raquo;</span
+                >
+              </a>
+            </li>
           </ul>
 
-          
-            
-<form class="navbar-form navbar-right" action="../../../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-          
+          <form
+            class="navbar-form navbar-right"
+            action="../../../search.html"
+            method="get"
+          >
+            <div class="form-group">
+              <input
+                type="text"
+                name="q"
+                class="form-control"
+                placeholder="Search"
+              />
+            </div>
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
         </div>
+      </div>
     </div>
-  </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      
-  <div class="section" id="syscheck">
-<span id="manual-syscheck"></span><h1>Syscheck<a class="headerlink" href="#syscheck" title="Permalink to this headline">¶</a></h1>
-<p><strong>Syscheck</strong> is the name of the integrity checking process inside OpenArmor. It runs periodically
-to check if any configured file (or registry entry on Windows) has changed.</p>
-<div class="section" id="why-integrity-checking">
-<h2>Why Integrity checking?<a class="headerlink" href="#why-integrity-checking" title="Permalink to this headline">¶</a></h2>
-<p>This is the explanation from the <a class="reference external" href="http://www.amazon.com/OpenArmor-Host-Based-Intrusion-Detection-Guide/dp/159749240X">OpenArmor book</a>:</p>
-<blockquote>
-<div><p>There are multiple types of attacks and many attack vectors, but there
-is one thing unique about all of them: they leave traces and always change
-the system in some way. From viruses that modify a few files, to kernel-level
-rootkits that alters the kernel, there is always some change in the
-integrity of the system.</p>
-<p>Integrity checking is an essential part of intrusion detection, that
-detects changes in the integrity of the system. OpenArmor does that by
-looking for changes in the MD5/SHA1 checksums of the key files in the
-system and on the Windows registry.</p>
-<p>The way it works is that the agent scans the system every few hours
-(user defined) and send all the checksums to the server. The server
-stores the checksums and look for modifications on them. An alert
-is sent if anything changes.</p>
-</div></blockquote>
-</div>
-<div class="section" id="quick-facts">
-<h2>Quick facts<a class="headerlink" href="#quick-facts" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>How often does it run?</p>
-<ul>
-<li><p>By default every 6 hours, but the frequency or time/day are configurable.</p></li>
-</ul>
-</li>
-<li><p>Where is the database stored?</p>
-<ul>
-<li><p>On the manager in <code class="docutils literal notranslate"><span class="pre">/var/OpenArmor/queue/syscheck</span></code>.</p></li>
-</ul>
-</li>
-<li><p>How does it help with compliance? (PCI DSS, etc)</p>
-<ul>
-<li><p>It helps with sections 11.5 (install FIM software) and 10.5 (integrity checking of log files) of PCI.</p></li>
-</ul>
-</li>
-<li><p>How much CPU does it use?</p>
-<ul>
-<li><p>The scans are performed slowly to avoid using too much CPU/memory.</p></li>
-</ul>
-</li>
-<li><p>How are false positives handled?</p>
-<ul>
-<li><p>Files can be ignored manually in the configuration or using rules. By default when a file has changed 3 times further changes are automatically ignored.</p></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section" id="realtime-options">
-<h2>Realtime options<a class="headerlink" href="#realtime-options" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">OpenArmor-syscheckd</span></code> is able to check file integrity in near realtime on Windows and modern Linux distros. Windows comes with support out of the box, but on Linux systems inotify packages may need to be installed. Check for inotify dev packages, and possibly an inotify-tools package.</p>
-</div>
-<div class="section" id="configuration-options">
-<h2>Configuration options<a class="headerlink" href="#configuration-options" title="Permalink to this headline">¶</a></h2>
-<p>These configuration options can be specified in each agent’s OpenArmor.conf file, except
-for the <code class="docutils literal notranslate"><span class="pre">auto_ignore</span></code> and <code class="docutils literal notranslate"><span class="pre">alert_new_file</span></code> which apply to manager and local installs. The
-<code class="docutils literal notranslate"><span class="pre">ignore</span></code> option applies to all agents if specified on the manager.</p>
-<dl class="object">
-<dt>
-<code class="sig-name descname"><span class="pre">directories</span></code></dt>
-<dd><p>Use this option to add or remove directories to be monitored (they must be comma separated). All files and subdirectories will also be monitored.
-Drive letters without directories are not valid. At a minimum the ‘.’ should be included (<code class="docutils literal notranslate"><span class="pre">D:\.</span></code>). This should be set on the system you wish to
-monitor (or in the agent.conf if appropriate).</p>
-<p><strong>Default:</strong> /etc,/usr/bin,/usr/sbin,/bin,/sbin</p>
-<p><strong>Attributes:</strong></p>
-<ul>
-<li><p><strong>realtime</strong>: Value=yes</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>This will enable realtime/continuous monitoring on Linux (using the inotify system calls) and Windows systems.</p></li>
-</ul>
-</div></blockquote>
-</li>
-<li><p><strong>report_changes</strong>: Value=yes</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Report diffs of file changes.  This is limited to text files at this time.</p></li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This option is only available on Unix-like systems.</p>
-</div>
-</div></blockquote>
-</li>
-<li><p><strong>check_all</strong>: Value=yes</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>All the following check_* options are used together unless a specific option is explicitly overridden with “no”.</p></li>
-</ul>
-</div></blockquote>
-</li>
-<li><p><strong>check_sum</strong>: Value=yes</p>
-<blockquote>
-<div><ul>
-<li><p>Check the md5 and sha1 hashes of the  of the files will be checked.</p>
-<p>This is the same as using both check_sha1sum=”yes” and check_md5sum=”yes”</p>
-</li>
-</ul>
-</div></blockquote>
-</li>
-<li><p><strong>check_sha1sum</strong>: Value=yes</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>When used only the sha1 hash of the files will be checked.</p></li>
-</ul>
-</div></blockquote>
-</li>
-<li><p><strong>check_md5sum</strong>: Value=yes</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>The md5 hash of the files will be checked.</p></li>
-</ul>
-</div></blockquote>
-</li>
-<li><p><strong>check_size</strong>: Value=yes</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>The size of the files will be checked.</p></li>
-</ul>
-</div></blockquote>
-</li>
-<li><p><strong>check_owner</strong>: Value=yes</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Check the owner of the files selected.</p></li>
-</ul>
-</div></blockquote>
-</li>
-<li><p><strong>check_group</strong>: Value=yes</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Check the group owner of the files/directories selected.</p></li>
-</ul>
-</div></blockquote>
-</li>
-<li><p><strong>check_perm</strong>: Value=yes</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Check the UNIX permission of the files/directories selected.
-On windows this will only check the POSIX permissions.</p></li>
-</ul>
-</div></blockquote>
-</li>
-<li><p><strong>restrict</strong>: Value=string</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>A string that will limit checks to files containing that string in the file name.</p></li>
-</ul>
-<p><strong>Allowed:</strong> Any directory or file name (but not a path)</p>
-</div></blockquote>
-</li>
-<li><p><strong>no_recurse</strong>: Value=no</p>
-<blockquote>
-<div><div class="versionadded">
-<p><span class="versionmodified added">New in version 3.2.</span></p>
-</div>
-<ul class="simple">
-<li><p>Do not recurse into the defined directory.</p></li>
-</ul>
-<p><strong>Allowed:</strong> yes/no</p>
-</div></blockquote>
-</li>
-</ul>
-</dd></dl>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section" id="syscheck">
+            <span id="manual-syscheck"></span>
+            <h1>
+              Syscheck<a
+                class="headerlink"
+                href="#syscheck"
+                title="Permalink to this headline"
+                >¶</a
+              >
+            </h1>
+            <p>
+              <strong>Syscheck</strong> is the name of the integrity checking
+              process inside OpenArmor. It runs periodically to check if any
+              configured file (or registry entry on Windows) has changed.
+            </p>
+            <div class="section" id="why-integrity-checking">
+              <h2>
+                Why Integrity checking?<a
+                  class="headerlink"
+                  href="#why-integrity-checking"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <p>
+                This is the explanation from the
+                <a
+                  class="reference external"
+                  href="http://www.amazon.com/OpenArmor-Host-Based-Intrusion-Detection-Guide/dp/159749240X"
+                  >OpenArmor book</a
+                >:
+              </p>
+              <blockquote>
+                <div>
+                  <p>
+                    There are multiple types of attacks and many attack vectors,
+                    but there is one thing unique about all of them: they leave
+                    traces and always change the system in some way. From
+                    viruses that modify a few files, to kernel-level rootkits
+                    that alters the kernel, there is always some change in the
+                    integrity of the system.
+                  </p>
+                  <p>
+                    Integrity checking is an essential part of intrusion
+                    detection, that detects changes in the integrity of the
+                    system. OpenArmor does that by looking for changes in the
+                    MD5/SHA1 checksums of the key files in the system and on the
+                    Windows registry.
+                  </p>
+                  <p>
+                    The way it works is that the agent scans the system every
+                    few hours (user defined) and send all the checksums to the
+                    server. The server stores the checksums and look for
+                    modifications on them. An alert is sent if anything changes.
+                  </p>
+                </div>
+              </blockquote>
+            </div>
+            <div class="section" id="quick-facts">
+              <h2>
+                Quick facts<a
+                  class="headerlink"
+                  href="#quick-facts"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <ul class="simple">
+                <li>
+                  <p>How often does it run?</p>
+                  <ul>
+                    <li>
+                      <p>
+                        By default every 6 hours, but the frequency or time/day
+                        are configurable.
+                      </p>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>Where is the database stored?</p>
+                  <ul>
+                    <li>
+                      <p>
+                        On the manager in
+                        <code class="docutils literal notranslate"
+                          ><span class="pre"
+                            >/var/OpenArmor/queue/syscheck</span
+                          ></code
+                        >.
+                      </p>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>How does it help with compliance? (PCI DSS, etc)</p>
+                  <ul>
+                    <li>
+                      <p>
+                        It helps with sections 11.5 (install FIM software) and
+                        10.5 (integrity checking of log files) of PCI.
+                      </p>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>How much CPU does it use?</p>
+                  <ul>
+                    <li>
+                      <p>
+                        The scans are performed slowly to avoid using too much
+                        CPU/memory.
+                      </p>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>How are false positives handled?</p>
+                  <ul>
+                    <li>
+                      <p>
+                        Files can be ignored manually in the configuration or
+                        using rules. By default when a file has changed 3 times
+                        further changes are automatically ignored.
+                      </p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="section" id="realtime-options">
+              <h2>
+                Realtime options<a
+                  class="headerlink"
+                  href="#realtime-options"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <p>
+                <code class="docutils literal notranslate"
+                  ><span class="pre">OpenArmor-syscheckd</span></code
+                >
+                is able to check file integrity in near realtime on Windows and
+                modern Linux distros. Windows comes with support out of the box,
+                but on Linux systems inotify packages may need to be installed.
+                Check for inotify dev packages, and possibly an inotify-tools
+                package.
+              </p>
+            </div>
+            <div class="section" id="configuration-options">
+              <h2>
+                Configuration options<a
+                  class="headerlink"
+                  href="#configuration-options"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <p>
+                These configuration options can be specified in each agent’s
+                OpenArmor.conf file, except for the
+                <code class="docutils literal notranslate"
+                  ><span class="pre">auto_ignore</span></code
+                >
+                and
+                <code class="docutils literal notranslate"
+                  ><span class="pre">alert_new_file</span></code
+                >
+                which apply to manager and local installs. The
+                <code class="docutils literal notranslate"
+                  ><span class="pre">ignore</span></code
+                >
+                option applies to all agents if specified on the manager.
+              </p>
+              <dl class="object">
+                <dt>
+                  <code class="sig-name descname"
+                    ><span class="pre">directories</span></code
+                  >
+                </dt>
+                <dd>
+                  <p>
+                    Use this option to add or remove directories to be monitored
+                    (they must be comma separated). All files and subdirectories
+                    will also be monitored. Drive letters without directories
+                    are not valid. At a minimum the ‘.’ should be included
+                    (<code class="docutils literal notranslate"
+                      ><span class="pre">D:\.</span></code
+                    >). This should be set on the system you wish to monitor (or
+                    in the agent.conf if appropriate).
+                  </p>
+                  <p>
+                    <strong>Default:</strong> /etc,/usr/bin,/usr/sbin,/bin,/sbin
+                  </p>
+                  <p><strong>Attributes:</strong></p>
+                  <ul>
+                    <li>
+                      <p><strong>realtime</strong>: Value=yes</p>
+                      <blockquote>
+                        <div>
+                          <ul class="simple">
+                            <li>
+                              <p>
+                                This will enable realtime/continuous monitoring
+                                on Linux (using the inotify system calls) and
+                                Windows systems.
+                              </p>
+                            </li>
+                          </ul>
+                        </div>
+                      </blockquote>
+                    </li>
+                    <li>
+                      <p><strong>report_changes</strong>: Value=yes</p>
+                      <blockquote>
+                        <div>
+                          <ul class="simple">
+                            <li>
+                              <p>
+                                Report diffs of file changes. This is limited to
+                                text files at this time.
+                              </p>
+                            </li>
+                          </ul>
+                          <div class="admonition note">
+                            <p class="admonition-title">Note</p>
+                            <p>
+                              This option is only available on Unix-like
+                              systems.
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+                    </li>
+                    <li>
+                      <p><strong>check_all</strong>: Value=yes</p>
+                      <blockquote>
+                        <div>
+                          <ul class="simple">
+                            <li>
+                              <p>
+                                All the following check_* options are used
+                                together unless a specific option is explicitly
+                                overridden with “no”.
+                              </p>
+                            </li>
+                          </ul>
+                        </div>
+                      </blockquote>
+                    </li>
+                    <li>
+                      <p><strong>check_sum</strong>: Value=yes</p>
+                      <blockquote>
+                        <div>
+                          <ul>
+                            <li>
+                              <p>
+                                Check the md5 and sha1 hashes of the of the
+                                files will be checked.
+                              </p>
+                              <p>
+                                This is the same as using both
+                                check_sha1sum=”yes” and check_md5sum=”yes”
+                              </p>
+                            </li>
+                          </ul>
+                        </div>
+                      </blockquote>
+                    </li>
+                    <li>
+                      <p><strong>check_sha1sum</strong>: Value=yes</p>
+                      <blockquote>
+                        <div>
+                          <ul class="simple">
+                            <li>
+                              <p>
+                                When used only the sha1 hash of the files will
+                                be checked.
+                              </p>
+                            </li>
+                          </ul>
+                        </div>
+                      </blockquote>
+                    </li>
+                    <li>
+                      <p><strong>check_md5sum</strong>: Value=yes</p>
+                      <blockquote>
+                        <div>
+                          <ul class="simple">
+                            <li>
+                              <p>The md5 hash of the files will be checked.</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </blockquote>
+                    </li>
+                    <li>
+                      <p><strong>check_size</strong>: Value=yes</p>
+                      <blockquote>
+                        <div>
+                          <ul class="simple">
+                            <li>
+                              <p>The size of the files will be checked.</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </blockquote>
+                    </li>
+                    <li>
+                      <p><strong>check_owner</strong>: Value=yes</p>
+                      <blockquote>
+                        <div>
+                          <ul class="simple">
+                            <li>
+                              <p>Check the owner of the files selected.</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </blockquote>
+                    </li>
+                    <li>
+                      <p><strong>check_group</strong>: Value=yes</p>
+                      <blockquote>
+                        <div>
+                          <ul class="simple">
+                            <li>
+                              <p>
+                                Check the group owner of the files/directories
+                                selected.
+                              </p>
+                            </li>
+                          </ul>
+                        </div>
+                      </blockquote>
+                    </li>
+                    <li>
+                      <p><strong>check_perm</strong>: Value=yes</p>
+                      <blockquote>
+                        <div>
+                          <ul class="simple">
+                            <li>
+                              <p>
+                                Check the UNIX permission of the
+                                files/directories selected. On windows this will
+                                only check the POSIX permissions.
+                              </p>
+                            </li>
+                          </ul>
+                        </div>
+                      </blockquote>
+                    </li>
+                    <li>
+                      <p><strong>restrict</strong>: Value=string</p>
+                      <blockquote>
+                        <div>
+                          <ul class="simple">
+                            <li>
+                              <p>
+                                A string that will limit checks to files
+                                containing that string in the file name.
+                              </p>
+                            </li>
+                          </ul>
+                          <p>
+                            <strong>Allowed:</strong> Any directory or file name
+                            (but not a path)
+                          </p>
+                        </div>
+                      </blockquote>
+                    </li>
+                    <li>
+                      <p><strong>no_recurse</strong>: Value=no</p>
+                      <blockquote>
+                        <div>
+                          <div class="versionadded">
+                            <p>
+                              <span class="versionmodified added"
+                                >New in version 3.2.</span
+                              >
+                            </p>
+                          </div>
+                          <ul class="simple">
+                            <li>
+                              <p>Do not recurse into the defined directory.</p>
+                            </li>
+                          </ul>
+                          <p><strong>Allowed:</strong> yes/no</p>
+                        </div>
+                      </blockquote>
+                    </li>
+                  </ul>
+                </dd>
+              </dl>
 
-<dl class="object">
-<dt>
-<code class="sig-name descname"><span class="pre">ignore</span></code></dt>
-<dd><p>List of files or directories to be ignored (one entry per element). The files and directories are still checked, but the results are ignored.</p>
-<p><strong>Default:</strong> /etc/mtab</p>
-<p><strong>Attributes:</strong></p>
-<ul>
-<li><p><strong>type</strong>: Value=sregex</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>This is a simple regex pattern to filter out files so alerts are not generated.</p></li>
-</ul>
-</div></blockquote>
-</li>
-</ul>
-<p><strong>Allowed:</strong> Any directory or file name</p>
-</dd></dl>
+              <dl class="object">
+                <dt>
+                  <code class="sig-name descname"
+                    ><span class="pre">ignore</span></code
+                  >
+                </dt>
+                <dd>
+                  <p>
+                    List of files or directories to be ignored (one entry per
+                    element). The files and directories are still checked, but
+                    the results are ignored.
+                  </p>
+                  <p><strong>Default:</strong> /etc/mtab</p>
+                  <p><strong>Attributes:</strong></p>
+                  <ul>
+                    <li>
+                      <p><strong>type</strong>: Value=sregex</p>
+                      <blockquote>
+                        <div>
+                          <ul class="simple">
+                            <li>
+                              <p>
+                                This is a simple regex pattern to filter out
+                                files so alerts are not generated.
+                              </p>
+                            </li>
+                          </ul>
+                        </div>
+                      </blockquote>
+                    </li>
+                  </ul>
+                  <p><strong>Allowed:</strong> Any directory or file name</p>
+                </dd>
+              </dl>
 
-<dl class="object">
-<dt>
-<code class="sig-name descname"><span class="pre">nodiff</span></code></dt>
-<dd><div class="versionadded">
-<p><span class="versionmodified added">New in version 3.0.</span></p>
-</div>
-<p>List of files to not attach a diff. The files are still checked, but no diff is computed. This allows to monitor sensitive files like private key or database configuration without leaking sensitive data through alerts.</p>
-<p><strong>Attributes:</strong></p>
-<ul>
-<li><p><strong>type</strong>: Value=sregex</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>This is a simple regex pattern to filter out files so alerts are not generated.</p></li>
-</ul>
-</div></blockquote>
-</li>
-</ul>
-<p><strong>Allowed:</strong> Any directory or file name</p>
-</dd></dl>
+              <dl class="object">
+                <dt>
+                  <code class="sig-name descname"
+                    ><span class="pre">nodiff</span></code
+                  >
+                </dt>
+                <dd>
+                  <div class="versionadded">
+                    <p>
+                      <span class="versionmodified added"
+                        >New in version 3.0.</span
+                      >
+                    </p>
+                  </div>
+                  <p>
+                    List of files to not attach a diff. The files are still
+                    checked, but no diff is computed. This allows to monitor
+                    sensitive files like private key or database configuration
+                    without leaking sensitive data through alerts.
+                  </p>
+                  <p><strong>Attributes:</strong></p>
+                  <ul>
+                    <li>
+                      <p><strong>type</strong>: Value=sregex</p>
+                      <blockquote>
+                        <div>
+                          <ul class="simple">
+                            <li>
+                              <p>
+                                This is a simple regex pattern to filter out
+                                files so alerts are not generated.
+                              </p>
+                            </li>
+                          </ul>
+                        </div>
+                      </blockquote>
+                    </li>
+                  </ul>
+                  <p><strong>Allowed:</strong> Any directory or file name</p>
+                </dd>
+              </dl>
 
-<dl class="object">
-<dt>
-<code class="sig-name descname"><span class="pre">frequency</span></code></dt>
-<dd><p>Frequency that the syscheck is going to be executed (in seconds).</p>
-<p>The default is 6 hours or 21600 seconds</p>
-<p><strong>Default:</strong> 21600</p>
-<p><strong>Allowed:</strong> Time in seconds</p>
-</dd></dl>
+              <dl class="object">
+                <dt>
+                  <code class="sig-name descname"
+                    ><span class="pre">frequency</span></code
+                  >
+                </dt>
+                <dd>
+                  <p>
+                    Frequency that the syscheck is going to be executed (in
+                    seconds).
+                  </p>
+                  <p>The default is 6 hours or 21600 seconds</p>
+                  <p><strong>Default:</strong> 21600</p>
+                  <p><strong>Allowed:</strong> Time in seconds</p>
+                </dd>
+              </dl>
 
-<dl class="object">
-<dt>
-<code class="sig-name descname"><span class="pre">scan_time</span></code></dt>
-<dd><p>Time to run the scans (can be in the formats of 21pm, 8:30, 12am, etc).</p>
-<p><strong>Allowed:</strong> Time to run scan</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This may delay the initialization of realtime scans.</p>
-</div>
-</dd></dl>
+              <dl class="object">
+                <dt>
+                  <code class="sig-name descname"
+                    ><span class="pre">scan_time</span></code
+                  >
+                </dt>
+                <dd>
+                  <p>
+                    Time to run the scans (can be in the formats of 21pm, 8:30,
+                    12am, etc).
+                  </p>
+                  <p><strong>Allowed:</strong> Time to run scan</p>
+                  <div class="admonition note">
+                    <p class="admonition-title">Note</p>
+                    <p>This may delay the initialization of realtime scans.</p>
+                  </div>
+                </dd>
+              </dl>
 
-<dl class="object">
-<dt>
-<code class="sig-name descname"><span class="pre">scan_day</span></code></dt>
-<dd><p>Day of the week to run the scans (can be in the format of sunday, saturday, monday, etc)</p>
-<p><strong>Allowed:</strong> Day of the week</p>
-</dd></dl>
+              <dl class="object">
+                <dt>
+                  <code class="sig-name descname"
+                    ><span class="pre">scan_day</span></code
+                  >
+                </dt>
+                <dd>
+                  <p>
+                    Day of the week to run the scans (can be in the format of
+                    sunday, saturday, monday, etc)
+                  </p>
+                  <p><strong>Allowed:</strong> Day of the week</p>
+                </dd>
+              </dl>
 
-<span class="target" id="auto-ignore"></span><dl class="object">
-<dt>
-<code class="sig-name descname"><span class="pre">auto_ignore</span></code></dt>
-<dd><p>Specifies if syscheck will ignore files that change too often (after the third change)</p>
-<p><strong>Default:</strong> yes</p>
-<p><strong>Allowed:</strong> yes/no</p>
-<p><strong>Valid:</strong> server, local</p>
-</dd></dl>
+              <span class="target" id="auto-ignore"></span>
+              <dl class="object">
+                <dt>
+                  <code class="sig-name descname"
+                    ><span class="pre">auto_ignore</span></code
+                  >
+                </dt>
+                <dd>
+                  <p>
+                    Specifies if syscheck will ignore files that change too
+                    often (after the third change)
+                  </p>
+                  <p><strong>Default:</strong> yes</p>
+                  <p><strong>Allowed:</strong> yes/no</p>
+                  <p><strong>Valid:</strong> server, local</p>
+                </dd>
+              </dl>
 
-<span class="target" id="alert-new-files"></span><dl class="object">
-<dt>
-<code class="sig-name descname"><span class="pre">alert_new_files</span></code></dt>
-<dd><p>Specifies if syscheck should alert on new files created.</p>
-<p><strong>Default:</strong> no</p>
-<p><strong>Allowed:</strong> yes/no</p>
-<p><strong>Valid:</strong> server, local</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>New files will only be detected on a full scan, this option does not work in realtime.</p>
-</div>
-</dd></dl>
+              <span class="target" id="alert-new-files"></span>
+              <dl class="object">
+                <dt>
+                  <code class="sig-name descname"
+                    ><span class="pre">alert_new_files</span></code
+                  >
+                </dt>
+                <dd>
+                  <p>
+                    Specifies if syscheck should alert on new files created.
+                  </p>
+                  <p><strong>Default:</strong> no</p>
+                  <p><strong>Allowed:</strong> yes/no</p>
+                  <p><strong>Valid:</strong> server, local</p>
+                  <div class="admonition note">
+                    <p class="admonition-title">Note</p>
+                    <p>
+                      New files will only be detected on a full scan, this
+                      option does not work in realtime.
+                    </p>
+                  </div>
+                </dd>
+              </dl>
 
-<dl class="object">
-<dt>
-<code class="sig-name descname"><span class="pre">scan_on_start</span></code></dt>
-<dd><p>Specifies if syscheck should do the first scan as soon as it is started.</p>
-<p><strong>Default:</strong> yes</p>
-<p><strong>Allowed:</strong> yes/no</p>
-</dd></dl>
+              <dl class="object">
+                <dt>
+                  <code class="sig-name descname"
+                    ><span class="pre">scan_on_start</span></code
+                  >
+                </dt>
+                <dd>
+                  <p>
+                    Specifies if syscheck should do the first scan as soon as it
+                    is started.
+                  </p>
+                  <p><strong>Default:</strong> yes</p>
+                  <p><strong>Allowed:</strong> yes/no</p>
+                </dd>
+              </dl>
 
-<dl class="object">
-<dt>
-<code class="sig-name descname"><span class="pre">windows_registry</span></code></dt>
-<dd><p>Use this option to add Windows registry entries to be monitored (Windows-only).</p>
-<p><strong>Default:</strong> HKEY_LOCAL_MACHINESoftware</p>
-<p><strong>Allowed:</strong> Any registry entry (one per element)</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>New entries will not trigger alerts, only changes to existing entries.</p>
-</div>
-</dd></dl>
+              <dl class="object">
+                <dt>
+                  <code class="sig-name descname"
+                    ><span class="pre">windows_registry</span></code
+                  >
+                </dt>
+                <dd>
+                  <p>
+                    Use this option to add Windows registry entries to be
+                    monitored (Windows-only).
+                  </p>
+                  <p><strong>Default:</strong> HKEY_LOCAL_MACHINESoftware</p>
+                  <p>
+                    <strong>Allowed:</strong> Any registry entry (one per
+                    element)
+                  </p>
+                  <div class="admonition note">
+                    <p class="admonition-title">Note</p>
+                    <p>
+                      New entries will not trigger alerts, only changes to
+                      existing entries.
+                    </p>
+                  </div>
+                </dd>
+              </dl>
 
-<dl class="object">
-<dt>
-<code class="sig-name descname"><span class="pre">registry_ignore</span></code></dt>
-<dd><p>List of registry entries to be ignored.</p>
-<p><strong>Default:</strong> ..CryptographyRNG</p>
-<p><strong>Allowed:</strong> Any registry entry (one per element)</p>
-</dd></dl>
+              <dl class="object">
+                <dt>
+                  <code class="sig-name descname"
+                    ><span class="pre">registry_ignore</span></code
+                  >
+                </dt>
+                <dd>
+                  <p>List of registry entries to be ignored.</p>
+                  <p><strong>Default:</strong> ..CryptographyRNG</p>
+                  <p>
+                    <strong>Allowed:</strong> Any registry entry (one per
+                    element)
+                  </p>
+                </dd>
+              </dl>
 
-<dl class="object">
-<dt>
-<code class="sig-name descname"><span class="pre">prefilter_cmd</span></code></dt>
-<dd><p>Command to run to prevent prelinking from creating false positives.</p>
-<p><strong>Example:</strong></p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;prefilter_cmd&gt;</span>/usr/sbin/prelink -y<span class="nt">&lt;/prefilter_cmd&gt;</span>
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This option can potentially impact performance negatively. The configured command will be run for each and every file checked.</p>
-</div>
-</dd></dl>
+              <dl class="object">
+                <dt>
+                  <code class="sig-name descname"
+                    ><span class="pre">prefilter_cmd</span></code
+                  >
+                </dt>
+                <dd>
+                  <p>
+                    Command to run to prevent prelinking from creating false
+                    positives.
+                  </p>
+                  <p><strong>Example:</strong></p>
+                  <div class="highlight-xml notranslate">
+                    <div class="highlight">
+                      <pre><span></span><span class="nt">&lt;prefilter_cmd&gt;</span>/usr/sbin/prelink -y<span class="nt">&lt;/prefilter_cmd&gt;</span>
+</pre>
+                    </div>
+                  </div>
+                  <div class="admonition note">
+                    <p class="admonition-title">Note</p>
+                    <p>
+                      This option can potentially impact performance negatively.
+                      The configured command will be run for each and every file
+                      checked.
+                    </p>
+                  </div>
+                </dd>
+              </dl>
 
-<dl class="object">
-<dt>
-<code class="sig-name descname"><span class="pre">skip_nfs</span></code></dt>
-<dd><div class="versionadded">
-<p><span class="versionmodified added">New in version 2.9.0.</span></p>
-</div>
-<p>Specifies if syscheck should scan network mounted filesystems.  Works on Linux and FreeBSD.  Currently skip_nfs will abort checks running against CIFS or NFS mounts.</p>
-<p><strong>Default:</strong> no</p>
-<p><strong>Allowed:</strong> yes/no</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This option was added in OpenArmor 2.9.</p>
-</div>
-</dd></dl>
-
-</div>
-<div class="section" id="configuration-examples">
-<h2>Configuration Examples<a class="headerlink" href="#configuration-examples" title="Permalink to this headline">¶</a></h2>
-<p>To configure syscheck, a list of files and directories must be provided. The check_all option checks md5, sha1, owner, and permissions of the file.</p>
-<p>Example:</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;syscheck&gt;</span>
+              <dl class="object">
+                <dt>
+                  <code class="sig-name descname"
+                    ><span class="pre">skip_nfs</span></code
+                  >
+                </dt>
+                <dd>
+                  <div class="versionadded">
+                    <p>
+                      <span class="versionmodified added"
+                        >New in version 2.9.0.</span
+                      >
+                    </p>
+                  </div>
+                  <p>
+                    Specifies if syscheck should scan network mounted
+                    filesystems. Works on Linux and FreeBSD. Currently skip_nfs
+                    will abort checks running against CIFS or NFS mounts.
+                  </p>
+                  <p><strong>Default:</strong> no</p>
+                  <p><strong>Allowed:</strong> yes/no</p>
+                  <div class="admonition warning">
+                    <p class="admonition-title">Warning</p>
+                    <p>This option was added in OpenArmor 2.9.</p>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+            <div class="section" id="configuration-examples">
+              <h2>
+                Configuration Examples<a
+                  class="headerlink"
+                  href="#configuration-examples"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <p>
+                To configure syscheck, a list of files and directories must be
+                provided. The check_all option checks md5, sha1, owner, and
+                permissions of the file.
+              </p>
+              <p>Example:</p>
+              <div class="highlight-xml notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="nt">&lt;syscheck&gt;</span>
     <span class="nt">&lt;directories</span> <span class="na">check_all=</span><span class="s">&quot;yes&quot;</span><span class="nt">&gt;</span>/etc,/usr/bin,/usr/sbin<span class="nt">&lt;/directories&gt;</span>
     <span class="nt">&lt;directories</span> <span class="na">check_all=</span><span class="s">&quot;yes&quot;</span><span class="nt">&gt;</span>/root/users.txt,/bsd,/root/db.html<span class="nt">&lt;/directories&gt;</span>
 <span class="nt">&lt;/syscheck&gt;</span>
-</pre></div>
-</div>
-<p>Files and directories can be ignored using the <code class="docutils literal notranslate"><span class="pre">ignore</span></code> option (or <code class="docutils literal notranslate"><span class="pre">registry_ignore</span></code> for Windows registry entries):</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;syscheck&gt;</span>
+</pre>
+                </div>
+              </div>
+              <p>
+                Files and directories can be ignored using the
+                <code class="docutils literal notranslate"
+                  ><span class="pre">ignore</span></code
+                >
+                option (or
+                <code class="docutils literal notranslate"
+                  ><span class="pre">registry_ignore</span></code
+                >
+                for Windows registry entries):
+              </p>
+              <div class="highlight-xml notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="nt">&lt;syscheck&gt;</span>
     <span class="nt">&lt;ignore&gt;</span>/etc/random-seed<span class="nt">&lt;/ignore&gt;</span>
     <span class="nt">&lt;ignore&gt;</span>/root/dir<span class="nt">&lt;/ignore&gt;</span>
     <span class="nt">&lt;ignore</span> <span class="na">type=</span><span class="s">&quot;sregex&quot;</span><span class="nt">&gt;</span>.log$|.tmp<span class="nt">&lt;/ignore&gt;</span>
 <span class="nt">&lt;/syscheck&gt;</span>
-</pre></div>
-</div>
-<p>The <code class="docutils literal notranslate"><span class="pre">type</span></code> attribute can be set to sregex to specify a <a class="reference internal" href="../../syntax/regex.html#regex"><span class="std std-ref">Regular Expression Syntax</span></a> in the ignore option.</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;syscheck&gt;</span>
+</pre>
+                </div>
+              </div>
+              <p>
+                The
+                <code class="docutils literal notranslate"
+                  ><span class="pre">type</span></code
+                >
+                attribute can be set to sregex to specify a
+                <a
+                  class="reference internal"
+                  href="../../syntax/regex.html#regex"
+                  ><span class="std std-ref">Regular Expression Syntax</span></a
+                >
+                in the ignore option.
+              </p>
+              <div class="highlight-xml notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="nt">&lt;syscheck&gt;</span>
     <span class="nt">&lt;ignore</span> <span class="na">type=</span><span class="s">&quot;sregex&quot;</span><span class="nt">&gt;</span>^/opt/application/log<span class="nt">&lt;/ignore&gt;</span>
 <span class="nt">&lt;/syscheck&gt;</span>
-</pre></div>
-</div>
-<p>A local rule can be used to modify the severity for changes to specific files or directories:</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;rule</span> <span class="na">id=</span><span class="s">&quot;100345&quot;</span> <span class="na">level=</span><span class="s">&quot;12&quot;</span><span class="nt">&gt;</span>
+</pre>
+                </div>
+              </div>
+              <p>
+                A local rule can be used to modify the severity for changes to
+                specific files or directories:
+              </p>
+              <div class="highlight-xml notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="nt">&lt;rule</span> <span class="na">id=</span><span class="s">&quot;100345&quot;</span> <span class="na">level=</span><span class="s">&quot;12&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;if_matched_group&gt;</span>syscheck<span class="nt">&lt;/if_matched_group&gt;</span>
     <span class="nt">&lt;match&gt;</span>/var/www/htdocs<span class="nt">&lt;/match&gt;</span>
     <span class="nt">&lt;description&gt;</span>Changes to /var/www/htdocs - Critical file!<span class="nt">&lt;/description&gt;</span>
 <span class="nt">&lt;/rule&gt;</span>
-</pre></div>
-</div>
-<p>In the above example, a rule was created to alert with high severity (12) for changes to the files in the htdocs directory.</p>
-</div>
-<div class="section" id="real-time-monitoring">
-<h2>Real time Monitoring<a class="headerlink" href="#real-time-monitoring" title="Permalink to this headline">¶</a></h2>
-<p>OpenArmor supports realtime (continuous) file integrity monitoring on Linux (support was added kernel version 2.6.13) and Windows systems.</p>
-<p>The configuration is very simple. In the <code class="docutils literal notranslate"><span class="pre">&lt;directories&gt;</span></code> option where you specify what directories to monitor, adding <code class="docutils literal notranslate"><span class="pre">realtime=&quot;yes&quot;</span></code> will enable it.
-For example:</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;syscheck&gt;</span>
+</pre>
+                </div>
+              </div>
+              <p>
+                In the above example, a rule was created to alert with high
+                severity (12) for changes to the files in the htdocs directory.
+              </p>
+            </div>
+            <div class="section" id="real-time-monitoring">
+              <h2>
+                Real time Monitoring<a
+                  class="headerlink"
+                  href="#real-time-monitoring"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <p>
+                OpenArmor supports realtime (continuous) file integrity
+                monitoring on Linux (support was added kernel version 2.6.13)
+                and Windows systems.
+              </p>
+              <p>
+                The configuration is very simple. In the
+                <code class="docutils literal notranslate"
+                  ><span class="pre">&lt;directories&gt;</span></code
+                >
+                option where you specify what directories to monitor, adding
+                <code class="docutils literal notranslate"
+                  ><span class="pre">realtime=&quot;yes&quot;</span></code
+                >
+                will enable it. For example:
+              </p>
+              <div class="highlight-xml notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="nt">&lt;syscheck&gt;</span>
     <span class="nt">&lt;directories</span> <span class="na">realtime=</span><span class="s">&quot;yes&quot;</span> <span class="na">check_all=</span><span class="s">&quot;yes&quot;</span><span class="nt">&gt;</span>/etc,/usr/bin,/usr/sbin<span class="nt">&lt;/directories&gt;</span>
     <span class="nt">&lt;directories</span> <span class="na">check_all=</span><span class="s">&quot;yes&quot;</span><span class="nt">&gt;</span>/bin,/sbin<span class="nt">&lt;/directories&gt;</span>
 <span class="nt">&lt;/syscheck&gt;</span>
-</pre></div>
-</div>
-<p>In this case, the directories /etc, /usr/bin and /usr/sbin will be monitored in real time. The same applies to Windows too.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The real time monitoring will not start immediately. First OpenArmor-syscheckd needs to scan the file system and add each sub-directory to the realtime queue.
-It can take a while for this to finish (wait for the log “OpenArmor-syscheckd: INFO: Starting real time file monitoring” ).</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Real time only works with directories, not individual files. So you can monitor the /etc
-or C:\program files directory, but not an individual file like /etc/file.txt.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Both rootcheck and syscheck runs on the same thread, so when rootcheck is running, the inotify events would get queued until it finishes.</p>
-</div>
-</div>
-<div class="section" id="report-changes">
-<h2>Report Changes<a class="headerlink" href="#report-changes" title="Permalink to this headline">¶</a></h2>
-<p>OpenArmor supports sending diffs when changes are made to text files on Linux and unix systems.</p>
-<p>Configuring syscheck to show diffs is simple, add <code class="docutils literal notranslate"><span class="pre">report_changes=&quot;yes&quot;</span></code> to the <code class="docutils literal notranslate"><span class="pre">&lt;directories</span></code> option.
-For example:</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;syscheck&gt;</span>
+</pre>
+                </div>
+              </div>
+              <p>
+                In this case, the directories /etc, /usr/bin and /usr/sbin will
+                be monitored in real time. The same applies to Windows too.
+              </p>
+              <div class="admonition warning">
+                <p class="admonition-title">Warning</p>
+                <p>
+                  The real time monitoring will not start immediately. First
+                  OpenArmor-syscheckd needs to scan the file system and add each
+                  sub-directory to the realtime queue. It can take a while for
+                  this to finish (wait for the log “OpenArmor-syscheckd: INFO:
+                  Starting real time file monitoring” ).
+                </p>
+              </div>
+              <div class="admonition note">
+                <p class="admonition-title">Note</p>
+                <p>
+                  Real time only works with directories, not individual files.
+                  So you can monitor the /etc or C:\program files directory, but
+                  not an individual file like /etc/file.txt.
+                </p>
+              </div>
+              <div class="admonition note">
+                <p class="admonition-title">Note</p>
+                <p>
+                  Both rootcheck and syscheck runs on the same thread, so when
+                  rootcheck is running, the inotify events would get queued
+                  until it finishes.
+                </p>
+              </div>
+            </div>
+            <div class="section" id="report-changes">
+              <h2>
+                Report Changes<a
+                  class="headerlink"
+                  href="#report-changes"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <p>
+                OpenArmor supports sending diffs when changes are made to text
+                files on Linux and unix systems.
+              </p>
+              <p>
+                Configuring syscheck to show diffs is simple, add
+                <code class="docutils literal notranslate"
+                  ><span class="pre">report_changes=&quot;yes&quot;</span></code
+                >
+                to the
+                <code class="docutils literal notranslate"
+                  ><span class="pre">&lt;directories</span></code
+                >
+                option. For example:
+              </p>
+              <div class="highlight-xml notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="nt">&lt;syscheck&gt;</span>
     <span class="nt">&lt;directories</span> <span class="na">report_changes=</span><span class="s">&quot;yes&quot;</span> <span class="na">check_all=</span><span class="s">&quot;yes&quot;</span><span class="nt">&gt;</span>/etc<span class="nt">&lt;/directories&gt;</span>
     <span class="nt">&lt;directories</span> <span class="na">check_all=</span><span class="s">&quot;yes&quot;</span><span class="nt">&gt;</span>/bin,/sbin<span class="nt">&lt;/directories&gt;</span>
 <span class="nt">&lt;/syscheck&gt;</span>
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Report Changes can only work with text files, and the changes are stored on the agent
-inside <code class="docutils literal notranslate"><span class="pre">/var/OpenArmor/queue/diff/local/dir/file</span></code>.</p>
-<p>If OpenArmor has not been compiled with libmagic support, report_changes will copy any file
-designated, e.g. mp3, iso, executable, /chroot/dev/urandom (which would fill your hard drive).
-So unless libmagic is used, be very carefull on which directory you enable report_changes.</p>
-</div>
-</div>
-<div class="section" id="md5-whitelist-database">
-<h2>MD5 whitelist database<a class="headerlink" href="#md5-whitelist-database" title="Permalink to this headline">¶</a></h2>
-<p><cite>OpenArmor-analysisd</cite> can query an sqlite database for known-good md5 hashes.
-The database should contain the hashes, file names, and an optional date.</p>
-<p>This feature uses code from <a class="reference external" href="https://blog.rootshell.be/2013/05/13/improving-file-integrity-monitoring-with-OpenArmor/">Xavier Mertens.</a></p>
-<p>Configure the database in <cite>OpenArmor.conf</cite>:</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;/global&gt;</span>
+</pre>
+                </div>
+              </div>
+              <div class="admonition note">
+                <p class="admonition-title">Note</p>
+                <p>
+                  Report Changes can only work with text files, and the changes
+                  are stored on the agent inside
+                  <code class="docutils literal notranslate"
+                    ><span class="pre"
+                      >/var/OpenArmor/queue/diff/local/dir/file</span
+                    ></code
+                  >.
+                </p>
+                <p>
+                  If OpenArmor has not been compiled with libmagic support,
+                  report_changes will copy any file designated, e.g. mp3, iso,
+                  executable, /chroot/dev/urandom (which would fill your hard
+                  drive). So unless libmagic is used, be very carefull on which
+                  directory you enable report_changes.
+                </p>
+              </div>
+            </div>
+            <div class="section" id="md5-whitelist-database">
+              <h2>
+                MD5 whitelist database<a
+                  class="headerlink"
+                  href="#md5-whitelist-database"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <p>
+                <cite>OpenArmor-analysisd</cite> can query an sqlite database
+                for known-good md5 hashes. The database should contain the
+                hashes, file names, and an optional date.
+              </p>
+              <p>
+                This feature uses code from
+                <a
+                  class="reference external"
+                  href="https://blog.rootshell.be/2013/05/13/improving-file-integrity-monitoring-with-OpenArmor/"
+                  >Xavier Mertens.</a
+                >
+              </p>
+              <p>Configure the database in <cite>OpenArmor.conf</cite>:</p>
+              <div class="highlight-xml notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="nt">&lt;/global&gt;</span>
   <span class="nt">&lt;md5_whitelist&gt;</span>/rules/lists/md5whitelist.db<span class="nt">&lt;/md5_whitelist&gt;</span>
 <span class="nt">&lt;/global&gt;</span>
-</pre></div>
-</div>
-<p>Schema:</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">files</span> <span class="p">(</span>
+</pre>
+                </div>
+              </div>
+              <p>Schema:</p>
+              <div class="highlight-sql notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">files</span> <span class="p">(</span>
     <span class="n">md5sum</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">32</span><span class="p">),</span>
     <span class="n">file</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">256</span><span class="p">),</span>
     <span class="k">time</span> <span class="n">DATETIME</span>
 <span class="p">);</span>
 <span class="k">CREATE</span> <span class="k">UNIQUE</span> <span class="k">INDEX</span> <span class="n">files_idx</span> <span class="k">ON</span> <span class="n">files</span><span class="p">(</span><span class="n">md5sum</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="syscheck-faq">
-<h2>Syscheck: FAQ<a class="headerlink" href="#syscheck-faq" title="Permalink to this headline">¶</a></h2>
-<div class="contents local topic" id="contents">
-<ul class="simple">
-<li><p><a class="reference internal" href="#how-to-force-an-immediate-syscheck-scan" id="id1">How to force an immediate syscheck scan?</a></p></li>
-<li><p><a class="reference internal" href="#how-to-tell-syscheck-not-to-scan-the-system-when-OpenArmor-starts" id="id2">How to tell syscheck not to scan the system when OpenArmor starts?</a></p></li>
-<li><p><a class="reference internal" href="#how-to-ignore-a-file-that-changes-too-often" id="id3">How to ignore a file that changes too often?</a></p></li>
-<li><p><a class="reference internal" href="#why-does-OpenArmor-still-scan-a-file-even-though-it-s-been-ignored" id="id4">Why does OpenArmor still scan a file even though it’s been ignored?</a></p></li>
-<li><p><a class="reference internal" href="#how-to-know-when-the-syscheck-scan-ran" id="id5">How to know when the syscheck scan ran?</a></p></li>
-<li><p><a class="reference internal" href="#how-to-get-detailed-reporting-on-the-changes" id="id6">How to get detailed reporting on the changes?</a></p></li>
-<li><p><a class="reference internal" href="#syscheck-not-sending-any-file-data-to-the-server" id="id7">Syscheck not sending any file data to the server?</a></p></li>
-<li><p><a class="reference internal" href="#why-aren-t-new-files-creating-an-alert" id="id8">Why aren’t new files creating an alert?</a></p></li>
-<li><p><a class="reference internal" href="#can-OpenArmor-include-information-on-who-changed-a-file-in-the-alert" id="id9">Can OpenArmor include information on who changed a file in the alert?</a></p></li>
-<li><p><a class="reference internal" href="#how-do-i-stop-syscheck-alerts-during-system-updates" id="id10">How do I stop syscheck alerts during system updates?</a></p></li>
-</ul>
-</div>
-<div class="section" id="how-to-force-an-immediate-syscheck-scan">
-<h3><a class="toc-backref" href="#id1">How to force an immediate syscheck scan?</a><a class="headerlink" href="#how-to-force-an-immediate-syscheck-scan" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><p>Run agent control tool to perform a integrity checking immediately (option
--a to run on all the agents and -u to specify an agent id)</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>/var/OpenArmor/bin/agent_control -r -a
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="section" id="syscheck-faq">
+              <h2>
+                Syscheck: FAQ<a
+                  class="headerlink"
+                  href="#syscheck-faq"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="contents local topic" id="contents">
+                <ul class="simple">
+                  <li>
+                    <p>
+                      <a
+                        class="reference internal"
+                        href="#how-to-force-an-immediate-syscheck-scan"
+                        id="id1"
+                        >How to force an immediate syscheck scan?</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        class="reference internal"
+                        href="#how-to-tell-syscheck-not-to-scan-the-system-when-OpenArmor-starts"
+                        id="id2"
+                        >How to tell syscheck not to scan the system when
+                        OpenArmor starts?</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        class="reference internal"
+                        href="#how-to-ignore-a-file-that-changes-too-often"
+                        id="id3"
+                        >How to ignore a file that changes too often?</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        class="reference internal"
+                        href="#why-does-OpenArmor-still-scan-a-file-even-though-it-s-been-ignored"
+                        id="id4"
+                        >Why does OpenArmor still scan a file even though it’s
+                        been ignored?</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        class="reference internal"
+                        href="#how-to-know-when-the-syscheck-scan-ran"
+                        id="id5"
+                        >How to know when the syscheck scan ran?</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        class="reference internal"
+                        href="#how-to-get-detailed-reporting-on-the-changes"
+                        id="id6"
+                        >How to get detailed reporting on the changes?</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        class="reference internal"
+                        href="#syscheck-not-sending-any-file-data-to-the-server"
+                        id="id7"
+                        >Syscheck not sending any file data to the server?</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        class="reference internal"
+                        href="#why-aren-t-new-files-creating-an-alert"
+                        id="id8"
+                        >Why aren’t new files creating an alert?</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        class="reference internal"
+                        href="#can-OpenArmor-include-information-on-who-changed-a-file-in-the-alert"
+                        id="id9"
+                        >Can OpenArmor include information on who changed a file
+                        in the alert?</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        class="reference internal"
+                        href="#how-do-i-stop-syscheck-alerts-during-system-updates"
+                        id="id10"
+                        >How do I stop syscheck alerts during system updates?</a
+                      >
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div class="section" id="how-to-force-an-immediate-syscheck-scan">
+                <h3>
+                  <a class="toc-backref" href="#id1"
+                    >How to force an immediate syscheck scan?</a
+                  ><a
+                    class="headerlink"
+                    href="#how-to-force-an-immediate-syscheck-scan"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <blockquote>
+                  <div>
+                    <p>
+                      Run agent control tool to perform a integrity checking
+                      immediately (option -a to run on all the agents and -u to
+                      specify an agent id)
+                    </p>
+                    <div class="highlight-console notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="gp"># </span>/var/OpenArmor/bin/agent_control -r -a
 <span class="gp"># </span>/var/OpenArmor/bin/agent_control -r -u &lt;agent_id&gt;
-</pre></div>
-</div>
-<p>For more information see the <a class="reference internal" href="../../programs/agent_control.html#agent-control"><span class="std std-ref">agent_control</span></a> documentation.</p>
-</div></blockquote>
-</div>
-<div class="section" id="how-to-tell-syscheck-not-to-scan-the-system-when-OpenArmor-starts">
-<h3><a class="toc-backref" href="#id2">How to tell syscheck not to scan the system when OpenArmor starts?</a><a class="headerlink" href="#how-to-tell-syscheck-not-to-scan-the-system-when-OpenArmor-starts" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><p>Set the option &lt;scan_on_start&gt; to “no” on OpenArmor.conf</p>
-</div></blockquote>
-</div>
-<div class="section" id="how-to-ignore-a-file-that-changes-too-often">
-<h3><a class="toc-backref" href="#id3">How to ignore a file that changes too often?</a><a class="headerlink" href="#how-to-ignore-a-file-that-changes-too-often" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><p>Set the file/directory name in the &lt;ignore&gt; option or create a simple local rule.</p>
-<p>The following one will ignore files /etc/a and /etc/b and the directory /etc/dir
-for agents mswin1 and ubuntu-dns:</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;rule</span> <span class="na">id=</span><span class="s">&quot;100345&quot;</span> <span class="na">level=</span><span class="s">&quot;0&quot;</span> <span class="nt">&gt;</span>
+</pre>
+                      </div>
+                    </div>
+                    <p>
+                      For more information see the
+                      <a
+                        class="reference internal"
+                        href="../../programs/agent_control.html#agent-control"
+                        ><span class="std std-ref">agent_control</span></a
+                      >
+                      documentation.
+                    </p>
+                  </div>
+                </blockquote>
+              </div>
+              <div
+                class="section"
+                id="how-to-tell-syscheck-not-to-scan-the-system-when-OpenArmor-starts"
+              >
+                <h3>
+                  <a class="toc-backref" href="#id2"
+                    >How to tell syscheck not to scan the system when OpenArmor
+                    starts?</a
+                  ><a
+                    class="headerlink"
+                    href="#how-to-tell-syscheck-not-to-scan-the-system-when-OpenArmor-starts"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <blockquote>
+                  <div>
+                    <p>
+                      Set the option &lt;scan_on_start&gt; to “no” on
+                      OpenArmor.conf
+                    </p>
+                  </div>
+                </blockquote>
+              </div>
+              <div
+                class="section"
+                id="how-to-ignore-a-file-that-changes-too-often"
+              >
+                <h3>
+                  <a class="toc-backref" href="#id3"
+                    >How to ignore a file that changes too often?</a
+                  ><a
+                    class="headerlink"
+                    href="#how-to-ignore-a-file-that-changes-too-often"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <blockquote>
+                  <div>
+                    <p>
+                      Set the file/directory name in the &lt;ignore&gt; option
+                      or create a simple local rule.
+                    </p>
+                    <p>
+                      The following one will ignore files /etc/a and /etc/b and
+                      the directory /etc/dir for agents mswin1 and ubuntu-dns:
+                    </p>
+                    <div class="highlight-xml notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="nt">&lt;rule</span> <span class="na">id=</span><span class="s">&quot;100345&quot;</span> <span class="na">level=</span><span class="s">&quot;0&quot;</span> <span class="nt">&gt;</span>
     <span class="nt">&lt;if_group&gt;</span>syscheck<span class="nt">&lt;/if_group&gt;</span>
     <span class="nt">&lt;description&gt;</span>Changes ignored.<span class="nt">&lt;/description&gt;</span>
     <span class="nt">&lt;match&gt;</span>/etc/a|/etc/b|/etc/dir<span class="nt">&lt;/match&gt;</span>
     <span class="nt">&lt;hostname&gt;</span>mswin1|ubuntu-dns<span class="nt">&lt;/hostname&gt;</span>
 <span class="nt">&lt;/rule&gt;</span>
-</pre></div>
-</div>
-</div></blockquote>
-</div>
-<div class="section" id="why-does-OpenArmor-still-scan-a-file-even-though-it-s-been-ignored">
-<h3><a class="toc-backref" href="#id4">Why does OpenArmor still scan a file even though it’s been ignored?</a><a class="headerlink" href="#why-does-OpenArmor-still-scan-a-file-even-though-it-s-been-ignored" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><p>No idea. So if there are some directories you do not want scanned at all, make sure they are not included in a <code class="docutils literal notranslate"><span class="pre">&lt;directories&gt;</span></code> configuration.</p>
-</div></blockquote>
-</div>
-<div class="section" id="how-to-know-when-the-syscheck-scan-ran">
-<h3><a class="toc-backref" href="#id5">How to know when the syscheck scan ran?</a><a class="headerlink" href="#how-to-know-when-the-syscheck-scan-ran" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><p>Use the agent_control tool on the manager, to see this information.</p>
-<p>More information see the <a class="reference internal" href="../../programs/agent_control.html#agent-control"><span class="std std-ref">agent_control</span></a> documentation.</p>
-</div></blockquote>
-</div>
-<div class="section" id="how-to-get-detailed-reporting-on-the-changes">
-<h3><a class="toc-backref" href="#id6">How to get detailed reporting on the changes?</a><a class="headerlink" href="#how-to-get-detailed-reporting-on-the-changes" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><p>Use the syscheck_control tool on the manager or the web ui for that.</p>
-<p>More information see the <a class="reference internal" href="../../programs/syscheck_control.html#syscheck-control"><span class="std std-ref">syscheck_control</span></a> documentation.</p>
-</div></blockquote>
-</div>
-<div class="section" id="syscheck-not-sending-any-file-data-to-the-server">
-<h3><a class="toc-backref" href="#id7">Syscheck not sending any file data to the server?</a><a class="headerlink" href="#syscheck-not-sending-any-file-data-to-the-server" title="Permalink to this headline">¶</a></h3>
-<p>With OpenArmor 1.3 and Fedora you may run into this problem:</p>
-<p>You have named files you’d like OpenArmor to monitor so you add:</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;OpenArmor_config&gt;</span>
+</pre>
+                      </div>
+                    </div>
+                  </div>
+                </blockquote>
+              </div>
+              <div
+                class="section"
+                id="why-does-OpenArmor-still-scan-a-file-even-though-it-s-been-ignored"
+              >
+                <h3>
+                  <a class="toc-backref" href="#id4"
+                    >Why does OpenArmor still scan a file even though it’s been
+                    ignored?</a
+                  ><a
+                    class="headerlink"
+                    href="#why-does-OpenArmor-still-scan-a-file-even-though-it-s-been-ignored"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <blockquote>
+                  <div>
+                    <p>
+                      No idea. So if there are some directories you do not want
+                      scanned at all, make sure they are not included in a
+                      <code class="docutils literal notranslate"
+                        ><span class="pre">&lt;directories&gt;</span></code
+                      >
+                      configuration.
+                    </p>
+                  </div>
+                </blockquote>
+              </div>
+              <div class="section" id="how-to-know-when-the-syscheck-scan-ran">
+                <h3>
+                  <a class="toc-backref" href="#id5"
+                    >How to know when the syscheck scan ran?</a
+                  ><a
+                    class="headerlink"
+                    href="#how-to-know-when-the-syscheck-scan-ran"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <blockquote>
+                  <div>
+                    <p>
+                      Use the agent_control tool on the manager, to see this
+                      information.
+                    </p>
+                    <p>
+                      More information see the
+                      <a
+                        class="reference internal"
+                        href="../../programs/agent_control.html#agent-control"
+                        ><span class="std std-ref">agent_control</span></a
+                      >
+                      documentation.
+                    </p>
+                  </div>
+                </blockquote>
+              </div>
+              <div
+                class="section"
+                id="how-to-get-detailed-reporting-on-the-changes"
+              >
+                <h3>
+                  <a class="toc-backref" href="#id6"
+                    >How to get detailed reporting on the changes?</a
+                  ><a
+                    class="headerlink"
+                    href="#how-to-get-detailed-reporting-on-the-changes"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <blockquote>
+                  <div>
+                    <p>
+                      Use the syscheck_control tool on the manager or the web ui
+                      for that.
+                    </p>
+                    <p>
+                      More information see the
+                      <a
+                        class="reference internal"
+                        href="../../programs/syscheck_control.html#syscheck-control"
+                        ><span class="std std-ref">syscheck_control</span></a
+                      >
+                      documentation.
+                    </p>
+                  </div>
+                </blockquote>
+              </div>
+              <div
+                class="section"
+                id="syscheck-not-sending-any-file-data-to-the-server"
+              >
+                <h3>
+                  <a class="toc-backref" href="#id7"
+                    >Syscheck not sending any file data to the server?</a
+                  ><a
+                    class="headerlink"
+                    href="#syscheck-not-sending-any-file-data-to-the-server"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <p>
+                  With OpenArmor 1.3 and Fedora you may run into this problem:
+                </p>
+                <p>
+                  You have named files you’d like OpenArmor to monitor so you
+                  add:
+                </p>
+                <div class="highlight-xml notranslate">
+                  <div class="highlight">
+                    <pre><span></span><span class="nt">&lt;OpenArmor_config&gt;</span>
     <span class="nt">&lt;syscheck&gt;</span>
         <span class="nt">&lt;directories</span> <span class="na">check_all=</span><span class="s">&quot;yes&quot;</span><span class="nt">&gt;</span>/var/named<span class="nt">&lt;/directories&gt;</span>
-</pre></div>
-</div>
-<p>to OpenArmor.conf on the client. Fedora – at least as of version 7 –
-runs named in a chroot jail under /var/named/chroot. However, part of
-that chroot jail includes /var/named/chroot/proc. The contents of
-that directory are purely ephemeral; there is no value to checking
-their integrity. And, at least in OpenArmor 1.3, your syscheck may stall
-trying to read those files.</p>
-<p>The symptom is a syscheck database on the server that never grows
-beyond a file or two per restart of the client. The log monitoring continues
-to work, so you know it’s not a communication issue, and you will often
-see a slight increase in syscheck database file size after the client has
-restarted (in one case about 20 minutes after). But the database will never be
-completely built; there will only be a couple files listed in database.</p>
-<p>The solution is to add an ignore clause to OpenArmor.conf on the client:</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;OpenArmor_config&gt;</span>
+</pre>
+                  </div>
+                </div>
+                <p>
+                  to OpenArmor.conf on the client. Fedora – at least as of
+                  version 7 – runs named in a chroot jail under
+                  /var/named/chroot. However, part of that chroot jail includes
+                  /var/named/chroot/proc. The contents of that directory are
+                  purely ephemeral; there is no value to checking their
+                  integrity. And, at least in OpenArmor 1.3, your syscheck may
+                  stall trying to read those files.
+                </p>
+                <p>
+                  The symptom is a syscheck database on the server that never
+                  grows beyond a file or two per restart of the client. The log
+                  monitoring continues to work, so you know it’s not a
+                  communication issue, and you will often see a slight increase
+                  in syscheck database file size after the client has restarted
+                  (in one case about 20 minutes after). But the database will
+                  never be completely built; there will only be a couple files
+                  listed in database.
+                </p>
+                <p>
+                  The solution is to add an ignore clause to OpenArmor.conf on
+                  the client:
+                </p>
+                <div class="highlight-xml notranslate">
+                  <div class="highlight">
+                    <pre><span></span><span class="nt">&lt;OpenArmor_config&gt;</span>
     <span class="nt">&lt;syscheck&gt;</span>
         <span class="nt">&lt;ignore&gt;</span>/var/named/chroot/proc<span class="nt">&lt;/ignore&gt;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="why-aren-t-new-files-creating-an-alert">
-<h3><a class="toc-backref" href="#id8">Why aren’t new files creating an alert?</a><a class="headerlink" href="#why-aren-t-new-files-creating-an-alert" title="Permalink to this headline">¶</a></h3>
-<p>By default OpenArmor does not alert on new files.
-To enable this functionality, &lt;alert_new_files&gt; must be set to yes inside the &lt;syscheck&gt; section of the manager’s OpenArmor.conf.
-Also, the rule to alert on new files (rule 554) is set to level 0 by default.
-The alert level will need to be raised in order to see the alert.
-Alerting on new files does not work in realtime, a full scan will be necessary to detect them.</p>
-<p>Add the following to local_rules.xml:</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;rule</span> <span class="na">id=</span><span class="s">&quot;554&quot;</span> <span class="na">level=</span><span class="s">&quot;10&quot;</span> <span class="na">overwrite=</span><span class="s">&quot;yes&quot;</span><span class="nt">&gt;</span>
+</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="section" id="why-aren-t-new-files-creating-an-alert">
+                <h3>
+                  <a class="toc-backref" href="#id8"
+                    >Why aren’t new files creating an alert?</a
+                  ><a
+                    class="headerlink"
+                    href="#why-aren-t-new-files-creating-an-alert"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <p>
+                  By default OpenArmor does not alert on new files. To enable
+                  this functionality, &lt;alert_new_files&gt; must be set to yes
+                  inside the &lt;syscheck&gt; section of the manager’s
+                  OpenArmor.conf. Also, the rule to alert on new files (rule
+                  554) is set to level 0 by default. The alert level will need
+                  to be raised in order to see the alert. Alerting on new files
+                  does not work in realtime, a full scan will be necessary to
+                  detect them.
+                </p>
+                <p>Add the following to local_rules.xml:</p>
+                <div class="highlight-xml notranslate">
+                  <div class="highlight">
+                    <pre><span></span><span class="nt">&lt;rule</span> <span class="na">id=</span><span class="s">&quot;554&quot;</span> <span class="na">level=</span><span class="s">&quot;10&quot;</span> <span class="na">overwrite=</span><span class="s">&quot;yes&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;category&gt;</span>OpenArmor<span class="nt">&lt;/category&gt;</span>
   <span class="nt">&lt;decoded_as&gt;</span>syscheck_new_entry<span class="nt">&lt;/decoded_as&gt;</span>
   <span class="nt">&lt;description&gt;</span>File added to the system.<span class="nt">&lt;/description&gt;</span>
   <span class="nt">&lt;group&gt;</span>syscheck,<span class="nt">&lt;/group&gt;</span>
 <span class="nt">&lt;/rule&gt;</span>
-</pre></div>
-</div>
-<p>The <code class="docutils literal notranslate"><span class="pre">&lt;alert_new_files&gt;</span></code> entry should look something like this:</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;syscheck&gt;</span>
+</pre>
+                  </div>
+                </div>
+                <p>
+                  The
+                  <code class="docutils literal notranslate"
+                    ><span class="pre">&lt;alert_new_files&gt;</span></code
+                  >
+                  entry should look something like this:
+                </p>
+                <div class="highlight-xml notranslate">
+                  <div class="highlight">
+                    <pre><span></span><span class="nt">&lt;syscheck&gt;</span>
   <span class="nt">&lt;frequency&gt;</span>7200<span class="nt">&lt;/frequency&gt;</span>
   <span class="nt">&lt;alert_new_files&gt;</span>yes<span class="nt">&lt;/alert_new_files&gt;</span>
   <span class="nt">&lt;directories</span> <span class="na">check_all=</span><span class="s">&quot;yes&quot;</span><span class="nt">&gt;</span>/etc,/bin,/sbin<span class="nt">&lt;/directories&gt;</span>
 <span class="nt">&lt;/syscheck&gt;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="can-OpenArmor-include-information-on-who-changed-a-file-in-the-alert">
-<h3><a class="toc-backref" href="#id9">Can OpenArmor include information on who changed a file in the alert?</a><a class="headerlink" href="#can-OpenArmor-include-information-on-who-changed-a-file-in-the-alert" title="Permalink to this headline">¶</a></h3>
-<p>In short, no. OpenArmor does not track this information.
-You could use your OS’s auditing facilities to track this information,
-and create a rule to alert when an appropriate log is created.</p>
-</div>
-<div class="section" id="how-do-i-stop-syscheck-alerts-during-system-updates">
-<h3><a class="toc-backref" href="#id10">How do I stop syscheck alerts during system updates?</a><a class="headerlink" href="#how-do-i-stop-syscheck-alerts-during-system-updates" title="Permalink to this headline">¶</a></h3>
-<p>There is no easy way to do this, but there are work-arounds.
-Stop the OpenArmor processes on the manager, and run <code class="docutils literal notranslate"><span class="pre">/var/OpenArmor/bin/syscheck_control</span> <span class="pre">-u</span> <span class="pre">AGENT_ID</span></code>.
-This will clear the syscheck database for the agent,
-and the next time syscheck runs it will create a new baseline.
-Next, start the OpenArmor processes on the manager.
-Once the system update is complete, run a syscheck scan on that agent.
-The database will be populated with new values, and should not trigger “file modified” alarms.</p>
-</div>
-</div>
-</div>
-
-
+</pre>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="section"
+                id="can-OpenArmor-include-information-on-who-changed-a-file-in-the-alert"
+              >
+                <h3>
+                  <a class="toc-backref" href="#id9"
+                    >Can OpenArmor include information on who changed a file in
+                    the alert?</a
+                  ><a
+                    class="headerlink"
+                    href="#can-OpenArmor-include-information-on-who-changed-a-file-in-the-alert"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <p>
+                  In short, no. OpenArmor does not track this information. You
+                  could use your OS’s auditing facilities to track this
+                  information, and create a rule to alert when an appropriate
+                  log is created.
+                </p>
+              </div>
+              <div
+                class="section"
+                id="how-do-i-stop-syscheck-alerts-during-system-updates"
+              >
+                <h3>
+                  <a class="toc-backref" href="#id10"
+                    >How do I stop syscheck alerts during system updates?</a
+                  ><a
+                    class="headerlink"
+                    href="#how-do-i-stop-syscheck-alerts-during-system-updates"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <p>
+                  There is no easy way to do this, but there are work-arounds.
+                  Stop the OpenArmor processes on the manager, and run
+                  <code class="docutils literal notranslate"
+                    ><span class="pre"
+                      >/var/OpenArmor/bin/syscheck_control</span
+                    >
+                    <span class="pre">-u</span>
+                    <span class="pre">AGENT_ID</span></code
+                  >. This will clear the syscheck database for the agent, and
+                  the next time syscheck runs it will create a new baseline.
+                  Next, start the OpenArmor processes on the manager. Once the
+                  system update is complete, run a syscheck scan on that agent.
+                  The database will be populated with new values, and should not
+                  trigger “file modified” alarms.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-      
-  </div>
-</div>
-<footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      
-    </p>
-    <p>
-        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
-    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
-    Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
-    </p>
-  </div>
-</footer>
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>
+          &copy; Copyright 2010-2021, OpenArmor Project Team.<br />
+          OpenArmor <b>OpenArmor.net</b> domain owned and maintained by
+          <a href="https://theopenarmor.org" target="_blank"
+            >OpenArmor Foundation</a
+          ><br />
+          Home page graphics courtesy of
+          <a href="https://pixabay.com" target="_blank">pixabay</a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

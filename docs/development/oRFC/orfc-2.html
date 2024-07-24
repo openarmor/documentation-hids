@@ -5,13 +5,41 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>oRFC: 2 Coding Style Guide &#8212; OpenArmor</title>
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap-theme.min.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/parallax.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <link
+      rel="stylesheet"
+      href="../../../_static/pygments.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/bootstrap-sphinx.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/bootstrap-3.2.0/css/bootstrap-theme.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/bootstrap-sphinx.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/parallax.css"
+      type="text/css"
+    />
+    <script
+      id="documentation_options"
+      data-url_root="../../../"
+      src="../../../_static/documentation_options.js"
+    ></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
@@ -19,260 +47,553 @@
     <script src="../../../_static/js/jquery-fix.js"></script>
     <script src="../../../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
     <script src="../../../_static/bootstrap-sphinx.js"></script>
-    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link
+      rel="author"
+      title="About these documents"
+      href="../../../about.html"
+    />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Syntax and Options" href="../../syntax/index.html" />
-    <link rel="prev" title="oRFC: 1 The Collective Code Construction Contract (C4)" href="orfc-1.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
+    <link
+      rel="next"
+      title="Syntax and Options"
+      href="../../syntax/index.html"
+    />
+    <link
+      rel="prev"
+      title="oRFC: 1 The Collective Code Construction Contract (C4)"
+      href="orfc-1.html"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138780766-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-138780766-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-gtag('config', 'UA-138780766-1');
-</script>
+      gtag("config", "UA-138780766-1");
+    </script>
 
-<script type="text/javascript">
-  var _ss = _ss || [];
-  _ss.push(['_setDomain', 'https://koi-3QNN51VTHS.marketingautomation.services/net']);
-  _ss.push(['_setAccount', 'KOI-4APYNOYP8O']);
-  _ss.push(['_trackPageView']);
-  window._pa = window._pa || {};
-  // _pa.orderId = "myOrderId"; // OPTIONAL: attach unique conversion identifier to conversions
-  // _pa.revenue = "19.99"; // OPTIONAL: attach dynamic purchase values to conversions
-  // _pa.productId = "myProductId"; // OPTIONAL: Include product ID for use with dynamic ads
-  (function() {
-  var ss = document.createElement('script');
-  ss.type = 'text/javascript'; ss.async = true;
-  ss.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'koi-3QNN51VTHS.marketingautomation.services/client/ss.js?ver=2.4.0';
-  var scr = document.getElementsByTagName('script')[0];
-  scr.parentNode.insertBefore(ss, scr);
-  })();
-  </script>
+    <script type="text/javascript">
+      var _ss = _ss || [];
+      _ss.push([
+        "_setDomain",
+        "https://koi-3QNN51VTHS.marketingautomation.services/net",
+      ]);
+      _ss.push(["_setAccount", "KOI-4APYNOYP8O"]);
+      _ss.push(["_trackPageView"]);
+      window._pa = window._pa || {};
+      // _pa.orderId = "myOrderId"; // OPTIONAL: attach unique conversion identifier to conversions
+      // _pa.revenue = "19.99"; // OPTIONAL: attach dynamic purchase values to conversions
+      // _pa.productId = "myProductId"; // OPTIONAL: Include product ID for use with dynamic ads
+      (function () {
+        var ss = document.createElement("script");
+        ss.type = "text/javascript";
+        ss.async = true;
+        ss.src =
+          ("https:" == document.location.protocol ? "https://" : "http://") +
+          "koi-3QNN51VTHS.marketingautomation.services/client/ss.js?ver=2.4.0";
+        var scr = document.getElementsByTagName("script")[0];
+        scr.parentNode.insertBefore(ss, scr);
+      })();
+    </script>
 
-
-
-  </head><body>
-
-  <div id="navbar" class="navbar navbar-inverse navbar-default ">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
-          OpenArmor</a>
-        <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
-      </div>
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="navbar" class="navbar navbar-inverse navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".nav-collapse"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../../index.html"
+            ><img src="../../../_static/OpenArmor_logo_bare_small.jpg" />
+            OpenArmor</a
+          >
+          <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
+        </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
-            
-                <li><a href="https://theopenarmor.org/about/">About</a></li>
-                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
-                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
-                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
-            
-            
-              <li class="dropdown globaltoc-container">
-  <a role="button"
-     id="dLabelGlobalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="../../../index.html">Site <b class="caret"></b></a>
-  <ul class="dropdown-menu globaltoc"
-      role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul>
-<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">Manual</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">Frequently asked questions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../cookbooks/index.html">User submitted Cookbooks</a></li>
-</ul>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../build/index.html">Build, compile, and not much more</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">oRFC:</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../syntax/index.html">Syntax and Options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../formats/index.html">Output Formats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../programs/index.html">Man pages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../examples/index.html">Examples</a></li>
-</ul>
-</ul>
-</li>
-              
-            
-            
-              
-                
-  <li>
-    <a href="orfc-1.html" title="Previous Chapter: oRFC: 1 The Collective Code Construction Contract (C4)"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; oRFC: 1 The C...</span>
-    </a>
-  </li>
-  <li>
-    <a href="../../syntax/index.html" title="Next Chapter: Syntax and Options"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Syntax and Options &raquo;</span>
-    </a>
-  </li>
-              
-            
-            
-            
-            
+            <li><a href="https://theopenarmor.org/about/">About</a></li>
+            <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+            <li>
+              <a href="https://theopenarmor.org/register-for-OpenArmor/"
+                >Get OpenArmor+</a
+              >
+            </li>
+            <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
+
+            <li class="dropdown globaltoc-container">
+              <a
+                role="button"
+                id="dLabelGlobalToc"
+                data-toggle="dropdown"
+                data-target="#"
+                href="../../../index.html"
+                >Site <b class="caret"></b
+              ></a>
+              <ul
+                class="dropdown-menu globaltoc"
+                role="menu"
+                aria-labelledby="dLabelGlobalToc"
+              >
+                <ul>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../../manual/index.html"
+                      >Manual</a
+                    >
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../../faq/index.html"
+                      >Frequently asked questions</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../cookbooks/index.html"
+                      >User submitted Cookbooks</a
+                    >
+                  </li>
+                </ul>
+                <ul class="current">
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../build/index.html"
+                      >Build, compile, and not much more</a
+                    >
+                  </li>
+                  <li class="toctree-l1 current">
+                    <a class="reference internal" href="index.html">oRFC:</a>
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../../syntax/index.html"
+                      >Syntax and Options</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../formats/index.html"
+                      >Output Formats</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../programs/index.html"
+                      >Man pages</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../examples/index.html"
+                      >Examples</a
+                    >
+                  </li>
+                </ul>
+              </ul>
+            </li>
+
+            <li>
+              <a
+                href="orfc-1.html"
+                title="Previous Chapter: oRFC: 1 The Collective Code Construction Contract (C4)"
+                ><span
+                  class="glyphicon glyphicon-chevron-left visible-sm"
+                ></span
+                ><span class="hidden-sm hidden-tablet"
+                  >&laquo; oRFC: 1 The C...</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="../../syntax/index.html"
+                title="Next Chapter: Syntax and Options"
+                ><span
+                  class="glyphicon glyphicon-chevron-right visible-sm"
+                ></span
+                ><span class="hidden-sm hidden-tablet"
+                  >Syntax and Options &raquo;</span
+                >
+              </a>
+            </li>
           </ul>
 
-          
-            
-<form class="navbar-form navbar-right" action="../../../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-          
+          <form
+            class="navbar-form navbar-right"
+            action="../../../search.html"
+            method="get"
+          >
+            <div class="form-group">
+              <input
+                type="text"
+                name="q"
+                class="form-control"
+                placeholder="Search"
+              />
+            </div>
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
         </div>
+      </div>
     </div>
-  </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      
-  <div class="section" id="orfc-2-coding-style-guide">
-<h1>oRFC: 2 Coding Style Guide<a class="headerlink" href="#orfc-2-coding-style-guide" title="Permalink to this headline">¶</a></h1>
-<p>OpenArmor Coding Style Guide</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 16%" />
-<col style="width: 84%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p>Name</p></td>
-<td><p>OpenArmor Style Guide</p></td>
-</tr>
-<tr class="row-even"><td><p>Editor</p></td>
-<td><ul class="simple">
-<li><p>Jeremy Rossi &lt;jeremy at jeremyrossi dot com&gt;</p></li>
-<li><p>Christian Göttsche &lt;cgzones at googlemail dot com&gt;</p></li>
-</ul>
-</td>
-</tr>
-<tr class="row-odd"><td><p>State</p></td>
-<td><p>Draft</p></td>
-</tr>
-<tr class="row-even"><td><p>Origin</p></td>
-<td><ul class="simple">
-<li><p><a class="reference external" href="http://zeromq.org/docs:style">http://zeromq.org/docs:style</a></p></li>
-<li><p><a class="reference external" href="https://www.kernel.org/doc/Documentation/CodingStyle">https://www.kernel.org/doc/Documentation/CodingStyle</a></p></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="section" id="language">
-<h2>Language<a class="headerlink" href="#language" title="Permalink to this headline">¶</a></h2>
-<p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”,
-“SHOULD”, “SHOULD NOT”, “RECOMMENDED”,  “MAY”, and “OPTIONAL” in this
-document are to be interpreted as described in RFC 2119 <a class="footnote-reference brackets" href="#id2" id="id1">1</a>.</p>
-</div>
-<div class="section" id="goals">
-<h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
-<p>The OpenArmor Style Guide is meant to provide framework and guide of formating
-code contributor to OpenArmor.  The overall goals are:</p>
-<ul class="simple">
-<li><p>Maximize Readability of code in OpenArmor;</p></li>
-<li><p>Reduction in the number of bugs by removing ambiguity in code and logic flow;</p></li>
-<li><p>Be as minimally invasive as possible while achieving the stated goals;</p></li>
-<li><p>Trust the contributor.</p></li>
-</ul>
-</div>
-<div class="section" id="code-style">
-<h2>Code Style<a class="headerlink" href="#code-style" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="formatter">
-<h3>Formatter<a class="headerlink" href="#formatter" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p><a class="reference external" href="http://astyle.sourceforge.net/">Artistic Style</a> should be used to format the source code.</p></li>
-<li><p>Every code style should be achieved by a astyle command argument.</p></li>
-</ul>
-</div>
-<div class="section" id="indentation">
-<h3>Indentation<a class="headerlink" href="#indentation" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>4 spaces shall be used per indentation level. <em>–indent=spaces=4</em></p></li>
-<li><p>Switch and case blocks shall be indented. <em>–indent-switches</em></p></li>
-<li><p>Preprocessor conditional statements shall be indented to the same level as the source code. <em>–indent-preproc-cond</em></p></li>
-</ul>
-</div>
-<div class="section" id="file-endings">
-<h3>File endings<a class="headerlink" href="#file-endings" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Every files shall end with a newline.</p></li>
-<li><p>Every files shall have linux like line endings (\n). <em>–lineend=linux</em></p></li>
-</ul>
-</div>
-<div class="section" id="breaking-long-lines-and-strings">
-<h3>Breaking long lines and strings<a class="headerlink" href="#breaking-long-lines-and-strings" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="placing-braces-and-spaces">
-<h3>Placing Braces and Spaces<a class="headerlink" href="#placing-braces-and-spaces" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Braces shall be placed according to the stroustrup style. <em>–style=stroustrup</em></p></li>
-<li><p>Operators shall be padded by a space. <em>–pad-oper</em></p></li>
-<li><p>Every branch of conditional statements shall be surrounded by brackets. <em>–add-brackets</em></p></li>
-<li><p>Pointer and reference operators shall be attached to the variable name. <em>–align-pointer=name</em></p></li>
-</ul>
-</div>
-<div class="section" id="typedefs-struct">
-<h3>Typedefs &amp; Struct<a class="headerlink" href="#typedefs-struct" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="naming">
-<h3>Naming<a class="headerlink" href="#naming" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Variables</p></li>
-<li><p>Functions</p></li>
-<li><p>Typedefs</p></li>
-<li><p>Structs</p></li>
-</ul>
-</div>
-</div>
-<div class="section" id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<dl class="footnote brackets">
-<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>“Key words for use in RFCs to Indicate Requirement Levels” - <a class="reference external" href="http://tools.ietf.org/html/rfc2119">http://tools.ietf.org/html/rfc2119</a></p>
-</dd>
-</dl>
-</div>
-</div>
-
-
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section" id="orfc-2-coding-style-guide">
+            <h1>
+              oRFC: 2 Coding Style Guide<a
+                class="headerlink"
+                href="#orfc-2-coding-style-guide"
+                title="Permalink to this headline"
+                >¶</a
+              >
+            </h1>
+            <p>OpenArmor Coding Style Guide</p>
+            <table class="docutils align-default">
+              <colgroup>
+                <col style="width: 16%" />
+                <col style="width: 84%" />
+              </colgroup>
+              <tbody>
+                <tr class="row-odd">
+                  <td><p>Name</p></td>
+                  <td><p>OpenArmor Style Guide</p></td>
+                </tr>
+                <tr class="row-even">
+                  <td><p>Editor</p></td>
+                  <td>
+                    <ul class="simple">
+                      <li>
+                        <p>
+                          Jeremy Rossi &lt;jeremy at jeremyrossi dot com&gt;
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          Christian Göttsche &lt;cgzones at googlemail dot
+                          com&gt;
+                        </p>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="row-odd">
+                  <td><p>State</p></td>
+                  <td><p>Draft</p></td>
+                </tr>
+                <tr class="row-even">
+                  <td><p>Origin</p></td>
+                  <td>
+                    <ul class="simple">
+                      <li>
+                        <p>
+                          <a
+                            class="reference external"
+                            href="http://zeromq.org/docs:style"
+                            >http://zeromq.org/docs:style</a
+                          >
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <a
+                            class="reference external"
+                            href="https://www.kernel.org/doc/Documentation/CodingStyle"
+                            >https://www.kernel.org/doc/Documentation/CodingStyle</a
+                          >
+                        </p>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="section" id="language">
+              <h2>
+                Language<a
+                  class="headerlink"
+                  href="#language"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <p>
+                The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL
+                NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and
+                “OPTIONAL” in this document are to be interpreted as described
+                in RFC 2119
+                <a class="footnote-reference brackets" href="#id2" id="id1">1</a
+                >.
+              </p>
+            </div>
+            <div class="section" id="goals">
+              <h2>
+                Goals<a
+                  class="headerlink"
+                  href="#goals"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <p>
+                The OpenArmor Style Guide is meant to provide framework and
+                guide of formating code contributor to OpenArmor. The overall
+                goals are:
+              </p>
+              <ul class="simple">
+                <li><p>Maximize Readability of code in OpenArmor;</p></li>
+                <li>
+                  <p>
+                    Reduction in the number of bugs by removing ambiguity in
+                    code and logic flow;
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Be as minimally invasive as possible while achieving the
+                    stated goals;
+                  </p>
+                </li>
+                <li><p>Trust the contributor.</p></li>
+              </ul>
+            </div>
+            <div class="section" id="code-style">
+              <h2>
+                Code Style<a
+                  class="headerlink"
+                  href="#code-style"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="section" id="formatter">
+                <h3>
+                  Formatter<a
+                    class="headerlink"
+                    href="#formatter"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <ul class="simple">
+                  <li>
+                    <p>
+                      <a
+                        class="reference external"
+                        href="http://astyle.sourceforge.net/"
+                        >Artistic Style</a
+                      >
+                      should be used to format the source code.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Every code style should be achieved by a astyle command
+                      argument.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div class="section" id="indentation">
+                <h3>
+                  Indentation<a
+                    class="headerlink"
+                    href="#indentation"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <ul class="simple">
+                  <li>
+                    <p>
+                      4 spaces shall be used per indentation level.
+                      <em>–indent=spaces=4</em>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Switch and case blocks shall be indented.
+                      <em>–indent-switches</em>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Preprocessor conditional statements shall be indented to
+                      the same level as the source code.
+                      <em>–indent-preproc-cond</em>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div class="section" id="file-endings">
+                <h3>
+                  File endings<a
+                    class="headerlink"
+                    href="#file-endings"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <ul class="simple">
+                  <li><p>Every files shall end with a newline.</p></li>
+                  <li>
+                    <p>
+                      Every files shall have linux like line endings (\n).
+                      <em>–lineend=linux</em>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div class="section" id="breaking-long-lines-and-strings">
+                <h3>
+                  Breaking long lines and strings<a
+                    class="headerlink"
+                    href="#breaking-long-lines-and-strings"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+              </div>
+              <div class="section" id="placing-braces-and-spaces">
+                <h3>
+                  Placing Braces and Spaces<a
+                    class="headerlink"
+                    href="#placing-braces-and-spaces"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <ul class="simple">
+                  <li>
+                    <p>
+                      Braces shall be placed according to the stroustrup style.
+                      <em>–style=stroustrup</em>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Operators shall be padded by a space. <em>–pad-oper</em>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Every branch of conditional statements shall be surrounded
+                      by brackets. <em>–add-brackets</em>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Pointer and reference operators shall be attached to the
+                      variable name. <em>–align-pointer=name</em>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div class="section" id="typedefs-struct">
+                <h3>
+                  Typedefs &amp; Struct<a
+                    class="headerlink"
+                    href="#typedefs-struct"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+              </div>
+              <div class="section" id="naming">
+                <h3>
+                  Naming<a
+                    class="headerlink"
+                    href="#naming"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <ul class="simple">
+                  <li><p>Variables</p></li>
+                  <li><p>Functions</p></li>
+                  <li><p>Typedefs</p></li>
+                  <li><p>Structs</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="section" id="references">
+              <h2>
+                References<a
+                  class="headerlink"
+                  href="#references"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <dl class="footnote brackets">
+                <dt class="label" id="id2">
+                  <span class="brackets"
+                    ><a class="fn-backref" href="#id1">1</a></span
+                  >
+                </dt>
+                <dd>
+                  <p>
+                    “Key words for use in RFCs to Indicate Requirement Levels” -
+                    <a
+                      class="reference external"
+                      href="http://tools.ietf.org/html/rfc2119"
+                      >http://tools.ietf.org/html/rfc2119</a
+                    >
+                  </p>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-      
-  </div>
-</div>
-<footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      
-    </p>
-    <p>
-        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
-    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
-    Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
-    </p>
-  </div>
-</footer>
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>
+          &copy; Copyright 2010-2021, OpenArmor Project Team.<br />
+          OpenArmor <b>OpenArmor.net</b> domain owned and maintained by
+          <a href="https://theopenarmor.org" target="_blank"
+            >OpenArmor Foundation</a
+          ><br />
+          Home page graphics courtesy of
+          <a href="https://pixabay.com" target="_blank">pixabay</a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

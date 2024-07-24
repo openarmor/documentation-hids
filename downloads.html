@@ -1,394 +1,931 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
+
     <title>Downloads &#8212; OpenArmor</title>
-    
+
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-3.2.0/css/bootstrap-theme.min.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="_static/bootstrap-3.2.0/css/bootstrap.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="_static/bootstrap-3.2.0/css/bootstrap-theme.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="_static/bootstrap-sphinx.css"
+      type="text/css"
+    />
     <link rel="stylesheet" href="_static/parallax.css" type="text/css" />
-    
+
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '3.3.0',
+        URL_ROOT: "./",
+        VERSION: "3.3.0",
         COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
+        FILE_SUFFIX: ".html",
+        HAS_SOURCE: true,
+        SOURCELINK_SUFFIX: ".txt",
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script
+      type="text/javascript"
+      src="_static/js/jquery-1.11.0.min.js"
+    ></script>
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script
+      type="text/javascript"
+      src="_static/bootstrap-3.2.0/js/bootstrap.min.js"
+    ></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
 
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon" />
   </head>
   <body role="document">
-
-  <div id="navbar" class="navbar navbar-inverse navbar-default ">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.html"><img src="_static/OpenArmor_logo_bare_small.jpg">
-          OpenArmor</a>
-        <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
-      </div>
+    <div id="navbar" class="navbar navbar-inverse navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".nav-collapse"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"
+            ><img src="_static/OpenArmor_logo_bare_small.jpg" /> OpenArmor</a
+          >
+          <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
+        </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
-            
-                <li><a href="https://theopenarmor.org/about/">About <i class="fa fa-info-circle"></i></a></li>
-                <li><a href="https://theopenarmor.org/docs/">Documentation <i class="fa fa-book"></i></a></li>
-                <li><a href="https://theopenarmor.org/downloads/">Downloads <i class="fa fa-download"></i></a></li>
-            
-            
-              <li class="dropdown globaltoc-container">
-  <a role="button"
-     id="dLabelGlobalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="index.html">Site <b class="caret"></b></a>
-  <ul class="dropdown-menu globaltoc"
-      role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul>
-<li class="toctree-l1"><a class="reference internal" href="docs/manual/index.html">Manual</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="docs/faq/index.html">Frequently asked questions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/cookbooks/index.html">User submitted Cookbooks</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="docs/development/build/index.html">Build, compile, and not much more</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/development/oRFC/index.html">oRFC:</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="docs/syntax/index.html">Syntax and Options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/formats/index.html">Output Formats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/programs/index.html">Man pages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/examples/index.html">Examples</a></li>
-</ul>
-</ul>
-</li>
-              
-            
-            
-              
-                
-              
-            
-            
-            
-            
+            <li>
+              <a href="https://theopenarmor.org/about/"
+                >About <i class="fa fa-info-circle"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://theopenarmor.org/docs/"
+                >Documentation <i class="fa fa-book"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://theopenarmor.org/downloads/"
+                >Downloads <i class="fa fa-download"></i
+              ></a>
+            </li>
+
+            <li class="dropdown globaltoc-container">
+              <a
+                role="button"
+                id="dLabelGlobalToc"
+                data-toggle="dropdown"
+                data-target="#"
+                href="index.html"
+                >Site <b class="caret"></b
+              ></a>
+              <ul
+                class="dropdown-menu globaltoc"
+                role="menu"
+                aria-labelledby="dLabelGlobalToc"
+              >
+                <ul>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="docs/manual/index.html"
+                      >Manual</a
+                    >
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="docs/faq/index.html"
+                      >Frequently asked questions</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="docs/cookbooks/index.html"
+                      >User submitted Cookbooks</a
+                    >
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="docs/development/build/index.html"
+                      >Build, compile, and not much more</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="docs/development/oRFC/index.html"
+                      >oRFC:</a
+                    >
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="docs/syntax/index.html"
+                      >Syntax and Options</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="docs/formats/index.html"
+                      >Output Formats</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="docs/programs/index.html"
+                      >Man pages</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="docs/examples/index.html"
+                      >Examples</a
+                    >
+                  </li>
+                </ul>
+              </ul>
+            </li>
           </ul>
 
-          
-            
-<form class="navbar-form navbar-right" action="search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-          
-        </div>
-    </div>
-  </div>
-
-<div class="container">
-  <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">Downloads</a><ul>
-<li><a class="reference internal" href="#source-downloads">Source Downloads</a></li>
-<li><a class="reference internal" href="#rhel-centos-fedora-and-others">RHEL, CentOS, Fedora and others</a></li>
-<li><a class="reference internal" href="#ubuntu-and-debian">Ubuntu, and Debian</a><ul>
-<li><a class="reference internal" href="#yum-dnf-automated-installation-on-centos-redhat-amazon-linux-or-fedora">Yum/DNF Automated Installation on Centos, Redhat, Amazon Linux or Fedora</a></li>
-<li><a class="reference internal" href="#manual-yum-dnf-installation-on-centos-redhat-amazon-linux-or-fedora">Manual Yum/DNF installation on Centos, Redhat, Amazon Linux or Fedora</a></li>
-<li><a class="reference internal" href="#apt-automated-installation-on-ubuntu-and-debian">APT Automated Installation on Ubuntu and Debian</a></li>
-<li><a class="reference internal" href="#manual-apt-installation-on-ubuntu-and-debian">Manual APT Installation on Ubuntu and Debian</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#gpg-pgp-key">GPG / PGP key</a></li>
-<li><a class="reference internal" href="#presentation-slides">Presentation Slides</a></li>
-<li><a class="reference internal" href="#contribute-back">Contribute back!</a></li>
-</ul>
-</li>
-</ul>
-
+          <form
+            class="navbar-form navbar-right"
+            action="search.html"
+            method="get"
+          >
+            <div class="form-group">
+              <input
+                type="text"
+                name="q"
+                class="form-control"
+                placeholder="Search"
+              />
+            </div>
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
         </div>
       </div>
-    <div class="col-md-9">
-      
-  <div class="section" id="downloads">
-<h1>Downloads<a class="headerlink" href="#downloads" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="source-downloads">
-<h2>Source Downloads<a class="headerlink" href="#source-downloads" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<colgroup>
-<col width="19%" />
-<col width="64%" />
-<col width="18%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head" colspan="3">Latest development snapshots</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>Server/Agent</td>
-<td colspan="2"><a class="reference external" href="https://github.com/OpenArmor/OpenArmor-hids/releases">https://github.com/OpenArmor/OpenArmor-hids/releases</a></td>
-</tr>
-<tr class="row-odd"><td>Packages</td>
-<td colspan="2"><a class="reference external" href="https://updates.atomicorp.com/channels/OpenArmor-3-testing">https://updates.atomicorp.com/channels/OpenArmor-3-testing</a></td>
-</tr>
-<tr class="row-even"><td>Web UI</td>
-<td colspan="2"><a class="reference external" href="https://github.com/OpenArmor/OpenArmor-wui/releases">https://github.com/OpenArmor/OpenArmor-wui/releases</a></td>
-</tr>
-<tr class="row-odd"><td>Docs</td>
-<td colspan="2"><a class="reference external" href="https://github.com/OpenArmor/OpenArmor-docs">https://github.com/OpenArmor/OpenArmor-docs</a></td>
-</tr>
-</tbody>
-</table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="19%" />
-<col width="43%" />
-<col width="24%" />
-<col width="15%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head" colspan="2">Latest Stable Release (3.2.0)</th>
-<th class="head">Checksum</th>
-<th class="head">Signature</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>Server/Agent Unix</td>
-<td><a class="reference external" href="https://github.com/OpenArmor/OpenArmor-hids/archive/3.2.0.tar.gz">OpenArmor-hids-3.2.0.tar.gz</a> – <a class="reference external" href="https://github.com/OpenArmor/OpenArmor-hids/releases/tag/3.2.0">Release Notes</a></td>
-<td>&nbsp;</td>
-<td><a class="reference external" href="https://github.com/OpenArmor/OpenArmor-hids/releases/download/3.2.0/OpenArmor-hids-3.2.0.tar.gz.asc">GPG Unix</a></td>
-</tr>
-<tr class="row-odd"><td>Agent Windows</td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/windows/OpenArmor-agent-win32-3.2.0-6132.exe">OpenArmor-agent-win32-3.2.0.exe</a></td>
-<td>&nbsp;</td>
-<td><a class="reference external" href="http://updates.atomicorp.com/channels/atomic/windows/OpenArmor-agent-win32-3.2.0-6132.exe.asc">GPG Windows</a></td>
-</tr>
-<tr class="row-even"><td>Chocolatey Package</td>
-<td><a class="reference external" href="https://chocolatey.org/api/v2/package/OpenArmor-client/3.3.0">OpenArmor-client.3.3.0.nupkg</a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Virtual Appliance</td>
-<td><a class="reference external" href="http://updates.atomicorp.com/channels/atomic/virtual-machines/OpenArmor-vm-2.9.3.ova">OpenArmor-vm-2.9.3.ova</a> – <a class="reference external" href="http://updates.atomicorp.com/channels/atomic/virtual-machines/OpenArmor-vm-2.9.3.README">README</a></td>
-<td><a class="reference external" href="http://updates.atomicorp.com/channels/atomic/virtual-machines/OpenArmor-vm-2.9.3-checksum.txt">VA Checksum</a></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Docker Container</td>
-<td><a class="reference external" href="https://hub.docker.com/r/atomicorp/OpenArmor-docker/">atomicorp/OpenArmor-docker</a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="21%" />
-<col width="50%" />
-<col width="15%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">v3.2.0</th>
-<th class="head">Download</th>
-<th class="head">Checksum</th>
-<th class="head">Signature</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>Unix Server/Agent</td>
-<td><a class="reference external" href="https://github.com/OpenArmor/OpenArmor-hids/archive/3.2.0.tar.gz">OpenArmor-hids-3.2.0.tar.gz</a></td>
-<td>SHA256 b36cc4db73c265f5fd65f2b5450d69e332316612b5602a3e310ae8907e9d2548</td>
-<td><a class="reference external" href="https://github.com/OpenArmor/OpenArmor-hids/releases/download/3.2.0/OpenArmor-hids-3.2.0.tar.gz.asc">GPG-unix-v3</a></td>
-</tr>
-<tr class="row-odd"><td>Windows Agent</td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/windows/OpenArmor-agent-win32-3.2.0-6132.exe">OpenArmor-agent-win32-3.2.0.exe</a></td>
-<td>SHA256 ea291d729a14991cac0025d5de36d2cf516f6fdb0fa4f9ef4d99f428f46651bc</td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/windows/OpenArmor-agent-win32-3.2.0-6132.exe.asc">GPG-windows-v3</a></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="rhel-centos-fedora-and-others">
-<h2>RHEL, CentOS, Fedora and others<a class="headerlink" href="#rhel-centos-fedora-and-others" title="Permalink to this headline">¶</a></h2>
-<p>Available in the <a class="reference external" href="https://updates.atomicorp.com/channels/atomic/">Atomicorp repository</a>.</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="13%" />
-<col width="54%" />
-<col width="33%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head" colspan="2">CentOS / Redhat / Amazon Linux</th>
-<th class="head">atomic-release</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>el5 i386</td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/centos/5/i386/RPMS/">https://updates.atomicorp.com/channels/atomic/centos/5/i386/RPMS/</a></td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/centos/5/i386/RPMS/atomic-release-1.0-21.el5.art.noarch.rpm">atomic-release-1.0-21.el5.art.noarch.rpm</a></td>
-</tr>
-<tr class="row-odd"><td>el5 x86_64</td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/centos/5/x86_64/RPMS/">https://updates.atomicorp.com/channels/atomic/centos/5/x86_64/RPMS/</a></td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/centos/5/i386/RPMS/atomic-release-1.0-21.el5.art.noarch.rpm">atomic-release-1.0-21.el5.art.noarch.rpm</a></td>
-</tr>
-<tr class="row-even"><td>el6 i386</td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/centos/6/i386/RPMS/">https://updates.atomicorp.com/channels/atomic/centos/6/i386/RPMS/</a></td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/centos/6/i386/RPMS/atomic-release-1.0-21.el6.art.noarch.rpm">atomic-release-1.0-21.el6.art.noarch.rpm</a></td>
-</tr>
-<tr class="row-odd"><td>el6 x86_64</td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/centos/6/x86_64/RPMS/">https://updates.atomicorp.com/channels/atomic/centos/6/x86_64/RPMS/</a></td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/centos/6/i386/RPMS/atomic-release-1.0-21.el6.art.noarch.rpm">atomic-release-1.0-21.el6.art.noarch.rpm</a></td>
-</tr>
-<tr class="row-even"><td>el7 x86_64</td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/centos/7/x86_64/RPMS/">https://updates.atomicorp.com/channels/atomic/centos/7/x86_64/RPMS/</a></td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/centos/7/x86_64/RPMS/atomic-release-1.0-21.el7.art.noarch.rpm">atomic-release-1.0-21.el7.art.noarch.rpm</a></td>
-</tr>
-</tbody>
-</table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="12%" />
-<col width="54%" />
-<col width="35%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head" colspan="2">Fedora</th>
-<th class="head">atomic-release</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>fc24 x86_64</td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/fedora/24/x86_64/RPMS/">https://updates.atomicorp.com/channels/atomic/fedora/24/x86_64/RPMS/</a></td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/fedora/24/x86_64/RPMS/atomic-release-1.0-21.fc24.art.noarch.rpm">atomic-release-1.0-21.fc24.art.noarch.rpm</a></td>
-</tr>
-<tr class="row-odd"><td>fc25 x86_64</td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/fedora/25/x86_64/RPMS/">https://updates.atomicorp.com/channels/atomic/fedora/25/x86_64/RPMS/</a></td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/fedora/25/x86_64/RPMS/atomic-release-1.0-21.fc25.art.noarch.rpm">atomic-release-1.0-21.fc25.art.noarch.rpm</a></td>
-</tr>
-<tr class="row-even"><td>fc26 x86_64</td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/fedora/26/x86_64/RPMS/">https://updates.atomicorp.com/channels/atomic/fedora/26/x86_64/RPMS/</a></td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/fedora/26/x86_64/RPMS/atomic-release-1.0-21.fc26.art.noarch.rpm">atomic-release-1.0-21.fc26.art.noarch.rpm</a></td>
-</tr>
-<tr class="row-odd"><td>fc27 x86_64</td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/fedora/27/x86_64/RPMS/">https://updates.atomicorp.com/channels/atomic/fedora/27/x86_64/RPMS/</a></td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/fedora/27/x86_64/RPMS/atomic-release-1.0-21.fc27.art.noarch.rpm">atomic-release-1.0-21.fc27.art.noarch.rpm</a></td>
-</tr>
-<tr class="row-even"><td>fc28 x86_64</td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/fedora/28/x86_64/RPMS/">https://updates.atomicorp.com/channels/atomic/fedora/28/x86_64/RPMS/</a></td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/fedora/28/x86_64/RPMS/atomic-release-1.0-21.fc28.art.noarch.rpm">atomic-release-1.0-21.fc28.art.noarch.rpm</a></td>
-</tr>
-<tr class="row-odd"><td>fc29 x86_64</td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/fedora/29/x86_64/RPMS/">https://updates.atomicorp.com/channels/atomic/fedora/29/x86_64/RPMS/</a></td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/fedora/29/x86_64/RPMS/atomic-release-1.0-21.fc29.art.noarch.rpm">atomic-release-1.0-21.fc29.art.noarch.rpm</a></td>
-</tr>
-<tr class="row-even"><td>Legacy</td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/atomic/fedora/">https://updates.atomicorp.com/channels/atomic/fedora/</a></td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="16%" />
-<col width="84%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head" colspan="2">Amazon Linux</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>Amazon</td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/OpenArmor/amazon/1/x86_64/RPMS/">https://updates.atomicorp.com/channels/OpenArmor/amazon/1/x86_64/RPMS/</a></td>
-</tr>
-<tr class="row-odd"><td>Amazon (LTS)</td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/OpenArmor/amazon/2/x86_64/RPMS/">https://updates.atomicorp.com/channels/OpenArmor/amazon/2/x86_64/RPMS/</a></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="ubuntu-and-debian">
-<h2>Ubuntu, and Debian<a class="headerlink" href="#ubuntu-and-debian" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<colgroup>
-<col width="16%" />
-<col width="84%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head" colspan="2">Ubuntu</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>12 (precise)</td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/OpenArmor/ubuntu/pool/main/o/">https://updates.atomicorp.com/channels/OpenArmor/ubuntu/pool/main/o/</a></td>
-</tr>
-<tr class="row-odd"><td>14 (trusty)</td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/OpenArmor/ubuntu/pool/main/o/">https://updates.atomicorp.com/channels/OpenArmor/ubuntu/pool/main/o/</a></td>
-</tr>
-<tr class="row-even"><td>16 (xenial)</td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/OpenArmor/ubuntu/pool/main/o/">https://updates.atomicorp.com/channels/OpenArmor/ubuntu/pool/main/o/</a></td>
-</tr>
-<tr class="row-odd"><td>18 (bionic)</td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/OpenArmor/ubuntu/pool/main/o/">https://updates.atomicorp.com/channels/OpenArmor/ubuntu/pool/main/o/</a></td>
-</tr>
-</tbody>
-</table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="16%" />
-<col width="84%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head" colspan="2">Debian</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>7 (wheezy)</td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/OpenArmor/debian/pool/main/o/">https://updates.atomicorp.com/channels/OpenArmor/debian/pool/main/o/</a></td>
-</tr>
-<tr class="row-odd"><td>8 (jessie)</td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/OpenArmor/debian/pool/main/o/">https://updates.atomicorp.com/channels/OpenArmor/debian/pool/main/o/</a></td>
-</tr>
-<tr class="row-even"><td>9 (stretch)</td>
-<td><a class="reference external" href="https://updates.atomicorp.com/channels/OpenArmor/debian/pool/main/o/">https://updates.atomicorp.com/channels/OpenArmor/debian/pool/main/o/</a></td>
-</tr>
-</tbody>
-</table>
-<div class="section" id="yum-dnf-automated-installation-on-centos-redhat-amazon-linux-or-fedora">
-<h3>Yum/DNF Automated Installation on Centos, Redhat, Amazon Linux or Fedora<a class="headerlink" href="#yum-dnf-automated-installation-on-centos-redhat-amazon-linux-or-fedora" title="Permalink to this headline">¶</a></h3>
-<p>Automated installer:</p>
-<div class="code console highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Add Yum repo configuration</span>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div id="sidebar" class="bs-sidenav" role="complementary">
+            <ul>
+              <li>
+                <a class="reference internal" href="#">Downloads</a>
+                <ul>
+                  <li>
+                    <a class="reference internal" href="#source-downloads"
+                      >Source Downloads</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="reference internal"
+                      href="#rhel-centos-fedora-and-others"
+                      >RHEL, CentOS, Fedora and others</a
+                    >
+                  </li>
+                  <li>
+                    <a class="reference internal" href="#ubuntu-and-debian"
+                      >Ubuntu, and Debian</a
+                    >
+                    <ul>
+                      <li>
+                        <a
+                          class="reference internal"
+                          href="#yum-dnf-automated-installation-on-centos-redhat-amazon-linux-or-fedora"
+                          >Yum/DNF Automated Installation on Centos, Redhat,
+                          Amazon Linux or Fedora</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="reference internal"
+                          href="#manual-yum-dnf-installation-on-centos-redhat-amazon-linux-or-fedora"
+                          >Manual Yum/DNF installation on Centos, Redhat, Amazon
+                          Linux or Fedora</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="reference internal"
+                          href="#apt-automated-installation-on-ubuntu-and-debian"
+                          >APT Automated Installation on Ubuntu and Debian</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="reference internal"
+                          href="#manual-apt-installation-on-ubuntu-and-debian"
+                          >Manual APT Installation on Ubuntu and Debian</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="reference internal" href="#gpg-pgp-key"
+                      >GPG / PGP key</a
+                    >
+                  </li>
+                  <li>
+                    <a class="reference internal" href="#presentation-slides"
+                      >Presentation Slides</a
+                    >
+                  </li>
+                  <li>
+                    <a class="reference internal" href="#contribute-back"
+                      >Contribute back!</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="section" id="downloads">
+            <h1>
+              Downloads<a
+                class="headerlink"
+                href="#downloads"
+                title="Permalink to this headline"
+                >¶</a
+              >
+            </h1>
+            <div class="section" id="source-downloads">
+              <h2>
+                Source Downloads<a
+                  class="headerlink"
+                  href="#source-downloads"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <table border="1" class="docutils">
+                <colgroup>
+                  <col width="19%" />
+                  <col width="64%" />
+                  <col width="18%" />
+                </colgroup>
+                <thead valign="bottom">
+                  <tr class="row-odd">
+                    <th class="head" colspan="3">
+                      Latest development snapshots
+                    </th>
+                  </tr>
+                </thead>
+                <tbody valign="top">
+                  <tr class="row-even">
+                    <td>Server/Agent</td>
+                    <td colspan="2">
+                      <a
+                        class="reference external"
+                        href="https://github.com/OpenArmor/OpenArmor-hids/releases"
+                        >https://github.com/OpenArmor/OpenArmor-hids/releases</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-odd">
+                    <td>Packages</td>
+                    <td colspan="2">
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/OpenArmor-3-testing"
+                        >https://updates.atomicorp.com/channels/OpenArmor-3-testing</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-even">
+                    <td>Web UI</td>
+                    <td colspan="2">
+                      <a
+                        class="reference external"
+                        href="https://github.com/OpenArmor/OpenArmor-wui/releases"
+                        >https://github.com/OpenArmor/OpenArmor-wui/releases</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-odd">
+                    <td>Docs</td>
+                    <td colspan="2">
+                      <a
+                        class="reference external"
+                        href="https://github.com/OpenArmor/OpenArmor-docs"
+                        >https://github.com/OpenArmor/OpenArmor-docs</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table border="1" class="docutils">
+                <colgroup>
+                  <col width="19%" />
+                  <col width="43%" />
+                  <col width="24%" />
+                  <col width="15%" />
+                </colgroup>
+                <thead valign="bottom">
+                  <tr class="row-odd">
+                    <th class="head" colspan="2">
+                      Latest Stable Release (3.2.0)
+                    </th>
+                    <th class="head">Checksum</th>
+                    <th class="head">Signature</th>
+                  </tr>
+                </thead>
+                <tbody valign="top">
+                  <tr class="row-even">
+                    <td>Server/Agent Unix</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://github.com/OpenArmor/OpenArmor-hids/archive/3.2.0.tar.gz"
+                        >OpenArmor-hids-3.2.0.tar.gz</a
+                      >
+                      –
+                      <a
+                        class="reference external"
+                        href="https://github.com/OpenArmor/OpenArmor-hids/releases/tag/3.2.0"
+                        >Release Notes</a
+                      >
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://github.com/OpenArmor/OpenArmor-hids/releases/download/3.2.0/OpenArmor-hids-3.2.0.tar.gz.asc"
+                        >GPG Unix</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-odd">
+                    <td>Agent Windows</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/windows/OpenArmor-agent-win32-3.2.0-6132.exe"
+                        >OpenArmor-agent-win32-3.2.0.exe</a
+                      >
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="http://updates.atomicorp.com/channels/atomic/windows/OpenArmor-agent-win32-3.2.0-6132.exe.asc"
+                        >GPG Windows</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-even">
+                    <td>Chocolatey Package</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://chocolatey.org/api/v2/package/OpenArmor-client/3.3.0"
+                        >OpenArmor-client.3.3.0.nupkg</a
+                      >
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr class="row-odd">
+                    <td>Virtual Appliance</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="http://updates.atomicorp.com/channels/atomic/virtual-machines/OpenArmor-vm-2.9.3.ova"
+                        >OpenArmor-vm-2.9.3.ova</a
+                      >
+                      –
+                      <a
+                        class="reference external"
+                        href="http://updates.atomicorp.com/channels/atomic/virtual-machines/OpenArmor-vm-2.9.3.README"
+                        >README</a
+                      >
+                    </td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="http://updates.atomicorp.com/channels/atomic/virtual-machines/OpenArmor-vm-2.9.3-checksum.txt"
+                        >VA Checksum</a
+                      >
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr class="row-even">
+                    <td>Docker Container</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://hub.docker.com/r/atomicorp/OpenArmor-docker/"
+                        >atomicorp/OpenArmor-docker</a
+                      >
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table border="1" class="docutils">
+                <colgroup>
+                  <col width="14%" />
+                  <col width="21%" />
+                  <col width="50%" />
+                  <col width="15%" />
+                </colgroup>
+                <thead valign="bottom">
+                  <tr class="row-odd">
+                    <th class="head">v3.2.0</th>
+                    <th class="head">Download</th>
+                    <th class="head">Checksum</th>
+                    <th class="head">Signature</th>
+                  </tr>
+                </thead>
+                <tbody valign="top">
+                  <tr class="row-even">
+                    <td>Unix Server/Agent</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://github.com/OpenArmor/OpenArmor-hids/archive/3.2.0.tar.gz"
+                        >OpenArmor-hids-3.2.0.tar.gz</a
+                      >
+                    </td>
+                    <td>
+                      SHA256
+                      b36cc4db73c265f5fd65f2b5450d69e332316612b5602a3e310ae8907e9d2548
+                    </td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://github.com/OpenArmor/OpenArmor-hids/releases/download/3.2.0/OpenArmor-hids-3.2.0.tar.gz.asc"
+                        >GPG-unix-v3</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-odd">
+                    <td>Windows Agent</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/windows/OpenArmor-agent-win32-3.2.0-6132.exe"
+                        >OpenArmor-agent-win32-3.2.0.exe</a
+                      >
+                    </td>
+                    <td>
+                      SHA256
+                      ea291d729a14991cac0025d5de36d2cf516f6fdb0fa4f9ef4d99f428f46651bc
+                    </td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/windows/OpenArmor-agent-win32-3.2.0-6132.exe.asc"
+                        >GPG-windows-v3</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="section" id="rhel-centos-fedora-and-others">
+              <h2>
+                RHEL, CentOS, Fedora and others<a
+                  class="headerlink"
+                  href="#rhel-centos-fedora-and-others"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <p>
+                Available in the
+                <a
+                  class="reference external"
+                  href="https://updates.atomicorp.com/channels/atomic/"
+                  >Atomicorp repository</a
+                >.
+              </p>
+              <table border="1" class="docutils">
+                <colgroup>
+                  <col width="13%" />
+                  <col width="54%" />
+                  <col width="33%" />
+                </colgroup>
+                <thead valign="bottom">
+                  <tr class="row-odd">
+                    <th class="head" colspan="2">
+                      CentOS / Redhat / Amazon Linux
+                    </th>
+                    <th class="head">atomic-release</th>
+                  </tr>
+                </thead>
+                <tbody valign="top">
+                  <tr class="row-even">
+                    <td>el5 i386</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/centos/5/i386/RPMS/"
+                        >https://updates.atomicorp.com/channels/atomic/centos/5/i386/RPMS/</a
+                      >
+                    </td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/centos/5/i386/RPMS/atomic-release-1.0-21.el5.art.noarch.rpm"
+                        >atomic-release-1.0-21.el5.art.noarch.rpm</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-odd">
+                    <td>el5 x86_64</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/centos/5/x86_64/RPMS/"
+                        >https://updates.atomicorp.com/channels/atomic/centos/5/x86_64/RPMS/</a
+                      >
+                    </td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/centos/5/i386/RPMS/atomic-release-1.0-21.el5.art.noarch.rpm"
+                        >atomic-release-1.0-21.el5.art.noarch.rpm</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-even">
+                    <td>el6 i386</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/centos/6/i386/RPMS/"
+                        >https://updates.atomicorp.com/channels/atomic/centos/6/i386/RPMS/</a
+                      >
+                    </td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/centos/6/i386/RPMS/atomic-release-1.0-21.el6.art.noarch.rpm"
+                        >atomic-release-1.0-21.el6.art.noarch.rpm</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-odd">
+                    <td>el6 x86_64</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/centos/6/x86_64/RPMS/"
+                        >https://updates.atomicorp.com/channels/atomic/centos/6/x86_64/RPMS/</a
+                      >
+                    </td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/centos/6/i386/RPMS/atomic-release-1.0-21.el6.art.noarch.rpm"
+                        >atomic-release-1.0-21.el6.art.noarch.rpm</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-even">
+                    <td>el7 x86_64</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/centos/7/x86_64/RPMS/"
+                        >https://updates.atomicorp.com/channels/atomic/centos/7/x86_64/RPMS/</a
+                      >
+                    </td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/centos/7/x86_64/RPMS/atomic-release-1.0-21.el7.art.noarch.rpm"
+                        >atomic-release-1.0-21.el7.art.noarch.rpm</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table border="1" class="docutils">
+                <colgroup>
+                  <col width="12%" />
+                  <col width="54%" />
+                  <col width="35%" />
+                </colgroup>
+                <thead valign="bottom">
+                  <tr class="row-odd">
+                    <th class="head" colspan="2">Fedora</th>
+                    <th class="head">atomic-release</th>
+                  </tr>
+                </thead>
+                <tbody valign="top">
+                  <tr class="row-even">
+                    <td>fc24 x86_64</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/fedora/24/x86_64/RPMS/"
+                        >https://updates.atomicorp.com/channels/atomic/fedora/24/x86_64/RPMS/</a
+                      >
+                    </td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/fedora/24/x86_64/RPMS/atomic-release-1.0-21.fc24.art.noarch.rpm"
+                        >atomic-release-1.0-21.fc24.art.noarch.rpm</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-odd">
+                    <td>fc25 x86_64</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/fedora/25/x86_64/RPMS/"
+                        >https://updates.atomicorp.com/channels/atomic/fedora/25/x86_64/RPMS/</a
+                      >
+                    </td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/fedora/25/x86_64/RPMS/atomic-release-1.0-21.fc25.art.noarch.rpm"
+                        >atomic-release-1.0-21.fc25.art.noarch.rpm</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-even">
+                    <td>fc26 x86_64</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/fedora/26/x86_64/RPMS/"
+                        >https://updates.atomicorp.com/channels/atomic/fedora/26/x86_64/RPMS/</a
+                      >
+                    </td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/fedora/26/x86_64/RPMS/atomic-release-1.0-21.fc26.art.noarch.rpm"
+                        >atomic-release-1.0-21.fc26.art.noarch.rpm</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-odd">
+                    <td>fc27 x86_64</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/fedora/27/x86_64/RPMS/"
+                        >https://updates.atomicorp.com/channels/atomic/fedora/27/x86_64/RPMS/</a
+                      >
+                    </td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/fedora/27/x86_64/RPMS/atomic-release-1.0-21.fc27.art.noarch.rpm"
+                        >atomic-release-1.0-21.fc27.art.noarch.rpm</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-even">
+                    <td>fc28 x86_64</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/fedora/28/x86_64/RPMS/"
+                        >https://updates.atomicorp.com/channels/atomic/fedora/28/x86_64/RPMS/</a
+                      >
+                    </td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/fedora/28/x86_64/RPMS/atomic-release-1.0-21.fc28.art.noarch.rpm"
+                        >atomic-release-1.0-21.fc28.art.noarch.rpm</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-odd">
+                    <td>fc29 x86_64</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/fedora/29/x86_64/RPMS/"
+                        >https://updates.atomicorp.com/channels/atomic/fedora/29/x86_64/RPMS/</a
+                      >
+                    </td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/fedora/29/x86_64/RPMS/atomic-release-1.0-21.fc29.art.noarch.rpm"
+                        >atomic-release-1.0-21.fc29.art.noarch.rpm</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-even">
+                    <td>Legacy</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/atomic/fedora/"
+                        >https://updates.atomicorp.com/channels/atomic/fedora/</a
+                      >
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table border="1" class="docutils">
+                <colgroup>
+                  <col width="16%" />
+                  <col width="84%" />
+                </colgroup>
+                <thead valign="bottom">
+                  <tr class="row-odd">
+                    <th class="head" colspan="2">Amazon Linux</th>
+                  </tr>
+                </thead>
+                <tbody valign="top">
+                  <tr class="row-even">
+                    <td>Amazon</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/OpenArmor/amazon/1/x86_64/RPMS/"
+                        >https://updates.atomicorp.com/channels/OpenArmor/amazon/1/x86_64/RPMS/</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-odd">
+                    <td>Amazon (LTS)</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/OpenArmor/amazon/2/x86_64/RPMS/"
+                        >https://updates.atomicorp.com/channels/OpenArmor/amazon/2/x86_64/RPMS/</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="section" id="ubuntu-and-debian">
+              <h2>
+                Ubuntu, and Debian<a
+                  class="headerlink"
+                  href="#ubuntu-and-debian"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <table border="1" class="docutils">
+                <colgroup>
+                  <col width="16%" />
+                  <col width="84%" />
+                </colgroup>
+                <thead valign="bottom">
+                  <tr class="row-odd">
+                    <th class="head" colspan="2">Ubuntu</th>
+                  </tr>
+                </thead>
+                <tbody valign="top">
+                  <tr class="row-even">
+                    <td>12 (precise)</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/OpenArmor/ubuntu/pool/main/o/"
+                        >https://updates.atomicorp.com/channels/OpenArmor/ubuntu/pool/main/o/</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-odd">
+                    <td>14 (trusty)</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/OpenArmor/ubuntu/pool/main/o/"
+                        >https://updates.atomicorp.com/channels/OpenArmor/ubuntu/pool/main/o/</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-even">
+                    <td>16 (xenial)</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/OpenArmor/ubuntu/pool/main/o/"
+                        >https://updates.atomicorp.com/channels/OpenArmor/ubuntu/pool/main/o/</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-odd">
+                    <td>18 (bionic)</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/OpenArmor/ubuntu/pool/main/o/"
+                        >https://updates.atomicorp.com/channels/OpenArmor/ubuntu/pool/main/o/</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table border="1" class="docutils">
+                <colgroup>
+                  <col width="16%" />
+                  <col width="84%" />
+                </colgroup>
+                <thead valign="bottom">
+                  <tr class="row-odd">
+                    <th class="head" colspan="2">Debian</th>
+                  </tr>
+                </thead>
+                <tbody valign="top">
+                  <tr class="row-even">
+                    <td>7 (wheezy)</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/OpenArmor/debian/pool/main/o/"
+                        >https://updates.atomicorp.com/channels/OpenArmor/debian/pool/main/o/</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-odd">
+                    <td>8 (jessie)</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/OpenArmor/debian/pool/main/o/"
+                        >https://updates.atomicorp.com/channels/OpenArmor/debian/pool/main/o/</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-even">
+                    <td>9 (stretch)</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://updates.atomicorp.com/channels/OpenArmor/debian/pool/main/o/"
+                        >https://updates.atomicorp.com/channels/OpenArmor/debian/pool/main/o/</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div
+                class="section"
+                id="yum-dnf-automated-installation-on-centos-redhat-amazon-linux-or-fedora"
+              >
+                <h3>
+                  Yum/DNF Automated Installation on Centos, Redhat, Amazon Linux
+                  or Fedora<a
+                    class="headerlink"
+                    href="#yum-dnf-automated-installation-on-centos-redhat-amazon-linux-or-fedora"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <p>Automated installer:</p>
+                <div class="code console highlight-default">
+                  <div class="highlight">
+                    <pre><span></span><span class="c1"># Add Yum repo configuration</span>
 <span class="n">wget</span> <span class="o">-</span><span class="n">q</span> <span class="o">-</span><span class="n">O</span> <span class="o">-</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">updates</span><span class="o">.</span><span class="n">atomicorp</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">installers</span><span class="o">/</span><span class="n">atomic</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">bash</span>
 
 <span class="c1"># Server</span>
@@ -396,32 +933,67 @@
 
 <span class="c1"># Agent</span>
 <span class="n">sudo</span> <span class="n">yum</span> <span class="n">install</span> <span class="n">OpenArmor</span><span class="o">-</span><span class="n">hids</span><span class="o">-</span><span class="n">agent</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="manual-yum-dnf-installation-on-centos-redhat-amazon-linux-or-fedora">
-<h3>Manual Yum/DNF installation on Centos, Redhat, Amazon Linux or Fedora<a class="headerlink" href="#manual-yum-dnf-installation-on-centos-redhat-amazon-linux-or-fedora" title="Permalink to this headline">¶</a></h3>
-<ol class="arabic simple">
-<li>Download the atomic-release file for your distribution</li>
-<li>Install the atomic-release package (Note: This includes the OpenArmor GPG key)</li>
-</ol>
-<div class="code console highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">rpm</span> <span class="o">-</span><span class="n">Uvh</span> <span class="n">atomic</span><span class="o">-</span><span class="n">release</span><span class="o">*</span><span class="n">rpm</span>
-</pre></div>
-</div>
-<ol class="arabic simple" start="3">
-<li>Install OpenArmor package</li>
-</ol>
-<div class="code console highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Server</span>
+</pre>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="section"
+                id="manual-yum-dnf-installation-on-centos-redhat-amazon-linux-or-fedora"
+              >
+                <h3>
+                  Manual Yum/DNF installation on Centos, Redhat, Amazon Linux or
+                  Fedora<a
+                    class="headerlink"
+                    href="#manual-yum-dnf-installation-on-centos-redhat-amazon-linux-or-fedora"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <ol class="arabic simple">
+                  <li>
+                    Download the atomic-release file for your distribution
+                  </li>
+                  <li>
+                    Install the atomic-release package (Note: This includes the
+                    OpenArmor GPG key)
+                  </li>
+                </ol>
+                <div class="code console highlight-default">
+                  <div class="highlight">
+                    <pre><span></span><span class="n">sudo</span> <span class="n">rpm</span> <span class="o">-</span><span class="n">Uvh</span> <span class="n">atomic</span><span class="o">-</span><span class="n">release</span><span class="o">*</span><span class="n">rpm</span>
+</pre>
+                  </div>
+                </div>
+                <ol class="arabic simple" start="3">
+                  <li>Install OpenArmor package</li>
+                </ol>
+                <div class="code console highlight-default">
+                  <div class="highlight">
+                    <pre><span></span><span class="c1"># Server</span>
 <span class="n">sudo</span> <span class="n">yum</span> <span class="n">install</span> <span class="n">OpenArmor</span><span class="o">-</span><span class="n">hids</span> <span class="n">server</span>
 
 <span class="c1"># Agent</span>
 <span class="n">sudo</span> <span class="n">yum</span> <span class="n">install</span> <span class="n">OpenArmor</span><span class="o">-</span><span class="n">hids</span><span class="o">-</span><span class="n">agent</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="apt-automated-installation-on-ubuntu-and-debian">
-<h3>APT Automated Installation on Ubuntu and Debian<a class="headerlink" href="#apt-automated-installation-on-ubuntu-and-debian" title="Permalink to this headline">¶</a></h3>
-<div class="code console highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Add Apt sources.lst</span>
+</pre>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="section"
+                id="apt-automated-installation-on-ubuntu-and-debian"
+              >
+                <h3>
+                  APT Automated Installation on Ubuntu and Debian<a
+                    class="headerlink"
+                    href="#apt-automated-installation-on-ubuntu-and-debian"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <div class="code console highlight-default">
+                  <div class="highlight">
+                    <pre><span></span><span class="c1"># Add Apt sources.lst</span>
 <span class="n">wget</span> <span class="o">-</span><span class="n">q</span> <span class="o">-</span><span class="n">O</span> <span class="o">-</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">updates</span><span class="o">.</span><span class="n">atomicorp</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">installers</span><span class="o">/</span><span class="n">atomic</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">bash</span>
 
 <span class="c1"># Update apt data</span>
@@ -432,33 +1004,52 @@
 
 <span class="c1"># Agent</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">OpenArmor</span><span class="o">-</span><span class="n">hids</span><span class="o">-</span><span class="n">agent</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="manual-apt-installation-on-ubuntu-and-debian">
-<h3>Manual APT Installation on Ubuntu and Debian<a class="headerlink" href="#manual-apt-installation-on-ubuntu-and-debian" title="Permalink to this headline">¶</a></h3>
-<ol class="arabic simple">
-<li>Add the GPG key</li>
-</ol>
-<div class="code console highlight-default"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">-</span><span class="n">q</span> <span class="o">-</span><span class="n">O</span> <span class="o">-</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">atomicorp</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">RPM</span><span class="o">-</span><span class="n">GPG</span><span class="o">-</span><span class="n">KEY</span><span class="o">.</span><span class="n">atomicorp</span><span class="o">.</span><span class="n">txt</span>  <span class="o">|</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">key</span> <span class="n">add</span> <span class="o">-</span>
-</pre></div>
-</div>
-<ol class="arabic simple" start="2">
-<li>Add the repo configuration to sources.list</li>
-</ol>
-<div class="code console highlight-default"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">lsb</span><span class="o">-</span><span class="n">release</span>
+</pre>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="section"
+                id="manual-apt-installation-on-ubuntu-and-debian"
+              >
+                <h3>
+                  Manual APT Installation on Ubuntu and Debian<a
+                    class="headerlink"
+                    href="#manual-apt-installation-on-ubuntu-and-debian"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <ol class="arabic simple">
+                  <li>Add the GPG key</li>
+                </ol>
+                <div class="code console highlight-default">
+                  <div class="highlight">
+                    <pre><span></span><span class="n">wget</span> <span class="o">-</span><span class="n">q</span> <span class="o">-</span><span class="n">O</span> <span class="o">-</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">atomicorp</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">RPM</span><span class="o">-</span><span class="n">GPG</span><span class="o">-</span><span class="n">KEY</span><span class="o">.</span><span class="n">atomicorp</span><span class="o">.</span><span class="n">txt</span>  <span class="o">|</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">key</span> <span class="n">add</span> <span class="o">-</span>
+</pre>
+                  </div>
+                </div>
+                <ol class="arabic simple" start="2">
+                  <li>Add the repo configuration to sources.list</li>
+                </ol>
+                <div class="code console highlight-default">
+                  <div class="highlight">
+                    <pre><span></span><span class="n">source</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">lsb</span><span class="o">-</span><span class="n">release</span>
 
 <span class="c1"># Ubuntu</span>
 <span class="n">echo</span> <span class="s2">&quot;deb https://updates.atomicorp.com/channels/atomic/ubuntu $DISTRIB_CODENAME main&quot;</span> <span class="o">&gt;&gt;</span>  <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">atomic</span><span class="o">.</span><span class="n">list</span>
 
 <span class="c1"># Debian</span>
 <span class="n">echo</span> <span class="s2">&quot;deb https://updates.atomicorp.com/channels/atomic/debian $DISTRIB_CODENAME main&quot;</span> <span class="o">&gt;&gt;</span>  <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">atomic</span><span class="o">.</span><span class="n">list</span>
-</pre></div>
-</div>
-<ol class="arabic simple" start="3">
-<li>Install Agent or Server</li>
-</ol>
-<div class="code console highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Update apt data</span>
+</pre>
+                  </div>
+                </div>
+                <ol class="arabic simple" start="3">
+                  <li>Install Agent or Server</li>
+                </ol>
+                <div class="code console highlight-default">
+                  <div class="highlight">
+                    <pre><span></span><span class="c1"># Update apt data</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
 
 <span class="c1"># Server</span>
@@ -466,116 +1057,257 @@
 
 <span class="c1"># Agent</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">OpenArmor</span><span class="o">-</span><span class="n">hids</span><span class="o">-</span><span class="n">agent</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="gpg-pgp-key">
-<h2>GPG / PGP key<a class="headerlink" href="#gpg-pgp-key" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<colgroup>
-<col width="28%" />
-<col width="72%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>Key</td>
-<td>Manual Download Link</td>
-</tr>
-<tr class="row-even"><td>Package Signing Key</td>
-<td><a class="reference external" href="https://www.atomicorp.com/RPM-GPG-KEY.atomicorp.txt">https://www.atomicorp.com/RPM-GPG-KEY.atomicorp.txt</a></td>
-</tr>
-<tr class="row-odd"><td>Source Signing Key  c</td>
-<td><a class="reference external" href="https://OpenArmor.github.io/files/OpenArmor-ARCHIVE-KEY.asc">https://OpenArmor.github.io/files/OpenArmor-ARCHIVE-KEY.asc</a></td>
-</tr>
-</tbody>
-</table>
-<p>Before you install any package from our project, we recommend that you
-verify it using our PGP key. Follow these two steps if you are not used
-to using gpg. You first need to import our public key:</p>
-<div class="code console highlight-default"><div class="highlight"><pre><span></span><span class="c1"># wget https://OpenArmor.github.io/files/OpenArmor-ARCHIVE-KEY.asc</span>
+</pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section" id="gpg-pgp-key">
+              <h2>
+                GPG / PGP key<a
+                  class="headerlink"
+                  href="#gpg-pgp-key"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <table border="1" class="docutils">
+                <colgroup>
+                  <col width="28%" />
+                  <col width="72%" />
+                </colgroup>
+                <tbody valign="top">
+                  <tr class="row-odd">
+                    <td>Key</td>
+                    <td>Manual Download Link</td>
+                  </tr>
+                  <tr class="row-even">
+                    <td>Package Signing Key</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://www.atomicorp.com/RPM-GPG-KEY.atomicorp.txt"
+                        >https://www.atomicorp.com/RPM-GPG-KEY.atomicorp.txt</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-odd">
+                    <td>Source Signing Key c</td>
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://OpenArmor.github.io/files/OpenArmor-ARCHIVE-KEY.asc"
+                        >https://OpenArmor.github.io/files/OpenArmor-ARCHIVE-KEY.asc</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>
+                Before you install any package from our project, we recommend
+                that you verify it using our PGP key. Follow these two steps if
+                you are not used to using gpg. You first need to import our
+                public key:
+              </p>
+              <div class="code console highlight-default">
+                <div class="highlight">
+                  <pre><span></span><span class="c1"># wget https://OpenArmor.github.io/files/OpenArmor-ARCHIVE-KEY.asc</span>
 <span class="c1"># gpg --import OpenArmor-ARCHIVE-KEY.asc</span>
-</pre></div>
-</div>
-<p>And then verify each file against its signature:</p>
-<div class="code console highlight-default"><div class="highlight"><pre><span></span><span class="n">OpenArmor</span><span class="o">-</span><span class="n">test</span><span class="c1"># gpg --verify file.asc</span>
-</pre></div>
-</div>
-<p>You should get the following result:</p>
-<div class="code console highlight-default"><div class="highlight"><pre><span></span><span class="n">gpg</span><span class="p">:</span> <span class="n">Signature</span> <span class="n">made</span> <span class="n">Tue</span> <span class="mi">20</span> <span class="n">Dec</span> <span class="mi">2016</span> <span class="mi">11</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">58</span> <span class="n">AM</span> <span class="n">EST</span> <span class="n">using</span> <span class="n">RSA</span> <span class="n">key</span> <span class="n">ID</span> <span class="mi">2</span><span class="n">D8387B7</span>
+</pre>
+                </div>
+              </div>
+              <p>And then verify each file against its signature:</p>
+              <div class="code console highlight-default">
+                <div class="highlight">
+                  <pre><span></span><span class="n">OpenArmor</span><span class="o">-</span><span class="n">test</span><span class="c1"># gpg --verify file.asc</span>
+</pre>
+                </div>
+              </div>
+              <p>You should get the following result:</p>
+              <div class="code console highlight-default">
+                <div class="highlight">
+                  <pre><span></span><span class="n">gpg</span><span class="p">:</span> <span class="n">Signature</span> <span class="n">made</span> <span class="n">Tue</span> <span class="mi">20</span> <span class="n">Dec</span> <span class="mi">2016</span> <span class="mi">11</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">58</span> <span class="n">AM</span> <span class="n">EST</span> <span class="n">using</span> <span class="n">RSA</span> <span class="n">key</span> <span class="n">ID</span> <span class="mi">2</span><span class="n">D8387B7</span>
 <span class="n">gpg</span><span class="p">:</span> <span class="n">Good</span> <span class="n">signature</span> <span class="kn">from</span> <span class="s2">&quot;Scott R. Shinn &lt;scott@atomicorp.com&gt;&quot;</span>
 <span class="n">Primary</span> <span class="n">key</span> <span class="n">fingerprint</span><span class="p">:</span> <span class="n">B50F</span> <span class="n">B194</span> <span class="mi">7</span><span class="n">A0A</span> <span class="n">E311</span> <span class="mi">45</span><span class="n">D0</span>  <span class="mi">5</span><span class="n">FAD</span> <span class="n">EE1B</span> <span class="mf">0E6</span><span class="n">B</span> <span class="mi">2</span><span class="n">D83</span> <span class="mi">87</span><span class="n">B7</span>
-</pre></div>
-</div>
-<p>Note that the signing key was changed in December 2016. The previous signing key
-&#8220;6F11 9E06 487A AF17 C84C E48A 456B 17CF A390 1351&#8221; has expired. If you get an warning
-saying “gpg: Note: This key has expired!”, make sure to update the key and run the
-“import” command again (as specified above).</p>
-</div>
-<div class="section" id="presentation-slides">
-<h2>Presentation Slides<a class="headerlink" href="#presentation-slides" title="Permalink to this headline">¶</a></h2>
-<p>Several of the OpenArmor Project Team members have presented at conferences.
-Here is a collection of materials from some of those presentations.</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference external" href="https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/Decoding_AWS_CloudTrail_with_OpenArmor.pptx">Decoding AWS CloudTrail with OpenArmor</a></td>
-</tr>
-<tr class="row-even"><td><a class="reference external" href="https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/Log_Analysis_using_OpenArmor.pdf">Log Analysis Using OpenArmor</a></td>
-</tr>
-<tr class="row-odd"><td><a class="reference external" href="https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/Making_the_Most_of_OpenArmor.pdf">Making the Most of OpenArmor</a></td>
-</tr>
-<tr class="row-even"><td><a class="reference external" href="https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/Malware_Detection_with_OpenArmor.pptx">Malware Detection with OpenArmor</a></td>
-</tr>
-<tr class="row-odd"><td><a class="reference external" href="https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/OpenSourceSecurity_2013.pptx">Open Source Security</a></td>
-</tr>
-<tr class="row-even"><td><a class="reference external" href="https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/OpenArmor_Active_Response_and_Self_Healing.pdf">OpenArmor Active Response and Self Healing</a></td>
-</tr>
-<tr class="row-odd"><td><a class="reference external" href="https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/OpenArmor_and_OSSIM_Unified_Open_Source_Security.pdf">OpenArmor and OSSIM Unified Open Source Security</a></td>
-</tr>
-<tr class="row-even"><td><a class="reference external" href="https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/OpenArmor_at_Scale.pdf">OpenArmor at Scale</a></td>
-</tr>
-<tr class="row-odd"><td><a class="reference external" href="https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/OpenArmor_Con_2012-day-1.pdf">OpenArmor Con 2012 Day 1</a></td>
-</tr>
-<tr class="row-even"><td><a class="reference external" href="https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/OpenArmor_Con_2012-day-2.pdf">OpenArmor Con 2012 Day 2</a></td>
-</tr>
-<tr class="row-odd"><td><a class="reference external" href="https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/OpenArmor_Log_Mangement_with_Elasticsearch.pptx">OpenArmor Log Management with Elasticsearch</a></td>
-</tr>
-<tr class="row-even"><td><a class="reference external" href="https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/OpenArmor_PCI_Solution_2.0.pdf">OpenArmor PCI Solution 2.0</a></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="contribute-back">
-<h2>Contribute back!<a class="headerlink" href="#contribute-back" title="Permalink to this headline">¶</a></h2>
-<p>If you find OpenArmor useful and would like to contribute back to the
-community, please contact us. We have a lot of work to do and any help
-is appreciated.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-</div>
-</div>
-
-
+</pre>
+                </div>
+              </div>
+              <p>
+                Note that the signing key was changed in December 2016. The
+                previous signing key &#8220;6F11 9E06 487A AF17 C84C E48A 456B
+                17CF A390 1351&#8221; has expired. If you get an warning saying
+                “gpg: Note: This key has expired!”, make sure to update the key
+                and run the “import” command again (as specified above).
+              </p>
+            </div>
+            <div class="section" id="presentation-slides">
+              <h2>
+                Presentation Slides<a
+                  class="headerlink"
+                  href="#presentation-slides"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <p>
+                Several of the OpenArmor Project Team members have presented at
+                conferences. Here is a collection of materials from some of
+                those presentations.
+              </p>
+              <table border="1" class="docutils">
+                <colgroup>
+                  <col width="100%" />
+                </colgroup>
+                <tbody valign="top">
+                  <tr class="row-odd">
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/Decoding_AWS_CloudTrail_with_OpenArmor.pptx"
+                        >Decoding AWS CloudTrail with OpenArmor</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-even">
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/Log_Analysis_using_OpenArmor.pdf"
+                        >Log Analysis Using OpenArmor</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-odd">
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/Making_the_Most_of_OpenArmor.pdf"
+                        >Making the Most of OpenArmor</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-even">
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/Malware_Detection_with_OpenArmor.pptx"
+                        >Malware Detection with OpenArmor</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-odd">
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/OpenSourceSecurity_2013.pptx"
+                        >Open Source Security</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-even">
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/OpenArmor_Active_Response_and_Self_Healing.pdf"
+                        >OpenArmor Active Response and Self Healing</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-odd">
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/OpenArmor_and_OSSIM_Unified_Open_Source_Security.pdf"
+                        >OpenArmor and OSSIM Unified Open Source Security</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-even">
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/OpenArmor_at_Scale.pdf"
+                        >OpenArmor at Scale</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-odd">
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/OpenArmor_Con_2012-day-1.pdf"
+                        >OpenArmor Con 2012 Day 1</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-even">
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/OpenArmor_Con_2012-day-2.pdf"
+                        >OpenArmor Con 2012 Day 2</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-odd">
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/OpenArmor_Log_Mangement_with_Elasticsearch.pptx"
+                        >OpenArmor Log Management with Elasticsearch</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="row-even">
+                    <td>
+                      <a
+                        class="reference external"
+                        href="https://bintray.com/artifact/download/OpenArmor/OpenArmor-presentations/OpenArmor_PCI_Solution_2.0.pdf"
+                        >OpenArmor PCI Solution 2.0</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="section" id="contribute-back">
+              <h2>
+                Contribute back!<a
+                  class="headerlink"
+                  href="#contribute-back"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <p>
+                If you find OpenArmor useful and would like to contribute back
+                to the community, please contact us. We have a lot of work to do
+                and any help is appreciated.
+              </p>
+              <div class="line-block">
+                <div class="line"><br /></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-      
-  </div>
-</div>
-<footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      
-    </p>
-    <p>
-        &copy; Copyright 2010-2020, OpenArmor Project Team.<br/>
-    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.2 - 
-    Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
-    </p>
-  </div>
-</footer>
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>
+          &copy; Copyright 2010-2020, OpenArmor Project Team.<br />
+          OpenArmor <b>OpenArmor.net</b> domain owned and maintained by
+          <a href="https://theopenarmor.org" target="_blank"
+            >OpenArmor Foundation</a
+          ><br />
+          Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.2 -
+          Home page graphics courtesy of
+          <a href="https://pixabay.com" target="_blank">pixabay</a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

@@ -5,13 +5,41 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Log Samples from sshd &#8212; OpenArmor</title>
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap-theme.min.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/parallax.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <link
+      rel="stylesheet"
+      href="../../../_static/pygments.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/bootstrap-sphinx.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/bootstrap-3.2.0/css/bootstrap-theme.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/bootstrap-sphinx.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/parallax.css"
+      type="text/css"
+    />
+    <script
+      id="documentation_options"
+      data-url_root="../../../"
+      src="../../../_static/documentation_options.js"
+    ></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
@@ -19,195 +47,384 @@
     <script src="../../../_static/js/jquery-fix.js"></script>
     <script src="../../../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
     <script src="../../../_static/bootstrap-sphinx.js"></script>
-    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link
+      rel="author"
+      title="About these documents"
+      href="../../../about.html"
+    />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138780766-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-138780766-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-gtag('config', 'UA-138780766-1');
-</script>
+      gtag("config", "UA-138780766-1");
+    </script>
 
-<script type="text/javascript">
-  var _ss = _ss || [];
-  _ss.push(['_setDomain', 'https://koi-3QNN51VTHS.marketingautomation.services/net']);
-  _ss.push(['_setAccount', 'KOI-4APYNOYP8O']);
-  _ss.push(['_trackPageView']);
-  window._pa = window._pa || {};
-  // _pa.orderId = "myOrderId"; // OPTIONAL: attach unique conversion identifier to conversions
-  // _pa.revenue = "19.99"; // OPTIONAL: attach dynamic purchase values to conversions
-  // _pa.productId = "myProductId"; // OPTIONAL: Include product ID for use with dynamic ads
-  (function() {
-  var ss = document.createElement('script');
-  ss.type = 'text/javascript'; ss.async = true;
-  ss.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'koi-3QNN51VTHS.marketingautomation.services/client/ss.js?ver=2.4.0';
-  var scr = document.getElementsByTagName('script')[0];
-  scr.parentNode.insertBefore(ss, scr);
-  })();
-  </script>
+    <script type="text/javascript">
+      var _ss = _ss || [];
+      _ss.push([
+        "_setDomain",
+        "https://koi-3QNN51VTHS.marketingautomation.services/net",
+      ]);
+      _ss.push(["_setAccount", "KOI-4APYNOYP8O"]);
+      _ss.push(["_trackPageView"]);
+      window._pa = window._pa || {};
+      // _pa.orderId = "myOrderId"; // OPTIONAL: attach unique conversion identifier to conversions
+      // _pa.revenue = "19.99"; // OPTIONAL: attach dynamic purchase values to conversions
+      // _pa.productId = "myProductId"; // OPTIONAL: Include product ID for use with dynamic ads
+      (function () {
+        var ss = document.createElement("script");
+        ss.type = "text/javascript";
+        ss.async = true;
+        ss.src =
+          ("https:" == document.location.protocol ? "https://" : "http://") +
+          "koi-3QNN51VTHS.marketingautomation.services/client/ss.js?ver=2.4.0";
+        var scr = document.getElementsByTagName("script")[0];
+        scr.parentNode.insertBefore(ss, scr);
+      })();
+    </script>
 
-
-
-  </head><body>
-
-  <div id="navbar" class="navbar navbar-inverse navbar-default ">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
-          OpenArmor</a>
-        <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
-      </div>
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="navbar" class="navbar navbar-inverse navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".nav-collapse"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../../index.html"
+            ><img src="../../../_static/OpenArmor_logo_bare_small.jpg" />
+            OpenArmor</a
+          >
+          <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
+        </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
-            
-                <li><a href="https://theopenarmor.org/about/">About</a></li>
-                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
-                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
-                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
-            
-            
-              <li class="dropdown globaltoc-container">
-  <a role="button"
-     id="dLabelGlobalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="../../../index.html">Site <b class="caret"></b></a>
-  <ul class="dropdown-menu globaltoc"
-      role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul>
-<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">Manual</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">Frequently asked questions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../cookbooks/index.html">User submitted Cookbooks</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../development/build/index.html">Build, compile, and not much more</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../development/oRFC/index.html">oRFC:</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../syntax/index.html">Syntax and Options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../formats/index.html">Output Formats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../programs/index.html">Man pages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../examples/index.html">Examples</a></li>
-</ul>
-</ul>
-</li>
-              
-            
-            
-              
-                
-              
-            
-            
-            
-            
+            <li><a href="https://theopenarmor.org/about/">About</a></li>
+            <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+            <li>
+              <a href="https://theopenarmor.org/register-for-OpenArmor/"
+                >Get OpenArmor+</a
+              >
+            </li>
+            <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
+
+            <li class="dropdown globaltoc-container">
+              <a
+                role="button"
+                id="dLabelGlobalToc"
+                data-toggle="dropdown"
+                data-target="#"
+                href="../../../index.html"
+                >Site <b class="caret"></b
+              ></a>
+              <ul
+                class="dropdown-menu globaltoc"
+                role="menu"
+                aria-labelledby="dLabelGlobalToc"
+              >
+                <ul>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../../manual/index.html"
+                      >Manual</a
+                    >
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../../faq/index.html"
+                      >Frequently asked questions</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../cookbooks/index.html"
+                      >User submitted Cookbooks</a
+                    >
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../development/build/index.html"
+                      >Build, compile, and not much more</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../development/oRFC/index.html"
+                      >oRFC:</a
+                    >
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../../syntax/index.html"
+                      >Syntax and Options</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../formats/index.html"
+                      >Output Formats</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../programs/index.html"
+                      >Man pages</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../examples/index.html"
+                      >Examples</a
+                    >
+                  </li>
+                </ul>
+              </ul>
+            </li>
           </ul>
 
-          
-            
-<form class="navbar-form navbar-right" action="../../../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-          
+          <form
+            class="navbar-form navbar-right"
+            action="../../../search.html"
+            method="get"
+          >
+            <div class="form-group">
+              <input
+                type="text"
+                name="q"
+                class="form-control"
+                placeholder="Search"
+              />
+            </div>
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
         </div>
+      </div>
     </div>
-  </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      
-  <div class="section" id="log-samples-from-sshd">
-<h1>Log Samples from sshd<a class="headerlink" href="#log-samples-from-sshd" title="Permalink to this headline">¶</a></h1>
-<p>If the system is using pam, authentication events from sshd may also be logged in the <a class="reference external" href="../auth/pam.html">pam format</a></p>
-<p>Always make sure to disable DNS lookup to have the IP address logged instead of the hostname (sshd_config):</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">UseDNS no</span>
-</pre></div>
-</div>
-<div class="section" id="did-not-receive-identification-string-occurs-during-some-forms-of-sshd-dos">
-<h2>Did not receive identification string (occurs during some forms of sshd DoS):<a class="headerlink" href="#did-not-receive-identification-string-occurs-during-some-forms-of-sshd-dos" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Mar  8 06:08:23 stamina sshd[7713]: Did not receive identification string from 190.97.xx.199</span>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section" id="log-samples-from-sshd">
+            <h1>
+              Log Samples from sshd<a
+                class="headerlink"
+                href="#log-samples-from-sshd"
+                title="Permalink to this headline"
+                >¶</a
+              >
+            </h1>
+            <p>
+              If the system is using pam, authentication events from sshd may
+              also be logged in the
+              <a class="reference external" href="../auth/pam.html"
+                >pam format</a
+              >
+            </p>
+            <p>
+              Always make sure to disable DNS lookup to have the IP address
+              logged instead of the hostname (sshd_config):
+            </p>
+            <div class="highlight-console notranslate">
+              <div class="highlight">
+                <pre><span></span><span class="go">UseDNS no</span>
+</pre>
+              </div>
+            </div>
+            <div
+              class="section"
+              id="did-not-receive-identification-string-occurs-during-some-forms-of-sshd-dos"
+            >
+              <h2>
+                Did not receive identification string (occurs during some forms
+                of sshd DoS):<a
+                  class="headerlink"
+                  href="#did-not-receive-identification-string-occurs-during-some-forms-of-sshd-dos"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">Mar  8 06:08:23 stamina sshd[7713]: Did not receive identification string from 190.97.xx.199</span>
 <span class="go">Mar  8 06:08:26 stamina sshd[7758]: Did not receive identification string from 190.97.xx.199</span>
 <span class="go">Mar  8 06:08:26 stamina sshd[7739]: Did not receive identification string from 190.97.xx.199</span>
 <span class="go">Mar  8 06:08:27 stamina sshd[7770]: Did not receive identification string from 190.97.xx.199</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="rule-to-catch-multiple-instances-insert-into-local-rules-xml">
-<h2>Rule to catch multiple instances (insert into local_rules.xml):<a class="headerlink" href="#rule-to-catch-multiple-instances-insert-into-local-rules-xml" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;rule id=&quot;100031&quot; level=&quot;10&quot; frequency=&quot;4&quot; timeframe=&quot;360&quot;&gt;</span>
+</pre>
+                </div>
+              </div>
+            </div>
+            <div
+              class="section"
+              id="rule-to-catch-multiple-instances-insert-into-local-rules-xml"
+            >
+              <h2>
+                Rule to catch multiple instances (insert into
+                local_rules.xml):<a
+                  class="headerlink"
+                  href="#rule-to-catch-multiple-instances-insert-into-local-rules-xml"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">&lt;rule id=&quot;100031&quot; level=&quot;10&quot; frequency=&quot;4&quot; timeframe=&quot;360&quot;&gt;</span>
 <span class="go">  &lt;if_matched_sid&gt;5706&lt;/if_matched_sid&gt;</span>
 <span class="go">  &lt;description&gt;Possible DDoS attempt &lt;/description&gt;</span>
 <span class="go">  &lt;description&gt;(high number of non-existent identification strings).&lt;/description&gt;</span>
 <span class="go">&lt;/rule&gt;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="software-caused-connection-abort-occurs-during-some-forms-of-sshd-dos">
-<h2>Software caused connection abort (occurs during some forms of sshd DoS):<a class="headerlink" href="#software-caused-connection-abort-occurs-during-some-forms-of-sshd-dos" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Mar  8 06:09:56 stamina sshd[82181]: error: accept: Software caused connection abort</span>
+</pre>
+                </div>
+              </div>
+            </div>
+            <div
+              class="section"
+              id="software-caused-connection-abort-occurs-during-some-forms-of-sshd-dos"
+            >
+              <h2>
+                Software caused connection abort (occurs during some forms of
+                sshd DoS):<a
+                  class="headerlink"
+                  href="#software-caused-connection-abort-occurs-during-some-forms-of-sshd-dos"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">Mar  8 06:09:56 stamina sshd[82181]: error: accept: Software caused connection abort</span>
 <span class="go">Mar  8 06:13:11 stamina sshd[82181]: error: accept: Software caused connection abort</span>
 <span class="go">Mar  8 06:13:42 stamina sshd[82181]: error: accept: Software caused connection abort</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="rule-to-help-OpenArmor-recognise-this-error-as-nothing-serious">
-<h2>Rule to help OpenArmor recognise this error as nothing serious:<a class="headerlink" href="#rule-to-help-OpenArmor-recognise-this-error-as-nothing-serious" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;rule id=&quot;100032&quot; level=&quot;0&quot;&gt;</span>
+</pre>
+                </div>
+              </div>
+            </div>
+            <div
+              class="section"
+              id="rule-to-help-OpenArmor-recognise-this-error-as-nothing-serious"
+            >
+              <h2>
+                Rule to help OpenArmor recognise this error as nothing
+                serious:<a
+                  class="headerlink"
+                  href="#rule-to-help-OpenArmor-recognise-this-error-as-nothing-serious"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">&lt;rule id=&quot;100032&quot; level=&quot;0&quot;&gt;</span>
 <span class="go">  &lt;if_sid&gt;5700&lt;/if_sid&gt;</span>
 <span class="go">  &lt;match&gt;Software caused connection abort&lt;/match&gt;</span>
 <span class="go">  &lt;description&gt;Software caused connection abort.&lt;/description&gt;</span>
 <span class="go">&lt;/rule&gt;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="login-sucessful">
-<h2>Login sucessful:<a class="headerlink" href="#login-sucessful" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">May 21 20:22:28 slacker2 sshd[8813]: Accepted password for root from 192.168.20.185 port 1066 ssh2</span>
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="section" id="login-sucessful">
+              <h2>
+                Login sucessful:<a
+                  class="headerlink"
+                  href="#login-sucessful"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">May 21 20:22:28 slacker2 sshd[8813]: Accepted password for root from 192.168.20.185 port 1066 ssh2</span>
 <span class="go">May 21 20:22:28 sol2 sshd[23857]: [ID 702911 auth.notice] User test1, coming from 192.168.2.185,  -  authenticated.</span>
 <span class="go">Oct 11 08:05:46 hostname auth|security:info sshd[323808]: Accepted publickey for usr1 from 2.3.4.5 port 37909 ssh2</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="login-failed">
-<h2>Login failed:<a class="headerlink" href="#login-failed" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">May 21 20:22:28 slacker sshd[21487]: Failed password for root from 192.168.20.185 port 1045 ssh2</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="invalid-user-login-attempt">
-<h2>Invalid user login attempt:<a class="headerlink" href="#invalid-user-login-attempt" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Jul  7 10:51:24 chaves sshd[19537]: Invalid user admin from spongebob.lab.OpenArmor.net</span>
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="section" id="login-failed">
+              <h2>
+                Login failed:<a
+                  class="headerlink"
+                  href="#login-failed"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">May 21 20:22:28 slacker sshd[21487]: Failed password for root from 192.168.20.185 port 1045 ssh2</span>
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="section" id="invalid-user-login-attempt">
+              <h2>
+                Invalid user login attempt:<a
+                  class="headerlink"
+                  href="#invalid-user-login-attempt"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">Jul  7 10:51:24 chaves sshd[19537]: Invalid user admin from spongebob.lab.OpenArmor.net</span>
 <span class="go">Jul  7 10:53:24 chaves sshd[12914]: Failed password for invalid user test-inv from spongebob.lab.OpenArmor.net</span>
 <span class="go">Jul  7 10:53:24 kiko sshd[3251]: User dcid not allowed because listed in DenyUsers</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="full-scan-sample">
-<h2>Full scan sample:<a class="headerlink" href="#full-scan-sample" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Aug  1 18:27:45 knight sshd[20325]: Illegal user test from 218.49.183.17</span>
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="section" id="full-scan-sample">
+              <h2>
+                Full scan sample:<a
+                  class="headerlink"
+                  href="#full-scan-sample"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">Aug  1 18:27:45 knight sshd[20325]: Illegal user test from 218.49.183.17</span>
 <span class="go">Aug  1 18:27:46 knight sshd[20325]: Failed password for illegal user test from 218.49.183.17 port 48849 ssh2</span>
 <span class="go">Aug  1 18:27:46 knight sshd[20325]: error: Could not get shadow information for NOUSER</span>
 <span class="go">Aug  1 18:27:48 knight sshd[20327]: Illegal user guest from 218.49.183.17</span>
@@ -275,28 +492,29 @@ gtag('config', 'UA-138780766-1');
 <span class="go">Aug  1 18:36:27 knight sshd[20683]: Illegal user test from 218.49.183.17</span>
 <span class="go">Aug  1 18:36:28 knight sshd[20683]: Failed password for illegal user test from 218.49.183.17 port 41630 ssh</span>
 <span class="go">Aug  1 18:36:28 knight sshd[20683]: error: Could not get shadow information for NOUSER</span>
-</pre></div>
-</div>
-</div>
-</div>
-
-
+</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-      
-  </div>
-</div>
-<footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      
-    </p>
-    <p>
-        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
-    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
-    Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
-    </p>
-  </div>
-</footer>
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>
+          &copy; Copyright 2010-2021, OpenArmor Project Team.<br />
+          OpenArmor <b>OpenArmor.net</b> domain owned and maintained by
+          <a href="https://theopenarmor.org" target="_blank"
+            >OpenArmor Foundation</a
+          ><br />
+          Home page graphics courtesy of
+          <a href="https://pixabay.com" target="_blank">pixabay</a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

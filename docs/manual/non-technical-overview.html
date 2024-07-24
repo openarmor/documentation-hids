@@ -6,12 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Getting started with OpenArmor &#8212; OpenArmor</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/bootstrap-3.2.0/css/bootstrap-theme.min.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="../../_static/bootstrap-sphinx.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../_static/bootstrap-3.2.0/css/bootstrap.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../_static/bootstrap-3.2.0/css/bootstrap-theme.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../_static/bootstrap-sphinx.css"
+      type="text/css"
+    />
     <link rel="stylesheet" href="../../_static/parallax.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script
+      id="documentation_options"
+      data-url_root="../../"
+      src="../../_static/documentation_options.js"
+    ></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -22,237 +42,444 @@
     <link rel="author" title="About these documents" href="../../about.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="OpenArmor Architecture" href="OpenArmor-architecture.html" />
+    <link
+      rel="next"
+      title="OpenArmor Architecture"
+      href="OpenArmor-architecture.html"
+    />
     <link rel="prev" title="Manual" href="index.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138780766-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-138780766-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-gtag('config', 'UA-138780766-1');
-</script>
+      gtag("config", "UA-138780766-1");
+    </script>
 
-<script type="text/javascript">
-  var _ss = _ss || [];
-  _ss.push(['_setDomain', 'https://koi-3QNN51VTHS.marketingautomation.services/net']);
-  _ss.push(['_setAccount', 'KOI-4APYNOYP8O']);
-  _ss.push(['_trackPageView']);
-  window._pa = window._pa || {};
-  // _pa.orderId = "myOrderId"; // OPTIONAL: attach unique conversion identifier to conversions
-  // _pa.revenue = "19.99"; // OPTIONAL: attach dynamic purchase values to conversions
-  // _pa.productId = "myProductId"; // OPTIONAL: Include product ID for use with dynamic ads
-  (function() {
-  var ss = document.createElement('script');
-  ss.type = 'text/javascript'; ss.async = true;
-  ss.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'koi-3QNN51VTHS.marketingautomation.services/client/ss.js?ver=2.4.0';
-  var scr = document.getElementsByTagName('script')[0];
-  scr.parentNode.insertBefore(ss, scr);
-  })();
-  </script>
+    <script type="text/javascript">
+      var _ss = _ss || [];
+      _ss.push([
+        "_setDomain",
+        "https://koi-3QNN51VTHS.marketingautomation.services/net",
+      ]);
+      _ss.push(["_setAccount", "KOI-4APYNOYP8O"]);
+      _ss.push(["_trackPageView"]);
+      window._pa = window._pa || {};
+      // _pa.orderId = "myOrderId"; // OPTIONAL: attach unique conversion identifier to conversions
+      // _pa.revenue = "19.99"; // OPTIONAL: attach dynamic purchase values to conversions
+      // _pa.productId = "myProductId"; // OPTIONAL: Include product ID for use with dynamic ads
+      (function () {
+        var ss = document.createElement("script");
+        ss.type = "text/javascript";
+        ss.async = true;
+        ss.src =
+          ("https:" == document.location.protocol ? "https://" : "http://") +
+          "koi-3QNN51VTHS.marketingautomation.services/client/ss.js?ver=2.4.0";
+        var scr = document.getElementsByTagName("script")[0];
+        scr.parentNode.insertBefore(ss, scr);
+      })();
+    </script>
 
-
-
-  </head><body>
-
-  <div id="navbar" class="navbar navbar-inverse navbar-default ">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../../index.html"><img src="../../_static/OpenArmor_logo_bare_small.jpg">
-          OpenArmor</a>
-        <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
-      </div>
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="navbar" class="navbar navbar-inverse navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".nav-collapse"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html"
+            ><img src="../../_static/OpenArmor_logo_bare_small.jpg" />
+            OpenArmor</a
+          >
+          <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
+        </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
-            
-                <li><a href="https://theopenarmor.org/about/">About</a></li>
-                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
-                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
-                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
-            
-            
-              <li class="dropdown globaltoc-container">
-  <a role="button"
-     id="dLabelGlobalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="../../index.html">Site <b class="caret"></b></a>
-  <ul class="dropdown-menu globaltoc"
-      role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Manual</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently asked questions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cookbooks/index.html">User submitted Cookbooks</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../development/build/index.html">Build, compile, and not much more</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../development/oRFC/index.html">oRFC:</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../syntax/index.html">Syntax and Options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../formats/index.html">Output Formats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../programs/index.html">Man pages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Examples</a></li>
-</ul>
-</ul>
-</li>
-              
-            
-            
-              
-                
-  <li>
-    <a href="index.html" title="Previous Chapter: Manual"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Manual</span>
-    </a>
-  </li>
-  <li>
-    <a href="OpenArmor-architecture.html" title="Next Chapter: OpenArmor Architecture"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">OpenArmor Architecture &raquo;</span>
-    </a>
-  </li>
-              
-            
-            
-            
-            
+            <li><a href="https://theopenarmor.org/about/">About</a></li>
+            <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+            <li>
+              <a href="https://theopenarmor.org/register-for-OpenArmor/"
+                >Get OpenArmor+</a
+              >
+            </li>
+            <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
+
+            <li class="dropdown globaltoc-container">
+              <a
+                role="button"
+                id="dLabelGlobalToc"
+                data-toggle="dropdown"
+                data-target="#"
+                href="../../index.html"
+                >Site <b class="caret"></b
+              ></a>
+              <ul
+                class="dropdown-menu globaltoc"
+                role="menu"
+                aria-labelledby="dLabelGlobalToc"
+              >
+                <ul class="current">
+                  <li class="toctree-l1 current">
+                    <a class="reference internal" href="index.html">Manual</a>
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../faq/index.html"
+                      >Frequently asked questions</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../cookbooks/index.html"
+                      >User submitted Cookbooks</a
+                    >
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../development/build/index.html"
+                      >Build, compile, and not much more</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../development/oRFC/index.html"
+                      >oRFC:</a
+                    >
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../syntax/index.html"
+                      >Syntax and Options</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../formats/index.html"
+                      >Output Formats</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../programs/index.html"
+                      >Man pages</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../examples/index.html"
+                      >Examples</a
+                    >
+                  </li>
+                </ul>
+              </ul>
+            </li>
+
+            <li>
+              <a href="index.html" title="Previous Chapter: Manual"
+                ><span
+                  class="glyphicon glyphicon-chevron-left visible-sm"
+                ></span
+                ><span class="hidden-sm hidden-tablet">&laquo; Manual</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="OpenArmor-architecture.html"
+                title="Next Chapter: OpenArmor Architecture"
+                ><span
+                  class="glyphicon glyphicon-chevron-right visible-sm"
+                ></span
+                ><span class="hidden-sm hidden-tablet"
+                  >OpenArmor Architecture &raquo;</span
+                >
+              </a>
+            </li>
           </ul>
 
-          
-            
-<form class="navbar-form navbar-right" action="../../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-          
+          <form
+            class="navbar-form navbar-right"
+            action="../../search.html"
+            method="get"
+          >
+            <div class="form-group">
+              <input
+                type="text"
+                name="q"
+                class="form-control"
+                placeholder="Search"
+              />
+            </div>
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
         </div>
+      </div>
     </div>
-  </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      
-  <div class="section" id="getting-started-with-OpenArmor">
-<span id="nontech-overview"></span><h1>Getting started with OpenArmor<a class="headerlink" href="#getting-started-with-OpenArmor" title="Permalink to this headline">¶</a></h1>
-<p>OpenArmor is a platform to monitor and control your systems. It mixes together
-all the aspects of HIDS (host-based intrusion detection), log monitoring, and
-Security Incident Management (SIM)/Security Information and Event Management
-(SIEM) together in a simple, powerful, and open source solution.</p>
-<div class="section" id="key-benefits">
-<h2>Key Benefits<a class="headerlink" href="#key-benefits" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="compliance-requirements">
-<h3>Compliance Requirements<a class="headerlink" href="#compliance-requirements" title="Permalink to this headline">¶</a></h3>
-<p>OpenArmor helps customers meet specific compliance requirements such as PCI and HIPAA.
-It lets customers detect and alert on unauthorized file system modifications
-and malicious behavior embedded in the log files of commercial products as well as
-custom applications. For PCI, it covers the sections of file integrity monitoring
-(PCI 11.5, 10.5), log inspection and monitoring (section 10), and policy
-enforcement/checking.</p>
-</div>
-<div class="section" id="multi-platform">
-<h3>Multi platform<a class="headerlink" href="#multi-platform" title="Permalink to this headline">¶</a></h3>
-<p>OpenArmor lets customers implement a comprehensive host based intrusion detection
-system with fine grained application/server specific policies across multiple
-platforms such as Linux, Solaris, Windows, and Mac OS X.</p>
-</div>
-<div class="section" id="real-time-and-configurable-alerts">
-<h3>Real-time and Configurable Alerts<a class="headerlink" href="#real-time-and-configurable-alerts" title="Permalink to this headline">¶</a></h3>
-<p>OpenArmor lets customers configure incidents they want to be alerted on, and lets
-them focus on raising the priority of critical incidents over the regular noise
-on any system. Integration with smtp, sms, and syslog allows customers to be on
-top of alerts by sending them to e-mail enabled devices.
-Active response options to block an attack immediately are also available.</p>
-</div>
-<div class="section" id="integration-with-current-infrastructure">
-<h3>Integration with current infrastructure<a class="headerlink" href="#integration-with-current-infrastructure" title="Permalink to this headline">¶</a></h3>
-<p>OpenArmor will integrate with current investments from customers such as SIM/SEM
-(Security Incident Management/Security Events Management) products for centralized
-reporting and correlation of events.</p>
-</div>
-<div class="section" id="centralized-management">
-<h3>Centralized management<a class="headerlink" href="#centralized-management" title="Permalink to this headline">¶</a></h3>
-<p>OpenArmor provides a simplified centralized management server to manage policies
-across multiple operating systems. Additionally, it also lets customers define
-server specific overrides for finer grained policies.</p>
-</div>
-<div class="section" id="agent-and-agentless-monitoring">
-<h3>Agent and agentless monitoring<a class="headerlink" href="#agent-and-agentless-monitoring" title="Permalink to this headline">¶</a></h3>
-<p>OpenArmor offers the flexibility of agent based and agentless monitoring of systems
-and networking components such as routers and firewalls. Agentless monitoring
-lets customers who have restrictions on software being installed on systems
-(such as FDA approved systems or appliances) meet security and compliance needs.</p>
-</div>
-</div>
-<div class="section" id="key-features">
-<h2>Key Features<a class="headerlink" href="#key-features" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="file-integrity-checking">
-<h3>File Integrity checking<a class="headerlink" href="#file-integrity-checking" title="Permalink to this headline">¶</a></h3>
-<p>There is one thing in common to any attack to your networks and computers: they
-change your systems in some way. The goal of file integrity checking (or FIM -
-file integrity monitoring) is to detect these changes and alert you when they
-happen. It can be an attack, or a misuse by an employee or even a typo by an
-admin, any file, directory or registry change will be alerted to you.</p>
-<p>Covers PCI DSS sections 11.5 and 10.5.5.</p>
-</div>
-<div class="section" id="log-monitoring">
-<h3>Log Monitoring<a class="headerlink" href="#log-monitoring" title="Permalink to this headline">¶</a></h3>
-<p>Your operating system wants to speak to you, but do you know how to listen? Every
-operating system, application, and device on your network generate logs (events)
-to let you know what is happening. OpenArmor collects, analyzes and correlates these
-logs to let you know if something suspicious is happening (attack, misuse, errors,
-etc). Do you want to know when an application is installed on your client box? Or
-when someone changes a rule in your firewall? By monitoring your logs, OpenArmor will
-notify you.</p>
-<p>This should cover PCI DSS section 10.</p>
-</div>
-<div class="section" id="rootkit-detection">
-<h3>Rootkit detection<a class="headerlink" href="#rootkit-detection" title="Permalink to this headline">¶</a></h3>
-<p>Criminal hackers want to hide their actions, but using rootkit detection you can
-be notified when the system is modified in a way common to rootkits.</p>
-</div>
-<div class="section" id="active-response">
-<h3>Active response<a class="headerlink" href="#active-response" title="Permalink to this headline">¶</a></h3>
-<p>Active response allows OpenArmor to take immediate action when specified alerts are
-triggered. This may prevent an incident from spreading before an administrator
-can take action.</p>
-</div>
-</div>
-</div>
-
-
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section" id="getting-started-with-OpenArmor">
+            <span id="nontech-overview"></span>
+            <h1>
+              Getting started with OpenArmor<a
+                class="headerlink"
+                href="#getting-started-with-OpenArmor"
+                title="Permalink to this headline"
+                >¶</a
+              >
+            </h1>
+            <p>
+              OpenArmor is a platform to monitor and control your systems. It
+              mixes together all the aspects of HIDS (host-based intrusion
+              detection), log monitoring, and Security Incident Management
+              (SIM)/Security Information and Event Management (SIEM) together in
+              a simple, powerful, and open source solution.
+            </p>
+            <div class="section" id="key-benefits">
+              <h2>
+                Key Benefits<a
+                  class="headerlink"
+                  href="#key-benefits"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="section" id="compliance-requirements">
+                <h3>
+                  Compliance Requirements<a
+                    class="headerlink"
+                    href="#compliance-requirements"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <p>
+                  OpenArmor helps customers meet specific compliance
+                  requirements such as PCI and HIPAA. It lets customers detect
+                  and alert on unauthorized file system modifications and
+                  malicious behavior embedded in the log files of commercial
+                  products as well as custom applications. For PCI, it covers
+                  the sections of file integrity monitoring (PCI 11.5, 10.5),
+                  log inspection and monitoring (section 10), and policy
+                  enforcement/checking.
+                </p>
+              </div>
+              <div class="section" id="multi-platform">
+                <h3>
+                  Multi platform<a
+                    class="headerlink"
+                    href="#multi-platform"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <p>
+                  OpenArmor lets customers implement a comprehensive host based
+                  intrusion detection system with fine grained
+                  application/server specific policies across multiple platforms
+                  such as Linux, Solaris, Windows, and Mac OS X.
+                </p>
+              </div>
+              <div class="section" id="real-time-and-configurable-alerts">
+                <h3>
+                  Real-time and Configurable Alerts<a
+                    class="headerlink"
+                    href="#real-time-and-configurable-alerts"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <p>
+                  OpenArmor lets customers configure incidents they want to be
+                  alerted on, and lets them focus on raising the priority of
+                  critical incidents over the regular noise on any system.
+                  Integration with smtp, sms, and syslog allows customers to be
+                  on top of alerts by sending them to e-mail enabled devices.
+                  Active response options to block an attack immediately are
+                  also available.
+                </p>
+              </div>
+              <div class="section" id="integration-with-current-infrastructure">
+                <h3>
+                  Integration with current infrastructure<a
+                    class="headerlink"
+                    href="#integration-with-current-infrastructure"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <p>
+                  OpenArmor will integrate with current investments from
+                  customers such as SIM/SEM (Security Incident
+                  Management/Security Events Management) products for
+                  centralized reporting and correlation of events.
+                </p>
+              </div>
+              <div class="section" id="centralized-management">
+                <h3>
+                  Centralized management<a
+                    class="headerlink"
+                    href="#centralized-management"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <p>
+                  OpenArmor provides a simplified centralized management server
+                  to manage policies across multiple operating systems.
+                  Additionally, it also lets customers define server specific
+                  overrides for finer grained policies.
+                </p>
+              </div>
+              <div class="section" id="agent-and-agentless-monitoring">
+                <h3>
+                  Agent and agentless monitoring<a
+                    class="headerlink"
+                    href="#agent-and-agentless-monitoring"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <p>
+                  OpenArmor offers the flexibility of agent based and agentless
+                  monitoring of systems and networking components such as
+                  routers and firewalls. Agentless monitoring lets customers who
+                  have restrictions on software being installed on systems (such
+                  as FDA approved systems or appliances) meet security and
+                  compliance needs.
+                </p>
+              </div>
+            </div>
+            <div class="section" id="key-features">
+              <h2>
+                Key Features<a
+                  class="headerlink"
+                  href="#key-features"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="section" id="file-integrity-checking">
+                <h3>
+                  File Integrity checking<a
+                    class="headerlink"
+                    href="#file-integrity-checking"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <p>
+                  There is one thing in common to any attack to your networks
+                  and computers: they change your systems in some way. The goal
+                  of file integrity checking (or FIM - file integrity
+                  monitoring) is to detect these changes and alert you when they
+                  happen. It can be an attack, or a misuse by an employee or
+                  even a typo by an admin, any file, directory or registry
+                  change will be alerted to you.
+                </p>
+                <p>Covers PCI DSS sections 11.5 and 10.5.5.</p>
+              </div>
+              <div class="section" id="log-monitoring">
+                <h3>
+                  Log Monitoring<a
+                    class="headerlink"
+                    href="#log-monitoring"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <p>
+                  Your operating system wants to speak to you, but do you know
+                  how to listen? Every operating system, application, and device
+                  on your network generate logs (events) to let you know what is
+                  happening. OpenArmor collects, analyzes and correlates these
+                  logs to let you know if something suspicious is happening
+                  (attack, misuse, errors, etc). Do you want to know when an
+                  application is installed on your client box? Or when someone
+                  changes a rule in your firewall? By monitoring your logs,
+                  OpenArmor will notify you.
+                </p>
+                <p>This should cover PCI DSS section 10.</p>
+              </div>
+              <div class="section" id="rootkit-detection">
+                <h3>
+                  Rootkit detection<a
+                    class="headerlink"
+                    href="#rootkit-detection"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <p>
+                  Criminal hackers want to hide their actions, but using rootkit
+                  detection you can be notified when the system is modified in a
+                  way common to rootkits.
+                </p>
+              </div>
+              <div class="section" id="active-response">
+                <h3>
+                  Active response<a
+                    class="headerlink"
+                    href="#active-response"
+                    title="Permalink to this headline"
+                    >¶</a
+                  >
+                </h3>
+                <p>
+                  Active response allows OpenArmor to take immediate action when
+                  specified alerts are triggered. This may prevent an incident
+                  from spreading before an administrator can take action.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-      
-  </div>
-</div>
-<footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      
-    </p>
-    <p>
-        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
-    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
-    Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
-    </p>
-  </div>
-</footer>
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>
+          &copy; Copyright 2010-2021, OpenArmor Project Team.<br />
+          OpenArmor <b>OpenArmor.net</b> domain owned and maintained by
+          <a href="https://theopenarmor.org" target="_blank"
+            >OpenArmor Foundation</a
+          ><br />
+          Home page graphics courtesy of
+          <a href="https://pixabay.com" target="_blank">pixabay</a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

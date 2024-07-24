@@ -5,13 +5,41 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Integration and Deployment with cfengine &#8212; OpenArmor</title>
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-3.2.0/css/bootstrap-theme.min.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/parallax.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <link
+      rel="stylesheet"
+      href="../../../_static/pygments.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/bootstrap-sphinx.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/bootstrap-3.2.0/css/bootstrap.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/bootstrap-3.2.0/css/bootstrap-theme.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/bootstrap-sphinx.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../_static/parallax.css"
+      type="text/css"
+    />
+    <script
+      id="documentation_options"
+      data-url_root="../../../"
+      src="../../../_static/documentation_options.js"
+    ></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
@@ -19,180 +47,357 @@
     <script src="../../../_static/js/jquery-fix.js"></script>
     <script src="../../../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
     <script src="../../../_static/bootstrap-sphinx.js"></script>
-    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link
+      rel="author"
+      title="About these documents"
+      href="../../../about.html"
+    />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="OpenArmor Updates" href="updates.html" />
     <link rel="prev" title="Requirements" href="compile-OpenArmor-mingw.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138780766-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-138780766-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-gtag('config', 'UA-138780766-1');
-</script>
+      gtag("config", "UA-138780766-1");
+    </script>
 
-<script type="text/javascript">
-  var _ss = _ss || [];
-  _ss.push(['_setDomain', 'https://koi-3QNN51VTHS.marketingautomation.services/net']);
-  _ss.push(['_setAccount', 'KOI-4APYNOYP8O']);
-  _ss.push(['_trackPageView']);
-  window._pa = window._pa || {};
-  // _pa.orderId = "myOrderId"; // OPTIONAL: attach unique conversion identifier to conversions
-  // _pa.revenue = "19.99"; // OPTIONAL: attach dynamic purchase values to conversions
-  // _pa.productId = "myProductId"; // OPTIONAL: Include product ID for use with dynamic ads
-  (function() {
-  var ss = document.createElement('script');
-  ss.type = 'text/javascript'; ss.async = true;
-  ss.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'koi-3QNN51VTHS.marketingautomation.services/client/ss.js?ver=2.4.0';
-  var scr = document.getElementsByTagName('script')[0];
-  scr.parentNode.insertBefore(ss, scr);
-  })();
-  </script>
+    <script type="text/javascript">
+      var _ss = _ss || [];
+      _ss.push([
+        "_setDomain",
+        "https://koi-3QNN51VTHS.marketingautomation.services/net",
+      ]);
+      _ss.push(["_setAccount", "KOI-4APYNOYP8O"]);
+      _ss.push(["_trackPageView"]);
+      window._pa = window._pa || {};
+      // _pa.orderId = "myOrderId"; // OPTIONAL: attach unique conversion identifier to conversions
+      // _pa.revenue = "19.99"; // OPTIONAL: attach dynamic purchase values to conversions
+      // _pa.productId = "myProductId"; // OPTIONAL: Include product ID for use with dynamic ads
+      (function () {
+        var ss = document.createElement("script");
+        ss.type = "text/javascript";
+        ss.async = true;
+        ss.src =
+          ("https:" == document.location.protocol ? "https://" : "http://") +
+          "koi-3QNN51VTHS.marketingautomation.services/client/ss.js?ver=2.4.0";
+        var scr = document.getElementsByTagName("script")[0];
+        scr.parentNode.insertBefore(ss, scr);
+      })();
+    </script>
 
-
-
-  </head><body>
-
-  <div id="navbar" class="navbar navbar-inverse navbar-default ">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/OpenArmor_logo_bare_small.jpg">
-          OpenArmor</a>
-        <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
-      </div>
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="navbar" class="navbar navbar-inverse navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".nav-collapse"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../../index.html"
+            ><img src="../../../_static/OpenArmor_logo_bare_small.jpg" />
+            OpenArmor</a
+          >
+          <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
+        </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
-            
-                <li><a href="https://theopenarmor.org/about/">About</a></li>
-                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
-                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
-                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
-            
-            
-              <li class="dropdown globaltoc-container">
-  <a role="button"
-     id="dLabelGlobalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="../../../index.html">Site <b class="caret"></b></a>
-  <ul class="dropdown-menu globaltoc"
-      role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Manual</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">Frequently asked questions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../cookbooks/index.html">User submitted Cookbooks</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../development/build/index.html">Build, compile, and not much more</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../development/oRFC/index.html">oRFC:</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../syntax/index.html">Syntax and Options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../formats/index.html">Output Formats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../programs/index.html">Man pages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../examples/index.html">Examples</a></li>
-</ul>
-</ul>
-</li>
-              
-            
-            
-              
-                
-  <li>
-    <a href="compile-OpenArmor-mingw.html" title="Previous Chapter: Requirements"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Requirements</span>
-    </a>
-  </li>
-  <li>
-    <a href="updates.html" title="Next Chapter: OpenArmor Updates"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">OpenArmor Updates &raquo;</span>
-    </a>
-  </li>
-              
-            
-            
-            
-            
+            <li><a href="https://theopenarmor.org/about/">About</a></li>
+            <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+            <li>
+              <a href="https://theopenarmor.org/register-for-OpenArmor/"
+                >Get OpenArmor+</a
+              >
+            </li>
+            <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
+
+            <li class="dropdown globaltoc-container">
+              <a
+                role="button"
+                id="dLabelGlobalToc"
+                data-toggle="dropdown"
+                data-target="#"
+                href="../../../index.html"
+                >Site <b class="caret"></b
+              ></a>
+              <ul
+                class="dropdown-menu globaltoc"
+                role="menu"
+                aria-labelledby="dLabelGlobalToc"
+              >
+                <ul class="current">
+                  <li class="toctree-l1 current">
+                    <a class="reference internal" href="../index.html"
+                      >Manual</a
+                    >
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../../faq/index.html"
+                      >Frequently asked questions</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../cookbooks/index.html"
+                      >User submitted Cookbooks</a
+                    >
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../development/build/index.html"
+                      >Build, compile, and not much more</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../development/oRFC/index.html"
+                      >oRFC:</a
+                    >
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../../syntax/index.html"
+                      >Syntax and Options</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../formats/index.html"
+                      >Output Formats</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../programs/index.html"
+                      >Man pages</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../examples/index.html"
+                      >Examples</a
+                    >
+                  </li>
+                </ul>
+              </ul>
+            </li>
+
+            <li>
+              <a
+                href="compile-OpenArmor-mingw.html"
+                title="Previous Chapter: Requirements"
+                ><span
+                  class="glyphicon glyphicon-chevron-left visible-sm"
+                ></span
+                ><span class="hidden-sm hidden-tablet"
+                  >&laquo; Requirements</span
+                >
+              </a>
+            </li>
+            <li>
+              <a href="updates.html" title="Next Chapter: OpenArmor Updates"
+                ><span
+                  class="glyphicon glyphicon-chevron-right visible-sm"
+                ></span
+                ><span class="hidden-sm hidden-tablet"
+                  >OpenArmor Updates &raquo;</span
+                >
+              </a>
+            </li>
           </ul>
 
-          
-            
-<form class="navbar-form navbar-right" action="../../../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-          
+          <form
+            class="navbar-form navbar-right"
+            action="../../../search.html"
+            method="get"
+          >
+            <div class="form-group">
+              <input
+                type="text"
+                name="q"
+                class="form-control"
+                placeholder="Search"
+              />
+            </div>
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
         </div>
+      </div>
     </div>
-  </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      
-  <div class="section" id="integration-and-deployment-with-cfengine">
-<h1>Integration and Deployment with cfengine<a class="headerlink" href="#integration-and-deployment-with-cfengine" title="Permalink to this headline">¶</a></h1>
-<p>I recently required a larger deployment of OpenArmor-HIDS without too much manual intervention.  Almost every OpenArmor-HIDS tutorial I’ve across says this is possible, yet I was unable to find a tutorial demonstrating it.   So, in the spirit of open source, I’m contributing a brief overview.</p>
-<div class="section" id="prerequisites">
-<h2>Prerequisites:<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
-<p>In order to facilitate the key request, I chose to generate a file with the relevant information and copy it back to my cfmaster server.  I developed the following tutorial to demonstrate a cfengine copy back scenario: <a class="reference external" href="http://divisionbyzero.net/blog/2007/05/03/copy-back-with-cfengine/">Copy Back with cfengine</a>.</p>
-</div>
-<div class="section" id="configuring-the-cfengine-clients">
-<h2>Configuring the cfengine clients:<a class="headerlink" href="#configuring-the-cfengine-clients" title="Permalink to this headline">¶</a></h2>
-<p>I added a group to my <code class="docutils literal notranslate"><span class="pre">cfagent.conf</span></code> for my OpenArmor server named: <code class="docutils literal notranslate"><span class="pre">hg_OpenArmor_server</span></code> (host group). I then created an <code class="docutils literal notranslate"><span class="pre">OpenArmor-hids.cf</span></code> containing the following:</p>
-<ul class="simple">
-<li><p>control</p></li>
-</ul>
-<p>My control sections sets up the variables I’ll be using in the rest of the file.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">control:</span>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section" id="integration-and-deployment-with-cfengine">
+            <h1>
+              Integration and Deployment with cfengine<a
+                class="headerlink"
+                href="#integration-and-deployment-with-cfengine"
+                title="Permalink to this headline"
+                >¶</a
+              >
+            </h1>
+            <p>
+              I recently required a larger deployment of OpenArmor-HIDS without
+              too much manual intervention. Almost every OpenArmor-HIDS tutorial
+              I’ve across says this is possible, yet I was unable to find a
+              tutorial demonstrating it. So, in the spirit of open source, I’m
+              contributing a brief overview.
+            </p>
+            <div class="section" id="prerequisites">
+              <h2>
+                Prerequisites:<a
+                  class="headerlink"
+                  href="#prerequisites"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <p>
+                In order to facilitate the key request, I chose to generate a
+                file with the relevant information and copy it back to my
+                cfmaster server. I developed the following tutorial to
+                demonstrate a cfengine copy back scenario:
+                <a
+                  class="reference external"
+                  href="http://divisionbyzero.net/blog/2007/05/03/copy-back-with-cfengine/"
+                  >Copy Back with cfengine</a
+                >.
+              </p>
+            </div>
+            <div class="section" id="configuring-the-cfengine-clients">
+              <h2>
+                Configuring the cfengine clients:<a
+                  class="headerlink"
+                  href="#configuring-the-cfengine-clients"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <p>
+                I added a group to my
+                <code class="docutils literal notranslate"
+                  ><span class="pre">cfagent.conf</span></code
+                >
+                for my OpenArmor server named:
+                <code class="docutils literal notranslate"
+                  ><span class="pre">hg_OpenArmor_server</span></code
+                >
+                (host group). I then created an
+                <code class="docutils literal notranslate"
+                  ><span class="pre">OpenArmor-hids.cf</span></code
+                >
+                containing the following:
+              </p>
+              <ul class="simple">
+                <li><p>control</p></li>
+              </ul>
+              <p>
+                My control sections sets up the variables I’ll be using in the
+                rest of the file.
+              </p>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">control:</span>
 <span class="go">  any::</span>
 <span class="go">    OpenArmor_key_dir = (/usr/local/cfkeys/OpenArmor)</span>
 <span class="go">    OpenArmor_req_dir = ( $(util_updir)/OpenArmor )</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>package</p></li>
-</ul>
-<p>I’m using yum to automatically install OpenArmor-HIDS from my local RPM Repository.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">packages:</span>
+</pre>
+                </div>
+              </div>
+              <ul class="simple">
+                <li><p>package</p></li>
+              </ul>
+              <p>
+                I’m using yum to automatically install OpenArmor-HIDS from my
+                local RPM Repository.
+              </p>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">packages:</span>
 <span class="go">  !hg_OpenArmor_server::</span>
 <span class="go">      OpenArmor-hids                  action=install</span>
 <span class="go">      OpenArmor-hids-client           action=install</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>links</p></li>
-</ul>
-<p>The Links section just links OpenArmor-agent.conf to OpenArmor.conf on the clients.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">links:</span>
+</pre>
+                </div>
+              </div>
+              <ul class="simple">
+                <li><p>links</p></li>
+              </ul>
+              <p>
+                The Links section just links OpenArmor-agent.conf to
+                OpenArmor.conf on the clients.
+              </p>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">links:</span>
 <span class="go">  !hg_OpenArmor_server::</span>
 <span class="go">    /var/OpenArmor/etc/OpenArmor.conf -&gt; /var/OpenArmor/etc/OpenArmor-agent.conf</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>copy</p></li>
-</ul>
-<p>I manage the <code class="docutils literal notranslate"><span class="pre">OpenArmor-agent.conf</span></code> in cfengine, because my cfengine configurations are all stored in a subversion repository.  The first stanza in copy just pushes the most recent copy of the <code class="docutils literal notranslate"><span class="pre">OpenArmor-agent.conf</span></code> file to my network, setting the dynamic class <code class="docutils literal notranslate"><span class="pre">dc_restart_OpenArmor</span></code> if the copy occurs.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">copy:</span>
+</pre>
+                </div>
+              </div>
+              <ul class="simple">
+                <li><p>copy</p></li>
+              </ul>
+              <p>
+                I manage the
+                <code class="docutils literal notranslate"
+                  ><span class="pre">OpenArmor-agent.conf</span></code
+                >
+                in cfengine, because my cfengine configurations are all stored
+                in a subversion repository. The first stanza in copy just pushes
+                the most recent copy of the
+                <code class="docutils literal notranslate"
+                  ><span class="pre">OpenArmor-agent.conf</span></code
+                >
+                file to my network, setting the dynamic class
+                <code class="docutils literal notranslate"
+                  ><span class="pre">dc_restart_OpenArmor</span></code
+                >
+                if the copy occurs.
+              </p>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">copy:</span>
 <span class="go">  !hg_OpenArmor_server::</span>
 <span class="gp">      $</span><span class="o">(</span>distribute<span class="o">)</span>/OpenArmor-agent.conf      <span class="nv">dest</span><span class="o">=</span>/var/OpenArmor/etc/OpenArmor-agent.conf
 <span class="go">                                          server=$(policyhost)</span>
@@ -200,78 +405,192 @@ gtag('config', 'UA-138780766-1');
 <span class="go">                                          group=OpenArmor</span>
 <span class="go">                                          type=sum</span>
 <span class="go">                                          define=dc_restart_OpenArmor</span>
-</pre></div>
-</div>
-<p>This second stanza in the <code class="docutils literal notranslate"><span class="pre">copy</span></code> section copies a file from our OpenArmor key directory to the client.keys file on the client.  This copy only happens if the two files are different.  It also sets <code class="docutils literal notranslate"><span class="pre">dc_restart_OpenArmor</span></code> if the copy occurs.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span><span class="o">(</span>OpenArmor_key_dir<span class="o">)</span>/<span class="k">$(</span>host<span class="k">)</span>.OpenArmor    <span class="nv">dest</span><span class="o">=</span>/var/OpenArmor/etc/client.keys
+</pre>
+                </div>
+              </div>
+              <p>
+                This second stanza in the
+                <code class="docutils literal notranslate"
+                  ><span class="pre">copy</span></code
+                >
+                section copies a file from our OpenArmor key directory to the
+                client.keys file on the client. This copy only happens if the
+                two files are different. It also sets
+                <code class="docutils literal notranslate"
+                  ><span class="pre">dc_restart_OpenArmor</span></code
+                >
+                if the copy occurs.
+              </p>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="gp">$</span><span class="o">(</span>OpenArmor_key_dir<span class="o">)</span>/<span class="k">$(</span>host<span class="k">)</span>.OpenArmor    <span class="nv">dest</span><span class="o">=</span>/var/OpenArmor/etc/client.keys
 <span class="go">                                  server=$(policyhost)</span>
 <span class="go">                                  mode=640</span>
 <span class="go">                                  group=OpenArmor</span>
 <span class="go">                                  type=sum</span>
 <span class="go">                                  define=dc_restart_OpenArmor</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>processes</p></li>
-</ul>
-<p>My processes block checks to ensure that OpenArmor-HIDS is running the correct daemons.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">processes:</span>
+</pre>
+                </div>
+              </div>
+              <ul class="simple">
+                <li><p>processes</p></li>
+              </ul>
+              <p>
+                My processes block checks to ensure that OpenArmor-HIDS is
+                running the correct daemons.
+              </p>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">processes:</span>
 <span class="go">  !hg_OpenArmor_server::</span>
 <span class="go">      &quot;OpenArmor-agentd&quot; elsedefine=dc_restart_OpenArmor</span>
 <span class="go">  ``hg_OpenArmor_server``::</span>
 <span class="go">      &quot;OpenArmor-remoted&quot; elsedefine=dc_restart_OpenArmor</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>shellcommands</p></li>
-</ul>
-<p>This section is where the certificate request occurs through some devious mechanisms I designed for no other reason than to amuse myself.  Hopefully, it amuses others as well.  The first thing it does is issue a command that echo’s the client eth0 ipv4 address to a file named ‘’host.OpenArmor’’ in the OpenArmor request directory I defined.   The <code class="docutils literal notranslate"><span class="pre">hg_OpenArmor_server</span></code> class will use this to generate a cert to place in the aforementioned copy block.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">shellcommands:</span>
+</pre>
+                </div>
+              </div>
+              <ul class="simple">
+                <li><p>shellcommands</p></li>
+              </ul>
+              <p>
+                This section is where the certificate request occurs through
+                some devious mechanisms I designed for no other reason than to
+                amuse myself. Hopefully, it amuses others as well. The first
+                thing it does is issue a command that echo’s the client eth0
+                ipv4 address to a file named ‘’host.OpenArmor’’ in the OpenArmor
+                request directory I defined. The
+                <code class="docutils literal notranslate"
+                  ><span class="pre">hg_OpenArmor_server</span></code
+                >
+                class will use this to generate a cert to place in the
+                aforementioned copy block.
+              </p>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">shellcommands:</span>
 <span class="go">  !hg_OpenArmor_server::</span>
 <span class="go">      &quot;/usr/bin/ssh util@$(policyhost) -i $(util_privkey) &#39;echo $(global.ipv4[eth0]) &gt; $(OpenArmor_req_dir)/$(host).OpenArmor&#39;&quot;</span>
-</pre></div>
-</div>
-<p>The last statement checks to see if anyone defined <code class="docutils literal notranslate"><span class="pre">dc_restart_OpenArmor</span></code>, and restart OpenArmor-hids if it was defined.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">dc_restart_OpenArmor::</span>
+</pre>
+                </div>
+              </div>
+              <p>
+                The last statement checks to see if anyone defined
+                <code class="docutils literal notranslate"
+                  ><span class="pre">dc_restart_OpenArmor</span></code
+                >, and restart OpenArmor-hids if it was defined.
+              </p>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">dc_restart_OpenArmor::</span>
 <span class="go">    &quot;/sbin/service OpenArmor-hids restart&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="ok-so-who-cares">
-<h2>Ok, so who cares?<a class="headerlink" href="#ok-so-who-cares" title="Permalink to this headline">¶</a></h2>
-<p>Well, now, our clients are setup to install, configure, and run OpenArmor-HIDS as well as issuing a request for their certificate.  However, the certificate directory on the server is empty and so none of them will actually run.  This is a problem.</p>
-</div>
-<div class="section" id="configuring-the-OpenArmor-server-w-cfengine">
-<h2>Configuring the OpenArmor Server w/cfengine<a class="headerlink" href="#configuring-the-OpenArmor-server-w-cfengine" title="Permalink to this headline">¶</a></h2>
-<p>The cfengine part of this was a pain for me because of the order of the actions I had defined and the extent of work I had done incorrectly in the past.  I could have figured out an interesting way to handle this, but I didn’t want to scrap my entire cfengine config and start from scratch.  So I created a perl script that allowed me to use the <code class="docutils literal notranslate"><span class="pre">manage_agents</span></code> script without interaction.  It does require the <code class="docutils literal notranslate"><span class="pre">Expect.pm</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">Regexp::Common</span></code> from CPAN, but is otherwise stock Perl 5.8.x.  I also wrote a shell script wrapper to handle running the perl script and culminating the results.  I saved these two scripts in <code class="docutils literal notranslate"><span class="pre">/root/security</span></code>, so if you put them elsewhere, make sure to update the shell script wrapper.</p>
-<p>The scripts for managing keys can be downloaded <a class="reference external" href="http://db0.us/~brad/cfengine-OpenArmor-scripts.tar.gz">here</a></p>
-<p>The cfengine bit was really simple, it just had to call my wrapper shell script and set the class.  I did this with a control block:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">control:</span>
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="section" id="ok-so-who-cares">
+              <h2>
+                Ok, so who cares?<a
+                  class="headerlink"
+                  href="#ok-so-who-cares"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <p>
+                Well, now, our clients are setup to install, configure, and run
+                OpenArmor-HIDS as well as issuing a request for their
+                certificate. However, the certificate directory on the server is
+                empty and so none of them will actually run. This is a problem.
+              </p>
+            </div>
+            <div
+              class="section"
+              id="configuring-the-OpenArmor-server-w-cfengine"
+            >
+              <h2>
+                Configuring the OpenArmor Server w/cfengine<a
+                  class="headerlink"
+                  href="#configuring-the-OpenArmor-server-w-cfengine"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <p>
+                The cfengine part of this was a pain for me because of the order
+                of the actions I had defined and the extent of work I had done
+                incorrectly in the past. I could have figured out an interesting
+                way to handle this, but I didn’t want to scrap my entire
+                cfengine config and start from scratch. So I created a perl
+                script that allowed me to use the
+                <code class="docutils literal notranslate"
+                  ><span class="pre">manage_agents</span></code
+                >
+                script without interaction. It does require the
+                <code class="docutils literal notranslate"
+                  ><span class="pre">Expect.pm</span></code
+                >
+                &amp;
+                <code class="docutils literal notranslate"
+                  ><span class="pre">Regexp::Common</span></code
+                >
+                from CPAN, but is otherwise stock Perl 5.8.x. I also wrote a
+                shell script wrapper to handle running the perl script and
+                culminating the results. I saved these two scripts in
+                <code class="docutils literal notranslate"
+                  ><span class="pre">/root/security</span></code
+                >, so if you put them elsewhere, make sure to update the shell
+                script wrapper.
+              </p>
+              <p>
+                The scripts for managing keys can be downloaded
+                <a
+                  class="reference external"
+                  href="http://db0.us/~brad/cfengine-OpenArmor-scripts.tar.gz"
+                  >here</a
+                >
+              </p>
+              <p>
+                The cfengine bit was really simple, it just had to call my
+                wrapper shell script and set the class. I did this with a
+                control block:
+              </p>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">control:</span>
 <span class="go"> hg_OpenArmor_server::</span>
 <span class="go">   AddClasses = ( ExecResult(/root/security/OpenArmor-scan.sh) )</span>
-</pre></div>
-</div>
-<p>The combination of the two scripts and this one line in the cfengine configuration handle creating, removing, and exporting the keys, as well as configuring the <code class="docutils literal notranslate"><span class="pre">dc_restart_OpenArmor</span></code> class if there have been changes.</p>
-</div>
-</div>
-
-
+</pre>
+                </div>
+              </div>
+              <p>
+                The combination of the two scripts and this one line in the
+                cfengine configuration handle creating, removing, and exporting
+                the keys, as well as configuring the
+                <code class="docutils literal notranslate"
+                  ><span class="pre">dc_restart_OpenArmor</span></code
+                >
+                class if there have been changes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-      
-  </div>
-</div>
-<footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      
-    </p>
-    <p>
-        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
-    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
-    Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
-    </p>
-  </div>
-</footer>
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>
+          &copy; Copyright 2010-2021, OpenArmor Project Team.<br />
+          OpenArmor <b>OpenArmor.net</b> domain owned and maintained by
+          <a href="https://theopenarmor.org" target="_blank"
+            >OpenArmor Foundation</a
+          ><br />
+          Home page graphics courtesy of
+          <a href="https://pixabay.com" target="_blank">pixabay</a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

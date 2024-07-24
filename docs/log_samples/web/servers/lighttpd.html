@@ -5,13 +5,41 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Log Samples from lighttpd &#8212; OpenArmor</title>
-    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../_static/bootstrap-3.2.0/css/bootstrap-theme.min.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../_static/parallax.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <link
+      rel="stylesheet"
+      href="../../../../_static/pygments.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../../_static/bootstrap-sphinx.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../../_static/bootstrap-3.2.0/css/bootstrap.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../../_static/bootstrap-3.2.0/css/bootstrap-theme.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../../_static/bootstrap-sphinx.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../../_static/parallax.css"
+      type="text/css"
+    />
+    <script
+      id="documentation_options"
+      data-url_root="../../../../"
+      src="../../../../_static/documentation_options.js"
+    ></script>
     <script src="../../../../_static/jquery.js"></script>
     <script src="../../../../_static/underscore.js"></script>
     <script src="../../../../_static/doctools.js"></script>
@@ -19,193 +47,378 @@
     <script src="../../../../_static/js/jquery-fix.js"></script>
     <script src="../../../../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
     <script src="../../../../_static/bootstrap-sphinx.js"></script>
-    <link rel="author" title="About these documents" href="../../../../about.html" />
+    <link
+      rel="author"
+      title="About these documents"
+      href="../../../../about.html"
+    />
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138780766-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-138780766-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-gtag('config', 'UA-138780766-1');
-</script>
+      gtag("config", "UA-138780766-1");
+    </script>
 
-<script type="text/javascript">
-  var _ss = _ss || [];
-  _ss.push(['_setDomain', 'https://koi-3QNN51VTHS.marketingautomation.services/net']);
-  _ss.push(['_setAccount', 'KOI-4APYNOYP8O']);
-  _ss.push(['_trackPageView']);
-  window._pa = window._pa || {};
-  // _pa.orderId = "myOrderId"; // OPTIONAL: attach unique conversion identifier to conversions
-  // _pa.revenue = "19.99"; // OPTIONAL: attach dynamic purchase values to conversions
-  // _pa.productId = "myProductId"; // OPTIONAL: Include product ID for use with dynamic ads
-  (function() {
-  var ss = document.createElement('script');
-  ss.type = 'text/javascript'; ss.async = true;
-  ss.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'koi-3QNN51VTHS.marketingautomation.services/client/ss.js?ver=2.4.0';
-  var scr = document.getElementsByTagName('script')[0];
-  scr.parentNode.insertBefore(ss, scr);
-  })();
-  </script>
+    <script type="text/javascript">
+      var _ss = _ss || [];
+      _ss.push([
+        "_setDomain",
+        "https://koi-3QNN51VTHS.marketingautomation.services/net",
+      ]);
+      _ss.push(["_setAccount", "KOI-4APYNOYP8O"]);
+      _ss.push(["_trackPageView"]);
+      window._pa = window._pa || {};
+      // _pa.orderId = "myOrderId"; // OPTIONAL: attach unique conversion identifier to conversions
+      // _pa.revenue = "19.99"; // OPTIONAL: attach dynamic purchase values to conversions
+      // _pa.productId = "myProductId"; // OPTIONAL: Include product ID for use with dynamic ads
+      (function () {
+        var ss = document.createElement("script");
+        ss.type = "text/javascript";
+        ss.async = true;
+        ss.src =
+          ("https:" == document.location.protocol ? "https://" : "http://") +
+          "koi-3QNN51VTHS.marketingautomation.services/client/ss.js?ver=2.4.0";
+        var scr = document.getElementsByTagName("script")[0];
+        scr.parentNode.insertBefore(ss, scr);
+      })();
+    </script>
 
-
-
-  </head><body>
-
-  <div id="navbar" class="navbar navbar-inverse navbar-default ">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../../../../index.html"><img src="../../../../_static/OpenArmor_logo_bare_small.jpg">
-          OpenArmor</a>
-        <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
-      </div>
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="navbar" class="navbar navbar-inverse navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".nav-collapse"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../../../index.html"
+            ><img src="../../../../_static/OpenArmor_logo_bare_small.jpg" />
+            OpenArmor</a
+          >
+          <span class="navbar-text navbar-version pull-left"><b>3.6.0</b></span>
+        </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
-            
-                <li><a href="https://theopenarmor.org/about/">About</a></li>
-                <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
-                <li><a href="https://theopenarmor.org/register-for-OpenArmor/">Get OpenArmor+</a></li>
-                <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
-            
-            
-              <li class="dropdown globaltoc-container">
-  <a role="button"
-     id="dLabelGlobalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="../../../../index.html">Site <b class="caret"></b></a>
-  <ul class="dropdown-menu globaltoc"
-      role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../manual/index.html">Manual</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../faq/index.html">Frequently asked questions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../cookbooks/index.html">User submitted Cookbooks</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../development/build/index.html">Build, compile, and not much more</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../development/oRFC/index.html">oRFC:</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../syntax/index.html">Syntax and Options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../formats/index.html">Output Formats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../programs/index.html">Man pages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../examples/index.html">Examples</a></li>
-</ul>
-</ul>
-</li>
-              
-            
-            
-              
-                
-              
-            
-            
-            
-            
+            <li><a href="https://theopenarmor.org/about/">About</a></li>
+            <li><a href="https://theopenarmor.org/docs/">Documentation</a></li>
+            <li>
+              <a href="https://theopenarmor.org/register-for-OpenArmor/"
+                >Get OpenArmor+</a
+              >
+            </li>
+            <li><a href="https://theopenarmor.org/downloads/">Downloads</a></li>
+
+            <li class="dropdown globaltoc-container">
+              <a
+                role="button"
+                id="dLabelGlobalToc"
+                data-toggle="dropdown"
+                data-target="#"
+                href="../../../../index.html"
+                >Site <b class="caret"></b
+              ></a>
+              <ul
+                class="dropdown-menu globaltoc"
+                role="menu"
+                aria-labelledby="dLabelGlobalToc"
+              >
+                <ul>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../../manual/index.html"
+                      >Manual</a
+                    >
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a class="reference internal" href="../../../faq/index.html"
+                      >Frequently asked questions</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../../cookbooks/index.html"
+                      >User submitted Cookbooks</a
+                    >
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../../development/build/index.html"
+                      >Build, compile, and not much more</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../../development/oRFC/index.html"
+                      >oRFC:</a
+                    >
+                  </li>
+                </ul>
+                <ul>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../../syntax/index.html"
+                      >Syntax and Options</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../../formats/index.html"
+                      >Output Formats</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../../programs/index.html"
+                      >Man pages</a
+                    >
+                  </li>
+                  <li class="toctree-l1">
+                    <a
+                      class="reference internal"
+                      href="../../../examples/index.html"
+                      >Examples</a
+                    >
+                  </li>
+                </ul>
+              </ul>
+            </li>
           </ul>
 
-          
-            
-<form class="navbar-form navbar-right" action="../../../../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-          
+          <form
+            class="navbar-form navbar-right"
+            action="../../../../search.html"
+            method="get"
+          >
+            <div class="form-group">
+              <input
+                type="text"
+                name="q"
+                class="form-control"
+                placeholder="Search"
+              />
+            </div>
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
         </div>
+      </div>
     </div>
-  </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      
-  <div class="section" id="log-samples-from-lighttpd">
-<h1>Log Samples from lighttpd<a class="headerlink" href="#log-samples-from-lighttpd" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="simple-get">
-<h2>Simple GET:<a class="headerlink" href="#simple-get" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">86.75.32.44 www.mysite.com - [20/Jun/2010:09:35:41 +0200] &quot;GET /robots.txt HTTP/1.1&quot; 404 345 &quot;-&quot; &quot;Googlebot-Image/1.0&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="dfind-scan-probe">
-<h2>DFind scan probe:<a class="headerlink" href="#dfind-scan-probe" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">166.71.12.34 - - [20/Jun/2010:09:59:48 +0200] &quot;GET /w00tw00t.at.ISC.SANS.DFind:) HTTP/1.1&quot; 400 349 &quot;-&quot; &quot;-&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="mod-proxy-backend-fastcgi">
-<h2>mod_proxy_backend_fastcgi:<a class="headerlink" href="#mod-proxy-backend-fastcgi" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2010-01-03 17:49:20 (trace) (mod_proxy_backend_fastcgi.c:650) (stderr from unix:/tmp/php-fastcgi.sock for /base/base_graph_display.php) /localwww/base/base/base_graph_display.php</span>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section" id="log-samples-from-lighttpd">
+            <h1>
+              Log Samples from lighttpd<a
+                class="headerlink"
+                href="#log-samples-from-lighttpd"
+                title="Permalink to this headline"
+                >¶</a
+              >
+            </h1>
+            <div class="section" id="simple-get">
+              <h2>
+                Simple GET:<a
+                  class="headerlink"
+                  href="#simple-get"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">86.75.32.44 www.mysite.com - [20/Jun/2010:09:35:41 +0200] &quot;GET /robots.txt HTTP/1.1&quot; 404 345 &quot;-&quot; &quot;Googlebot-Image/1.0&quot;</span>
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="section" id="dfind-scan-probe">
+              <h2>
+                DFind scan probe:<a
+                  class="headerlink"
+                  href="#dfind-scan-probe"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">166.71.12.34 - - [20/Jun/2010:09:59:48 +0200] &quot;GET /w00tw00t.at.ISC.SANS.DFind:) HTTP/1.1&quot; 400 349 &quot;-&quot; &quot;-&quot;</span>
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="section" id="mod-proxy-backend-fastcgi">
+              <h2>
+                mod_proxy_backend_fastcgi:<a
+                  class="headerlink"
+                  href="#mod-proxy-backend-fastcgi"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">2010-01-03 17:49:20 (trace) (mod_proxy_backend_fastcgi.c:650) (stderr from unix:/tmp/php-fastcgi.sock for /base/base_graph_display.php) /localwww/base/base/base_graph_display.php</span>
 <span class="go">2010-01-03 17:49:22 (trace) (mod_proxy_backend_fastcgi.c:650) (stderr from unix:/tmp/php-fastcgi.sock for /base/base_graph_display.php) /localwww/base//base/base_graph_display.php</span>
 <span class="go">2010-06-19 02:54:36 (trace) (mod_proxy_backend_fastcgi.c:650) (stderr from unix:/tmp/php-fastcgi.sock for /wp-cron.php) Invalid document end at line 2, column 1</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="http-auth-c">
-<h2>http_auth.c:<a class="headerlink" href="#http-auth-c" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2010-01-03 17:48:25 (http_auth.c:922) password doesn&#39;t match for / webmonitor</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="mode-evasive-connection-flood-attempt">
-<h2>mode_evasive connection flood attempt:<a class="headerlink" href="#mode-evasive-connection-flood-attempt" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2010-04-22 07:37:43 (mod_evasive.c:174) 82.194.122.1 turned away. Too many connections.</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="request-c">
-<h2>request.c:<a class="headerlink" href="#request-c" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2010-06-20 09:50:14: (request.c.1141) POST-request, but content-length missing -&gt; 411</span>
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="section" id="http-auth-c">
+              <h2>
+                http_auth.c:<a
+                  class="headerlink"
+                  href="#http-auth-c"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">2010-01-03 17:48:25 (http_auth.c:922) password doesn&#39;t match for / webmonitor</span>
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="section" id="mode-evasive-connection-flood-attempt">
+              <h2>
+                mode_evasive connection flood attempt:<a
+                  class="headerlink"
+                  href="#mode-evasive-connection-flood-attempt"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">2010-04-22 07:37:43 (mod_evasive.c:174) 82.194.122.1 turned away. Too many connections.</span>
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="section" id="request-c">
+              <h2>
+                request.c:<a
+                  class="headerlink"
+                  href="#request-c"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">2010-06-20 09:50:14: (request.c.1141) POST-request, but content-length missing -&gt; 411</span>
 <span class="go">2010-04-06 09:37:58 (trace) (request.c:448) Host header is duplicate (Status: 400)</span>
 <span class="go">2010-03-31 00:37:31 (trace) (request.c:440) Host header is invalid (Status: 400), was [inet_ntoa error]</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="server-c">
-<h2>server.c:<a class="headerlink" href="#server-c" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2010-06-20 06:25:04 (trace) (server.c:813) [note] graceful shutdown started by UID=0, PID=32003</span>
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="section" id="server-c">
+              <h2>
+                server.c:<a
+                  class="headerlink"
+                  href="#server-c"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">2010-06-20 06:25:04 (trace) (server.c:813) [note] graceful shutdown started by UID=0, PID=32003</span>
 <span class="go">2010-06-20 06:25:05 (trace) (server.c:1778) server stopped by UID=0, PID=32003</span>
 <span class="go">2010-10-13 15:03:57: (server.c.961) WARNING: unknown config-key: proxy-core.balancer (ignored)</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="log-c">
-<h2>log.c:<a class="headerlink" href="#log-c" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2010-01-03 17:47:10 (trace) (log.c:166) server started</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="connections-c">
-<h2>connections.c:<a class="headerlink" href="#connections-c" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2010-06-20 07:41:53 (error) (connections.c:1180) Warning: Either the error-handler returned status 404 or the error-handler itself was not found: /www/www.myhost.de/index.html</span>
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="section" id="log-c">
+              <h2>
+                log.c:<a
+                  class="headerlink"
+                  href="#log-c"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">2010-01-03 17:47:10 (trace) (log.c:166) server started</span>
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="section" id="connections-c">
+              <h2>
+                connections.c:<a
+                  class="headerlink"
+                  href="#connections-c"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">2010-06-20 07:41:53 (error) (connections.c:1180) Warning: Either the error-handler returned status 404 or the error-handler itself was not found: /www/www.myhost.de/index.html</span>
 <span class="go">2010-06-20 07:41:53 (error) (connections.c:1181) returning the original status: 404</span>
 <span class="go">2010-06-20 09:35:41 (error) (connections.c:1182) If this is a rails app: check your production.log</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="http-req-c">
-<h2>http_req.c:<a class="headerlink" href="#http-req-c" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2010-06-20 10:15:07 (trace) (http_req.c:283) parsing failed at token ( [1]), header: ^E^A</span>
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="section" id="http-req-c">
+              <h2>
+                http_req.c:<a
+                  class="headerlink"
+                  href="#http-req-c"
+                  title="Permalink to this headline"
+                  >¶</a
+                >
+              </h2>
+              <div class="highlight-console notranslate">
+                <div class="highlight">
+                  <pre><span></span><span class="go">2010-06-20 10:15:07 (trace) (http_req.c:283) parsing failed at token ( [1]), header: ^E^A</span>
 <span class="go">2010-06-18 13:57:59 (trace) (http_req.c:283) parsing failed at token (Accept [1]), header: GET  HTTP/1.1</span>
 <span class="go">Accept: */*</span>
 <span class="go">Accept-Language: en-us</span>
@@ -219,28 +432,29 @@ gtag('config', 'UA-138780766-1');
 <span class="go">User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)</span>
 <span class="go">Via: 1.1 192.168.133.200</span>
 <span class="go">Connection: Keep-Alive</span>
-</pre></div>
-</div>
-</div>
-</div>
-
-
+</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-      
-  </div>
-</div>
-<footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      
-    </p>
-    <p>
-        &copy; Copyright 2010-2021, OpenArmor Project Team.<br/>
-    OpenArmor <b>OpenArmor.net</b> domain owned and maintained by <a href="https://theopenarmor.org" target="_blank">OpenArmor Foundation</a><br/>
-    Home page graphics courtesy of <a href="https://pixabay.com" target="_blank">pixabay</a>
-    </p>
-  </div>
-</footer>
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>
+          &copy; Copyright 2010-2021, OpenArmor Project Team.<br />
+          OpenArmor <b>OpenArmor.net</b> domain owned and maintained by
+          <a href="https://theopenarmor.org" target="_blank"
+            >OpenArmor Foundation</a
+          ><br />
+          Home page graphics courtesy of
+          <a href="https://pixabay.com" target="_blank">pixabay</a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
